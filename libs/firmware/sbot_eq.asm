@@ -1,0 +1,25 @@
+* file of equates to control sensor robot
+
+* Fred Martin
+* Sun Oct 27 13:28:39 1991
+
+
+* following devices are on 6811 Port A
+IR_LEVEL EQU	$80
+IR_XMIT	EQU	$40
+IR_REFL	EQU	$20
+BEEP	EQU	$08
+
+* equates for Sharp IR sensors
+FRONT_IR_MASK	EQU	%00000001
+FRONT_IR_ADDR	EQU	PORTA
+
+BACK_IR_MASK	EQU	%00000010
+BACK_IR_ADDR	EQU	PORTA
+
+LEFT_IR_MASK	EQU	%00100000
+LEFT_IR_ADDR	EQU	$5000
+
+RIGHT_IR_MASK	EQU	%01000000
+RIGHT_IR_ADDR	EQU	$5000
+

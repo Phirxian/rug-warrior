@@ -1,0 +1,6 @@
+V3.2
+MIT 6.270 Board
+To put board into download mode, hold the Choose button down and tap the Reset button.  Release the Choose button when the yellow LED goes out.
+Download complete.  Please reset the board before pressing continue.
+pcoder22.s19
+lib_r22.lis

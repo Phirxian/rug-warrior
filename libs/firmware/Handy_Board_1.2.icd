@@ -1,0 +1,6 @@
+V3.2
+Handy Board
+To put board into download mode, hold down Stop while turning on the board.  Continue holding Stop until the green PWR LED goes out.
+Download complete.  Please reset the board before pressing continue by turning the board off and on.
+pcode_hb.s19
+lib_hb.lis

@@ -1,0 +1,65 @@
+RWP-DOC.TXT  -- Rug Warrior Pro specific files supplied on the software disk.
+
+Default load files:
+
+LIB-RWP.LIS - Specifies all the files loaded automatically into Rug
+  Warrior Pro when IC starts up.  The default configuration includes:
+    LIB-IC.C
+    LIB-RWP.C
+    SHAFT.C
+    SPEED.ICB
+  The user may freely add, delete, or replace files in LIB-RWP.LIS as
+  desired to customize his or her robot.
+
+LIB-IC.C    - Standard IC functions and variables
+
+LIB-RWP.C   - Functions specific to Rug Warrior Pro's standard set of
+  sensors and actuators.
+
+SHAFT.C     - User interface to the shaft encoders
+
+SPEED.ICB   - Assembly code routine needed to support shaft encoders.
+
+SPEED.ASM   - Assembly code file used to create SPEED.ICB.  SPEED.ASM is
+  used as input by an assembler to create the .ICB file.  A facility for
+  doing this is located at web site: http://www.newtonlabs.com/ic/icb.html
+
+Most Stackable Expansion Modules, SEMs, for Rug Warrior Pro require
+driver software.  References to the appropriate drivers should be
+placed in LIB-RWP.LIS.
+
+Self test files:
+
+RWP-TEST.LIS - Loader file that loads the self test functions.
+
+SELFTEST.C   - Code that support Rug Warrior Pro self testing.
+
+COF.C        - Enables Rug Warrior Pro to play piezo buzzer testing tune.
+
+REGDEFS.C    - Definitions for all the internal MC68HC11 registers.
+
+Behavior examples:
+
+COMMON  .C   - Utilities common to one or more example behavior.
+TRACK   .C   - Motion utility.
+BUGLE   .C
+BUGLE   .LIS
+THEREMIN.C
+THEREMIN.LIS
+YOYO    .C
+YOYO    .LIS
+WIMP    .C
+WIMP    .LIS
+FOLLOW  .C
+FOLLOW  .LIS
+MOTH    .C
+MOTH    .LIS
+ECHO    .C
+ECHO    .LIS
+SONICCMD.C
+SONICCMD.LIS
+BEHAVE  .C
+BEHAVE  .LIS
+
+Example behaviors are described in the Rug Warrior Pro Assembly Guide.
+

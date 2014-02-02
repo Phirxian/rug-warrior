@@ -1,0 +1,24 @@
+* file of equates to control rev 2.1 board
+
+* Fred Martin
+* Wed Jan 15 13:21:18 1992
+
+
+* following devices are on 6811 Port A
+IR_LEVEL EQU	$80
+IR_XMIT	EQU	$40
+IR_REFL	EQU	$20
+BEEP	EQU	$08
+
+* equates for Sharp IR sensors
+IR_MASK_ZERO	EQU	%00000001
+IR_ADDR_ZERO	EQU	PORTA
+
+IR_MASK_ONE	EQU	%00000010
+IR_ADDR_ONE	EQU	PORTA
+
+IR_MASK_TWO	EQU	%00000100
+IR_ADDR_TWO	EQU	$7000
+
+IR_MASK_THREE	EQU	%00001000
+IR_ADDR_THREE	EQU	$7000

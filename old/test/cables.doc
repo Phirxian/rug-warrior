@@ -1,0 +1,133 @@
+cables.doc
+By Randy Sargent (rsargent@media.mit.edu)
+Updated Tuesday, August 2, 1994.
+
+This document describes how to interface your RS-232 device to the
+MIT RJ-11 serial standard.  The MIT RJ-11 serial standard
+works for:
+
+	All Imachinations brand computer boards and robot controllers
+	The MIT 6.270 robot controller
+	The MIT Miniboard (versions 1.5 and 2.0)
+	The "Rug Warrior"
+	  (from "Mobile Robots: Inspiration to Implementation", by
+                 Joe Jones and Anita Flynn)
+
+
+Most people will want to start with the commonly available DB-25 and
+DB-9 to RJ-11 converters (generally available from DigiKey or Jameco).
+If you buy one that fits your computer, the rest of the guide will
+tell you how to connect its internals to match the MIT RJ-11 standard.
+
+***********************
+WARNING WARNING WARNING
+***********************
+
+Different brand phone adapters use different color schemes!!  Read the
+following paragraph to find out which type of phone adapter you have.
+(Depending on which kind you have, you may need to swap "Yellow" and
+"Black" in the following instructions).
+
+Some phone adapters have 4 wires, some have 6.  For those that have 6,
+ignore the outside two (the blue and the white).  You can cut them off
+if you want.
+
+Your adapter should have red and green wires in the middle, and black
+and yellow wires towards outside of these two.  But different adapters
+swap the order of the red/green and black/yellow pairs!
+
+Pick up the phone plug portion of the phone adapter you need for your
+machine.  Orient it so that the individual colored wires are coming
+out towards you, and so that they are coming from the lower half.
+You should see that the black wire is on the left and the yellow wire
+is on the right.  IF THIS IS NOT THE CASE (it isn't for some brands of
+adapters), PLEASE REVERSE BLACK AND YELLOW IN THE FOLLOWING
+INSTRUCTIONS.
+
+If you have to make a phone cable, be sure to wire your phone cables
+like the phone company does, which means ALL WIRES ARE SWAPPED.  There
+is typically a ridge on one of the flat faces of the cable.  If you
+put the ridge in the same direction with respect to each plug, the
+wires will get swapped.
+
+DECstation 5000 has two IBM-standard male DB-25's coming out of the
+back of the box (/dev/tty00 and /dev/tty01).
+
+IBM PC or compatible may have either a male DB-25 or a male DB-9
+coming out the back.  (A female DB-25 is typically a parallel printer
+port, while a female DB-9 is typically for an old EGA-style monitor).
+
+The easiest way to connect a Macintosh is to first buy a MiniDIN-8 to
+DB25 adapter.  The macintosh "Modem Cable"s has a DB25 that works just
+like a IBM-compatable DB25, and should be wired the same.  Macintosh
+"Printer Cable"s have pins 2 and 3 swapped.  (Often, Mac MiniDIN-8 to
+DB25's aren't labeled, so you won't know which you have.  Either
+experiment, or try adding a null modem adapter to make yours work).
+
+Here's how to wire up a phone adapter for either:
+
+phone to female DB25 adapter (IBM and compatibles, Macintosh "Modem",
+                              DECstation 5000):
+  Yellow:     pin 2
+  Black:      pin 3
+  Red+Green:  pin 7
+
+phone to female DB9 adapter (IBM and compatibles):
+  Black:      pin 2
+  Yellow:     pin 3
+  Red+Green:  pin 5
+
+phone to female DB25 adapter (Macintosh "Printer" cable):
+  Black:      pin 2
+  Yellow:     pin 3
+  Red+Green:  Pin 7
+
+
+SPARCstation 1 has two female DB-25's coming out of the back of the
+box (/dev/ttya and /dev/ttyb).  Here's how to wire up a phone adapter
+for it:
+
+phone to male DB25 adapter (SPARCstation 1):
+  Yellow:     pin 2
+  Black:      pin 3
+  Red+Green:  pin 7
+
+Some SPARCstations have only one female DB-25 for serial, labeled
+"A/B".  The above pinout will let you hook up to port "A" (/dev/ttya).
+Port B uses a disjoint set of pins on the same DB-25, so you'd
+probably want to make some sort of custom Y-adapter to get access to
+both ports at the same time.  (This document doesn't currently contain
+the pins of this DB-25 used for port "B").
+
+VAXstation 2000 has a male DB-9 coming out the back (/dev/ttys1).
+This is a non-standard pinout -- most DB-9 serial hardware you'll find
+uses the IBM-PC standard.
+
+Here's how to wire up a phone adapter for it:
+
+phone to female DB9 adapter (VAXstation 2000):
+  Yellow:     pin 2
+  Black:      pin 3
+  Red+Green:  pin 7
+
+
+VAXstation 3100 has two sort-of phone-like connectors coming out the
+back (arrows icon: /dev/ttys0 and printer icon: /dev/ttys1.  On
+athena, /dev/ttys0 doesn't seem to be usable).  The connector is very
+similar to the phone connector that are used on the robots, except
+that the springy tab is offset.  When you find the right male
+connector, you'll need to make a phone cable.  Because the VAX uses
+opposite pinout of our RJ11 standard, you'll need to make the cable
+with the wires STRAIGHT THROUGH; the colors should not swap sides,
+unlike the normal phone cables used elsewhere.  But don't worry, you
+can't confuse a VAX cable with a normal cable because the special VAX
+connector can't be plugged in to standard RJ11 jacks.
+
+DECstation 3100 has two sort-of phone-like connectors coming out the
+back (arrows icon: /dev/tty00 and printer icon: /dev/tty01).  See
+VAXstation 3100 above for how to wire up to these connectors.
+
+
+
+
+

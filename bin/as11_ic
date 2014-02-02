@@ -1,0 +1,10 @@
+#!/bin/csh -f
+as11_cpp $argv -DZERO_PAGE_START=\$10 -DMAIN_START=\$8020
+mv ${1:r}.s19 /tmp/$$1.s19
+# zero page increases by 3
+# main high byte increases by 7
+# main low byte increases by 11
+as11_cpp $argv -DZERO_PAGE_START=\$13 -DMAIN_START=\$872B - cre >/tmp/$$.cre
+mv ${1:r}.s19 /tmp/$$2.s19
+cat /tmp/$$1.s19 /tmp/$$2.s19 /tmp/$$.cre > ${1:r}.icb
+rm /tmp/$$1.s19 /tmp/$$2.s19 /tmp/$$.cre

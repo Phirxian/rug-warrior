@@ -1,0 +1,41 @@
+#!/bin/csh -f
+
+# -D flags fixed 970418 Randy Sargent
+
+echo "as11_cpp v3.1 970418"
+
+# This is a UNIX csh script
+# first arg is the .asm file to assemble
+# Other args can be -I or -D flags to cpp, or flags to the
+# assembler
+
+set cpp_args=()
+set other_args=()
+
+# If an arg starts with -D or -I, it goes to the c preprocessor
+# Otherwise, it goes to the assembler
+
+foreach arg ($argv[2-])
+  if (("$arg" =~ "-D"*) || ("$arg" =~ "-I"*)) then
+    set cpp_args=($cpp_args "$arg")
+ else
+    set other_args=($other_args "$arg")
+  endif
+end
+
+set echo
+# the next line runs the c preprocessor
+# often this is just /lib/cpp
+# if you have gcc, you can do
+#  gcc -traditional -x c $cpp_args
+#
+
+# Uncomment one of the following lines depending on what works for you
+
+# cccp -traditional $cpp_args ${1:r}.asm > /tmp/$$.asm
+# /lib/cpp $cpp_args ${1:r}.asm > /tmp/$$.asm
+gcc -E -traditional -x c $cpp_args ${1:r}.asm > /tmp/$$.asm
+
+as11 /tmp/$$.asm $other_args
+rm /tmp/$$.asm
+mv /tmp/$$.s19 ${1:r}.s19

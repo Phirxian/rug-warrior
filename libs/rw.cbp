@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="rw" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/rw" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/rw" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="base/cof.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="base/diagnostic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="base/encoders.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="base/lib_ic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="base/lib_rwp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="base/menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="base/r22_ir.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="base/regdefs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="base/servo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="base/shaft.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="base/startstp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="base/tunes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="comportment/1meter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="comportment/rotate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="shared/motor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

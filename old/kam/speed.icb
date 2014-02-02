@@ -1,0 +1,11 @@
+S11C8020CC802AFDBFEA0E390000FC8028C30001FD80288601B710233BE7
+S9030000FC
+S11C872BCC8735FDBFEA0E390000FC8733C30001FD87338601B710233B9F
+S9030000FC
+6811 assembler version 2.1  10-Aug-91
+  please send bugs to Randy Sargent (rsargent@athena.mit.edu)
+  original program by Motorola.
+IC3_interrupt_handler 8735 *0018 0009 
+TFLG1      1023 *0003 0023 
+subroutine_initialize_module 872b *0007 
+variable_left_clicks 8733 *0015 0019 0021 

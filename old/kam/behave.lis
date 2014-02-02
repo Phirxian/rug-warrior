@@ -1,0 +1,11 @@
+kam/common.c
+kam/track.c
+kam/bugle.c
+kam/theremin.c
+kam/yoyo.c
+kam/wimp.c
+kam/follow.c
+kam/moth.c
+kam/echo.c
+kam/soniccmd.c
+kam/behave.c

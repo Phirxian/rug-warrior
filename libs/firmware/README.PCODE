@@ -1,0 +1,27 @@
+PCODE Readme
+Version 3.1 Beta 4
+For use with IC version 3.1.X
+
+An up-to-date version of this package can be found at:
+
+http://www.newtonlabs.com/ic
+
+This package uses and includes "as11_cpp", a UNIX shell script which
+runs files through a c-preprocessor before running them through as11.
+Currently this only works on UNIX boxes.  If you need sources for as11
+that work under UNIX, check out http://www.ai.mit.edu/people/rsargent.
+It is possible to run the sources through a c-preprocessor manually if
+you don't have access to a UNIX box.
+
+Please send questions to "ic@newtonlabs.com"
+
+*****************************************
+What are the different versions of pcode?
+
+ pcoder22.s19: Pcode for the MIT Rev 2.21 6.270 board
+ pcode_hb.s19: Pcode for the Handy Board
+ pcode_rw.s19: Pcode for the Rug Warrior
+
+-- Randy Sargent
+   March 28, 1996
+
