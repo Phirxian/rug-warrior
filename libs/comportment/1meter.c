@@ -1,8 +1,15 @@
+
+/**
+ * TODO En-tete
+ */
 void main()
 {
-    printf("runing for\n1.2 meter");
+    const int distance = 120; /* Distance in centimeters */
+    
+    printf("Running for\n%.2d meter", distance/100);
+    
     init_motors();
     drive(100,0);
-    sleep(feetToMotor(feetToCm(120.), 100));
+    sleep(feetToMotor(feetToCm(distance.), 100));
     stop();
 }
