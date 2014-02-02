@@ -1,7 +1,7 @@
 #define R_MOTOR 1
 #define L_MOTOR 2
 
-float feetToCm(float cm)
+float cmToFeet(float cm)
 {
     return cm/30.48;
 }
