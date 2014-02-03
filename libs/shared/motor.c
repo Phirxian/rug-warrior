@@ -1,7 +1,11 @@
 #define R_MOTOR 1
 #define L_MOTOR 2
-
-float feetToCm(float cm)
+/**
+ * Conversion cm to feet
+ * @param cm - the distance in centimeters used to be converted
+ * @return the distance converted in feet
+ */
+float cmToFeet(float cm)
 {
     return cm/30.48;
 }
