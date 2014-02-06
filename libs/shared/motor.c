@@ -1,6 +1,16 @@
 #define R_MOTOR 1
 #define L_MOTOR 2
 
+/**
+ * Conversion cm to feet
+ * @param cm - the distance in centimeters used to be converted
+ * @return the distance converted in feet
+ */
+float cmToFeet(float cm)
+{
+    return cm/30.48;
+}
+
 /*
  * calculate the time needed to run
  * in x feet with given speed [-100 : 100]
