@@ -2,7 +2,7 @@
 /* by Matt Domsch (luigi@mit.edu) */
 int FL_MOTOR = 0;
 int RL_MOTOR = 2;
-int FR_MOTOR = 1 ; 
+int FR_MOTOR = 1 ;
 int RR_MOTOR = 3;
 int L_ENCODER = 1;
 int R_ENCODER = 0;
@@ -21,7 +21,7 @@ void main(){
   while(wait_button(CYCLE_B)!=CHOOSE_B);
   countdown(3.);
   measured_drive(100,4000);
-  stop();
+  stop2();
 }
 
 void measured_drive(int speed, int distance){
@@ -32,7 +32,7 @@ void measured_drive(int speed, int distance){
   if (speed>100) speed=100;
   if (speed<-100) {speed=-100; SHAFT_ENCODER_SPEED_DECREMENT*=-1;}
   reset_encoder(0);reset_encoder(1);
-  while (read_encoder(L_ENCODER) < distance &&  
+  while (read_encoder(L_ENCODER) < distance &&
 	 read_encoder(R_ENCODER) < distance) {
     lenc=read_encoder(L_ENCODER);
     renc=read_encoder(R_ENCODER);
@@ -59,7 +59,7 @@ void measured_drive(int speed, int distance){
       mmotor(FL_MOTOR,speed);
       mmotor(FR_MOTOR,speed);
     }
-  }    
+  }
   off(FL_MOTOR);
   off(FR_MOTOR);
   off(RL_MOTOR);
@@ -97,11 +97,11 @@ int measured_turn(int direction, int speed, int distance){
   else if (direction==RIGHT) {lmotorspeed=speed;rmotorspeed=-1*speed;}
   else {printf("Illegal turn direction\n");
 	return(-1);}
-  
 
-  stop();
+
+  stop2();
   reset_encoder(L_ENCODER);reset_encoder(R_ENCODER);
-  while (read_encoder(L_ENCODER) < distance &&  
+  while (read_encoder(L_ENCODER) < distance &&
 	 read_encoder(R_ENCODER) < distance) {
     lenc=read_encoder(L_ENCODER);
     renc=read_encoder(R_ENCODER);
@@ -126,14 +126,14 @@ int measured_turn(int direction, int speed, int distance){
       mmotor(FL_MOTOR,lmotorspeed);
       mmotor(FR_MOTOR,rmotorspeed);
     }
-  }    
+  }
   off(FL_MOTOR);
   off(FR_MOTOR);
   off(RL_MOTOR);
   off(RR_MOTOR);
 }
 
-void stop(){
+void stop2(){
   int lenc,renc;
   off(FL_MOTOR);
   off(RL_MOTOR);

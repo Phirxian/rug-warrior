@@ -1,0 +1,9 @@
+<map id="select_int_value" name="select_int_value">
+<area shape="rect" id="node3" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="192,5,261,32"/>
+<area shape="rect" id="node5" href="$menu_8c.html#aad05720d81aee6fe57273df91d1206d1" title="wait_button" alt="" coords="179,183,275,209"/>
+<area shape="rect" id="node7" href="$base_2lib__rwp_8c.html#a922b44bdf1062f6836a7e1774c74ce35" title="choose_button" alt="" coords="488,208,605,235"/>
+<area shape="rect" id="node9" href="$base_2lib__rwp_8c.html#a2c2600c101c9082504db325bb20996c8" title="escape_button" alt="" coords="488,107,605,133"/>
+<area shape="rect" id="node17" href="$convert_8c.html#abd8bbcfabb3ddef2ccaafb9928a37b95" title="min" alt="" coords="203,309,250,336"/>
+<area shape="rect" id="node19" href="$base_2lib__rwp_8c.html#a31d4781f14dda7a49205b126d29f3e08" title="frob_knob" alt="" coords="184,360,269,387"/>
+<area shape="rect" id="node11" href="$menu_8c.html#ade420648ad5e270eb49e76bc71fcb203" title="chosen_button" alt="" coords="323,157,440,184"/>
+</map>

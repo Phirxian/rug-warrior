@@ -58,8 +58,11 @@ void servo_off()
     asm_servo_off(0);
 }
 /************************************************************************/
-/* Servo movement commands                                              */
-int servo(int period) /* argument in clock cycles of pulse, moves servo */
+/*
+ * Servo movement commands
+ * argument in clock cycles of pulse, moves servo
+ */
+int servo(int period)
 {
     if(period>MAX_SERVO_WAVETIME)
         return (servo_pulse_wavetime=MAX_SERVO_WAVETIME);
@@ -69,24 +72,36 @@ int servo(int period) /* argument in clock cycles of pulse, moves servo */
         return(servo_pulse_wavetime=period);
 }
 
-int servo_rad(float angle) /* argument in radians, moves servo */
+/*
+ * argument in radians, moves servo
+ */
+int servo_rad(float angle)
 {
     return servo(radian_to_pulse(angle));
 }
 
-int servo_deg(float angle) /* argument in degrees, moves servo */
+/*
+ * argument in degrees, moves servo
+ */
+int servo_deg(float angle)
 {
     return servo(degree_to_pulse(angle));
 }
 
 /************************************************************************/
-/* Pulse width calculations                                             */
-int radian_to_pulse(float angle) /* argument in radians, returns pulse width */
+/*
+ * Pulse width calculations
+ * argument in radians, returns pulse width
+ */
+int radian_to_pulse(float angle)
 {
     return ((int)(angle*((float)SERVO_RANGE)/rexcursion)+MIN_SERVO_WAVETIME);
 }
 
-int degree_to_pulse(float angle) /* argument in degrees, returns pulse width */
+/*
+ * argument in degrees, returns pulse width
+ */
+int degree_to_pulse(float angle)
 {
     return ((int)((angle*((float)SERVO_RANGE))/dexcursion)+MIN_SERVO_WAVETIME);
 }

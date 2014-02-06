@@ -1,0 +1,349 @@
+\hypertarget{shared_2sonar_8c}{\section{/root/\-Desktop/rug-\/warrior/libs/shared/sonar.c File Reference}
+\label{shared_2sonar_8c}\index{/root/\-Desktop/rug-\/warrior/libs/shared/sonar.\-c@{/root/\-Desktop/rug-\/warrior/libs/shared/sonar.\-c}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{shared_2sonar_8c_a4536c29acdd706cb369a5b5f32ce57a1}{init\-\_\-sonar} ()
+\item 
+void \hyperlink{shared_2sonar_8c_ad8136df344f340b0653c27e3317c08f5}{ping} ()
+\item 
+float \hyperlink{shared_2sonar_8c_aa79c7e06f14884f4008cc28e35896016}{range} ()
+\item 
+void \hyperlink{shared_2sonar_8c_a820ae5b5b352c676e51b8b36120055ea}{sonar\-\_\-enable\-\_\-servo} ()
+\item 
+void \hyperlink{shared_2sonar_8c_a4f1b909d6e33e828b93f5fcbfa0a906a}{sonar\-\_\-disable\-\_\-servo} ()
+\item 
+void \hyperlink{shared_2sonar_8c_a429dc232d3a74189590dfc6e470b4b7e}{sonar\-\_\-init\-\_\-servo} ()
+\item 
+void \hyperlink{shared_2sonar_8c_af4c3fee4924e35db9312e92135f61f94}{sonar\-\_\-servo\-\_\-off} ()
+\item 
+void \hyperlink{shared_2sonar_8c_a58495e4ae9f36f8f7acbca793a9477c7}{pwm\-\_\-servo} (int usec)
+\item 
+void \hyperlink{shared_2sonar_8c_a222f05c4901d3ffb622e9846e40526bd}{set\-\_\-servo} (int pos)
+\item 
+void \hyperlink{shared_2sonar_8c_a3e946f741a74a116374de8566c6caba6}{scan} (int low\-\_\-pos, int high\-\_\-pos)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{shared_2sonar_8c_a4ae53f2593e7b886f4f3ef5e57236cf6}{Rug\-Bat\-\_\-jumper} = 0
+\item 
+int \hyperlink{shared_2sonar_8c_a12c3dfe0abee002f7f04e26bd760df73}{Rug\-Bat\-\_\-addr} = 0x4000 + (\-Rug\-Bat\-\_\-jumper $\ast$ 0x1000)
+\item 
+int \hyperlink{shared_2sonar_8c_af19ee435a5b83c0a8c328ea16f39dc06}{\-\_\-tctl1} = 0x1020
+\item 
+int \hyperlink{shared_2sonar_8c_aa2a466dd3209e5a86a6c2035e31e63a4}{\-\_\-tctl2} = 0x1021
+\item 
+int \hyperlink{shared_2sonar_8c_acc2bac68be85b5a6b815b2eba1b722f9}{\-\_\-tflg1} = 0x1023
+\item 
+int \hyperlink{shared_2sonar_8c_abc9dfed8df6ecfb1a486856c53b2e7c9}{\-\_\-oc1m} = 0x100\-C
+\item 
+int \hyperlink{shared_2sonar_8c_a6661787666cd8eb58d2c294e4ea1a759}{\-\_\-oc1d} = 0x100\-D
+\item 
+int \hyperlink{shared_2sonar_8c_ab279a0d0a1dbef356d011879e98d54dd}{\-\_\-toc1} = 0x1016
+\item 
+int \hyperlink{shared_2sonar_8c_abe6af8d1e21a17069a3d09f0d7d2296c}{\-\_\-toc5} = 0x101\-E
+\item 
+int \hyperlink{shared_2sonar_8c_af9f873bb3d62a8c571d0cb79605ee823}{\-\_\-tic1} = 0x1010
+\item 
+int \hyperlink{shared_2sonar_8c_aef57c859539d92064f8b8fa6d6ed6c69}{\-\_\-tic2} = 0x1012
+\item 
+int \hyperlink{shared_2sonar_8c_a5c515407443765ab45ab6a33685af08f}{servo\-\_\-pos} = 0
+\item 
+float \hyperlink{shared_2sonar_8c_ab016905d43821e09cb2c489fc4071e2c}{scan\-\_\-delay} = 0.\-01
+\item 
+int \hyperlink{shared_2sonar_8c_a031b324910933b8d3c81e00421ae74a0}{servo\-\_\-center} = 1475
+\item 
+int \hyperlink{shared_2sonar_8c_a16173e2bababcc06ef9fccb294efb2c9}{servo\-\_\-gain} = 10
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{shared_2sonar_8c_a4536c29acdd706cb369a5b5f32ce57a1}{\index{shared/sonar.\-c@{shared/sonar.\-c}!init\-\_\-sonar@{init\-\_\-sonar}}
+\index{init\-\_\-sonar@{init\-\_\-sonar}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{init\-\_\-sonar}]{\setlength{\rightskip}{0pt plus 5cm}void init\-\_\-sonar (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{shared_2sonar_8c_a4536c29acdd706cb369a5b5f32ce57a1}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{shared_2sonar_8c_a4536c29acdd706cb369a5b5f32ce57a1_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{shared_2sonar_8c_ad8136df344f340b0653c27e3317c08f5}{\index{shared/sonar.\-c@{shared/sonar.\-c}!ping@{ping}}
+\index{ping@{ping}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{ping}]{\setlength{\rightskip}{0pt plus 5cm}void ping (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{shared_2sonar_8c_ad8136df344f340b0653c27e3317c08f5}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{shared_2sonar_8c_ad8136df344f340b0653c27e3317c08f5_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{shared_2sonar_8c_ad8136df344f340b0653c27e3317c08f5_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{shared_2sonar_8c_a58495e4ae9f36f8f7acbca793a9477c7}{\index{shared/sonar.\-c@{shared/sonar.\-c}!pwm\-\_\-servo@{pwm\-\_\-servo}}
+\index{pwm\-\_\-servo@{pwm\-\_\-servo}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{pwm\-\_\-servo}]{\setlength{\rightskip}{0pt plus 5cm}void pwm\-\_\-servo (
+\begin{DoxyParamCaption}
+\item[{int}]{usec}
+\end{DoxyParamCaption}
+)}}\label{shared_2sonar_8c_a58495e4ae9f36f8f7acbca793a9477c7}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{shared_2sonar_8c_a58495e4ae9f36f8f7acbca793a9477c7_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{shared_2sonar_8c_aa79c7e06f14884f4008cc28e35896016}{\index{shared/sonar.\-c@{shared/sonar.\-c}!range@{range}}
+\index{range@{range}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{range}]{\setlength{\rightskip}{0pt plus 5cm}float range (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{shared_2sonar_8c_aa79c7e06f14884f4008cc28e35896016}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{shared_2sonar_8c_aa79c7e06f14884f4008cc28e35896016_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{shared_2sonar_8c_a3e946f741a74a116374de8566c6caba6}{\index{shared/sonar.\-c@{shared/sonar.\-c}!scan@{scan}}
+\index{scan@{scan}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{scan}]{\setlength{\rightskip}{0pt plus 5cm}void scan (
+\begin{DoxyParamCaption}
+\item[{int}]{low\-\_\-pos, }
+\item[{int}]{high\-\_\-pos}
+\end{DoxyParamCaption}
+)}}\label{shared_2sonar_8c_a3e946f741a74a116374de8566c6caba6}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{shared_2sonar_8c_a3e946f741a74a116374de8566c6caba6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{shared_2sonar_8c_a222f05c4901d3ffb622e9846e40526bd}{\index{shared/sonar.\-c@{shared/sonar.\-c}!set\-\_\-servo@{set\-\_\-servo}}
+\index{set\-\_\-servo@{set\-\_\-servo}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{set\-\_\-servo}]{\setlength{\rightskip}{0pt plus 5cm}void set\-\_\-servo (
+\begin{DoxyParamCaption}
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)}}\label{shared_2sonar_8c_a222f05c4901d3ffb622e9846e40526bd}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{shared_2sonar_8c_a222f05c4901d3ffb622e9846e40526bd_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=222pt]{shared_2sonar_8c_a222f05c4901d3ffb622e9846e40526bd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{shared_2sonar_8c_a4f1b909d6e33e828b93f5fcbfa0a906a}{\index{shared/sonar.\-c@{shared/sonar.\-c}!sonar\-\_\-disable\-\_\-servo@{sonar\-\_\-disable\-\_\-servo}}
+\index{sonar\-\_\-disable\-\_\-servo@{sonar\-\_\-disable\-\_\-servo}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{sonar\-\_\-disable\-\_\-servo}]{\setlength{\rightskip}{0pt plus 5cm}void sonar\-\_\-disable\-\_\-servo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{shared_2sonar_8c_a4f1b909d6e33e828b93f5fcbfa0a906a}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shared_2sonar_8c_a4f1b909d6e33e828b93f5fcbfa0a906a_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{shared_2sonar_8c_a820ae5b5b352c676e51b8b36120055ea}{\index{shared/sonar.\-c@{shared/sonar.\-c}!sonar\-\_\-enable\-\_\-servo@{sonar\-\_\-enable\-\_\-servo}}
+\index{sonar\-\_\-enable\-\_\-servo@{sonar\-\_\-enable\-\_\-servo}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{sonar\-\_\-enable\-\_\-servo}]{\setlength{\rightskip}{0pt plus 5cm}void sonar\-\_\-enable\-\_\-servo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{shared_2sonar_8c_a820ae5b5b352c676e51b8b36120055ea}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{shared_2sonar_8c_a820ae5b5b352c676e51b8b36120055ea_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{shared_2sonar_8c_a429dc232d3a74189590dfc6e470b4b7e}{\index{shared/sonar.\-c@{shared/sonar.\-c}!sonar\-\_\-init\-\_\-servo@{sonar\-\_\-init\-\_\-servo}}
+\index{sonar\-\_\-init\-\_\-servo@{sonar\-\_\-init\-\_\-servo}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{sonar\-\_\-init\-\_\-servo}]{\setlength{\rightskip}{0pt plus 5cm}void sonar\-\_\-init\-\_\-servo (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{shared_2sonar_8c_a429dc232d3a74189590dfc6e470b4b7e}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{shared_2sonar_8c_a429dc232d3a74189590dfc6e470b4b7e_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=254pt]{shared_2sonar_8c_a429dc232d3a74189590dfc6e470b4b7e_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{shared_2sonar_8c_af4c3fee4924e35db9312e92135f61f94}{\index{shared/sonar.\-c@{shared/sonar.\-c}!sonar\-\_\-servo\-\_\-off@{sonar\-\_\-servo\-\_\-off}}
+\index{sonar\-\_\-servo\-\_\-off@{sonar\-\_\-servo\-\_\-off}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{sonar\-\_\-servo\-\_\-off}]{\setlength{\rightskip}{0pt plus 5cm}void sonar\-\_\-servo\-\_\-off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{shared_2sonar_8c_af4c3fee4924e35db9312e92135f61f94}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{shared_2sonar_8c_af4c3fee4924e35db9312e92135f61f94_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{shared_2sonar_8c_af4c3fee4924e35db9312e92135f61f94_icgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{shared_2sonar_8c_a6661787666cd8eb58d2c294e4ea1a759}{\index{shared/sonar.\-c@{shared/sonar.\-c}!\-\_\-oc1d@{\-\_\-oc1d}}
+\index{\-\_\-oc1d@{\-\_\-oc1d}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{\-\_\-oc1d}]{\setlength{\rightskip}{0pt plus 5cm}int \-\_\-oc1d = 0x100\-D}}\label{shared_2sonar_8c_a6661787666cd8eb58d2c294e4ea1a759}
+\hypertarget{shared_2sonar_8c_abc9dfed8df6ecfb1a486856c53b2e7c9}{\index{shared/sonar.\-c@{shared/sonar.\-c}!\-\_\-oc1m@{\-\_\-oc1m}}
+\index{\-\_\-oc1m@{\-\_\-oc1m}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{\-\_\-oc1m}]{\setlength{\rightskip}{0pt plus 5cm}int \-\_\-oc1m = 0x100\-C}}\label{shared_2sonar_8c_abc9dfed8df6ecfb1a486856c53b2e7c9}
+\hypertarget{shared_2sonar_8c_af19ee435a5b83c0a8c328ea16f39dc06}{\index{shared/sonar.\-c@{shared/sonar.\-c}!\-\_\-tctl1@{\-\_\-tctl1}}
+\index{\-\_\-tctl1@{\-\_\-tctl1}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{\-\_\-tctl1}]{\setlength{\rightskip}{0pt plus 5cm}int \-\_\-tctl1 = 0x1020}}\label{shared_2sonar_8c_af19ee435a5b83c0a8c328ea16f39dc06}
+\hypertarget{shared_2sonar_8c_aa2a466dd3209e5a86a6c2035e31e63a4}{\index{shared/sonar.\-c@{shared/sonar.\-c}!\-\_\-tctl2@{\-\_\-tctl2}}
+\index{\-\_\-tctl2@{\-\_\-tctl2}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{\-\_\-tctl2}]{\setlength{\rightskip}{0pt plus 5cm}int \-\_\-tctl2 = 0x1021}}\label{shared_2sonar_8c_aa2a466dd3209e5a86a6c2035e31e63a4}
+\hypertarget{shared_2sonar_8c_acc2bac68be85b5a6b815b2eba1b722f9}{\index{shared/sonar.\-c@{shared/sonar.\-c}!\-\_\-tflg1@{\-\_\-tflg1}}
+\index{\-\_\-tflg1@{\-\_\-tflg1}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{\-\_\-tflg1}]{\setlength{\rightskip}{0pt plus 5cm}int \-\_\-tflg1 = 0x1023}}\label{shared_2sonar_8c_acc2bac68be85b5a6b815b2eba1b722f9}
+\hypertarget{shared_2sonar_8c_af9f873bb3d62a8c571d0cb79605ee823}{\index{shared/sonar.\-c@{shared/sonar.\-c}!\-\_\-tic1@{\-\_\-tic1}}
+\index{\-\_\-tic1@{\-\_\-tic1}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{\-\_\-tic1}]{\setlength{\rightskip}{0pt plus 5cm}int \-\_\-tic1 = 0x1010}}\label{shared_2sonar_8c_af9f873bb3d62a8c571d0cb79605ee823}
+\hypertarget{shared_2sonar_8c_aef57c859539d92064f8b8fa6d6ed6c69}{\index{shared/sonar.\-c@{shared/sonar.\-c}!\-\_\-tic2@{\-\_\-tic2}}
+\index{\-\_\-tic2@{\-\_\-tic2}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{\-\_\-tic2}]{\setlength{\rightskip}{0pt plus 5cm}int \-\_\-tic2 = 0x1012}}\label{shared_2sonar_8c_aef57c859539d92064f8b8fa6d6ed6c69}
+\hypertarget{shared_2sonar_8c_ab279a0d0a1dbef356d011879e98d54dd}{\index{shared/sonar.\-c@{shared/sonar.\-c}!\-\_\-toc1@{\-\_\-toc1}}
+\index{\-\_\-toc1@{\-\_\-toc1}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{\-\_\-toc1}]{\setlength{\rightskip}{0pt plus 5cm}int \-\_\-toc1 = 0x1016}}\label{shared_2sonar_8c_ab279a0d0a1dbef356d011879e98d54dd}
+\hypertarget{shared_2sonar_8c_abe6af8d1e21a17069a3d09f0d7d2296c}{\index{shared/sonar.\-c@{shared/sonar.\-c}!\-\_\-toc5@{\-\_\-toc5}}
+\index{\-\_\-toc5@{\-\_\-toc5}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{\-\_\-toc5}]{\setlength{\rightskip}{0pt plus 5cm}int \-\_\-toc5 = 0x101\-E}}\label{shared_2sonar_8c_abe6af8d1e21a17069a3d09f0d7d2296c}
+\hypertarget{shared_2sonar_8c_a12c3dfe0abee002f7f04e26bd760df73}{\index{shared/sonar.\-c@{shared/sonar.\-c}!Rug\-Bat\-\_\-addr@{Rug\-Bat\-\_\-addr}}
+\index{Rug\-Bat\-\_\-addr@{Rug\-Bat\-\_\-addr}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{Rug\-Bat\-\_\-addr}]{\setlength{\rightskip}{0pt plus 5cm}int Rug\-Bat\-\_\-addr = 0x4000 + (\-Rug\-Bat\-\_\-jumper $\ast$ 0x1000)}}\label{shared_2sonar_8c_a12c3dfe0abee002f7f04e26bd760df73}
+\hypertarget{shared_2sonar_8c_a4ae53f2593e7b886f4f3ef5e57236cf6}{\index{shared/sonar.\-c@{shared/sonar.\-c}!Rug\-Bat\-\_\-jumper@{Rug\-Bat\-\_\-jumper}}
+\index{Rug\-Bat\-\_\-jumper@{Rug\-Bat\-\_\-jumper}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{Rug\-Bat\-\_\-jumper}]{\setlength{\rightskip}{0pt plus 5cm}int Rug\-Bat\-\_\-jumper = 0}}\label{shared_2sonar_8c_a4ae53f2593e7b886f4f3ef5e57236cf6}
+\hypertarget{shared_2sonar_8c_ab016905d43821e09cb2c489fc4071e2c}{\index{shared/sonar.\-c@{shared/sonar.\-c}!scan\-\_\-delay@{scan\-\_\-delay}}
+\index{scan\-\_\-delay@{scan\-\_\-delay}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{scan\-\_\-delay}]{\setlength{\rightskip}{0pt plus 5cm}float scan\-\_\-delay = 0.\-01}}\label{shared_2sonar_8c_ab016905d43821e09cb2c489fc4071e2c}
+\hypertarget{shared_2sonar_8c_a031b324910933b8d3c81e00421ae74a0}{\index{shared/sonar.\-c@{shared/sonar.\-c}!servo\-\_\-center@{servo\-\_\-center}}
+\index{servo\-\_\-center@{servo\-\_\-center}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{servo\-\_\-center}]{\setlength{\rightskip}{0pt plus 5cm}int servo\-\_\-center = 1475}}\label{shared_2sonar_8c_a031b324910933b8d3c81e00421ae74a0}
+\hypertarget{shared_2sonar_8c_a16173e2bababcc06ef9fccb294efb2c9}{\index{shared/sonar.\-c@{shared/sonar.\-c}!servo\-\_\-gain@{servo\-\_\-gain}}
+\index{servo\-\_\-gain@{servo\-\_\-gain}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{servo\-\_\-gain}]{\setlength{\rightskip}{0pt plus 5cm}int servo\-\_\-gain = 10}}\label{shared_2sonar_8c_a16173e2bababcc06ef9fccb294efb2c9}
+\hypertarget{shared_2sonar_8c_a5c515407443765ab45ab6a33685af08f}{\index{shared/sonar.\-c@{shared/sonar.\-c}!servo\-\_\-pos@{servo\-\_\-pos}}
+\index{servo\-\_\-pos@{servo\-\_\-pos}!shared/sonar.c@{shared/sonar.\-c}}
+\subsubsection[{servo\-\_\-pos}]{\setlength{\rightskip}{0pt plus 5cm}int servo\-\_\-pos = 0}}\label{shared_2sonar_8c_a5c515407443765ab45ab6a33685af08f}

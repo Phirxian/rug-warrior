@@ -1,0 +1,537 @@
+\hypertarget{lib__hb_8c}{\section{/root/\-Desktop/rug-\/warrior/libs/firmware/lib\-\_\-hb.c File Reference}
+\label{lib__hb_8c}\index{/root/\-Desktop/rug-\/warrior/libs/firmware/lib\-\_\-hb.\-c@{/root/\-Desktop/rug-\/warrior/libs/firmware/lib\-\_\-hb.\-c}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{lib__hb_8c_a6089a104ffb48b4c9705527f5287c418}{reset\-\_\-system\-\_\-time} ()
+\item 
+float \hyperlink{lib__hb_8c_ab53334924c8ee90693b8d48d8f74793d}{seconds} ()
+\item 
+void \hyperlink{lib__hb_8c_aa5113ec47ecf6d5c15614c9353cb9a08}{sleep} (float \hyperlink{lib__rw11_8c_ab53334924c8ee90693b8d48d8f74793d}{seconds})
+\item 
+void \hyperlink{lib__hb_8c_aa3650dfb953be0fa6fb4e6a625d3f777}{msleep} (long msec)
+\item 
+void \hyperlink{lib__hb_8c_a912dfbf994f4d4c7dff5aa2540ae4400}{beep} ()
+\item 
+void \hyperlink{lib__hb_8c_aabe762cad0063d9271131f3cc306a0e8}{tone} (float frequency, float length)
+\item 
+void \hyperlink{lib__hb_8c_ac01536f2a7ceb0d4c7e5e6a6d59c3871}{beeper\-\_\-on} ()
+\item 
+void \hyperlink{lib__hb_8c_a35b95a4506fe38aa8c942b178cdda428}{beeper\-\_\-off} ()
+\item 
+void \hyperlink{lib__hb_8c_aebfeaced338ec2353b5d133eebfb3ebb}{set\-\_\-beeper\-\_\-pitch} (float frequency)
+\item 
+void \hyperlink{lib__hb_8c_a55a302772158e1f15f1c90992f535272}{fd} (int \hyperlink{lib__rw11_8c_a90fe552c840051a4a1608b28de652fca}{motor})
+\item 
+void \hyperlink{lib__hb_8c_a3f5edef0489aca523a64a40e8fe16320}{bk} (int \hyperlink{lib__rw11_8c_a90fe552c840051a4a1608b28de652fca}{motor})
+\item 
+void \hyperlink{lib__hb_8c_ab32a8ae225a031b09e355e0813bec06f}{off} (int \hyperlink{lib__rw11_8c_a90fe552c840051a4a1608b28de652fca}{motor})
+\item 
+void \hyperlink{lib__hb_8c_ad6cb702751d048f67025d99608424796}{alloff} ()
+\item 
+void \hyperlink{lib__hb_8c_ae640dbf28bc931da0ff9d2369066c641}{ao} ()
+\item 
+void \hyperlink{lib__hb_8c_a8c2b1ad56a0ecf04cd02e951dfb6c9da}{motor} (int m, int speed)
+\item 
+void \hyperlink{lib__hb_8c_a5ad04cbb50e276d5c0c68928b6f72fbb}{\-\_\-set\-\_\-motor} (int \hyperlink{lib__rw11_8c_a90fe552c840051a4a1608b28de652fca}{motor}, int dir, int speed)
+\item 
+void \hyperlink{lib__hb_8c_a14a2f7ce8a5918b038b2f29adeb96771}{\-\_\-set\-\_\-motor\-\_\-speeds} ()
+\item 
+int \hyperlink{lib__hb_8c_a6e7a4ff7e766f85295d9095966336185}{stop\-\_\-button} ()
+\item 
+int \hyperlink{lib__hb_8c_a310f6d16b7c5f8c8c86a2ca3cc8fb537}{start\-\_\-button} ()
+\item 
+void \hyperlink{lib__hb_8c_a0cdb3a3b9e978d9470d299807e7238cd}{start\-\_\-press} ()
+\item 
+void \hyperlink{lib__hb_8c_a58ba1f6f55e0bade7190f4db26184683}{stop\-\_\-press} ()
+\item 
+int \hyperlink{lib__hb_8c_afa28db0c35c02b77341a6bed7aac0cb4}{analog} (int port)
+\item 
+int \hyperlink{lib__hb_8c_ab45352baf6161b1799e924c298b7384d}{\-\_\-raw\-\_\-analog} (int port)
+\item 
+int \hyperlink{lib__hb_8c_a3eb7db79d996b92f7063b65dc34b3484}{digital} (int port)
+\item 
+int \hyperlink{lib__hb_8c_af282a0e0f6790a16082e81d5e0689b57}{knob} ()
+\item 
+void \hyperlink{lib__hb_8c_a1299acec6790d8d455483b14b1917c37}{hog\-\_\-processor} ()
+\item 
+void \hyperlink{lib__hb_8c_ae01d4ace8ba76b19d6576a42ca149804}{system\-\_\-pwm\-\_\-on} ()
+\item 
+void \hyperlink{lib__hb_8c_a6d7aaee4c992a4706ee2f5c4d8e65f20}{system\-\_\-pwm\-\_\-off} ()
+\item 
+void \hyperlink{lib__hb_8c_a3e1bd2d0965fad8b3da59f6c566b7d99}{system\-\_\-print\-\_\-on} ()
+\item 
+void \hyperlink{lib__hb_8c_a491765ac88d0c8713c3b4b991c2ed8f5}{system\-\_\-print\-\_\-off} ()
+\item 
+int \hyperlink{lib__hb_8c_ad20b61b5f8df70199d073dea3c7676e6}{random} (int mod)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{lib__hb_8c_a7e268a46ff5738936191b2e2750db66a}{\-\_\-motor\-\_\-speed} \mbox{[}$\,$\mbox{]} = \{7, 7, 7, 7, 7, 7\}
+\item 
+int \hyperlink{lib__hb_8c_ab937b20dd80c12afb097e7b45379dc6b}{\-\_\-speed\-\_\-table} \mbox{[}$\,$\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{lib__hb_8c_ab45352baf6161b1799e924c298b7384d}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!\-\_\-raw\-\_\-analog@{\-\_\-raw\-\_\-analog}}
+\index{\-\_\-raw\-\_\-analog@{\-\_\-raw\-\_\-analog}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{\-\_\-raw\-\_\-analog}]{\setlength{\rightskip}{0pt plus 5cm}int \-\_\-raw\-\_\-analog (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_ab45352baf6161b1799e924c298b7384d}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{lib__hb_8c_ab45352baf6161b1799e924c298b7384d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__hb_8c_a5ad04cbb50e276d5c0c68928b6f72fbb}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!\-\_\-set\-\_\-motor@{\-\_\-set\-\_\-motor}}
+\index{\-\_\-set\-\_\-motor@{\-\_\-set\-\_\-motor}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{\-\_\-set\-\_\-motor}]{\setlength{\rightskip}{0pt plus 5cm}void \-\_\-set\-\_\-motor (
+\begin{DoxyParamCaption}
+\item[{int}]{motor, }
+\item[{int}]{dir, }
+\item[{int}]{speed}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a5ad04cbb50e276d5c0c68928b6f72fbb}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{lib__hb_8c_a5ad04cbb50e276d5c0c68928b6f72fbb_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{lib__hb_8c_a5ad04cbb50e276d5c0c68928b6f72fbb_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__hb_8c_a14a2f7ce8a5918b038b2f29adeb96771}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!\-\_\-set\-\_\-motor\-\_\-speeds@{\-\_\-set\-\_\-motor\-\_\-speeds}}
+\index{\-\_\-set\-\_\-motor\-\_\-speeds@{\-\_\-set\-\_\-motor\-\_\-speeds}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{\-\_\-set\-\_\-motor\-\_\-speeds}]{\setlength{\rightskip}{0pt plus 5cm}void \-\_\-set\-\_\-motor\-\_\-speeds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a14a2f7ce8a5918b038b2f29adeb96771}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib__hb_8c_a14a2f7ce8a5918b038b2f29adeb96771_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__hb_8c_ad6cb702751d048f67025d99608424796}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!alloff@{alloff}}
+\index{alloff@{alloff}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{alloff}]{\setlength{\rightskip}{0pt plus 5cm}void alloff (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_ad6cb702751d048f67025d99608424796}
+\hypertarget{lib__hb_8c_afa28db0c35c02b77341a6bed7aac0cb4}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!analog@{analog}}
+\index{analog@{analog}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{analog}]{\setlength{\rightskip}{0pt plus 5cm}int analog (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_afa28db0c35c02b77341a6bed7aac0cb4}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib__hb_8c_afa28db0c35c02b77341a6bed7aac0cb4_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__hb_8c_ae640dbf28bc931da0ff9d2369066c641}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!ao@{ao}}
+\index{ao@{ao}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{ao}]{\setlength{\rightskip}{0pt plus 5cm}void ao (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_ae640dbf28bc931da0ff9d2369066c641}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=186pt]{lib__hb_8c_ae640dbf28bc931da0ff9d2369066c641_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__hb_8c_a912dfbf994f4d4c7dff5aa2540ae4400}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!beep@{beep}}
+\index{beep@{beep}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{beep}]{\setlength{\rightskip}{0pt plus 5cm}void beep (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a912dfbf994f4d4c7dff5aa2540ae4400}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib__hb_8c_a912dfbf994f4d4c7dff5aa2540ae4400_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__hb_8c_a35b95a4506fe38aa8c942b178cdda428}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!beeper\-\_\-off@{beeper\-\_\-off}}
+\index{beeper\-\_\-off@{beeper\-\_\-off}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{beeper\-\_\-off}]{\setlength{\rightskip}{0pt plus 5cm}void beeper\-\_\-off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a35b95a4506fe38aa8c942b178cdda428}
+\hypertarget{lib__hb_8c_ac01536f2a7ceb0d4c7e5e6a6d59c3871}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!beeper\-\_\-on@{beeper\-\_\-on}}
+\index{beeper\-\_\-on@{beeper\-\_\-on}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{beeper\-\_\-on}]{\setlength{\rightskip}{0pt plus 5cm}void beeper\-\_\-on (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_ac01536f2a7ceb0d4c7e5e6a6d59c3871}
+\hypertarget{lib__hb_8c_a3f5edef0489aca523a64a40e8fe16320}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!bk@{bk}}
+\index{bk@{bk}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{bk}]{\setlength{\rightskip}{0pt plus 5cm}void bk (
+\begin{DoxyParamCaption}
+\item[{int}]{motor}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a3f5edef0489aca523a64a40e8fe16320}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib__hb_8c_a3f5edef0489aca523a64a40e8fe16320_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__hb_8c_a3eb7db79d996b92f7063b65dc34b3484}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!digital@{digital}}
+\index{digital@{digital}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{digital}]{\setlength{\rightskip}{0pt plus 5cm}int digital (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a3eb7db79d996b92f7063b65dc34b3484}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib__hb_8c_a3eb7db79d996b92f7063b65dc34b3484_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__hb_8c_a55a302772158e1f15f1c90992f535272}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!fd@{fd}}
+\index{fd@{fd}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{fd}]{\setlength{\rightskip}{0pt plus 5cm}void fd (
+\begin{DoxyParamCaption}
+\item[{int}]{motor}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a55a302772158e1f15f1c90992f535272}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib__hb_8c_a55a302772158e1f15f1c90992f535272_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__hb_8c_a1299acec6790d8d455483b14b1917c37}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!hog\-\_\-processor@{hog\-\_\-processor}}
+\index{hog\-\_\-processor@{hog\-\_\-processor}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{hog\-\_\-processor}]{\setlength{\rightskip}{0pt plus 5cm}void hog\-\_\-processor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a1299acec6790d8d455483b14b1917c37}
+\hypertarget{lib__hb_8c_af282a0e0f6790a16082e81d5e0689b57}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!knob@{knob}}
+\index{knob@{knob}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{knob}]{\setlength{\rightskip}{0pt plus 5cm}int knob (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_af282a0e0f6790a16082e81d5e0689b57}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{lib__hb_8c_af282a0e0f6790a16082e81d5e0689b57_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__hb_8c_a8c2b1ad56a0ecf04cd02e951dfb6c9da}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!motor@{motor}}
+\index{motor@{motor}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{motor}]{\setlength{\rightskip}{0pt plus 5cm}void motor (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{speed}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a8c2b1ad56a0ecf04cd02e951dfb6c9da}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib__hb_8c_a8c2b1ad56a0ecf04cd02e951dfb6c9da_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__hb_8c_aa3650dfb953be0fa6fb4e6a625d3f777}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!msleep@{msleep}}
+\index{msleep@{msleep}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{msleep}]{\setlength{\rightskip}{0pt plus 5cm}void msleep (
+\begin{DoxyParamCaption}
+\item[{long}]{msec}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_aa3650dfb953be0fa6fb4e6a625d3f777}
+\hypertarget{lib__hb_8c_ab32a8ae225a031b09e355e0813bec06f}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!off@{off}}
+\index{off@{off}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{off}]{\setlength{\rightskip}{0pt plus 5cm}void off (
+\begin{DoxyParamCaption}
+\item[{int}]{motor}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_ab32a8ae225a031b09e355e0813bec06f}
+\hypertarget{lib__hb_8c_ad20b61b5f8df70199d073dea3c7676e6}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!random@{random}}
+\index{random@{random}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{random}]{\setlength{\rightskip}{0pt plus 5cm}int random (
+\begin{DoxyParamCaption}
+\item[{int}]{mod}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_ad20b61b5f8df70199d073dea3c7676e6}
+\hypertarget{lib__hb_8c_a6089a104ffb48b4c9705527f5287c418}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!reset\-\_\-system\-\_\-time@{reset\-\_\-system\-\_\-time}}
+\index{reset\-\_\-system\-\_\-time@{reset\-\_\-system\-\_\-time}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{reset\-\_\-system\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}void reset\-\_\-system\-\_\-time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a6089a104ffb48b4c9705527f5287c418}
+\hypertarget{lib__hb_8c_ab53334924c8ee90693b8d48d8f74793d}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!seconds@{seconds}}
+\index{seconds@{seconds}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{seconds}]{\setlength{\rightskip}{0pt plus 5cm}float seconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_ab53334924c8ee90693b8d48d8f74793d}
+\hypertarget{lib__hb_8c_aebfeaced338ec2353b5d133eebfb3ebb}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!set\-\_\-beeper\-\_\-pitch@{set\-\_\-beeper\-\_\-pitch}}
+\index{set\-\_\-beeper\-\_\-pitch@{set\-\_\-beeper\-\_\-pitch}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{set\-\_\-beeper\-\_\-pitch}]{\setlength{\rightskip}{0pt plus 5cm}void set\-\_\-beeper\-\_\-pitch (
+\begin{DoxyParamCaption}
+\item[{float}]{frequency}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_aebfeaced338ec2353b5d133eebfb3ebb}
+\hypertarget{lib__hb_8c_aa5113ec47ecf6d5c15614c9353cb9a08}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!sleep@{sleep}}
+\index{sleep@{sleep}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{sleep}]{\setlength{\rightskip}{0pt plus 5cm}void sleep (
+\begin{DoxyParamCaption}
+\item[{float}]{seconds}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_aa5113ec47ecf6d5c15614c9353cb9a08}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{lib__hb_8c_aa5113ec47ecf6d5c15614c9353cb9a08_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__hb_8c_a310f6d16b7c5f8c8c86a2ca3cc8fb537}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!start\-\_\-button@{start\-\_\-button}}
+\index{start\-\_\-button@{start\-\_\-button}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{start\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}int start\-\_\-button (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a310f6d16b7c5f8c8c86a2ca3cc8fb537}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=264pt]{lib__hb_8c_a310f6d16b7c5f8c8c86a2ca3cc8fb537_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__hb_8c_a0cdb3a3b9e978d9470d299807e7238cd}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!start\-\_\-press@{start\-\_\-press}}
+\index{start\-\_\-press@{start\-\_\-press}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{start\-\_\-press}]{\setlength{\rightskip}{0pt plus 5cm}void start\-\_\-press (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a0cdb3a3b9e978d9470d299807e7238cd}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib__hb_8c_a0cdb3a3b9e978d9470d299807e7238cd_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__hb_8c_a6e7a4ff7e766f85295d9095966336185}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!stop\-\_\-button@{stop\-\_\-button}}
+\index{stop\-\_\-button@{stop\-\_\-button}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{stop\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}int stop\-\_\-button (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a6e7a4ff7e766f85295d9095966336185}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{lib__hb_8c_a6e7a4ff7e766f85295d9095966336185_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__hb_8c_a58ba1f6f55e0bade7190f4db26184683}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!stop\-\_\-press@{stop\-\_\-press}}
+\index{stop\-\_\-press@{stop\-\_\-press}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{stop\-\_\-press}]{\setlength{\rightskip}{0pt plus 5cm}void stop\-\_\-press (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a58ba1f6f55e0bade7190f4db26184683}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib__hb_8c_a58ba1f6f55e0bade7190f4db26184683_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__hb_8c_a491765ac88d0c8713c3b4b991c2ed8f5}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!system\-\_\-print\-\_\-off@{system\-\_\-print\-\_\-off}}
+\index{system\-\_\-print\-\_\-off@{system\-\_\-print\-\_\-off}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{system\-\_\-print\-\_\-off}]{\setlength{\rightskip}{0pt plus 5cm}void system\-\_\-print\-\_\-off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a491765ac88d0c8713c3b4b991c2ed8f5}
+\hypertarget{lib__hb_8c_a3e1bd2d0965fad8b3da59f6c566b7d99}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!system\-\_\-print\-\_\-on@{system\-\_\-print\-\_\-on}}
+\index{system\-\_\-print\-\_\-on@{system\-\_\-print\-\_\-on}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{system\-\_\-print\-\_\-on}]{\setlength{\rightskip}{0pt plus 5cm}void system\-\_\-print\-\_\-on (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a3e1bd2d0965fad8b3da59f6c566b7d99}
+\hypertarget{lib__hb_8c_a6d7aaee4c992a4706ee2f5c4d8e65f20}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!system\-\_\-pwm\-\_\-off@{system\-\_\-pwm\-\_\-off}}
+\index{system\-\_\-pwm\-\_\-off@{system\-\_\-pwm\-\_\-off}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{system\-\_\-pwm\-\_\-off}]{\setlength{\rightskip}{0pt plus 5cm}void system\-\_\-pwm\-\_\-off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_a6d7aaee4c992a4706ee2f5c4d8e65f20}
+\hypertarget{lib__hb_8c_ae01d4ace8ba76b19d6576a42ca149804}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!system\-\_\-pwm\-\_\-on@{system\-\_\-pwm\-\_\-on}}
+\index{system\-\_\-pwm\-\_\-on@{system\-\_\-pwm\-\_\-on}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{system\-\_\-pwm\-\_\-on}]{\setlength{\rightskip}{0pt plus 5cm}void system\-\_\-pwm\-\_\-on (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_ae01d4ace8ba76b19d6576a42ca149804}
+\hypertarget{lib__hb_8c_aabe762cad0063d9271131f3cc306a0e8}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!tone@{tone}}
+\index{tone@{tone}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{tone}]{\setlength{\rightskip}{0pt plus 5cm}void tone (
+\begin{DoxyParamCaption}
+\item[{float}]{frequency, }
+\item[{float}]{length}
+\end{DoxyParamCaption}
+)}}\label{lib__hb_8c_aabe762cad0063d9271131f3cc306a0e8}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{lib__hb_8c_aabe762cad0063d9271131f3cc306a0e8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{lib__hb_8c_a7e268a46ff5738936191b2e2750db66a}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!\-\_\-motor\-\_\-speed@{\-\_\-motor\-\_\-speed}}
+\index{\-\_\-motor\-\_\-speed@{\-\_\-motor\-\_\-speed}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{\-\_\-motor\-\_\-speed}]{\setlength{\rightskip}{0pt plus 5cm}int \-\_\-motor\-\_\-speed\mbox{[}$\,$\mbox{]} = \{7, 7, 7, 7, 7, 7\}}}\label{lib__hb_8c_a7e268a46ff5738936191b2e2750db66a}
+\hypertarget{lib__hb_8c_ab937b20dd80c12afb097e7b45379dc6b}{\index{lib\-\_\-hb.\-c@{lib\-\_\-hb.\-c}!\-\_\-speed\-\_\-table@{\-\_\-speed\-\_\-table}}
+\index{\-\_\-speed\-\_\-table@{\-\_\-speed\-\_\-table}!lib_hb.c@{lib\-\_\-hb.\-c}}
+\subsubsection[{\-\_\-speed\-\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}int \-\_\-speed\-\_\-table\mbox{[}$\,$\mbox{]}}}\label{lib__hb_8c_ab937b20dd80c12afb097e7b45379dc6b}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \{
+               0b00000000,  
+               0b00010001,
+               0b01001001,           
+               0b01010101,
+               0b01010111,
+               0b01110111,
+               0b01111111,
+                   0b11111111   
+             \}
+\end{DoxyCode}

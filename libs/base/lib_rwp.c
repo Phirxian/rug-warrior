@@ -70,8 +70,10 @@ int dip_switch(int which)
 /**             Rug Warrior specific functions and constants                 */
 /*****************************************************************************/
 
-/* Digital ports 1 and 2 are unassigned, digital ports 3,4,5,6 are outputs */
-/* Return a bit from any of the port A line */
+/*
+ * Digital ports 1 and 2 are unassigned, digital ports 3,4,5,6 are outputs
+ * Return a bit from any of the port A line
+ */
 int digital(int port)
 {
     return 1 & (peek(0x1000) >> (port & 7));
@@ -85,12 +87,14 @@ int left_shaft()
 /* Return state of right shaft encoder: */
 int right_shaft()
 {
-    return (peek(0x1000) & 0b10000000 && 1);  /* 0x80 -> 1 */
+    return (peek(0x1000)) < 0;  /* 0x80 -> 1 */
 }
 
 
-/* Indices for accessing sensors connected to the A/D converter.
-   e.g. to read value of right photo cells use analog(photo_right) */
+/*
+ * Indices for accessing sensors connected to the A/D converter.
+ * e.g. to read value of right photo cells use analog(photo_right)
+ */
 
 int photo_right = 0;
 
@@ -195,9 +199,9 @@ int bumper()
 }
 
 /* ir_detect returns:
-     0b00 => no reflection, 0b01 => reflection on right,
-     0b10 => reflection on left, 0b11 => reflection on both sides */
-
+ *    0b00 => no reflection, 0b01 => reflection on right,
+ *    0b10 => reflection on left, 0b11 => reflection on both sides
+ */
 int ir_detect()
 {
     int val1, val2, val3;

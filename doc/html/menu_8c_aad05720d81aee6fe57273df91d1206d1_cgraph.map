@@ -1,0 +1,5 @@
+<map id="wait_button" name="wait_button">
+<area shape="rect" id="node3" href="$base_2lib__rwp_8c.html#a922b44bdf1062f6836a7e1774c74ce35" title="choose_button" alt="" coords="315,5,432,32"/>
+<area shape="rect" id="node5" href="$base_2lib__rwp_8c.html#a2c2600c101c9082504db325bb20996c8" title="escape_button" alt="" coords="315,68,432,95"/>
+<area shape="rect" id="node7" href="$menu_8c.html#ade420648ad5e270eb49e76bc71fcb203" title="chosen_button" alt="" coords="149,31,267,57"/>
+</map>

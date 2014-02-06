@@ -73,14 +73,6 @@ int sec(float secs)     /* Convert seconds to milliseconds */
     (int)(1000. * secs);
 }
 
-int abs(int arg)                /* Not in C ??? */
-{
-    if(arg < 0)
-        return -1 * arg;
-    else
-        return arg;
-}
-
 void wait(int milli_seconds)    /* Don't busy wait, check a timer */
 {
     long timer_a;

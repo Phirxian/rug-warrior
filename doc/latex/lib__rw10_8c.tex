@@ -1,0 +1,423 @@
+\hypertarget{lib__rw10_8c}{\section{/root/\-Desktop/rug-\/warrior/libs/firmware/lib\-\_\-rw10.c File Reference}
+\label{lib__rw10_8c}\index{/root/\-Desktop/rug-\/warrior/libs/firmware/lib\-\_\-rw10.\-c@{/root/\-Desktop/rug-\/warrior/libs/firmware/lib\-\_\-rw10.\-c}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{lib__rw10_8c_a2284a454776748e677a7eda5d64ef0fe}{init\-\_\-on\-\_\-load} ()
+\item 
+void \hyperlink{lib__rw10_8c_a51dbebf8f091329175ab0d44426a40c6}{frob} (int loc, int bits)
+\item 
+void \hyperlink{lib__rw10_8c_a6089a104ffb48b4c9705527f5287c418}{reset\-\_\-system\-\_\-time} ()
+\item 
+float \hyperlink{lib__rw10_8c_ab53334924c8ee90693b8d48d8f74793d}{seconds} ()
+\item 
+void \hyperlink{lib__rw10_8c_aa5113ec47ecf6d5c15614c9353cb9a08}{sleep} (float \hyperlink{lib__rw11_8c_ab53334924c8ee90693b8d48d8f74793d}{seconds})
+\item 
+void \hyperlink{lib__rw10_8c_aa3650dfb953be0fa6fb4e6a625d3f777}{msleep} (long msec)
+\item 
+void \hyperlink{lib__rw10_8c_a912dfbf994f4d4c7dff5aa2540ae4400}{beep} ()
+\item 
+void \hyperlink{lib__rw10_8c_aabe762cad0063d9271131f3cc306a0e8}{tone} (float frequency, float length)
+\item 
+void \hyperlink{lib__rw10_8c_ac01536f2a7ceb0d4c7e5e6a6d59c3871}{beeper\-\_\-on} ()
+\item 
+void \hyperlink{lib__rw10_8c_a35b95a4506fe38aa8c942b178cdda428}{beeper\-\_\-off} ()
+\item 
+void \hyperlink{lib__rw10_8c_aebfeaced338ec2353b5d133eebfb3ebb}{set\-\_\-beeper\-\_\-pitch} (float frequency)
+\item 
+long \hyperlink{lib__rw10_8c_a3ced1c4d929dec5fc84c7a905001a948}{timer\-\_\-create\-\_\-mseconds} (long timeout)
+\item 
+long \hyperlink{lib__rw10_8c_a103a241f9babfefa4a5a754bb2368253}{timer\-\_\-create\-\_\-seconds} (float timeout)
+\item 
+int \hyperlink{lib__rw10_8c_a2a0f0ec3bd9ebf537a7a728b9b837f0e}{timer\-\_\-done} (long timer)
+\item 
+void \hyperlink{lib__rw10_8c_a9907891a049d7bb046be768dfc7717e8}{init\-\_\-motors} ()
+\item 
+void \hyperlink{lib__rw10_8c_ad1c6fb1c48bda68dd726a3c7c75c1e9a}{fd} (int m)
+\item 
+void \hyperlink{lib__rw10_8c_abb00dd3c5b4a9c477dd41a7bdd71e31d}{bk} (int m)
+\item 
+void \hyperlink{lib__rw10_8c_a2298e12b41adcad35e4793722d96f04e}{off} (int m)
+\item 
+void \hyperlink{lib__rw10_8c_ad6cb702751d048f67025d99608424796}{alloff} ()
+\item 
+void \hyperlink{lib__rw10_8c_ae640dbf28bc931da0ff9d2369066c641}{ao} ()
+\item 
+void \hyperlink{lib__rw10_8c_a8c2b1ad56a0ecf04cd02e951dfb6c9da}{motor} (int m, int speed)
+\item 
+int \hyperlink{lib__rw10_8c_a3eb7db79d996b92f7063b65dc34b3484}{digital} (int port)
+\item 
+int \hyperlink{lib__rw10_8c_afa28db0c35c02b77341a6bed7aac0cb4}{analog} (int port)
+\item 
+void \hyperlink{lib__rw10_8c_a1e7915e9691641f3cfb8658e5de4a7c7}{timer2} (int on)
+\item 
+void \hyperlink{lib__rw10_8c_a38b4eedef785b9c06fbdd46bcefbdb0f}{timer3} (int on)
+\item 
+void \hyperlink{lib__rw10_8c_a1299acec6790d8d455483b14b1917c37}{hog\-\_\-processor} ()
+\item 
+void \hyperlink{lib__rw10_8c_ae01d4ace8ba76b19d6576a42ca149804}{system\-\_\-pwm\-\_\-on} ()
+\item 
+void \hyperlink{lib__rw10_8c_a6d7aaee4c992a4706ee2f5c4d8e65f20}{system\-\_\-pwm\-\_\-off} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{lib__rw10_8c_a7eada0aa6e78d377f4f8754adc970e82}{\-\_\-foobar} = \hyperlink{lib__rw10_8c_a2284a454776748e677a7eda5d64ef0fe}{init\-\_\-on\-\_\-load}()
+\item 
+int \hyperlink{lib__rw10_8c_ab937b20dd80c12afb097e7b45379dc6b}{\-\_\-speed\-\_\-table} \mbox{[}$\,$\mbox{]}
+\item 
+int \hyperlink{lib__rw10_8c_ad2418a7bce80afb6f10e4db918286882}{port\-\_\-a} = 0x1000
+\item 
+int \hyperlink{lib__rw10_8c_a410101f24c9b4159ee85224bb98396d3}{port\-\_\-d} = 0x1008
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{lib__rw10_8c_ad6cb702751d048f67025d99608424796}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!alloff@{alloff}}
+\index{alloff@{alloff}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{alloff}]{\setlength{\rightskip}{0pt plus 5cm}void alloff (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_ad6cb702751d048f67025d99608424796}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{lib__rw10_8c_ad6cb702751d048f67025d99608424796_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__rw10_8c_afa28db0c35c02b77341a6bed7aac0cb4}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!analog@{analog}}
+\index{analog@{analog}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{analog}]{\setlength{\rightskip}{0pt plus 5cm}int analog (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_afa28db0c35c02b77341a6bed7aac0cb4}
+\hypertarget{lib__rw10_8c_ae640dbf28bc931da0ff9d2369066c641}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!ao@{ao}}
+\index{ao@{ao}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{ao}]{\setlength{\rightskip}{0pt plus 5cm}void ao (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_ae640dbf28bc931da0ff9d2369066c641}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{lib__rw10_8c_ae640dbf28bc931da0ff9d2369066c641_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__rw10_8c_a912dfbf994f4d4c7dff5aa2540ae4400}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!beep@{beep}}
+\index{beep@{beep}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{beep}]{\setlength{\rightskip}{0pt plus 5cm}void beep (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_a912dfbf994f4d4c7dff5aa2540ae4400}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lib__rw10_8c_a912dfbf994f4d4c7dff5aa2540ae4400_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__rw10_8c_a35b95a4506fe38aa8c942b178cdda428}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!beeper\-\_\-off@{beeper\-\_\-off}}
+\index{beeper\-\_\-off@{beeper\-\_\-off}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{beeper\-\_\-off}]{\setlength{\rightskip}{0pt plus 5cm}void beeper\-\_\-off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_a35b95a4506fe38aa8c942b178cdda428}
+\hypertarget{lib__rw10_8c_ac01536f2a7ceb0d4c7e5e6a6d59c3871}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!beeper\-\_\-on@{beeper\-\_\-on}}
+\index{beeper\-\_\-on@{beeper\-\_\-on}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{beeper\-\_\-on}]{\setlength{\rightskip}{0pt plus 5cm}void beeper\-\_\-on (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_ac01536f2a7ceb0d4c7e5e6a6d59c3871}
+\hypertarget{lib__rw10_8c_abb00dd3c5b4a9c477dd41a7bdd71e31d}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!bk@{bk}}
+\index{bk@{bk}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{bk}]{\setlength{\rightskip}{0pt plus 5cm}void bk (
+\begin{DoxyParamCaption}
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_abb00dd3c5b4a9c477dd41a7bdd71e31d}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{lib__rw10_8c_abb00dd3c5b4a9c477dd41a7bdd71e31d_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__rw10_8c_a3eb7db79d996b92f7063b65dc34b3484}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!digital@{digital}}
+\index{digital@{digital}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{digital}]{\setlength{\rightskip}{0pt plus 5cm}int digital (
+\begin{DoxyParamCaption}
+\item[{int}]{port}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_a3eb7db79d996b92f7063b65dc34b3484}
+\hypertarget{lib__rw10_8c_ad1c6fb1c48bda68dd726a3c7c75c1e9a}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!fd@{fd}}
+\index{fd@{fd}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{fd}]{\setlength{\rightskip}{0pt plus 5cm}void fd (
+\begin{DoxyParamCaption}
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_ad1c6fb1c48bda68dd726a3c7c75c1e9a}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{lib__rw10_8c_ad1c6fb1c48bda68dd726a3c7c75c1e9a_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__rw10_8c_a51dbebf8f091329175ab0d44426a40c6}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!frob@{frob}}
+\index{frob@{frob}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{frob}]{\setlength{\rightskip}{0pt plus 5cm}void frob (
+\begin{DoxyParamCaption}
+\item[{int}]{loc, }
+\item[{int}]{bits}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_a51dbebf8f091329175ab0d44426a40c6}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{lib__rw10_8c_a51dbebf8f091329175ab0d44426a40c6_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__rw10_8c_a1299acec6790d8d455483b14b1917c37}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!hog\-\_\-processor@{hog\-\_\-processor}}
+\index{hog\-\_\-processor@{hog\-\_\-processor}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{hog\-\_\-processor}]{\setlength{\rightskip}{0pt plus 5cm}void hog\-\_\-processor (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_a1299acec6790d8d455483b14b1917c37}
+\hypertarget{lib__rw10_8c_a9907891a049d7bb046be768dfc7717e8}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!init\-\_\-motors@{init\-\_\-motors}}
+\index{init\-\_\-motors@{init\-\_\-motors}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{init\-\_\-motors}]{\setlength{\rightskip}{0pt plus 5cm}void init\-\_\-motors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_a9907891a049d7bb046be768dfc7717e8}
+\hypertarget{lib__rw10_8c_a2284a454776748e677a7eda5d64ef0fe}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!init\-\_\-on\-\_\-load@{init\-\_\-on\-\_\-load}}
+\index{init\-\_\-on\-\_\-load@{init\-\_\-on\-\_\-load}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{init\-\_\-on\-\_\-load}]{\setlength{\rightskip}{0pt plus 5cm}int init\-\_\-on\-\_\-load (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_a2284a454776748e677a7eda5d64ef0fe}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{lib__rw10_8c_a2284a454776748e677a7eda5d64ef0fe_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__rw10_8c_a8c2b1ad56a0ecf04cd02e951dfb6c9da}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!motor@{motor}}
+\index{motor@{motor}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{motor}]{\setlength{\rightskip}{0pt plus 5cm}void motor (
+\begin{DoxyParamCaption}
+\item[{int}]{m, }
+\item[{int}]{speed}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_a8c2b1ad56a0ecf04cd02e951dfb6c9da}
+\hypertarget{lib__rw10_8c_aa3650dfb953be0fa6fb4e6a625d3f777}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!msleep@{msleep}}
+\index{msleep@{msleep}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{msleep}]{\setlength{\rightskip}{0pt plus 5cm}void msleep (
+\begin{DoxyParamCaption}
+\item[{long}]{msec}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_aa3650dfb953be0fa6fb4e6a625d3f777}
+\hypertarget{lib__rw10_8c_a2298e12b41adcad35e4793722d96f04e}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!off@{off}}
+\index{off@{off}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{off}]{\setlength{\rightskip}{0pt plus 5cm}void off (
+\begin{DoxyParamCaption}
+\item[{int}]{m}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_a2298e12b41adcad35e4793722d96f04e}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{lib__rw10_8c_a2298e12b41adcad35e4793722d96f04e_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__rw10_8c_a6089a104ffb48b4c9705527f5287c418}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!reset\-\_\-system\-\_\-time@{reset\-\_\-system\-\_\-time}}
+\index{reset\-\_\-system\-\_\-time@{reset\-\_\-system\-\_\-time}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{reset\-\_\-system\-\_\-time}]{\setlength{\rightskip}{0pt plus 5cm}void reset\-\_\-system\-\_\-time (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_a6089a104ffb48b4c9705527f5287c418}
+\hypertarget{lib__rw10_8c_ab53334924c8ee90693b8d48d8f74793d}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!seconds@{seconds}}
+\index{seconds@{seconds}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{seconds}]{\setlength{\rightskip}{0pt plus 5cm}float seconds (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_ab53334924c8ee90693b8d48d8f74793d}
+\hypertarget{lib__rw10_8c_aebfeaced338ec2353b5d133eebfb3ebb}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!set\-\_\-beeper\-\_\-pitch@{set\-\_\-beeper\-\_\-pitch}}
+\index{set\-\_\-beeper\-\_\-pitch@{set\-\_\-beeper\-\_\-pitch}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{set\-\_\-beeper\-\_\-pitch}]{\setlength{\rightskip}{0pt plus 5cm}void set\-\_\-beeper\-\_\-pitch (
+\begin{DoxyParamCaption}
+\item[{float}]{frequency}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_aebfeaced338ec2353b5d133eebfb3ebb}
+\hypertarget{lib__rw10_8c_aa5113ec47ecf6d5c15614c9353cb9a08}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!sleep@{sleep}}
+\index{sleep@{sleep}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{sleep}]{\setlength{\rightskip}{0pt plus 5cm}void sleep (
+\begin{DoxyParamCaption}
+\item[{float}]{seconds}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_aa5113ec47ecf6d5c15614c9353cb9a08}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{lib__rw10_8c_aa5113ec47ecf6d5c15614c9353cb9a08_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{lib__rw10_8c_a6d7aaee4c992a4706ee2f5c4d8e65f20}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!system\-\_\-pwm\-\_\-off@{system\-\_\-pwm\-\_\-off}}
+\index{system\-\_\-pwm\-\_\-off@{system\-\_\-pwm\-\_\-off}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{system\-\_\-pwm\-\_\-off}]{\setlength{\rightskip}{0pt plus 5cm}void system\-\_\-pwm\-\_\-off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_a6d7aaee4c992a4706ee2f5c4d8e65f20}
+\hypertarget{lib__rw10_8c_ae01d4ace8ba76b19d6576a42ca149804}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!system\-\_\-pwm\-\_\-on@{system\-\_\-pwm\-\_\-on}}
+\index{system\-\_\-pwm\-\_\-on@{system\-\_\-pwm\-\_\-on}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{system\-\_\-pwm\-\_\-on}]{\setlength{\rightskip}{0pt plus 5cm}void system\-\_\-pwm\-\_\-on (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_ae01d4ace8ba76b19d6576a42ca149804}
+\hypertarget{lib__rw10_8c_a1e7915e9691641f3cfb8658e5de4a7c7}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!timer2@{timer2}}
+\index{timer2@{timer2}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{timer2}]{\setlength{\rightskip}{0pt plus 5cm}void timer2 (
+\begin{DoxyParamCaption}
+\item[{int}]{on}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_a1e7915e9691641f3cfb8658e5de4a7c7}
+\hypertarget{lib__rw10_8c_a38b4eedef785b9c06fbdd46bcefbdb0f}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!timer3@{timer3}}
+\index{timer3@{timer3}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{timer3}]{\setlength{\rightskip}{0pt plus 5cm}void timer3 (
+\begin{DoxyParamCaption}
+\item[{int}]{on}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_a38b4eedef785b9c06fbdd46bcefbdb0f}
+\hypertarget{lib__rw10_8c_a3ced1c4d929dec5fc84c7a905001a948}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!timer\-\_\-create\-\_\-mseconds@{timer\-\_\-create\-\_\-mseconds}}
+\index{timer\-\_\-create\-\_\-mseconds@{timer\-\_\-create\-\_\-mseconds}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{timer\-\_\-create\-\_\-mseconds}]{\setlength{\rightskip}{0pt plus 5cm}long timer\-\_\-create\-\_\-mseconds (
+\begin{DoxyParamCaption}
+\item[{long}]{timeout}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_a3ced1c4d929dec5fc84c7a905001a948}
+\hypertarget{lib__rw10_8c_a103a241f9babfefa4a5a754bb2368253}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!timer\-\_\-create\-\_\-seconds@{timer\-\_\-create\-\_\-seconds}}
+\index{timer\-\_\-create\-\_\-seconds@{timer\-\_\-create\-\_\-seconds}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{timer\-\_\-create\-\_\-seconds}]{\setlength{\rightskip}{0pt plus 5cm}long timer\-\_\-create\-\_\-seconds (
+\begin{DoxyParamCaption}
+\item[{float}]{timeout}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_a103a241f9babfefa4a5a754bb2368253}
+\hypertarget{lib__rw10_8c_a2a0f0ec3bd9ebf537a7a728b9b837f0e}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!timer\-\_\-done@{timer\-\_\-done}}
+\index{timer\-\_\-done@{timer\-\_\-done}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{timer\-\_\-done}]{\setlength{\rightskip}{0pt plus 5cm}int timer\-\_\-done (
+\begin{DoxyParamCaption}
+\item[{long}]{timer}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_a2a0f0ec3bd9ebf537a7a728b9b837f0e}
+\hypertarget{lib__rw10_8c_aabe762cad0063d9271131f3cc306a0e8}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!tone@{tone}}
+\index{tone@{tone}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{tone}]{\setlength{\rightskip}{0pt plus 5cm}void tone (
+\begin{DoxyParamCaption}
+\item[{float}]{frequency, }
+\item[{float}]{length}
+\end{DoxyParamCaption}
+)}}\label{lib__rw10_8c_aabe762cad0063d9271131f3cc306a0e8}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{lib__rw10_8c_aabe762cad0063d9271131f3cc306a0e8_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{lib__rw10_8c_a7eada0aa6e78d377f4f8754adc970e82}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!\-\_\-foobar@{\-\_\-foobar}}
+\index{\-\_\-foobar@{\-\_\-foobar}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{\-\_\-foobar}]{\setlength{\rightskip}{0pt plus 5cm}int \-\_\-foobar = {\bf init\-\_\-on\-\_\-load}()}}\label{lib__rw10_8c_a7eada0aa6e78d377f4f8754adc970e82}
+\hypertarget{lib__rw10_8c_ab937b20dd80c12afb097e7b45379dc6b}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!\-\_\-speed\-\_\-table@{\-\_\-speed\-\_\-table}}
+\index{\-\_\-speed\-\_\-table@{\-\_\-speed\-\_\-table}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{\-\_\-speed\-\_\-table}]{\setlength{\rightskip}{0pt plus 5cm}int \-\_\-speed\-\_\-table\mbox{[}$\,$\mbox{]}}}\label{lib__rw10_8c_ab937b20dd80c12afb097e7b45379dc6b}
+{\bfseries Initial value\-:}
+\begin{DoxyCode}
+= \{
+                   0b00000000,  
+               0b00010001,
+               0b01001001,           
+               0b01010101,
+               0b01010111,
+               0b01110111,
+               0b01111111,
+                   0b11111111   
+             \}
+\end{DoxyCode}
+\hypertarget{lib__rw10_8c_ad2418a7bce80afb6f10e4db918286882}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!port\-\_\-a@{port\-\_\-a}}
+\index{port\-\_\-a@{port\-\_\-a}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{port\-\_\-a}]{\setlength{\rightskip}{0pt plus 5cm}int port\-\_\-a = 0x1000}}\label{lib__rw10_8c_ad2418a7bce80afb6f10e4db918286882}
+\hypertarget{lib__rw10_8c_a410101f24c9b4159ee85224bb98396d3}{\index{lib\-\_\-rw10.\-c@{lib\-\_\-rw10.\-c}!port\-\_\-d@{port\-\_\-d}}
+\index{port\-\_\-d@{port\-\_\-d}!lib_rw10.c@{lib\-\_\-rw10.\-c}}
+\subsubsection[{port\-\_\-d}]{\setlength{\rightskip}{0pt plus 5cm}int port\-\_\-d = 0x1008}}\label{lib__rw10_8c_a410101f24c9b4159ee85224bb98396d3}

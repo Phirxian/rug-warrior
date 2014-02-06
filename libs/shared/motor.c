@@ -1,19 +1,26 @@
 #define R_MOTOR 1
 #define L_MOTOR 2
 
-float cmToFeet(float cm)
-{
-    return cm/30.48;
-}
-
+/*
+ * calculate the time needed to run
+ * in x feet with given speed [-100 : 100]
+ */
 float feetToMotor(float feet, int speed)
 {
-    return (feet/0.67)*(100/speed);
+    float tmp = (float)speed;
+    float inv = 100./tmp;
+    return (feet/0.67)*inv;
 }
 
-void rotate(int flags, int angle, int speed)
+/*
+ * flags : R_MOTOR, L_MOTOR, R_MOTOR | L_MOTOR
+ * angle : degree
+ * speed : [-100 : 0] U [0 : 100]
+ */
+void rotate(int flags, float angle, int speed)
 {
     int invert;
+    float radius = 14.;
 
     if(flags < 0 || flags > 3)
         return;
@@ -22,22 +29,16 @@ void rotate(int flags, int angle, int speed)
 
     if(flags == 3)
     {
-        angle /= 2;
+        angle /= 2.;
         invert = -1;
-    }
-
-    if(speed < 0)
-    {
-        invert *= -1;
-        speed *= -1;
+        radius /= 2.;
     }
 
     motor(0, speed*(flags & 1));
     motor(1, speed*(flags & 2)*invert);
 
-    /** calculate the time for the angle **/
-    /** see degree_to_pulse **/
-    sleep(feetToMotor((float)angle/100.), speed);
+    /* calculate the time for the angle */
+    sleep(feetToMotor(cmToFeet((angle/360.)*2.*PI*radius), speed));
 
     stop();
 }

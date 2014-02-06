@@ -67,13 +67,67 @@
 		<Unit filename="base/tunes.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="comportment/1meter.c">
+		<Unit filename="behavior/1meter.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="comportment/rotate.c">
+		<Unit filename="behavior/rotate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="shared/convert.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="shared/motor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="shared/screen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="shared/sonar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/aie.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/analog5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/analog6.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/analog7.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/bumper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/ir.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/lcd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/mic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/motor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/photo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/piezo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/shaftenc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/sonard.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="test/user_digital.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>

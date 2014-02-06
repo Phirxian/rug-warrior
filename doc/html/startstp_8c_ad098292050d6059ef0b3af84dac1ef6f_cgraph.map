@@ -1,0 +1,18 @@
+<map id="start_machine" name="start_machine">
+<area shape="rect" id="node3" href="$base_2lib__rwp_8c.html#a2c2600c101c9082504db325bb20996c8" title="escape_button" alt="" coords="200,5,317,32"/>
+<area shape="rect" id="node5" href="$base_2lib__rwp_8c.html#a5ed481f88895f103240c678460c12968" title="dip_switch" alt="" coords="215,56,302,83"/>
+<area shape="rect" id="node7" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="231,107,287,133"/>
+<area shape="rect" id="node11" href="$base_2lib__rwp_8c.html#a922b44bdf1062f6836a7e1774c74ce35" title="choose_button" alt="" coords="200,157,317,184"/>
+<area shape="rect" id="node13" href="$base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="423,221,489,248"/>
+<area shape="rect" id="node15" href="$startstp_8c.html#aad36a7650fcfc97a17682202424cd242" title="_average_analog_sensor" alt="" coords="168,259,349,285"/>
+<area shape="rect" id="node18" href="$base_2lib__ic_8c.html#a6089a104ffb48b4c9705527f5287c418" title="reset_system_time" alt="" coords="186,309,331,336"/>
+<area shape="rect" id="node20" href="$r22__ir_8c.html#a211f904daceebd1873f7aae7b3f8c7f3" title="ir_transmit_on" alt="" coords="201,360,316,387"/>
+<area shape="rect" id="node22" href="$startstp_8c.html#af49aa2ff6fdc9c54196bcec458bb3af4" title="_stop_machine" alt="" coords="199,411,318,437"/>
+<area shape="rect" id="node9" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="421,107,491,133"/>
+<area shape="rect" id="node24" href="$base_2lib__ic_8c.html#ab53334924c8ee90693b8d48d8f74793d" title="seconds" alt="" coords="419,284,493,311"/>
+<area shape="rect" id="node26" href="$base_2lib__ic_8c.html#a1299acec6790d8d455483b14b1917c37" title="hog_processor" alt="" coords="398,335,514,361"/>
+<area shape="rect" id="node28" href="$r22__ir_8c.html#a66be7ce57773daca4a1555e3cad91181" title="ir_transmit_off" alt="" coords="399,385,513,412"/>
+<area shape="rect" id="node30" href="$base_2lib__rwp_8c.html#ad6cb702751d048f67025d99608424796" title="alloff" alt="" coords="430,436,482,463"/>
+<area shape="rect" id="node32" href="$servo_8c.html#a4762aeae74c720d62d44f53f879b01d3" title="servo_off" alt="" coords="416,487,496,513"/>
+<area shape="rect" id="node34" href="$base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428" title="beeper_off" alt="" coords="411,537,501,564"/>
+</map>

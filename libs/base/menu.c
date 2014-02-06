@@ -13,22 +13,6 @@
 #define CYCLE_B   5
 
 /*****************************button routines*************************/
-int min(int a,int b)
-{
-    if(a<b)
-        return(a);
-    else
-        return(b);
-}
-
-float fmin(float a,float b)
-{
-    if(a<b)
-        return(a);
-    else
-        return(b);
-}
-
 int chosen_button()
 {
     /* returns which button is depressed.  If both, choose has precedence */
@@ -40,10 +24,12 @@ int chosen_button()
         return NEITHER_B;
 }
 
+/*
+ * wait until button is depressed(DOWN_B), released(UP_B), or both(CYCLE_B) and
+ * return which button if any activated the sequence
+ */
 int wait_button(int i)
 {
-    /* wait until button is depressed(DOWN_B), released(UP_B), or both(CYCLE_B) and
-         return which button if any activated the sequence */
     if(i==DOWN_B)
     {
         while(!(choose_button() || escape_button()));
@@ -74,7 +60,9 @@ int wait_button(int i)
 }
 
 /**********************Menu selection routines*****************************/
-/*returns an integer value between min_val and max_val chosen using frob */
+/*
+ * returns an integer value between min_val and max_val chosen using frob
+ */
 int select_int_value(char s[],int min_val,int max_val)
 {
     int val, coarseness=(255)/(max_val-min_val),selection;
@@ -115,7 +103,9 @@ float select_float_value(char s[],float min_val,float max_val)
         return fmin(val,max_val);
 }
 
-/* menu selects a line of a string from a composite string with n lines*/
+/*
+ * menu selects a line of a string from a composite string with n lines
+ */
 int select_string(char choices[][],int n)
 {
     int selection,last_selection=-1,coarseness;

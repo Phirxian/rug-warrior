@@ -1,0 +1,11 @@
+<map id="analog" name="analog">
+<area shape="rect" id="node3" href="$diagnostic_8c.html#a42755f36768d92ecf643a73490488309" title="view_average_port" alt="" coords="140,5,281,32"/>
+<area shape="rect" id="node5" href="$diagnostic_8c.html#a9c7615094fa3d462fcd91432cd0d9a3d" title="view_inputs" alt="" coords="163,56,258,83"/>
+<area shape="rect" id="node9" href="$base_2lib__rwp_8c.html#a6368ba2819f669bf17962d89b3fca203" title="bumper" alt="" coords="175,107,247,133"/>
+<area shape="rect" id="node13" href="$startstp_8c.html#ad098292050d6059ef0b3af84dac1ef6f" title="start_machine" alt="" coords="349,183,464,209"/>
+<area shape="rect" id="node15" href="$startstp_8c.html#aad36a7650fcfc97a17682202424cd242" title="_average_analog_sensor" alt="" coords="120,208,301,235"/>
+<area shape="rect" id="node18" href="$lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="181,259,241,285"/>
+<area shape="rect" id="node20" href="$analog5_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="183,309,238,336"/>
+<area shape="rect" id="node7" href="$diagnostic_8c.html#ab93a0ba8748af7794b42a8c381480915" title="control_panel" alt="" coords="353,56,461,83"/>
+<area shape="rect" id="node11" href="$bumper_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="379,107,434,133"/>
+</map>

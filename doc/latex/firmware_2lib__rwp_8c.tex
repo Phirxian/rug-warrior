@@ -1,0 +1,150 @@
+\hypertarget{firmware_2lib__rwp_8c}{\section{/root/\-Desktop/rug-\/warrior/libs/firmware/lib\-\_\-rwp.c File Reference}
+\label{firmware_2lib__rwp_8c}\index{/root/\-Desktop/rug-\/warrior/libs/firmware/lib\-\_\-rwp.\-c@{/root/\-Desktop/rug-\/warrior/libs/firmware/lib\-\_\-rwp.\-c}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{firmware_2lib__rwp_8c_a49fe73be96a0657e6a3ea6669cdc9f25}{left\-\_\-shaft} ()
+\item 
+int \hyperlink{firmware_2lib__rwp_8c_a759cd6a2d214a5b16d6e01d114385039}{right\-\_\-shaft} ()
+\item 
+int \hyperlink{firmware_2lib__rwp_8c_adac0e25b6c0b34901f454931a366bf51}{init\-\_\-motors} ()
+\item 
+void \hyperlink{firmware_2lib__rwp_8c_a8c528baf37154d347366083f0f816846}{stop} ()
+\item 
+void \hyperlink{firmware_2lib__rwp_8c_a9032e2468648895fa936f08f6a831bf9}{drive} (int trans\-\_\-vel, int rot\-\_\-vel)
+\item 
+int \hyperlink{firmware_2lib__rwp_8c_a6368ba2819f669bf17962d89b3fca203}{bumper} ()
+\item 
+int \hyperlink{firmware_2lib__rwp_8c_a0bcda6b2106a42058fe25734f7b6efc0}{ir\-\_\-detect} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{firmware_2lib__rwp_8c_abf8c764cb5f5289ee3688871415dd737}{photo\-\_\-right} = 0
+\item 
+int \hyperlink{firmware_2lib__rwp_8c_a80003173b2b20936eebe10521f94b503}{photo\-\_\-left} = 1
+\item 
+int \hyperlink{firmware_2lib__rwp_8c_a1793fe255c482750301ca7e5ea57874d}{microphone} = 2
+\item 
+int \hyperlink{firmware_2lib__rwp_8c_aadb76e04ceadfab884568976b02ccb95}{T\-O\-Cx} \mbox{[}2\mbox{]} = \{0x1018, 0x101\-A\}
+\item 
+int \hyperlink{firmware_2lib__rwp_8c_a40bc49694db9b112049f8a604d1a0b5b}{dir\-\_\-mask} \mbox{[}2\mbox{]} = \{0b00010000, 0b00100000\}
+\item 
+int \hyperlink{firmware_2lib__rwp_8c_af583a71fc7eabd31426624437cd1a8f3}{pwm\-\_\-mask} \mbox{[}2\mbox{]} = \{0b01000000, 0b00100000\}
+\item 
+int \hyperlink{firmware_2lib__rwp_8c_ab98f1128461d00f21e140e84a06b1ecb}{init\-\_\-motors\-\_\-dummy} = \hyperlink{firmware_2lib__rwp_8c_adac0e25b6c0b34901f454931a366bf51}{init\-\_\-motors}()
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{firmware_2lib__rwp_8c_a6368ba2819f669bf17962d89b3fca203}{\index{firmware/lib\-\_\-rwp.\-c@{firmware/lib\-\_\-rwp.\-c}!bumper@{bumper}}
+\index{bumper@{bumper}!firmware/lib_rwp.c@{firmware/lib\-\_\-rwp.\-c}}
+\subsubsection[{bumper}]{\setlength{\rightskip}{0pt plus 5cm}int bumper (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{firmware_2lib__rwp_8c_a6368ba2819f669bf17962d89b3fca203}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{firmware_2lib__rwp_8c_a6368ba2819f669bf17962d89b3fca203_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{firmware_2lib__rwp_8c_a9032e2468648895fa936f08f6a831bf9}{\index{firmware/lib\-\_\-rwp.\-c@{firmware/lib\-\_\-rwp.\-c}!drive@{drive}}
+\index{drive@{drive}!firmware/lib_rwp.c@{firmware/lib\-\_\-rwp.\-c}}
+\subsubsection[{drive}]{\setlength{\rightskip}{0pt plus 5cm}void drive (
+\begin{DoxyParamCaption}
+\item[{int}]{trans\-\_\-vel, }
+\item[{int}]{rot\-\_\-vel}
+\end{DoxyParamCaption}
+)}}\label{firmware_2lib__rwp_8c_a9032e2468648895fa936f08f6a831bf9}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=202pt]{firmware_2lib__rwp_8c_a9032e2468648895fa936f08f6a831bf9_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{firmware_2lib__rwp_8c_adac0e25b6c0b34901f454931a366bf51}{\index{firmware/lib\-\_\-rwp.\-c@{firmware/lib\-\_\-rwp.\-c}!init\-\_\-motors@{init\-\_\-motors}}
+\index{init\-\_\-motors@{init\-\_\-motors}!firmware/lib_rwp.c@{firmware/lib\-\_\-rwp.\-c}}
+\subsubsection[{init\-\_\-motors}]{\setlength{\rightskip}{0pt plus 5cm}int init\-\_\-motors (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{firmware_2lib__rwp_8c_adac0e25b6c0b34901f454931a366bf51}
+\hypertarget{firmware_2lib__rwp_8c_a0bcda6b2106a42058fe25734f7b6efc0}{\index{firmware/lib\-\_\-rwp.\-c@{firmware/lib\-\_\-rwp.\-c}!ir\-\_\-detect@{ir\-\_\-detect}}
+\index{ir\-\_\-detect@{ir\-\_\-detect}!firmware/lib_rwp.c@{firmware/lib\-\_\-rwp.\-c}}
+\subsubsection[{ir\-\_\-detect}]{\setlength{\rightskip}{0pt plus 5cm}int ir\-\_\-detect (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{firmware_2lib__rwp_8c_a0bcda6b2106a42058fe25734f7b6efc0}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=228pt]{firmware_2lib__rwp_8c_a0bcda6b2106a42058fe25734f7b6efc0_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{firmware_2lib__rwp_8c_a49fe73be96a0657e6a3ea6669cdc9f25}{\index{firmware/lib\-\_\-rwp.\-c@{firmware/lib\-\_\-rwp.\-c}!left\-\_\-shaft@{left\-\_\-shaft}}
+\index{left\-\_\-shaft@{left\-\_\-shaft}!firmware/lib_rwp.c@{firmware/lib\-\_\-rwp.\-c}}
+\subsubsection[{left\-\_\-shaft}]{\setlength{\rightskip}{0pt plus 5cm}int left\-\_\-shaft (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{firmware_2lib__rwp_8c_a49fe73be96a0657e6a3ea6669cdc9f25}
+\hypertarget{firmware_2lib__rwp_8c_a759cd6a2d214a5b16d6e01d114385039}{\index{firmware/lib\-\_\-rwp.\-c@{firmware/lib\-\_\-rwp.\-c}!right\-\_\-shaft@{right\-\_\-shaft}}
+\index{right\-\_\-shaft@{right\-\_\-shaft}!firmware/lib_rwp.c@{firmware/lib\-\_\-rwp.\-c}}
+\subsubsection[{right\-\_\-shaft}]{\setlength{\rightskip}{0pt plus 5cm}int right\-\_\-shaft (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{firmware_2lib__rwp_8c_a759cd6a2d214a5b16d6e01d114385039}
+\hypertarget{firmware_2lib__rwp_8c_a8c528baf37154d347366083f0f816846}{\index{firmware/lib\-\_\-rwp.\-c@{firmware/lib\-\_\-rwp.\-c}!stop@{stop}}
+\index{stop@{stop}!firmware/lib_rwp.c@{firmware/lib\-\_\-rwp.\-c}}
+\subsubsection[{stop}]{\setlength{\rightskip}{0pt plus 5cm}void stop (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{firmware_2lib__rwp_8c_a8c528baf37154d347366083f0f816846}
+
+
+\subsection{Variable Documentation}
+\hypertarget{firmware_2lib__rwp_8c_a40bc49694db9b112049f8a604d1a0b5b}{\index{firmware/lib\-\_\-rwp.\-c@{firmware/lib\-\_\-rwp.\-c}!dir\-\_\-mask@{dir\-\_\-mask}}
+\index{dir\-\_\-mask@{dir\-\_\-mask}!firmware/lib_rwp.c@{firmware/lib\-\_\-rwp.\-c}}
+\subsubsection[{dir\-\_\-mask}]{\setlength{\rightskip}{0pt plus 5cm}int dir\-\_\-mask\mbox{[}2\mbox{]} = \{0b00010000, 0b00100000\}}}\label{firmware_2lib__rwp_8c_a40bc49694db9b112049f8a604d1a0b5b}
+\hypertarget{firmware_2lib__rwp_8c_ab98f1128461d00f21e140e84a06b1ecb}{\index{firmware/lib\-\_\-rwp.\-c@{firmware/lib\-\_\-rwp.\-c}!init\-\_\-motors\-\_\-dummy@{init\-\_\-motors\-\_\-dummy}}
+\index{init\-\_\-motors\-\_\-dummy@{init\-\_\-motors\-\_\-dummy}!firmware/lib_rwp.c@{firmware/lib\-\_\-rwp.\-c}}
+\subsubsection[{init\-\_\-motors\-\_\-dummy}]{\setlength{\rightskip}{0pt plus 5cm}int init\-\_\-motors\-\_\-dummy = {\bf init\-\_\-motors}()}}\label{firmware_2lib__rwp_8c_ab98f1128461d00f21e140e84a06b1ecb}
+\hypertarget{firmware_2lib__rwp_8c_a1793fe255c482750301ca7e5ea57874d}{\index{firmware/lib\-\_\-rwp.\-c@{firmware/lib\-\_\-rwp.\-c}!microphone@{microphone}}
+\index{microphone@{microphone}!firmware/lib_rwp.c@{firmware/lib\-\_\-rwp.\-c}}
+\subsubsection[{microphone}]{\setlength{\rightskip}{0pt plus 5cm}int microphone = 2}}\label{firmware_2lib__rwp_8c_a1793fe255c482750301ca7e5ea57874d}
+\hypertarget{firmware_2lib__rwp_8c_a80003173b2b20936eebe10521f94b503}{\index{firmware/lib\-\_\-rwp.\-c@{firmware/lib\-\_\-rwp.\-c}!photo\-\_\-left@{photo\-\_\-left}}
+\index{photo\-\_\-left@{photo\-\_\-left}!firmware/lib_rwp.c@{firmware/lib\-\_\-rwp.\-c}}
+\subsubsection[{photo\-\_\-left}]{\setlength{\rightskip}{0pt plus 5cm}int photo\-\_\-left = 1}}\label{firmware_2lib__rwp_8c_a80003173b2b20936eebe10521f94b503}
+\hypertarget{firmware_2lib__rwp_8c_abf8c764cb5f5289ee3688871415dd737}{\index{firmware/lib\-\_\-rwp.\-c@{firmware/lib\-\_\-rwp.\-c}!photo\-\_\-right@{photo\-\_\-right}}
+\index{photo\-\_\-right@{photo\-\_\-right}!firmware/lib_rwp.c@{firmware/lib\-\_\-rwp.\-c}}
+\subsubsection[{photo\-\_\-right}]{\setlength{\rightskip}{0pt plus 5cm}int photo\-\_\-right = 0}}\label{firmware_2lib__rwp_8c_abf8c764cb5f5289ee3688871415dd737}
+\hypertarget{firmware_2lib__rwp_8c_af583a71fc7eabd31426624437cd1a8f3}{\index{firmware/lib\-\_\-rwp.\-c@{firmware/lib\-\_\-rwp.\-c}!pwm\-\_\-mask@{pwm\-\_\-mask}}
+\index{pwm\-\_\-mask@{pwm\-\_\-mask}!firmware/lib_rwp.c@{firmware/lib\-\_\-rwp.\-c}}
+\subsubsection[{pwm\-\_\-mask}]{\setlength{\rightskip}{0pt plus 5cm}int pwm\-\_\-mask\mbox{[}2\mbox{]} = \{0b01000000, 0b00100000\}}}\label{firmware_2lib__rwp_8c_af583a71fc7eabd31426624437cd1a8f3}
+\hypertarget{firmware_2lib__rwp_8c_aadb76e04ceadfab884568976b02ccb95}{\index{firmware/lib\-\_\-rwp.\-c@{firmware/lib\-\_\-rwp.\-c}!T\-O\-Cx@{T\-O\-Cx}}
+\index{T\-O\-Cx@{T\-O\-Cx}!firmware/lib_rwp.c@{firmware/lib\-\_\-rwp.\-c}}
+\subsubsection[{T\-O\-Cx}]{\setlength{\rightskip}{0pt plus 5cm}int T\-O\-Cx\mbox{[}2\mbox{]} = \{0x1018, 0x101\-A\}}}\label{firmware_2lib__rwp_8c_aadb76e04ceadfab884568976b02ccb95}

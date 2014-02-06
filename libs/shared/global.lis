@@ -1,1 +1,4 @@
 shared/motor.c
+shared/convert.c
+shared/screen.c
+shared/sonar.c

@@ -1,0 +1,193 @@
+\hypertarget{servo_8c}{\section{/root/\-Desktop/rug-\/warrior/libs/base/servo.c File Reference}
+\label{servo_8c}\index{/root/\-Desktop/rug-\/warrior/libs/base/servo.\-c@{/root/\-Desktop/rug-\/warrior/libs/base/servo.\-c}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{servo_8c_a270aa1736f4ea39233ae801e0800aec3}{S\-E\-R\-V\-O\-\_\-\-R\-A\-N\-G\-E}~(\hyperlink{servo_8c_a699776fdf3fa0c147cc4110ee63a957d}{M\-A\-X\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E}-\/\hyperlink{servo_8c_ad2a44d730fcaaf369296836d8994c36c}{M\-I\-N\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E})
+\item 
+\#define \hyperlink{servo_8c_abe52f2c21a75aedf90039aac3af8a5e5}{rexcursion}~3.\-14159
+\item 
+\#define \hyperlink{servo_8c_aec7b9852c8a771a1e361b22b9291ae68}{dexcursion}~180.
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{servo_8c_a24c8d174ac2785eca27540fa8c051f53}{servo\-\_\-on} ()
+\item 
+void \hyperlink{servo_8c_a4762aeae74c720d62d44f53f879b01d3}{servo\-\_\-off} ()
+\item 
+int \hyperlink{servo_8c_ac5fbcc0b4c4dab421b304092b7823045}{servo} (int period)
+\item 
+int \hyperlink{servo_8c_ac683fdac9a6941bc38849d4ce362393d}{servo\-\_\-rad} (float angle)
+\item 
+int \hyperlink{servo_8c_a3d875995a3b35785c44ec13f2f56cf3c}{servo\-\_\-deg} (float angle)
+\item 
+int \hyperlink{servo_8c_ad723a20a012d1795672d339666f56033}{radian\-\_\-to\-\_\-pulse} (float angle)
+\item 
+int \hyperlink{servo_8c_aae9e6da25fe5947af721ba8a45044d81}{degree\-\_\-to\-\_\-pulse} (float angle)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{servo_8c_ad2a44d730fcaaf369296836d8994c36c}{M\-I\-N\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E} = 1400
+\item 
+int \hyperlink{servo_8c_a699776fdf3fa0c147cc4110ee63a957d}{M\-A\-X\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E} = 4530
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{servo_8c_aec7b9852c8a771a1e361b22b9291ae68}{\index{servo.\-c@{servo.\-c}!dexcursion@{dexcursion}}
+\index{dexcursion@{dexcursion}!servo.c@{servo.\-c}}
+\subsubsection[{dexcursion}]{\setlength{\rightskip}{0pt plus 5cm}\#define dexcursion~180.}}\label{servo_8c_aec7b9852c8a771a1e361b22b9291ae68}
+\hypertarget{servo_8c_abe52f2c21a75aedf90039aac3af8a5e5}{\index{servo.\-c@{servo.\-c}!rexcursion@{rexcursion}}
+\index{rexcursion@{rexcursion}!servo.c@{servo.\-c}}
+\subsubsection[{rexcursion}]{\setlength{\rightskip}{0pt plus 5cm}\#define rexcursion~3.\-14159}}\label{servo_8c_abe52f2c21a75aedf90039aac3af8a5e5}
+\hypertarget{servo_8c_a270aa1736f4ea39233ae801e0800aec3}{\index{servo.\-c@{servo.\-c}!S\-E\-R\-V\-O\-\_\-\-R\-A\-N\-G\-E@{S\-E\-R\-V\-O\-\_\-\-R\-A\-N\-G\-E}}
+\index{S\-E\-R\-V\-O\-\_\-\-R\-A\-N\-G\-E@{S\-E\-R\-V\-O\-\_\-\-R\-A\-N\-G\-E}!servo.c@{servo.\-c}}
+\subsubsection[{S\-E\-R\-V\-O\-\_\-\-R\-A\-N\-G\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\-E\-R\-V\-O\-\_\-\-R\-A\-N\-G\-E~({\bf M\-A\-X\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E}-\/{\bf M\-I\-N\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E})}}\label{servo_8c_a270aa1736f4ea39233ae801e0800aec3}
+
+
+\subsection{Function Documentation}
+\hypertarget{servo_8c_aae9e6da25fe5947af721ba8a45044d81}{\index{servo.\-c@{servo.\-c}!degree\-\_\-to\-\_\-pulse@{degree\-\_\-to\-\_\-pulse}}
+\index{degree\-\_\-to\-\_\-pulse@{degree\-\_\-to\-\_\-pulse}!servo.c@{servo.\-c}}
+\subsubsection[{degree\-\_\-to\-\_\-pulse}]{\setlength{\rightskip}{0pt plus 5cm}int degree\-\_\-to\-\_\-pulse (
+\begin{DoxyParamCaption}
+\item[{float}]{angle}
+\end{DoxyParamCaption}
+)}}\label{servo_8c_aae9e6da25fe5947af721ba8a45044d81}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{servo_8c_aae9e6da25fe5947af721ba8a45044d81_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{servo_8c_ad723a20a012d1795672d339666f56033}{\index{servo.\-c@{servo.\-c}!radian\-\_\-to\-\_\-pulse@{radian\-\_\-to\-\_\-pulse}}
+\index{radian\-\_\-to\-\_\-pulse@{radian\-\_\-to\-\_\-pulse}!servo.c@{servo.\-c}}
+\subsubsection[{radian\-\_\-to\-\_\-pulse}]{\setlength{\rightskip}{0pt plus 5cm}int radian\-\_\-to\-\_\-pulse (
+\begin{DoxyParamCaption}
+\item[{float}]{angle}
+\end{DoxyParamCaption}
+)}}\label{servo_8c_ad723a20a012d1795672d339666f56033}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{servo_8c_ad723a20a012d1795672d339666f56033_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{servo_8c_ac5fbcc0b4c4dab421b304092b7823045}{\index{servo.\-c@{servo.\-c}!servo@{servo}}
+\index{servo@{servo}!servo.c@{servo.\-c}}
+\subsubsection[{servo}]{\setlength{\rightskip}{0pt plus 5cm}int servo (
+\begin{DoxyParamCaption}
+\item[{int}]{period}
+\end{DoxyParamCaption}
+)}}\label{servo_8c_ac5fbcc0b4c4dab421b304092b7823045}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{servo_8c_ac5fbcc0b4c4dab421b304092b7823045_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{servo_8c_a3d875995a3b35785c44ec13f2f56cf3c}{\index{servo.\-c@{servo.\-c}!servo\-\_\-deg@{servo\-\_\-deg}}
+\index{servo\-\_\-deg@{servo\-\_\-deg}!servo.c@{servo.\-c}}
+\subsubsection[{servo\-\_\-deg}]{\setlength{\rightskip}{0pt plus 5cm}int servo\-\_\-deg (
+\begin{DoxyParamCaption}
+\item[{float}]{angle}
+\end{DoxyParamCaption}
+)}}\label{servo_8c_a3d875995a3b35785c44ec13f2f56cf3c}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{servo_8c_a3d875995a3b35785c44ec13f2f56cf3c_cgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{servo_8c_a4762aeae74c720d62d44f53f879b01d3}{\index{servo.\-c@{servo.\-c}!servo\-\_\-off@{servo\-\_\-off}}
+\index{servo\-\_\-off@{servo\-\_\-off}!servo.c@{servo.\-c}}
+\subsubsection[{servo\-\_\-off}]{\setlength{\rightskip}{0pt plus 5cm}void servo\-\_\-off (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{servo_8c_a4762aeae74c720d62d44f53f879b01d3}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{servo_8c_a4762aeae74c720d62d44f53f879b01d3_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{servo_8c_a24c8d174ac2785eca27540fa8c051f53}{\index{servo.\-c@{servo.\-c}!servo\-\_\-on@{servo\-\_\-on}}
+\index{servo\-\_\-on@{servo\-\_\-on}!servo.c@{servo.\-c}}
+\subsubsection[{servo\-\_\-on}]{\setlength{\rightskip}{0pt plus 5cm}void servo\-\_\-on (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{servo_8c_a24c8d174ac2785eca27540fa8c051f53}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{servo_8c_a24c8d174ac2785eca27540fa8c051f53_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{servo_8c_ac683fdac9a6941bc38849d4ce362393d}{\index{servo.\-c@{servo.\-c}!servo\-\_\-rad@{servo\-\_\-rad}}
+\index{servo\-\_\-rad@{servo\-\_\-rad}!servo.c@{servo.\-c}}
+\subsubsection[{servo\-\_\-rad}]{\setlength{\rightskip}{0pt plus 5cm}int servo\-\_\-rad (
+\begin{DoxyParamCaption}
+\item[{float}]{angle}
+\end{DoxyParamCaption}
+)}}\label{servo_8c_ac683fdac9a6941bc38849d4ce362393d}
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=272pt]{servo_8c_ac683fdac9a6941bc38849d4ce362393d_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+\subsection{Variable Documentation}
+\hypertarget{servo_8c_a699776fdf3fa0c147cc4110ee63a957d}{\index{servo.\-c@{servo.\-c}!M\-A\-X\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E@{M\-A\-X\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E}}
+\index{M\-A\-X\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E@{M\-A\-X\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E}!servo.c@{servo.\-c}}
+\subsubsection[{M\-A\-X\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}int M\-A\-X\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E = 4530}}\label{servo_8c_a699776fdf3fa0c147cc4110ee63a957d}
+\hypertarget{servo_8c_ad2a44d730fcaaf369296836d8994c36c}{\index{servo.\-c@{servo.\-c}!M\-I\-N\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E@{M\-I\-N\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E}}
+\index{M\-I\-N\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E@{M\-I\-N\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E}!servo.c@{servo.\-c}}
+\subsubsection[{M\-I\-N\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E}]{\setlength{\rightskip}{0pt plus 5cm}int M\-I\-N\-\_\-\-S\-E\-R\-V\-O\-\_\-\-W\-A\-V\-E\-T\-I\-M\-E = 1400}}\label{servo_8c_ad2a44d730fcaaf369296836d8994c36c}

@@ -18,7 +18,9 @@
    You can also vary the number of samples averaged together
    in an attempt to fine tune speed/accuracy the sensors. */
 
-/* Call with analog port of light sensor used to detect starting lamp */
+/*
+ * Call with analog port of light sensor used to detect starting lamp
+ */
 void start_machine(int port)
 {
     /* Notes: ir_xmit_period and ir_freq_rcv_select are system
