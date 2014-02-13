@@ -1,9 +1,0 @@
-digraph "/root/Desktop/ic_linux_3.1/libs/behavior" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_6719ab1f1f7655efc2fa43f7eb574fd1 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="libs" fontname="Helvetica", fontsize="10", URL="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html"]
-  dir_173da6a53398f641f6765e7c9f1986ec [shape=box, label="behavior", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_173da6a53398f641f6765e7c9f1986ec.html"];
-  }
-}

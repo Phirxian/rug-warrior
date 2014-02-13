@@ -1,0 +1,14 @@
+<map id="choose_button" name="choose_button">
+<area shape="rect" id="node3" href="$menu_8c.html#ade420648ad5e270eb49e76bc71fcb203" title="chosen_button" alt="" coords="171,95,288,121"/>
+<area shape="rect" id="node14" href="$menu_8c.html#aad05720d81aee6fe57273df91d1206d1" title="wait_button" alt="" coords="359,145,455,172"/>
+<area shape="rect" id="node17" href="$menu_8c.html#aa7168d52d66264c671f6470176856fd1" title="select_int_value" alt="" coords="531,44,655,71"/>
+<area shape="rect" id="node21" href="$menu_8c.html#a0a37e579c94982ce5cf6d631464f96ea" title="select_float_value" alt="" coords="525,247,661,273"/>
+<area shape="rect" id="node23" href="$menu_8c.html#a1b08ad6fdc5215cef1a76e23f309dae1" title="select_string" alt="" coords="542,196,645,223"/>
+<area shape="rect" id="node34" href="$startstp_8c.html#ad098292050d6059ef0b3af84dac1ef6f" title="start_machine" alt="" coords="172,297,287,324"/>
+<area shape="rect" id="node36" href="$lib__r22_8c.html#a34eaae0b8960db57c37e35eecc891b6c" title="left_button" alt="" coords="184,348,275,375"/>
+<area shape="rect" id="node5" href="$diagnostic_8c.html#a42755f36768d92ecf643a73490488309" title="view_average_port" alt="" coords="336,44,477,71"/>
+<area shape="rect" id="node7" href="$diagnostic_8c.html#a9c7615094fa3d462fcd91432cd0d9a3d" title="view_inputs" alt="" coords="722,133,817,160"/>
+<area shape="rect" id="node11" href="$diagnostic_8c.html#ab50d07079b04faf6898956b052644966" title="frob_outputs" alt="" coords="718,57,821,84"/>
+<area shape="rect" id="node9" href="$diagnostic_8c.html#ab93a0ba8748af7794b42a8c381480915" title="control_panel" alt="" coords="878,133,986,160"/>
+<area shape="rect" id="node27" href="$diagnostic_8c.html#aca7443f3516c9e251222934ede56b80b" title="control_choose" alt="" coords="710,184,829,211"/>
+</map>

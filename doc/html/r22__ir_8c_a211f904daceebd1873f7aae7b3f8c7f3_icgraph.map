@@ -1,0 +1,5 @@
+<map id="ir_transmit_on" name="ir_transmit_on">
+<area shape="rect" id="node3" href="$diagnostic_8c.html#ab50d07079b04faf6898956b052644966" title="frob_outputs" alt="" coords="174,5,277,32"/>
+<area shape="rect" id="node7" href="$startstp_8c.html#ad098292050d6059ef0b3af84dac1ef6f" title="start_machine" alt="" coords="168,56,283,83"/>
+<area shape="rect" id="node5" href="$diagnostic_8c.html#ab93a0ba8748af7794b42a8c381480915" title="control_panel" alt="" coords="331,5,439,32"/>
+</map>

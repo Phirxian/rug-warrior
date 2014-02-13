@@ -1,0 +1,8 @@
+<map id="view_average_port" name="view_average_port">
+<area shape="rect" id="node3" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="225,5,281,32"/>
+<area shape="rect" id="node7" href="$menu_8c.html#ade420648ad5e270eb49e76bc71fcb203" title="chosen_button" alt="" coords="195,56,312,83"/>
+<area shape="rect" id="node13" href="$base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="221,107,286,133"/>
+<area shape="rect" id="node5" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="384,5,453,32"/>
+<area shape="rect" id="node9" href="$base_2lib__rwp_8c.html#a922b44bdf1062f6836a7e1774c74ce35" title="choose_button" alt="" coords="360,56,477,83"/>
+<area shape="rect" id="node11" href="$base_2lib__rwp_8c.html#a2c2600c101c9082504db325bb20996c8" title="escape_button" alt="" coords="360,107,477,133"/>
+</map>

@@ -1,9 +1,0 @@
-digraph "/root/Desktop/ic_linux_3.1/libs/base" {
-  compound=true
-  node [ fontsize="10", fontname="Helvetica"];
-  edge [ labelfontsize="10", labelfontname="Helvetica"];
-  subgraph clusterdir_6719ab1f1f7655efc2fa43f7eb574fd1 {
-    graph [ bgcolor="#ddddee", pencolor="black", label="libs" fontname="Helvetica", fontsize="10", URL="dir_6719ab1f1f7655efc2fa43f7eb574fd1.html"]
-  dir_06498c378442102d76a793fbea770c00 [shape=box, label="base", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_06498c378442102d76a793fbea770c00.html"];
-  }
-}
