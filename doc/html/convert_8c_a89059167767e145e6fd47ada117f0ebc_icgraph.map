@@ -1,7 +1,0 @@
-<map id="digits" name="digits">
-<area shape="rect" id="node3" href="$screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="109,31,168,57"/>
-<area shape="rect" id="node5" href="$test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78" title="display_mot_test" alt="" coords="216,5,347,32"/>
-<area shape="rect" id="node11" href="$bumper_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="254,56,309,83"/>
-<area shape="rect" id="node7" href="$test_2motor_8c.html#a9382922728322499a2a494319f2f948c" title="set_show_motors" alt="" coords="395,5,530,32"/>
-<area shape="rect" id="node9" href="$test_2motor_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="579,5,634,32"/>
-</map>

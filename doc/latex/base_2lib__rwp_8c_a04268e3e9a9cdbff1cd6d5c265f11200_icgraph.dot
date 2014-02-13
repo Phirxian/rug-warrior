@@ -1,0 +1,40 @@
+digraph "motor"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="motor",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="view_inputs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$diagnostic_8c.html#a9c7615094fa3d462fcd91432cd0d9a3d"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="control_panel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$diagnostic_8c.html#ab93a0ba8748af7794b42a8c381480915"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="frob_outputs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$diagnostic_8c.html#ab50d07079b04faf6898956b052644966"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="drive",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$base_2lib__rwp_8c.html#a9032e2468648895fa936f08f6a831bf9"];
+  Node5 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3"];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="_set_motor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb"];
+  Node7 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="fd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib__hb_8c.html#a55a302772158e1f15f1c90992f535272"];
+  Node7 -> Node9 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="bk",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib__hb_8c.html#a3f5edef0489aca523a64a40e8fe16320"];
+  Node7 -> Node10 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="motor",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib__hb_8c.html#a8c2b1ad56a0ecf04cd02e951dfb6c9da"];
+  Node1 -> Node11 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="fd",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib__rw10_8c.html#ad1c6fb1c48bda68dd726a3c7c75c1e9a"];
+  Node1 -> Node12 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="bk",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib__rw10_8c.html#abb00dd3c5b4a9c477dd41a7bdd71e31d"];
+  Node1 -> Node13 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="off",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib__rw10_8c.html#a2298e12b41adcad35e4793722d96f04e"];
+  Node1 -> Node14 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="rotate",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$shared_2motor_8c.html#adb9f04d0113231e1cc65bd880e19b918"];
+  Node14 -> Node15 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$rotate_8c.html#acdef7a1fd863a6d3770c1268cb06add3"];
+  Node1 -> Node16 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="set_show_motors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$test_2motor_8c.html#a9382922728322499a2a494319f2f948c"];
+  Node16 -> Node17 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$test_2motor_8c.html#acdef7a1fd863a6d3770c1268cb06add3"];
+}

@@ -12,7 +12,7 @@ void main()
         set_servo(pos);
 
         ping();
-        printf("%d\n", range());
+        printf("%f\n", range());
 
         pos += 10;
         sleep(1.);

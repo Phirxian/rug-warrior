@@ -1,0 +1,21 @@
+digraph "main"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="analog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="therm_diff",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$photo_8c.html#a66f998077162963e411a04991dff9d0a"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="repeat_char",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$screen_8c.html#ac8e8b349181ce150291f6cacea837914"];
+  Node3 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="abs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$convert_8c.html#a83b97b49b2135e525b55a3a7ff42036e"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="p_byte",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$photo_8c.html#a4ccb49abe8987fd40632afca2dbaa528"];
+  Node1 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="sleep",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08"];
+  Node7 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="msleep",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777"];
+}

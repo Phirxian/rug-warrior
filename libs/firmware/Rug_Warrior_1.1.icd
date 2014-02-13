@@ -2,5 +2,5 @@ V3.2
 Rug Warrior Board
 To put board into download mode, move the large slide switch to the DL position and press the reset button.
 Download complete.  Please reset the board before pressing continue.
-pcode_rw.s19
+firmware/pcode_rw.s19
 lib_rw11.lis

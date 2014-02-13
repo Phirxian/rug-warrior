@@ -31,46 +31,63 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="base/cof.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="base/diagnostic.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="base/encoders.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="base/lib_ic.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="base/lib_rwp.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="base/menu.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="base/r22_ir.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="base/regdefs.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="base/servo.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="base/shaft.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="base/startstp.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="base/tunes.c">
-			<Option compilerVar="CC" />
-		</Unit>
+		<Unit filename="base/speed.asm" />
 		<Unit filename="behavior/1meter.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="behavior/rotate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="firmware/6811regs.asm" />
+		<Unit filename="firmware/ldxibase.asm" />
+		<Unit filename="firmware/lib_hb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="firmware/lib_ic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="firmware/lib_r22.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="firmware/lib_rw10.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="firmware/lib_rw11.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="firmware/lib_rwp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="firmware/pcode_eq.asm" />
+		<Unit filename="firmware/r21_beep.asm" />
+		<Unit filename="firmware/r21_eq.asm" />
+		<Unit filename="firmware/r22_beep.asm" />
+		<Unit filename="firmware/r22_eq.asm" />
+		<Unit filename="firmware/sb_beep.asm" />
+		<Unit filename="firmware/sbot_eq.asm" />
+		<Unit filename="firmware/speed.asm" />
+		<Unit filename="music/cof.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="music/echo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="music/tunes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="shared/common.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="shared/convert.c">
@@ -124,7 +141,7 @@
 		<Unit filename="test/shaftenc.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="test/sonard.c">
+		<Unit filename="test/sonar.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="test/user_digital.c">

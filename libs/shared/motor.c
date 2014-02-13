@@ -1,17 +1,82 @@
 #define R_MOTOR 1
 #define L_MOTOR 2
 
+int _left_enc_counts_ = 0;
+int _right_enc_counts_ = 0;
+int _motor_right_speed_ = 0;
+int _motor_left_speed_ = 0;
+int _motor_distance_ = 0;
+
 /**
- * Conversion cm to feet
- * @param cm - the distance in centimeters used to be converted
- * @return the distance converted in feet
+ * start it with thread
+ * dependency : encoder_aux() process
  */
-float cmToFeet(float cm)
+void running()
 {
-    return cm/30.48;
+    int diff;
+
+    while(1)
+    {
+        diff = _left_enc_counts_ - _right_enc_counts_;
+
+        if(diff < -1)
+        {
+            _motor_right_speed_ += 1;
+            _motor_left_speed_ -= 1;
+        }
+
+        if(diff > 1)
+        {
+            _motor_right_speed_ -= 1;
+            _motor_left_speed_ += 1;
+        }
+
+        if(_left_enc_counts_ >= _motor_distance_) _motor_left_speed_ = 0;
+        if(_right_enc_counts_ >= _motor_distance_) _motor_right_speed_ = 0;
+
+        motor(0, _motor_left_speed_);
+        motor(1, _motor_right_speed_);
+    }
 }
 
-/*
+/**
+ * count the switching state of encoders
+ * value are stored into
+ * _left_enc_counts_ and _right_enc_counts_
+ * use this function under parallele thread
+ */
+void encoder_aux()
+{
+    int l_old, r_old, l_new, r_new;
+
+    while(1)
+    {
+        l_new = left_shaft();
+        r_new = right_shaft();
+
+        if(l_old & ~l_new)
+            _left_enc_counts_++;
+
+        if(r_old & ~r_new)
+            _right_enc_counts_++;
+
+        l_old = l_new;
+        r_old = r_new;
+    }
+}
+
+/**
+ * check if encoder_aux() process
+ * are not in running state
+ * can be not thread-safe
+ */
+void encoder_reset()
+{
+    _left_enc_counts_ = 0;
+    _right_enc_counts_ = 0;
+}
+
+/**
  * calculate the time needed to run
  * in x feet with given speed [-100 : 100]
  */
@@ -22,7 +87,7 @@ float feetToMotor(float feet, int speed)
     return (feet/0.67)*inv;
 }
 
-/*
+/**
  * flags : R_MOTOR, L_MOTOR, R_MOTOR | L_MOTOR
  * angle : degree
  * speed : [-100 : 0] U [0 : 100]

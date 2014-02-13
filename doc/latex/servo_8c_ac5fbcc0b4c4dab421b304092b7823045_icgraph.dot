@@ -1,0 +1,15 @@
+digraph "servo"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="servo",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="frob_outputs",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$diagnostic_8c.html#ab50d07079b04faf6898956b052644966"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="control_panel",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$diagnostic_8c.html#ab93a0ba8748af7794b42a8c381480915"];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="servo_rad",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$servo_8c.html#ac683fdac9a6941bc38849d4ce362393d"];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="servo_deg",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$servo_8c.html#a3d875995a3b35785c44ec13f2f56cf3c"];
+}

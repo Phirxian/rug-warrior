@@ -1,0 +1,11 @@
+digraph "_raw_analog"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="_raw_analog",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="analog",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib__hb_8c.html#afa28db0c35c02b77341a6bed7aac0cb4"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="knob",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$lib__hb_8c.html#af282a0e0f6790a16082e81d5e0689b57"];
+}

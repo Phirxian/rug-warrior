@@ -1,0 +1,13 @@
+digraph "get_right_clicks"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="get_right_clicks",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="display_mot_test",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="set_show_motors",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$test_2motor_8c.html#a9382922728322499a2a494319f2f948c"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$test_2motor_8c.html#acdef7a1fd863a6d3770c1268cb06add3"];
+}

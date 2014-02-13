@@ -1,6 +1,0 @@
-<map id="digital" name="digital">
-<area shape="rect" id="node3" href="$diagnostic_8c.html#a9c7615094fa3d462fcd91432cd0d9a3d" title="view_inputs" alt="" coords="115,5,210,32"/>
-<area shape="rect" id="node7" href="$lib__hb_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="130,56,195,83"/>
-<area shape="rect" id="node9" href="$user__digital_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="135,107,190,133"/>
-<area shape="rect" id="node5" href="$diagnostic_8c.html#ab93a0ba8748af7794b42a8c381480915" title="control_panel" alt="" coords="259,5,367,32"/>
-</map>

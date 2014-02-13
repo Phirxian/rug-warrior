@@ -1,4 +1,4 @@
-/*
+/**
  * Print val in the given number
  * of columns if possible
  */
@@ -18,7 +18,7 @@ void printn(int val, int cols)
     }
 }
 
-/*
+/**
  * repeat ch on rep column
  */
 void repeat_char(int ch, int rep)

@@ -1,8 +1,0 @@
-<map id="analog" name="analog">
-<area shape="rect" id="node3" href="$lib__hb_8c.html#ab45352baf6161b1799e924c298b7384d" title="_raw_analog" alt="" coords="120,5,221,32"/>
-<area shape="rect" id="node5" href="$base_2lib__rwp_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="141,56,201,83"/>
-<area shape="rect" id="node7" href="$base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400" title="beep" alt="" coords="143,107,198,133"/>
-<area shape="rect" id="node9" href="$base_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="269,107,320,133"/>
-<area shape="rect" id="node11" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="368,107,424,133"/>
-<area shape="rect" id="node13" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="472,107,541,133"/>
-</map>

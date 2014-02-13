@@ -1,82 +1,41 @@
 /* LIB_IC.C */
-
-
-
 /*
-
     VERSION HISTORY
-
-
-
  7/9/97   Created from lib_rw11.c.  Moved out Rug Warrior specific functions and variables
-
-
-
 */
-
-
 
 persistent int test_number;
 
-
-
 /*******************/
-
 /* TIME PRIMITIVES */
-
 /*******************/
 
-
-
 /***********************************/
-
 /* location of various time stuff: */
-
 /* 0x14: time in milliseconds      */
-
 /***********************************/
-
-
 
 void reset_system_time()
-
 {
-
   pokeword(0x14, 0);
-
   pokeword(0x12, 0);
-
 }
 
 /*  returns valid time from 0 to 32,767 minutes (approx)  */
 
 float seconds()
-
 {
-
   return ((float) mseconds()) / 1000.;
-
 }
-
-
 
 void sleep(float seconds)
-
 {
-
     msleep((long)(seconds * 1000.));
-
 }
 
-
-
 void msleep(long msec)
-
 {
-
     long end_time= mseconds() + msec;
-
-
 
     while (1) {
 
@@ -234,7 +193,3 @@ void hog_processor()
     poke(0x0a, 0);
 
 }
-
-
-
-

@@ -1,9 +1,5 @@
 /* Definitions of the registers in the MC68HC11A1 */
 
-/* alpha.c have different name */
-int port_a= 0x1000;
-int port_d= 0x1008;
-
 int porta = 0x1000;
 int pioc  = 0x1002;
 int portc = 0x1003;
@@ -53,6 +49,5 @@ int hprio = 0x103C;
 int init  = 0x103D;
 int test1 = 0x103E;
 int config = 0x103F;
-int pyro = 5;
 
 

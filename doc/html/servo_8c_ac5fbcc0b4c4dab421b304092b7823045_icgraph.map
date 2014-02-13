@@ -1,6 +1,0 @@
-<map id="servo" name="servo">
-<area shape="rect" id="node3" href="$diagnostic_8c.html#ab50d07079b04faf6898956b052644966" title="frob_outputs" alt="" coords="113,5,215,32"/>
-<area shape="rect" id="node7" href="$servo_8c.html#ac683fdac9a6941bc38849d4ce362393d" title="servo_rad" alt="" coords="121,56,207,83"/>
-<area shape="rect" id="node9" href="$servo_8c.html#a3d875995a3b35785c44ec13f2f56cf3c" title="servo_deg" alt="" coords="120,107,208,133"/>
-<area shape="rect" id="node5" href="$diagnostic_8c.html#ab93a0ba8748af7794b42a8c381480915" title="control_panel" alt="" coords="265,5,373,32"/>
-</map>

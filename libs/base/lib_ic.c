@@ -1,22 +1,21 @@
+/* LIB_IC.C */
+
 /*
     VERSION HISTORY
-    7/9/97   Created from lib_rw11.c.  Moved out Rug Warrior specific functions and variables
+
+ 7/9/97   Created from lib_rw11.c.  Moved out Rug Warrior specific functions and variables
+
 */
 
 persistent int test_number;
 
 /*******************/
-
 /* TIME PRIMITIVES */
-
 /*******************/
 
 /***********************************/
-
 /* location of various time stuff: */
-
 /* 0x14: time in milliseconds      */
-
 /***********************************/
 
 void reset_system_time()
@@ -25,7 +24,9 @@ void reset_system_time()
     pokeword(0x12, 0);
 }
 
-/*  returns valid time from 0 to 32,767 minutes (approx)  */
+/**
+ * returns valid time from 0 to 32,767 minutes (approx)
+ */
 float seconds()
 {
     return ((float) mseconds()) / 1000.;
@@ -38,12 +39,11 @@ void sleep(float seconds)
 
 void msleep(long msec)
 {
-    long end_time = mseconds() + msec;
+    long end_time= mseconds() + msec;
 
     while(1)
     {
         /* if the following test doesn't execute at least once a second,
-
            msleep may not halt */
         long done= mseconds()-end_time;
 
@@ -51,12 +51,17 @@ void msleep(long msec)
     }
 }
 
+/**
+ * Old freq was 500, but 1000 sounds louder
+ */
 void beep()
 {
-    tone(1000., .3);    /* Old freq was 500, but 1000 sounds louder */
+    tone(1000., .3);
 }
 
-/*  1/2 cycle delay in .5us goes in 0x26 and 0x27  */
+/**
+ * 1/2 cycle delay in .5us goes in 0x26 and 0x27
+ */
 void tone(float frequency, float length)
 {
     pokeword(0x26, (int)(1E6 / frequency));
@@ -64,7 +69,6 @@ void tone(float frequency, float length)
     sleep(length);
     bit_clear(0x1020, 0b00000001);
     /*  following is important to reduce # of interrupts
-
     when tone is off  */
     pokeword(0x26, 0);
     bit_clear(0x1000, 8);
@@ -104,7 +108,6 @@ int timer_done(long timer)
     return timer < mseconds();
 }
 
-
 int analog(int port)
 {
     poke(0x1039, 0b10000000);
@@ -116,15 +119,13 @@ int analog(int port)
 /*** Multi-Tasking Support ***/
 /*****************************/
 
-/*  gives process that calls it 256 ticks (over 1/4 sec)
-    more to run before being swapped out
-    call repeatedly to hog processor indefinitely  */
-
+/**
+ * gives process that calls it 256 ticks (over 1/4 sec)
+ * more to run before being swapped out
+ * call repeatedly to hog processor indefinitely
+ */
 void hog_processor()
 {
     poke(0x0a, 0);
 }
-
-
-
 

@@ -1,9 +1,0 @@
-<map id="frob_knob" name="frob_knob">
-<area shape="rect" id="node3" href="$diagnostic_8c.html#ab50d07079b04faf6898956b052644966" title="frob_outputs" alt="" coords="331,5,434,32"/>
-<area shape="rect" id="node7" href="$menu_8c.html#aa7168d52d66264c671f6470176856fd1" title="select_int_value" alt="" coords="145,31,269,57"/>
-<area shape="rect" id="node13" href="$menu_8c.html#a0a37e579c94982ce5cf6d631464f96ea" title="select_float_value" alt="" coords="139,132,275,159"/>
-<area shape="rect" id="node15" href="$menu_8c.html#a1b08ad6fdc5215cef1a76e23f309dae1" title="select_string" alt="" coords="155,81,258,108"/>
-<area shape="rect" id="node5" href="$diagnostic_8c.html#ab93a0ba8748af7794b42a8c381480915" title="control_panel" alt="" coords="491,56,599,83"/>
-<area shape="rect" id="node9" href="$diagnostic_8c.html#a9c7615094fa3d462fcd91432cd0d9a3d" title="view_inputs" alt="" coords="335,56,430,83"/>
-<area shape="rect" id="node19" href="$diagnostic_8c.html#aca7443f3516c9e251222934ede56b80b" title="control_choose" alt="" coords="323,107,442,133"/>
-</map>

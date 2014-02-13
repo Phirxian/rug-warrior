@@ -1,13 +1,1 @@
-base/cof.c
-base/regdefs.c
-base/analog.icb
-base/servo.icb
-base/r22expbd.icb
-base/servo.c
-base/encoders.lis
-base/r22_ir.lis
-base/shaft.lis
-base/lib_ic.c
-base/lib_rwp.c
-base/startstp.lis
-base/tunes.c
+base/lib_rwp.lis

@@ -1,0 +1,56 @@
+***  Installation Started 06/13/12 16:02  ***
+Title: Interactive C Installation
+Source: \\SERETUD05\ADM$\RUGWAR~1\!ICW32_R.EXE
+Made Dir: C:\IC
+File Copy: C:\IC\ic.hlp
+Made Dir: C:\IC\libs
+File Copy: C:\IC\libs\behave.c
+File Copy: C:\IC\libs\behave.lis
+File Copy: C:\IC\libs\bugle.c
+File Copy: C:\IC\libs\bugle.lis
+File Copy: C:\IC\libs\cof.c
+File Copy: C:\IC\libs\common.c
+File Copy: C:\IC\libs\echo.c
+File Copy: C:\IC\libs\echo.lis
+File Copy: C:\IC\libs\follow.c
+File Copy: C:\IC\libs\follow.lis
+File Copy: C:\IC\libs\lib_ic.c
+File Copy: C:\IC\libs\lib_rwp.c
+File Copy: C:\IC\libs\lib_rwp.lis
+File Copy: C:\IC\libs\moth.c
+File Copy: C:\IC\libs\moth.lis
+File Copy: C:\IC\libs\pcoderwp.s19
+File Copy: C:\IC\libs\regdefs.c
+File Copy: C:\IC\libs\rwp-doc.txt
+File Copy: C:\IC\libs\rwp-test.lis
+File Copy: C:\IC\libs\selftest.c
+File Copy: C:\IC\libs\shaft.c
+File Copy: C:\IC\libs\soniccmd.c
+File Copy: C:\IC\libs\soniccmd.lis
+File Copy: C:\IC\libs\speed.asm
+File Copy: C:\IC\libs\speed.icb
+File Copy: C:\IC\libs\theremin.c
+File Copy: C:\IC\libs\theremin.lis
+File Copy: C:\IC\libs\track.c
+File Copy: C:\IC\libs\wimp.c
+File Copy: C:\IC\libs\wimp.lis
+File Copy: C:\IC\libs\yo-yo.lis
+File Copy: C:\IC\libs\yoyo.c
+File Copy: C:\IC\libs\Rug_Warrior_Pro.icd
+Made Dir: C:\IC\libs\icarchiv
+File Copy: C:\IC\libs\icarchiv\6811regs.asm
+File Copy: C:\IC\libs\icarchiv\bicycle.c
+File Copy: C:\IC\libs\icarchiv\music.c
+File Copy: C:\IC\libs\icarchiv\pcode_eq.asm
+File Copy: C:\IC\libs\icarchiv\readme.pco
+File Copy: C:\IC\libs\icarchiv\screen.c
+File Copy: C:\IC\libs\icarchiv\tunes.c
+File Copy: C:\IC\icwin.exe
+Made Dir: C:\Documents and Settings\All Users\Menu Démarrer\Programmes\Interactive C
+Shell Link: C:\Documents and Settings\All Users\Menu Démarrer\Programmes\Interactive C\Interactive C.lnk
+Shell Link: C:\Documents and Settings\All Users\Menu Démarrer\Programmes\Interactive C\Interactive C Help.lnk
+RegDB Key: SOFTWARE\Newton Research Labs\IC
+RegDB Val: C:\IC
+RegDB Name: IC_DIR
+RegDB Root: 2
+User Rights: Admin
