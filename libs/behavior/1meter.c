@@ -12,9 +12,8 @@
 
 void main()
 {
-    _motor_distance_ = 100;
-    _motor_right_speed_ = 100;
-    _motor_left_speed_ = 100;
+    _motor_distance_ = (int)(600./1.178)-1;
+    _motor_initial_speed_ = 100;
 
     printf("runing for\n1.2 meter");
     init_motors();

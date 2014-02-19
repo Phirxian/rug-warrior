@@ -3,6 +3,7 @@
 
 int _left_enc_counts_ = 0;
 int _right_enc_counts_ = 0;
+int _motor_initial_speed_ = 0;
 int _motor_right_speed_ = 0;
 int _motor_left_speed_ = 0;
 int _motor_distance_ = 0;
@@ -15,27 +16,24 @@ void running()
 {
     int diff;
 
+    int inv = (-1)*(_motor_initial_speed_ < 0) +
+                   (_motor_initial_speed_ > 0);
+
+    _motor_right_speed_ = _motor_initial_speed_;
+    _motor_left_speed_ = _motor_initial_speed_;
+
     while(1)
     {
-        diff = _left_enc_counts_ - _right_enc_counts_;
+        diff = _right_enc_counts_ - _left_enc_counts_;
 
-        if(diff < -1)
-        {
-            _motor_right_speed_ += 1;
-            _motor_left_speed_ -= 1;
-        }
-
-        if(diff > 1)
-        {
-            _motor_right_speed_ -= 1;
-            _motor_left_speed_ += 1;
-        }
+        _motor_right_speed_ -= inv*diff;
+        _motor_left_speed_ += inv*diff;
 
         if(_left_enc_counts_ >= _motor_distance_) _motor_left_speed_ = 0;
         if(_right_enc_counts_ >= _motor_distance_) _motor_right_speed_ = 0;
 
-        motor(0, _motor_left_speed_);
-        motor(1, _motor_right_speed_);
+        motor(0, inv*abs(_motor_left_speed_));
+        motor(1, inv*abs(_motor_right_speed_));
     }
 }
 
