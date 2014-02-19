@@ -14,8 +14,8 @@ var searchData=
   ['play_5fnote',['play_note',['../tunes_8c.html#a389a29b1aa7cd3e5f0ab7e0a50eb81c2',1,'tunes.c']]],
   ['play_5fnote_5f2',['play_note_2',['../tunes_8c.html#ad64a752477bb35b9b4f09eec3f7e3281',1,'tunes.c']]],
   ['play_5freset',['play_reset',['../tunes_8c.html#a91cf8addb9d8e64913aa1aa559a65663',1,'tunes.c']]],
-  ['port_5fa',['port_a',['../regdefs_8c.html#ad2418a7bce80afb6f10e4db918286882',1,'port_a():&#160;regdefs.c'],['../lib__rw10_8c.html#ad2418a7bce80afb6f10e4db918286882',1,'port_a():&#160;lib_rw10.c']]],
-  ['port_5fd',['port_d',['../regdefs_8c.html#a410101f24c9b4159ee85224bb98396d3',1,'port_d():&#160;regdefs.c'],['../lib__rw10_8c.html#a410101f24c9b4159ee85224bb98396d3',1,'port_d():&#160;lib_rw10.c']]],
+  ['port_5fa',['port_a',['../lib__rw10_8c.html#ad2418a7bce80afb6f10e4db918286882',1,'lib_rw10.c']]],
+  ['port_5fd',['port_d',['../lib__rw10_8c.html#a410101f24c9b4159ee85224bb98396d3',1,'lib_rw10.c']]],
   ['porta',['porta',['../regdefs_8c.html#a7f40325aaddc75ec8e13cdd34400047d',1,'regdefs.c']]],
   ['portb',['portb',['../regdefs_8c.html#a98e200bd29fdd78738d3594990c12644',1,'regdefs.c']]],
   ['portc',['portc',['../regdefs_8c.html#a134599483af0c222f05597a818de4ac6',1,'regdefs.c']]],
@@ -28,5 +28,5 @@ var searchData=
   ['printn',['printn',['../screen_8c.html#a598db0d698ebf794573aa38998ff031a',1,'screen.c']]],
   ['pwm_5fmask',['pwm_mask',['../base_2lib__rwp_8c.html#af583a71fc7eabd31426624437cd1a8f3',1,'pwm_mask():&#160;lib_rwp.c'],['../lib__rw11_8c.html#af583a71fc7eabd31426624437cd1a8f3',1,'pwm_mask():&#160;lib_rw11.c'],['../firmware_2lib__rwp_8c.html#af583a71fc7eabd31426624437cd1a8f3',1,'pwm_mask():&#160;lib_rwp.c']]],
   ['pwm_5fservo',['pwm_servo',['../shared_2sonar_8c.html#a58495e4ae9f36f8f7acbca793a9477c7',1,'sonar.c']]],
-  ['pyro',['pyro',['../regdefs_8c.html#a3819bdc2daadda0fce30bf39acac346f',1,'pyro():&#160;regdefs.c'],['../lib__rw11_8c.html#a3819bdc2daadda0fce30bf39acac346f',1,'pyro():&#160;lib_rw11.c']]]
+  ['pyro',['pyro',['../lib__rw11_8c.html#a3819bdc2daadda0fce30bf39acac346f',1,'lib_rw11.c']]]
 ];

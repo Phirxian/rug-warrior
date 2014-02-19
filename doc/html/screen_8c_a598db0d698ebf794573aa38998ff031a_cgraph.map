@@ -1,5 +1,5 @@
 <map id="printn" name="printn">
-<area shape="rect" id="node3" href="$convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="133,5,189,32"/>
-<area shape="rect" id="node7" href="$screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="112,56,211,83"/>
-<area shape="rect" id="node5" href="$convert_8c.html#a83b97b49b2135e525b55a3a7ff42036e" title="abs" alt="" coords="259,5,304,32"/>
+<area shape="rect" id="node2" href="$convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="128,5,181,32"/>
+<area shape="rect" id="node4" href="$screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="109,56,200,83"/>
+<area shape="rect" id="node3" href="$common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="248,5,291,32"/>
 </map>

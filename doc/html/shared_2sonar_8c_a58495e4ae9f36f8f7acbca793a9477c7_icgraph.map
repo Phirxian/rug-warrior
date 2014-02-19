@@ -1,5 +1,5 @@
 <map id="pwm_servo" name="pwm_servo">
-<area shape="rect" id="node3" href="$shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd" title="set_servo" alt="" coords="150,31,234,57"/>
-<area shape="rect" id="node5" href="$shared_2sonar_8c.html#a3e946f741a74a116374de8566c6caba6" title="scan" alt="" coords="285,5,337,32"/>
-<area shape="rect" id="node7" href="$test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="283,56,338,83"/>
+<area shape="rect" id="node2" href="$shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd" title="set_servo" alt="" coords="145,31,223,57"/>
+<area shape="rect" id="node3" href="$shared_2sonar_8c.html#a3e946f741a74a116374de8566c6caba6" title="scan" alt="" coords="272,5,323,32"/>
+<area shape="rect" id="node4" href="$test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="272,56,323,83"/>
 </map>

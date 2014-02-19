@@ -1,6 +1,0 @@
-<map id="servo_off" name="servo_off">
-<area shape="rect" id="node3" href="$diagnostic_8c.html#ab50d07079b04faf6898956b052644966" title="frob_outputs" alt="" coords="142,5,245,32"/>
-<area shape="rect" id="node7" href="$startstp_8c.html#af49aa2ff6fdc9c54196bcec458bb3af4" title="_stop_machine" alt="" coords="134,56,253,83"/>
-<area shape="rect" id="node5" href="$diagnostic_8c.html#ab93a0ba8748af7794b42a8c381480915" title="control_panel" alt="" coords="305,5,413,32"/>
-<area shape="rect" id="node9" href="$startstp_8c.html#ad098292050d6059ef0b3af84dac1ef6f" title="start_machine" alt="" coords="301,56,416,83"/>
-</map>

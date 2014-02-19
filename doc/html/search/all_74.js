@@ -29,5 +29,7 @@ var searchData=
   ['toc5',['toc5',['../regdefs_8c.html#a9c175667fe5da1871a7ed7a4187bd8cb',1,'regdefs.c']]],
   ['tocx',['TOCx',['../base_2lib__rwp_8c.html#aadb76e04ceadfab884568976b02ccb95',1,'TOCx():&#160;lib_rwp.c'],['../lib__rw11_8c.html#aadb76e04ceadfab884568976b02ccb95',1,'TOCx():&#160;lib_rw11.c'],['../firmware_2lib__rwp_8c.html#aadb76e04ceadfab884568976b02ccb95',1,'TOCx():&#160;lib_rwp.c']]],
   ['tone',['tone',['../base_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8',1,'tone(float frequency, float length):&#160;lib_ic.c'],['../lib__hb_8c.html#aabe762cad0063d9271131f3cc306a0e8',1,'tone(float frequency, float length):&#160;lib_hb.c'],['../firmware_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8',1,'tone(float frequency, float length):&#160;lib_ic.c'],['../lib__r22_8c.html#aabe762cad0063d9271131f3cc306a0e8',1,'tone(float frequency, float length):&#160;lib_r22.c'],['../lib__rw10_8c.html#aabe762cad0063d9271131f3cc306a0e8',1,'tone(float frequency, float length):&#160;lib_rw10.c'],['../lib__rw11_8c.html#aabe762cad0063d9271131f3cc306a0e8',1,'tone(float frequency, float length):&#160;lib_rw11.c']]],
-  ['tunes_2ec',['tunes.c',['../tunes_8c.html',1,'']]]
+  ['tunes_2ec',['tunes.c',['../tunes_8c.html',1,'']]],
+  ['twitch',['twitch',['../echo_8c.html#a30c8746d91a7cba8f120e337d0a25c2f',1,'echo.c']]],
+  ['twitch_5faux',['twitch_aux',['../echo_8c.html#a95e08d0f0c9ef53423e1a81cfe3561db',1,'echo.c']]]
 ];

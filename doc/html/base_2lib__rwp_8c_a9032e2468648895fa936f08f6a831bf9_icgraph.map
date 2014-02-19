@@ -1,3 +1,7 @@
 <map id="drive" name="drive">
-<area shape="rect" id="node3" href="$1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="107,5,162,32"/>
+<area shape="rect" id="node2" href="$echo_8c.html#a95e08d0f0c9ef53423e1a81cfe3561db" title="twitch_aux" alt="" coords="104,5,189,32"/>
+<area shape="rect" id="node3" href="$echo_8c.html#a30c8746d91a7cba8f120e337d0a25c2f" title="twitch" alt="" coords="238,5,295,32"/>
+<area shape="rect" id="node4" href="$echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="344,5,395,32"/>
+<area shape="rect" id="node5" href="$echo_8c.html#a185bec48275b377b760853a63644fc23" title="echo_control" alt="" coords="443,5,539,32"/>
+<area shape="rect" id="node6" href="$echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="587,5,669,32"/>
 </map>
