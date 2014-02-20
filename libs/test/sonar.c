@@ -1,22 +1,69 @@
-void main()
+/**
+ * Make the servo scan back and forth between low_pos and high_pos
+ * Delay tells the servo how long to wait between steps
+ * ADD : Print the actual position of the rugBat between -100 & 100
+ *		 And make a predetermined number of loop
+ * @param nLoop - number of laps remaining (must be superior to 1)
+ */
+void scan_display_position(int low_pos, int high_pos, int nLoop)
 {
-    int pos;
-    pos = -100;
 
-    init_sonar();
-    sonar_init_servo();
+    /* Standard step size */
+    int step = 1;
+	
+	if (nLoop < 1) {
+		return;
+	}
 
-    while(pos <= 100)
+    /* Start can fail otherwise*/
+    servo_pos = (low_pos + high_pos) / 2;
+
+    while(1)
     {
-        printf("%d - ", pos);
-        set_servo(pos);
+        if((servo_pos < low_pos) || (servo_pos > high_pos))
+        {
+            /* Don't reverse instantly */
+            sleep(3.0 * scan_delay);
+            step = (- step);
+        }
 
-        ping();
-        printf("%f\n", range());
-
-        pos += 10;
-        sleep(1.);
+        servo_pos = servo_pos + step;
+        set_servo(servo_pos);
+		
+		printf("Position %d\n", servo_pos);
+		
+        sleep(scan_delay);
+		
+		if (servo_pos == 100) { /* A laps has been realized */
+			nLoop--;
+		}
+		
+		if (nLoop == 0) { /* All loop are realized */
+			return;
+		}
     }
+}
 
-    sonar_servo_off();
+/** Turn the RugBat then Compute the distance between the rugbat and the object */
+void main() {
+
+	/* Turn the RugBat*/
+	sonar_init_servo();
+	
+	scan_display_position(-100,100, 5); /* 5 loop*/
+	
+	printf("END OF LOOPS");
+	sleep(5.0);
+	
+	printf("\n\n");
+	sonar_servo_off();
+	
+	/* Calculate the distance continious between an object and the sonar */
+	init_sonar();
+	while (1) {
+		ping();
+		printf("%f\n", feetToCm(range()));
+		sleep(2.0);
+	}
+	
 }
