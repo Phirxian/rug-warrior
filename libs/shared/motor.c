@@ -1,5 +1,6 @@
 #define R_MOTOR 1
 #define L_MOTOR 2
+#define C_MOTOR (R_MOTOR | L_MOTOR)
 
 int _left_enc_counts_ = 0;
 int _right_enc_counts_ = 0;
@@ -8,9 +9,12 @@ int _motor_right_speed_ = 0;
 int _motor_left_speed_ = 0;
 int _motor_distance_ = 0;
 
+int _running_process_running_ = 0;
+
 /**
  * start it with thread
  * dependency : encoder_aux() process
+ * ! reset the encoders count
  */
 void running()
 {
@@ -19,21 +23,32 @@ void running()
     int inv = (-1)*(_motor_initial_speed_ < 0) +
                    (_motor_initial_speed_ > 0);
 
-    _motor_right_speed_ = _motor_initial_speed_;
-    _motor_left_speed_ = _motor_initial_speed_;
+    _motor_right_speed_ = inv*_motor_initial_speed_;
+    _motor_left_speed_ = inv*_motor_initial_speed_;
 
-    while(1)
+    _running_process_running_ = 1;
+    reset_encoder_aux();
+
+    while(_running_process_running_)
     {
         diff = _right_enc_counts_ - _left_enc_counts_;
 
-        _motor_right_speed_ -= inv*diff;
-        _motor_left_speed_ += inv*diff;
+        if(_motor_right_speed_ - diff > 0)
+            _motor_right_speed_ -= diff;
 
-        if(_left_enc_counts_ >= _motor_distance_) _motor_left_speed_ = 0;
-        if(_right_enc_counts_ >= _motor_distance_) _motor_right_speed_ = 0;
+        if(_motor_left_speed_ + diff > 0)
+            _motor_left_speed_ += diff;
 
-        motor(0, inv*abs(_motor_left_speed_));
-        motor(1, inv*abs(_motor_right_speed_));
+        if(_left_enc_counts_ >= _motor_distance_)
+            _motor_left_speed_ = 0;
+
+        if(_right_enc_counts_ >= _motor_distance_)
+            _motor_right_speed_ = 0;
+
+        motor(0, inv*_motor_left_speed_);
+        motor(1, inv*_motor_right_speed_);
+
+        sleep(0.1);
     }
 }
 
@@ -64,6 +79,23 @@ void encoder_aux()
 }
 
 /**
+ * reset encoders count
+ */
+void reset_encoder_aux()
+{
+    while(_left_enc_counts_)
+    {
+        _left_enc_counts_ = 0;
+        sleep(0.001);
+    }
+    while(_right_enc_counts_)
+    {
+        _right_enc_counts_ = 0;
+        sleep(0.001);
+    }
+}
+
+/**
  * check if encoder_aux() process
  * are not in running state
  * can be not thread-safe
@@ -88,30 +120,49 @@ float feetToMotor(float feet, int speed)
 /**
  * flags : R_MOTOR, L_MOTOR, R_MOTOR | L_MOTOR
  * angle : degree
- * speed : [-100 : 0] U [0 : 100]
+ * dependency process: encoder_aux
+ * @see _motor_initial_speed_
+ * ! reset the encoders count
  */
-void rotate(int flags, float angle, int speed)
+void rotate(int flags, int angle)
 {
     int invert;
-    float radius = 14.;
+    int needed;
+    int adjust;
+    float radius;
 
     if(flags < 0 || flags > 3)
         return;
 
+    radius = 14.;
     invert = 1;
+
+    adjust = -(angle < 0) + (angle > 0);
+    angle = (angle < 0)*(-angle) + (angle > 0)*angle;
 
     if(flags == 3)
     {
-        angle /= 2.;
-        invert = -1;
+        angle /= 2;
+        invert *= -1;
         radius /= 2.;
     }
 
-    motor(0, speed*(flags & 1));
-    motor(1, speed*(flags & 2)*invert);
+    _motor_right_speed_ = adjust*_motor_initial_speed_*(flags & 1)*invert;
+    _motor_left_speed_ = adjust*_motor_initial_speed_*(flags & 2);
 
-    /* calculate the time for the angle */
-    sleep(feetToMotor(cmToFeet((angle/360.)*2.*PI*radius), speed));
+    reset_encoder_aux();
 
-    stop();
+    needed = (int)(480.*((float)(angle))/2160.);
+
+    while(_motor_left_speed_ || _motor_right_speed_)
+    {
+        if(flags & 1 && _right_enc_counts_ >= needed)
+          _motor_right_speed_ = 0;
+
+        if(flags & 2 && _left_enc_counts_ >= needed)
+          _motor_left_speed_ = 0;
+
+        motor(0, _motor_left_speed_);
+        motor(1, _motor_right_speed_);
+    }
 }

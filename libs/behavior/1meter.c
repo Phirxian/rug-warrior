@@ -25,6 +25,9 @@ void main()
     {
         printf("running Test   ");
         printn(_right_enc_counts_-_left_enc_counts_,5);
+        printf(" ");
+        printn(_motor_right_speed_,5);
+        printn(_motor_left_speed_,5);
         printf("\n");
 
         sleep(0.1);

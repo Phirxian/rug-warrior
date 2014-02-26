@@ -10,23 +10,27 @@ float stop_time = 0.035;   /* Approximately, one servo cycle */
  */
 
 int track(int trans_vel, int rot_vel, int clicks)
-{   long time_out = mseconds() + 5000L;     /* Time out after 5 seconds */
+{
+    long time_out = mseconds() + 5000L;     /* Time out after 5 seconds */
     int l_tot_clks = 0;    /* Total clicks */
     int r_tot_clks = 0;
     int ave_clks = 0;
     get_left_clicks();     /* Reset clicks */
     get_right_clicks();    /* Reset clicks */
     driveb(trans_vel, rot_vel);   /* Turn motors on */
+
     while(1)
+    {
+        l_tot_clks = l_tot_clks + get_left_clicks();  /* Count up the clicks */
+        r_tot_clks = r_tot_clks + get_right_clicks();
+        ave_clks = min(l_tot_clks, r_tot_clks);       /* Trigger on ave_clicks */
+
+        if((ave_clks >= clicks) || (mseconds() > time_out))
         {
-            l_tot_clks = l_tot_clks + get_left_clicks();  /* Count up the clicks */
-            r_tot_clks = r_tot_clks + get_right_clicks();
-            ave_clks = min(l_tot_clks, r_tot_clks);       /* Trigger on ave_clicks */
-            if ((ave_clks >= clicks) || (mseconds() > time_out))
-                {   driveb((- trans_vel), (- rot_vel));   /* Try to kill motion */
-                    sleep(stop_time);
-                    stop();
-                    return (clicks - ave_clks);
-            }
+            driveb((- trans_vel), (- rot_vel));   /* Try to kill motion */
+            sleep(stop_time);
+            stop();
+            return (clicks - ave_clks);
+        }
     }
 }
