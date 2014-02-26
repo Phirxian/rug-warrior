@@ -1,0 +1,11 @@
+<map id="warb" name="warb">
+<area shape="rect" id="node2" href="$a00001.html#a35b95a4506fe38aa8c942b178cdda428" title="beeper_off" alt="" coords="124,5,207,32"/>
+<area shape="rect" id="node3" href="$a00001.html#ac01536f2a7ceb0d4c7e5e6a6d59c3871" title="beeper_on" alt="" coords="124,56,207,83"/>
+<area shape="rect" id="node4" href="$a00001.html#aebfeaced338ec2353b5d133eebfb3ebb" title="set_beeper_pitch" alt="" coords="105,107,226,133"/>
+<area shape="rect" id="node5" href="$a00001.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="408,157,461,184"/>
+<area shape="rect" id="node7" href="$a00008.html#a30c8746d91a7cba8f120e337d0a25c2f" title="twitch" alt="" coords="137,208,194,235"/>
+<area shape="rect" id="node6" href="$a00001.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="509,157,573,184"/>
+<area shape="rect" id="node8" href="$a00008.html#a95e08d0f0c9ef53423e1a81cfe3561db" title="twitch_aux" alt="" coords="275,208,360,235"/>
+<area shape="rect" id="node9" href="$a00002.html#a9032e2468648895fa936f08f6a831bf9" title="drive" alt="" coords="409,208,460,235"/>
+<area shape="rect" id="node10" href="$a00002.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="514,208,569,235"/>
+</map>

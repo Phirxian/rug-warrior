@@ -1,0 +1,10 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$a00002.html#a6368ba2819f669bf17962d89b3fca203" title="bumper" alt="" coords="105,12,170,39"/>
+<area shape="rect" id="node4" href="$a00014.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="110,69,165,96"/>
+<area shape="rect" id="node8" href="$a00001.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="111,132,164,159"/>
+<area shape="rect" id="node3" href="$a00001.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="234,5,294,32"/>
+<area shape="rect" id="node5" href="$a00011.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="237,56,291,83"/>
+<area shape="rect" id="node7" href="$a00014.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="219,107,309,133"/>
+<area shape="rect" id="node6" href="$a00010.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="357,56,400,83"/>
+<area shape="rect" id="node9" href="$a00001.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="232,157,296,184"/>
+</map>

@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="rw" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/rw" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/rw" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="libs/base/lib_ic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/base/lib_rwp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/base/regdefs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/base/shaft.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/base/speed.asm" />
+		<Unit filename="libs/behavior/1meter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/behavior/RugBat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/behavior/rotate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/firmware/6811regs.asm" />
+		<Unit filename="libs/firmware/ldxibase.asm" />
+		<Unit filename="libs/firmware/lib_hb.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/firmware/lib_ic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/firmware/lib_r22.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/firmware/lib_rw10.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/firmware/lib_rw11.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/firmware/lib_rwp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/firmware/pcode_eq.asm" />
+		<Unit filename="libs/firmware/r21_beep.asm" />
+		<Unit filename="libs/firmware/r21_eq.asm" />
+		<Unit filename="libs/firmware/r22_beep.asm" />
+		<Unit filename="libs/firmware/r22_eq.asm" />
+		<Unit filename="libs/firmware/sb_beep.asm" />
+		<Unit filename="libs/firmware/sbot_eq.asm" />
+		<Unit filename="libs/firmware/speed.asm" />
+		<Unit filename="libs/music/cof.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/music/echo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/music/tunes.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/shared/common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/shared/convert.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/shared/motor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/shared/screen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/shared/sonar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/test/aie.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/test/analog5.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/test/analog6.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/test/analog7.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/test/bumper.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/test/encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/test/ir.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/test/lcd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/test/mic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/test/motor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/test/photo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/test/piezo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/test/shaftenc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/test/sonar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/test/user_digital.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/behave.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/bugle.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/cof.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/common.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/echo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/follow.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/lib_ic.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/lib_rwp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/moth.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/regdefs.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/selftest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/shaft.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/soniccmd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/speed.asm" />
+		<Unit filename="old/kam/theremin.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/track.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/wimp.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/kam/yoyo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/sample/ir_orient.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/sample/karstbot.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/sample/linefol.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/sample/screen.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/sample/shaftenc.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/sample/shooter.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/test/RugBat.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/test/alpha.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/test/hbtest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/test/irplacebo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/test/irtest22.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/test/selftest.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="old/test/testbrd.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

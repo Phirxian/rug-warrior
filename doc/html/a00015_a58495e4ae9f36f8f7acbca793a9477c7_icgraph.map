@@ -1,0 +1,5 @@
+<map id="pwm_servo" name="pwm_servo">
+<area shape="rect" id="node2" href="$a00015.html#a222f05c4901d3ffb622e9846e40526bd" title="set_servo" alt="" coords="145,31,223,57"/>
+<area shape="rect" id="node3" href="$a00015.html#a3e946f741a74a116374de8566c6caba6" title="scan" alt="" coords="272,5,323,32"/>
+<area shape="rect" id="node4" href="$a00016.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="272,56,323,83"/>
+</map>

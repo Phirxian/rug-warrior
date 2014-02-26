@@ -1,0 +1,8 @@
+<map id="rotate" name="rotate">
+<area shape="rect" id="node2" href="$a00011.html#a616c6cbada9a0cc9a076a510a274764a" title="cmToFeet" alt="" coords="115,5,197,32"/>
+<area shape="rect" id="node3" href="$a00012.html#af075ff93ea9486ef03788b5c0b12707b" title="feetToMotor" alt="" coords="110,56,202,83"/>
+<area shape="rect" id="node4" href="$a00002.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="129,107,183,133"/>
+<area shape="rect" id="node5" href="$a00001.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="129,157,183,184"/>
+<area shape="rect" id="node7" href="$a00002.html#a8c528baf37154d347366083f0f816846" title="stop" alt="" coords="133,208,179,235"/>
+<area shape="rect" id="node6" href="$a00001.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="251,157,315,184"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="play_note" name="play_note">
+<area shape="rect" id="node2" href="$a00009.html#ad64a752477bb35b9b4f09eec3f7e3281" title="play_note_2" alt="" coords="134,81,226,108"/>
+<area shape="rect" id="node3" href="$a00001.html#aebfeaced338ec2353b5d133eebfb3ebb" title="set_beeper_pitch" alt="" coords="275,5,397,32"/>
+<area shape="rect" id="node4" href="$a00001.html#ac01536f2a7ceb0d4c7e5e6a6d59c3871" title="beeper_on" alt="" coords="295,56,377,83"/>
+<area shape="rect" id="node5" href="$a00001.html#a35b95a4506fe38aa8c942b178cdda428" title="beeper_off" alt="" coords="295,107,377,133"/>
+<area shape="rect" id="node6" href="$a00009.html#a02f694a5858b7ab04b5f7d18c0f6be5e" title="music_command" alt="" coords="275,157,397,184"/>
+</map>

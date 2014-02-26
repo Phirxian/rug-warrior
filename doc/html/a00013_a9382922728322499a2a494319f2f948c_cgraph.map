@@ -1,0 +1,10 @@
+<map id="set_show_motors" name="set_show_motors">
+<area shape="rect" id="node2" href="$a00013.html#ae795df409b1689e7122dab70480e9b78" title="display_mot_test" alt="" coords="179,56,301,83"/>
+<area shape="rect" id="node9" href="$a00002.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="213,107,267,133"/>
+<area shape="rect" id="node3" href="$a00004.html#a1176d8fd5c446189a5d405bbbc448df0" title="get_left_clicks" alt="" coords="353,5,460,32"/>
+<area shape="rect" id="node4" href="$a00004.html#a46882b7cd70183cdbcc74cab94e0196a" title="get_right_clicks" alt="" coords="350,56,463,83"/>
+<area shape="rect" id="node5" href="$a00014.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="379,107,434,133"/>
+<area shape="rect" id="node6" href="$a00011.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="531,81,584,108"/>
+<area shape="rect" id="node8" href="$a00014.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="512,132,603,159"/>
+<area shape="rect" id="node7" href="$a00010.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="651,81,693,108"/>
+</map>

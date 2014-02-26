@@ -1,0 +1,7 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$a00004.html#a655a0723b26fd4943c4f9883b69be9c6" title="init_velocity" alt="" coords="104,5,195,32"/>
+<area shape="rect" id="node3" href="$a00002.html#a49fe73be96a0657e6a3ea6669cdc9f25" title="left_shaft" alt="" coords="111,56,187,83"/>
+<area shape="rect" id="node4" href="$a00002.html#a759cd6a2d214a5b16d6e01d114385039" title="right_shaft" alt="" coords="108,107,191,133"/>
+<area shape="rect" id="node5" href="$a00001.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="123,157,176,184"/>
+<area shape="rect" id="node6" href="$a00001.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="243,157,307,184"/>
+</map>

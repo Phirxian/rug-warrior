@@ -1,0 +1,18 @@
+<map id="start_echo" name="start_echo">
+<area shape="rect" id="node2" href="$a00008.html#a42efcf4d578c48f2cee299e4086dd417" title="capture_command" alt="" coords="571,5,701,32"/>
+<area shape="rect" id="node5" href="$a00008.html#a185bec48275b377b760853a63644fc23" title="echo_control" alt="" coords="141,107,237,133"/>
+<area shape="rect" id="node14" href="$a00008.html#a126686bb849f61aca5d2fc14f452f827" title="rpt" alt="" coords="617,56,655,83"/>
+<area shape="rect" id="node15" href="$a00008.html#a925d8efdf863cf52667ec8fcf4fb7d33" title="sample_sound" alt="" coords="136,259,243,285"/>
+<area shape="rect" id="node3" href="$a00001.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="749,107,803,133"/>
+<area shape="rect" id="node4" href="$a00001.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="851,107,915,133"/>
+<area shape="rect" id="node6" href="$a00008.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="296,208,347,235"/>
+<area shape="rect" id="node7" href="$a00008.html#a30c8746d91a7cba8f120e337d0a25c2f" title="twitch" alt="" coords="433,360,490,387"/>
+<area shape="rect" id="node11" href="$a00001.html#ac01536f2a7ceb0d4c7e5e6a6d59c3871" title="beeper_on" alt="" coords="420,157,503,184"/>
+<area shape="rect" id="node12" href="$a00001.html#aebfeaced338ec2353b5d133eebfb3ebb" title="set_beeper_pitch" alt="" coords="401,208,522,235"/>
+<area shape="rect" id="node13" href="$a00001.html#a35b95a4506fe38aa8c942b178cdda428" title="beeper_off" alt="" coords="420,259,503,285"/>
+<area shape="rect" id="node8" href="$a00008.html#a95e08d0f0c9ef53423e1a81cfe3561db" title="twitch_aux" alt="" coords="593,360,679,387"/>
+<area shape="rect" id="node9" href="$a00002.html#a9032e2468648895fa936f08f6a831bf9" title="drive" alt="" coords="751,360,801,387"/>
+<area shape="rect" id="node10" href="$a00002.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="855,360,910,387"/>
+<area shape="rect" id="node16" href="$a00010.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="300,259,343,285"/>
+<area shape="rect" id="node17" href="$a00001.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="291,309,351,336"/>
+</map>
