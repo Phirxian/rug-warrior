@@ -9,11 +9,15 @@
  * Go Foward and when skirt is touched (push)
  * And Escape an obstacle when skirt is touched (bumper)
  */
+/** 
+ * Go Foward and when skirt is touched (push)
+ * And Escape an obstacle when skirt is touched (bumper)
+ */
 void main() {
 
 	/* Utilisatation de int bumper() */
 	int bumper;
-	bumper = bumper();
+	bumper = bumper2();
 	
 	init_motors();
 	
@@ -22,19 +26,31 @@ void main() {
 		/* En fonction du bumper touché le faire tourner dans le sens opposé et le faire repartir */
 		
 		if (bumper != 0) { /* A Bumper is touched */
-			drive(0,0); /* Stop a motor */
+			 /* Stop a motor */
 			if (bumper == RIGHT) {
-				/* Spin Left at 60° or 90° or 120° OR use IR*/
+				drive(0,0);
+				/* Spin Left at 30° or 60° OR use IR */
+				rotate(L_MOTOR, 60.0, 50);
 			} else if (bumper == LEFT) {
-				/* Spin Right at 60° or 90° or 120° OR use IR */
+				drive(0,0);
+				/* Spin Right at 30° or 60°  OR use IR */
+				rotate(R_MOTOR, 60.0, 50);
 			} else if (bumper == FRONT) {
-				/* Spin at 180° */
+				drive(0,0);
+				/* Spin Right at 90° */
+				rotate(R_MOTOR, 90.0, 50);
 			} else if (bumper == BACK) {
+				
 				/* Go Forward */
+				
 			} else if (bumper == BACK_RIGHT) {
+				printf("TODO");
 				/* Spin Left at 30° */
+				
 			} else if (bumper == BACK_LEFT) {
+				printf("TODO");
 				/* Spin Right at 30° */
+				
 			}
 			drive(100,0);
 
@@ -44,3 +60,4 @@ void main() {
 
 	}
 }
+
