@@ -4,6 +4,11 @@
 #define BMP_BACK  		0b100
 
 /**
+ * Tool-Class Bumpers-related
+ * @version 270214-1541
+ */
+
+/**
  * Compensate the fact that there's a difference between instantaneous detection and the actual test
  * The main change is to increase the accuracy of the detection of the front bumper:
  * We insert an active temporisation when bumper() returns a front detection (left && right);
