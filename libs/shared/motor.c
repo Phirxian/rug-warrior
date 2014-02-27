@@ -50,6 +50,48 @@ void running()
 
         sleep(0.1);
     }
+
+    _running_process_running_ = 0;
+}
+
+/**
+ * start it with thread
+ * dependency : encoder_aux() process
+ * ! reset the encoders count
+ * same behavior as running()
+ * but running forever
+ */
+void running_forever()
+{
+    int diff;
+
+    int inv = (-1)*(_motor_initial_speed_ < 0) +
+                   (_motor_initial_speed_ > 0);
+
+    _motor_right_speed_ = inv*_motor_initial_speed_;
+    _motor_left_speed_ = inv*_motor_initial_speed_;
+
+    _running_process_running_ = 1;
+    reset_encoder_aux();
+
+    while(_running_process_running_)
+    {
+        diff = _right_enc_counts_ - _left_enc_counts_;
+
+        if(_motor_right_speed_ - diff > 0)
+            _motor_right_speed_ -= diff;
+
+        if(_motor_left_speed_ + diff > 0)
+            _motor_left_speed_ += diff;
+
+        motor(0, inv*_motor_left_speed_);
+        motor(1, inv*_motor_right_speed_);
+
+        sleep(0.1);
+    }
+
+    /* unreachable code */
+    _running_process_running_ = 0;
 }
 
 /**
