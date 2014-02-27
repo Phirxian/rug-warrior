@@ -29,7 +29,7 @@ void running()
     _running_process_running_ = 1;
     reset_encoder_aux();
 
-    while(_running_process_running_)
+    while(_running_process_running_ && (_left_enc_counts_ < _motor_distance_ || _right_enc_counts_ < _motor_distance_))
     {
         diff = _right_enc_counts_ - _left_enc_counts_;
 
@@ -51,6 +51,8 @@ void running()
         sleep(0.1);
     }
 
+    motor(0, 0);
+    motor(1, 0);
     _running_process_running_ = 0;
 }
 
