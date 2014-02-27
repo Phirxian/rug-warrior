@@ -94,6 +94,8 @@ void running_forever()
 
     /* unreachable code */
     _running_process_running_ = 0;
+    motor(0, 0);
+    motor(1, 0);
 }
 
 /**
