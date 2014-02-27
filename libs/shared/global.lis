@@ -3,3 +3,4 @@ shared/convert.c
 shared/screen.c
 shared/sonar.c
 shared/common.c
+shared/bumper.c

@@ -1,12 +1,3 @@
-/* LIB_IC.C */
-
-/*
-    VERSION HISTORY
-
- 7/9/97   Created from lib_rw11.c.  Moved out Rug Warrior specific functions and variables
-
-*/
-
 persistent int test_number;
 
 /*******************/
