@@ -33,11 +33,20 @@ int bumper_detection() {
 	/* Save the current time, to make a correction with a temporisation */
 	time = mseconds();
 
-	/* When the front bumper is touched, test with a temporisation */
+	/* When the front bumper is touched, test the other bumper with a temporisation */
     if (bmp == BMP_LEFT) {
-	 	while (bumper() != BMP_RIGHT && (mseconds() - time  < MAX_LAPS_DETECTION));
+	 	while ((bmp = bumper()) != BMP_RIGHT && (mseconds() - time  < MAX_LAPS_DETECTION)); /* Proactive Temposisation */
+		/* Is the bumper right is touched during the LAPS? */
+		if (bmp == BMP_RIGHT) {
+			bmp = BMP_FRONT;
+		}
+		
 	} else if (bmp == BMP_RIGHT) {
-        while (bumper() != BMP_LEFT && (mseconds() - time  < MAX_LAPS_DETECTION));
+        while ((bmp = bumper()) != BMP_LEFT && (mseconds() - time  < MAX_LAPS_DETECTION)); /* Proactive Temposisation */
+		/* Is the bumper left is touched during the LAPS? */
+		if (bmp == BMP_LEFT) {
+			bmp = BMP_FRONT;
+		}
     }
 
 	return bmp; /* No bumper is touched OR direct front OR back: no correction*/
