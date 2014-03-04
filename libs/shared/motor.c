@@ -100,7 +100,7 @@ void running_forever()
  * count the switching state of encoders
  * value are stored into
  * _left_enc_counts_ and _right_enc_counts_
- * use this function under parallele thread
+ * use this function under parallel thread
  */
 void encoder_aux()
 {
@@ -268,5 +268,30 @@ void move_behind(float distance, float marging)
     set_servo(0);
     sonar_servo_off();
     stop();
+}
+
+/** A revoir, avec following light
+ * Adjust the direction clockwise (right) or anti-clockwise (left)
+ * USED WITH : running() or running_forever() 
+ * @param 100 (clockwise) between -100 (anticlockwise)
+ */
+void direction(int clockwise) {
+    
+    /* BAD PARAM */
+    if (clockwise < -100 || clockwise > 100) {
+        return;
+    }
+    
+    /* Reset param to avoid problems*/
+    _motor_right_speed_ = 100;
+    _motor_left_speed_ = 100; 
+    
+    /* Ajust the direction*/
+    if (clockwise < 0) {
+        _motor_right_speed_ -=clockwise; /* Slowing the right motor to anticlockwise*/
+    } else if (clockwise > 0) {
+        _motor_left_speed_ += clockwise; /* Slowing the left motor to clockwise*/
+    }
+    
 }
 
