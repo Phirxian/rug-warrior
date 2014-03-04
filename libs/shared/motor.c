@@ -51,7 +51,7 @@ void running()
         sleep(0.1);
     }
 
-    _running_process_running_ = 0;
+    _running_process_running_ = -1;
 }
 
 /**
@@ -90,10 +90,8 @@ void running_forever()
         sleep(0.1);
     }
 
-    /* unreachable code */
-    _running_process_running_ = 0;
-    motor(0, 0);
-    motor(1, 0);
+    motor(0, 0); motor(1, 0);
+    _running_process_running_ = -1;
 }
 
 /**
@@ -217,8 +215,6 @@ void move_behind(float distance, float marging)
     float last;
     int scan;
 
-    printf("Runs until a wall is found 85cm\n");
-
     init_motors();
     init_sonar();
     sonar_init_servo();
@@ -239,14 +235,14 @@ void move_behind(float distance, float marging)
         {
             kill_process(pid);
             _running_process_running_ = 0;
-            _motor_initial_speed_ = 50+(int)(last-87.);
+            _motor_initial_speed_ = 50+(int)(last-(distance+marging));
             pid = start_process(running_forever());
         }
         else if(last <= (distance-marging))
         {
             kill_process(pid);
             _running_process_running_ = 0;
-            _motor_initial_speed_ = -50+(int)(-83.+last);
+            _motor_initial_speed_ = -50+(int)(-(distance-marging).+last);
             pid = start_process(running_forever());
         }
         else if(!_motor_initial_speed_) break;
@@ -256,15 +252,7 @@ void move_behind(float distance, float marging)
     }
 
     _running_process_running_ = 0;
-
-    for(scan = -100; scan<100; ++scan)
-    {
-        set_servo(scan);
-        ping();
-        last = feetToCm(range());
-        printf("scan %f\n", last);
-    }
-
+    while(_running_process_running_ != -1);
     set_servo(0);
     sonar_servo_off();
     stop();
