@@ -1,14 +1,15 @@
 /**
  * Move forward, and when the skirt is pushed,
  * escape from an obstacle (move back then rotate)
- * Last update: 17:25, Feb. 27, 2014
+ * Last update: 14:25, Mar. 4, 2014
+ * @version 1.1, utilisation des 2 moteurs pour accelerer la rotation par 2
  */
-void main() {
+void escape() {
 	
-	int bmp; /* Store, temporarily the bumper touced */
+	int bmp; /* Store, temporarily the bumper touched */
 	int run_pid; /* Store the pid of the running process, stop the robot when is killed*/
 	
-	/* */
+	/* Initialize all components needed to run the robot */
 	init_motors(); 
 	start_process(encoder_aux());
 	
@@ -39,17 +40,17 @@ void main() {
 			if (bmp == BMP_RIGHT) {
 				/* Spin Left at 30° or 60° */
 				printf("RIGHT\n");
-				rotate(R_MOTOR, 30);
+				rotate(C_MOTOR, -30);
 				
 			} else if (bmp == BMP_LEFT) {
 				/* Spin Right at 30° or 60°*/
 				printf("LEFT\n");
-				rotate(L_MOTOR, 30);
+				rotate(C_MOTOR, 30);
 				
 			} else { /* if (bmp == BMP_FRONT) { */
 				/* Spin Right at 90° */
 				printf("FRONT\n");
-				rotate(L_MOTOR, 90);
+				rotate(C_MOTOR, 90);
 			}
 			
 			sleep(0.50); /* Take a moment after to go foward(avoid overbalance frontly) */
@@ -60,4 +61,5 @@ void main() {
 		}
 		
 	}
+
 }
