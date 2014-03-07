@@ -162,7 +162,7 @@ void check_encoder()
     int last_right;
     int last_left;
 
-    while(true)
+    while(1)
     {
         sleep(1.0);
         if(last_right == _right_enc_counts_ &&
