@@ -150,6 +150,34 @@ void encoder_reset()
 }
 
 /**
+ * use this to chech if your
+ * your running process or
+ * runing forever process or
+ * move_behind process is not
+ * blocked by somethink
+ * (shaft does not change)
+ */
+void check_encoder()
+{
+    int last_right;
+    int last_left;
+
+    while(true)
+    {
+        sleep(1.0);
+        if(last_right == _right_enc_counts_ &&
+           last_left == _left_enc_counts_ &&
+           _right_enc_counts_ != 0)
+        {
+            _running_process_running_ = 0;
+            _move_behind_process_running_ = 0;
+        }
+        last_right = _right_enc_counts_;
+        last_left = _left_enc_counts_;
+    }
+}
+
+/**
  * calculate the time needed to run
  * in x feet with given speed [-100 : 100]
  */
