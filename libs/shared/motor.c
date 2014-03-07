@@ -10,6 +10,7 @@ int _motor_left_speed_ = 0;
 int _motor_distance_ = 0;
 
 int _running_process_running_ = 0;
+int _move_behind_process_running_ = 0;
 
 /**
  * start it with thread
@@ -209,6 +210,11 @@ void rotate(int flags, int angle)
     }
 }
 
+/**
+ * move the robot in front of object to the distance
+ * of @distance in cm
+ * @margin between > 0.22
+ */
 void move_behind(float distance, float marging, int minimal_speed)
 {
     float last;
@@ -217,7 +223,7 @@ void move_behind(float distance, float marging, int minimal_speed)
     set_servo(0);
     sleep(0.175);
 
-    while(1)
+    while(_move_behind_process_running_)
     {
         ping();
         last = feetToCm(range());
@@ -229,14 +235,14 @@ void move_behind(float distance, float marging, int minimal_speed)
             _running_process_running_ = 0;
             while(_running_process_running_ != -1);
             _motor_initial_speed_ = minimal_speed+(int)(last-(distance+marging));
-            pid = start_process(running_forever());
+            start_process(running_forever());
         }
         else if(last <= (distance-marging))
         {
             _running_process_running_ = 0;
             while(_running_process_running_ != -1);
             _motor_initial_speed_ = -minimal_speed+(int)(-(distance-marging).+last);
-            pid = start_process(running_forever());
+            start_process(running_forever());
         }
         else if(!_motor_initial_speed_) break;
         else break;
@@ -249,6 +255,7 @@ void move_behind(float distance, float marging, int minimal_speed)
     set_servo(0);
     sonar_servo_off();
     stop();
+    _move_behind_process_running_ = -1;
 }
 
 /** A revoir, avec following light
