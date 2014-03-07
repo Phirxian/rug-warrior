@@ -1,3 +1,4 @@
+shared/encoder.c
 shared/motor.c
 shared/convert.c
 shared/screen.c

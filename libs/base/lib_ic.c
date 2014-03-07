@@ -23,11 +23,17 @@ float seconds()
     return ((float) mseconds()) / 1000.;
 }
 
+/**
+ * yield the current process for @seconds
+ */
 void sleep(float seconds)
 {
     msleep((long)(seconds * 1000.));
 }
 
+/**
+ * yield the current process for @msec
+ */
 void msleep(long msec)
 {
     long end_time= mseconds() + msec;
@@ -65,12 +71,18 @@ void tone(float frequency, float length)
     bit_clear(0x1000, 8);
 }
 
+/**
+ * enable beeper output
+ */
 void beeper_on()
 {
     bit_set(0x1020, 0b00000001);
     bit_set(0x1022, 0b00001000);
 }
 
+/**
+ * disable beeper output
+ */
 void beeper_off()
 {
     bit_clear(0x1022, 0b00001000);

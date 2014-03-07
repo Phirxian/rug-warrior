@@ -27,8 +27,6 @@ void encoder_aux()
 
 void main()
 {
-    start_process(encoder_aux());            /* Show SE state on LEDs */
-
     while(1)
     {
         printf("Encoders Test   ");
