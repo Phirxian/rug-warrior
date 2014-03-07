@@ -30,7 +30,7 @@ void main()
             /* Stop the robot */
             _running_process_running_ = 0;
             while(_running_process_running_ != -1);
-            escape();
+            escape(bmp);
             /* The robot can go foward after the dodge */
             _motor_initial_speed_ = 100;
             start_process(running_forever());

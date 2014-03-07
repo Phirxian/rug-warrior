@@ -243,7 +243,7 @@ void move_behind(float distance, float marging, int minimal_speed)
         {
             _running_process_running_ = 0;
             while(_running_process_running_ != -1);
-            _motor_initial_speed_ = -minimal_speed+(int)(-(distance-marging).+last);
+            _motor_initial_speed_ = -minimal_speed+(int)(-(distance-marging)+last);
             start_process(running_forever());
         }
         else if(!_motor_initial_speed_) break;
