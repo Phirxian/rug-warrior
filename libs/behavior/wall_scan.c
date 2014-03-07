@@ -2,7 +2,6 @@ void main()
 {
     int scan;
     printf("Runs until a wall is found 85cm\n");
-    start_process(encoder_aux());
 
     init_motors();
     init_sonar();

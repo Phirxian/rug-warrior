@@ -28,7 +28,6 @@ void rotate_test_all_for(int degree)
 void main()
 {
     init_motors();
-    start_process(encoder_aux());
 
     _motor_initial_speed_ = 100;
     printf("rotate sample using %d speed\n", _motor_initial_speed_);

@@ -10,7 +10,6 @@ void main()
 
     /* Initialize all components needed to run the robot */
     init_motors();
-    start_process(encoder_aux());
 
     _motor_initial_speed_ = 100;
     start_process(running_forever());
