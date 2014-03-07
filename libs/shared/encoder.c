@@ -69,7 +69,7 @@ void check_encoder()
     int last_right;
     int last_left;
 
-    while(true)
+    while(1)
     {
         sleep(_check_enc_yield_time_);
         if(last_right == _right_enc_counts_ &&
