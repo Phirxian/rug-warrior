@@ -223,6 +223,8 @@ void move_behind(float distance, float marging, int minimal_speed)
     set_servo(0);
     sleep(0.175);
 
+    _running_process_running_ = 1;
+
     while(_move_behind_process_running_)
     {
         ping();

@@ -5,3 +5,4 @@ shared/sonar.c
 shared/common.c
 shared/bumper.c
 shared/photo_cell.c
+shared/escape.c
