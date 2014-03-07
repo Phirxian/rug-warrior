@@ -209,20 +209,13 @@ void rotate(int flags, int angle)
     }
 }
 
-void move_behind(float distance, float marging)
+void move_behind(float distance, float marging, int minimal_speed)
 {
-    int pid;
     float last;
     int scan;
 
-    init_motors();
-    init_sonar();
-    sonar_init_servo();
-
     set_servo(0);
     sleep(0.175);
-
-    start_process(encoder_aux());
 
     while(1)
     {
@@ -233,16 +226,16 @@ void move_behind(float distance, float marging)
 
         if(last >= (distance+marging))
         {
-            kill_process(pid);
             _running_process_running_ = 0;
-            _motor_initial_speed_ = 50+(int)(last-(distance+marging));
+            while(_running_process_running_ != -1);
+            _motor_initial_speed_ = minimal_speed+(int)(last-(distance+marging));
             pid = start_process(running_forever());
         }
         else if(last <= (distance-marging))
         {
-            kill_process(pid);
             _running_process_running_ = 0;
-            _motor_initial_speed_ = -50+(int)(-(distance-marging).+last);
+            while(_running_process_running_ != -1);
+            _motor_initial_speed_ = -minimal_speed+(int)(-(distance-marging).+last);
             pid = start_process(running_forever());
         }
         else if(!_motor_initial_speed_) break;
@@ -260,26 +253,26 @@ void move_behind(float distance, float marging)
 
 /** A revoir, avec following light
  * Adjust the direction clockwise (right) or anti-clockwise (left)
- * USED WITH : running() or running_forever() 
+ * USED WITH : running() or running_forever()
  * @param 100 (clockwise) between -100 (anticlockwise)
  */
 void direction(int clockwise) {
-    
+
     /* BAD PARAM */
     if (clockwise < -100 || clockwise > 100) {
         return;
     }
-    
+
     /* Reset param to avoid problems*/
     _motor_right_speed_ = 100;
-    _motor_left_speed_ = 100; 
-    
+    _motor_left_speed_ = 100;
+
     /* Ajust the direction*/
     if (clockwise < 0) {
         _motor_right_speed_ -=clockwise; /* Slowing the right motor to anticlockwise*/
     } else if (clockwise > 0) {
         _motor_left_speed_ += clockwise; /* Slowing the left motor to clockwise*/
     }
-    
+
 }
 
