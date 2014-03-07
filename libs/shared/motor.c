@@ -213,7 +213,7 @@ void rotate(int flags, int angle)
 /**
  * move the robot in front of object to the distance
  * of @distance in cm
- * @margin between > 0.22
+ * @margin > 0.22 (distance between two shaft)
  */
 void move_behind(float distance, float marging, int minimal_speed)
 {
