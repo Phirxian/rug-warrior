@@ -50,7 +50,25 @@
 		<Unit filename="libs/behavior/RugBat.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="libs/behavior/escape.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/behavior/follow_light.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/behavior/menu.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="libs/behavior/rotate.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/behavior/wall_decrease.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/behavior/wall_scan.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/behavior/wall_stop.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="libs/firmware/6811regs.asm" />
@@ -90,19 +108,34 @@
 		<Unit filename="libs/music/tunes.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="libs/shared/bumper.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="libs/shared/common.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="libs/shared/convert.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="libs/shared/encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/shared/escape.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="libs/shared/motor.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/shared/photo_cell.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="libs/shared/screen.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="libs/shared/sonar.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/shared/thread.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="libs/test/aie.c">

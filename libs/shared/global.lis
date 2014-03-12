@@ -1,3 +1,4 @@
+shared/global.c
 shared/encoder.c
 shared/motor.c
 shared/convert.c

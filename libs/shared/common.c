@@ -1,12 +1,4 @@
 /**
- * No two drive motors respond in exactly the same way to the same
- * applied voltage.  Use the drive_bias term to correct for biases
- * in your robot.  If your robot arcs to the right, make drive_bias
- * positive, arcs to the left require a negative correction.
- */
-int drive_bias = 0;
-
-/**
  * Absolute value function for integers
  */
 int abs(int val)
@@ -58,14 +50,4 @@ int max(int x, int y)
         return x;
     else
         return y;
-}
-
-/**
- * Correct for motor bias
- */
-void driveb(int trans, int rot)
-{
-    int rot_bias = (drive_bias * trans) / 100;
-    motor(0,trans - (rot + rot_bias));
-    motor(1,trans + (rot + rot_bias));
 }
