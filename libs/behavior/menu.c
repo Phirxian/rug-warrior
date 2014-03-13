@@ -50,51 +50,51 @@ void main()
 
     }
 
-  if      (test_number == 1)
-    printf("1.2 meters\n"); \n sleep(1.0);
-    ahead(120);
+	if (test_number == 1) {
+		printf("1.2 meters\n"); \n sleep(1.0);
+		ahead(120);
     
-  else if (test_number == 2)
-    printf("Rotation around a wheel\n"); 
-    sleep(1.0);
-    rotate_wheel(45);
-    sleep(1.0);
-    rotate_wheel(90);
-    sleep(1.0);
-    rotate_wheel(180);
-    sleep(1.0);
-    rotate_wheel(270);
-    sleep(1.0);
-    rotate_wheel(360);
-    sleep(1.0);
+	} else if (test_number == 2) {
+		printf("Rotation around a wheel\n"); 
+		sleep(1.0);
+		rotate_wheel(45);
+		sleep(1.0);
+		rotate_wheel(90);
+		sleep(1.0);
+		rotate_wheel(180);
+		sleep(1.0);
+		rotate_wheel(270);
+		sleep(1.0);
+		rotate_wheel(360);
+		sleep(1.0);
     
-  else if (test_number == 3)
-    printf("Rotation around the axis\n");
-    sleep(1.0);
-    rotate_axis(30);
-    sleep(1.0);
-    rotate_axis(45);
-    sleep(1.0);
-    rotate_axis(90);
-    sleep(1.0);
-    rotate_axis(180);
-    sleep(1.0);
-    rotate_axis(270);
-    sleep(1.0);
-    rotate_axis(360);
-    sleep(1.0);
+	} else if (test_number == 3) {
+		printf("Rotation around the axis\n");
+		sleep(1.0);
+		rotate_axis(30);
+		sleep(1.0);
+		rotate_axis(45);
+		sleep(1.0);
+		rotate_axis(90);
+		sleep(1.0);
+		rotate_axis(180);
+		sleep(1.0);
+		rotate_axis(270);
+		sleep(1.0);
+		rotate_axis(360);
+		sleep(1.0);
     
-  else if (test_number == 4)
+  } else if (test_number == 4) {
     printf("Escape obstacles\n"); 
     sleep(1.0);
     escape();
 
-  else if (test_number == 5)
+  } else if (test_number == 5) {
     printf("Stop at 85 cm wall\n"); 
     sleep(1.0);
     stop_wall(85);
     
-  else if (test_number == 6)
+  } else if (test_number == 6) {
     printf("Stop at 85 cm wall\n"); 
     sleep(1.0);
     stop_wall(85);
@@ -103,39 +103,40 @@ void main()
     sleep(1.0);
     cartography(50);
 
-  else if (test_number == 7)
+  } else if (test_number == 7) {
     printf("Go, Slow & Stop at 50cm\n");
     sleep(1.0);
     go_stop(50, 100);
 
-  else if (test_number == 8)
+  } else if (test_number == 8) {
     printf("Avoid Obstacles\n"); 
     sleep(1.0);
     avoid();
 
-  else if (test_number == 9)
+  } else if (test_number == 9) {
     printf("Avoid and escape Obstacles\n"); 
     sleep(1.0);
     avoid_escape();
 
-  else if (test_number == 9)
+  } else if (test_number == 9) {
     printf("Following Light\n"); 
     sleep(1.0);
     follow_light();
   
-  else if (test_number == 11)
+  } else if (test_number == 11) {
     printf("Search & Stop at 20cm of light\n"); 
     sleep(1.0);
     stop_light(20);
     
-  else if (test_number == 12)
+  } else if (test_number == 12) {
     printf("Following Wall\n"); 
     sleep(1.0);
     follow_wall();
   
-  else if (test_number == 13)
+  } else if (test_number == 13) {
     printf("Out of Maze\n"); 
     sleep(1.0);
     labyrinth();
+  }
   
 }
