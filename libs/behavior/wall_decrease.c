@@ -1,10 +1,17 @@
+/*
+ * Run at a maximum speed until an obstacle is detected 100 cm away,
+ * then slow down until the obstacle is 30 cm away, then stop.
+ * These 2 values are passed to move_behind()
+ * Last update: -
+ * @version Final
+ */
 void main()
 {
     init_motors();
     init_sonar();
     sonar_init_servo();
 
-    printf("Runs until a wall is found 85cm\n");
+    printf("Wall decrease behavior\n");
 
     set_servo(0);
     sleep(0.175);
