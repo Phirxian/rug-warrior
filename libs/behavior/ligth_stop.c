@@ -2,7 +2,9 @@
  * Always run
  * but stop when a ligth is detected (20cm)
  * and adjust his distance to
- * @version Final
+ * 
+ * Last update: -
+ * @version -
  */
 void main()
 {
