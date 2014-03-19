@@ -12,6 +12,11 @@
 #define BMP_FRONT       0b011
 #define BMP_BACK        0b100
 
+/* The light environnement */
+#define VDARK_ENVIRONNEMENT 1
+#define DARK_ENVIRONNEMENT 2
+#define LIGHT_ENVIRONNEMENT 4
+#define VLIGHT_ENVIRONNEMENT 8 
 
 int _motor_initial_speed_ = 0;
 int _motor_right_speed_ = 0;
@@ -30,3 +35,4 @@ int _go_light_detection_running_ = 0; /* Process of "go light detection" is runn
 int _go_light_touch_running_ = 0; /* Process of "go light touch" is running */
 int _go_light_running_ = 0; /* Process of "go light" is running */
 int _mode_light_ = 0; /* 0 => Go light; else => Go Dark*/
+int _light_environnement_ = 4; /* Various light of environnement */
