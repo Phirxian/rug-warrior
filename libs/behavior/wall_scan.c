@@ -1,3 +1,11 @@
+/**
+ * Run at a maximum speed until an obstacle is detected 85 cm away,
+ * slow down until the obstacle is close,
+ * then scan the world in front of robot (180°)
+ *
+ * Last update: -
+ * @version Final
+ */
 void main()
 {
     int scan;
