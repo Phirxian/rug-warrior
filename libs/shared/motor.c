@@ -1,6 +1,6 @@
 /**
- * calculate the time needed to run
- * in x feet with given speed [-100 : 100]
+ * calculate the approximate time needed to run
+ * in @feet with given speed [-100 : 100]
  */
 float feetToMotor(float feet, int speed)
 {

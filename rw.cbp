@@ -47,13 +47,22 @@
 		<Unit filename="libs/behavior/1meter.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="libs/behavior/RugBat.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="libs/behavior/escape.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="libs/behavior/escape_distant.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/behavior/escape_dual.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="libs/behavior/follow_light.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/behavior/light_distance.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/behavior/ligth_stop.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="libs/behavior/menu.c">
@@ -121,6 +130,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="libs/shared/escape.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/shared/global.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="libs/shared/motor.c">
@@ -277,6 +289,7 @@
 		<Extensions>
 			<code_completion />
 			<debugger />
+			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

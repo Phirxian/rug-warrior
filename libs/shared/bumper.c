@@ -1,13 +1,3 @@
-#define BMP_RIGHT       0b001
-#define BMP_LEFT        0b010
-#define BMP_FRONT       0b011
-#define BMP_BACK        0b100
-
-/**
- * Tool-Class Bumpers-related
- * @version 270214-1541
- */
-
 /**
  * Compensate the fact that there's a difference between instantaneous detection and the actual test
  * The main change is to increase the accuracy of the detection of the front bumper:
@@ -16,6 +6,7 @@
  * CAUTION: LAP OF THE DETECTION IS NOT LONG -> OVERRIDE LEFT & RIGHT, LOW -> use bumper()
  * @return the touched bumper
  *         else 0 if no bumper(s) is/are touched
+ * @version 270214-1541
  */
 int bumper_detection()
 {

@@ -1,5 +1,6 @@
 /**
  * escape from an obstacle (move back then rotate)
+ * can be used with bumper or ir
  * Last update: 19:25, Mar. 7, 2014
  * please no running/runiing_forever process when you use this fonction
  * @version 1.1, utilisation des 2 moteurs pour accelerer la rotation par 2
