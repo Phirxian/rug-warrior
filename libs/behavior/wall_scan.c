@@ -1,3 +1,11 @@
+/*
+ * Run until an obstacle is detected 85 cm away, then
+ * scan the area at 180 degrees;
+ * Display the detected obstacle distances on the digital screen
+ *
+ * Last update: -
+ * @version Final
+ */
 void main()
 {
     int scan;
@@ -6,7 +14,7 @@ void main()
     init_sonar();
     sonar_init_servo();
 
-    printf("Runs until a wall is found 85cm\n");
+    printf("Run until a wall is found then scan\n");
 
     set_servo(0);
     sleep(0.175);
@@ -25,7 +33,7 @@ void main()
         set_servo(scan);
         ping();
         last = feetToCm(range());
-        printf("scan %f\n", last);
+        printf("Scan %f\n", last);
     }
 
     set_servo(0);
