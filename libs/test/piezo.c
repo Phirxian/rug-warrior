@@ -1,3 +1,7 @@
+/**
+ * play song
+ * @see cof()
+ */
 void main()
 {
     int ctr = 0;

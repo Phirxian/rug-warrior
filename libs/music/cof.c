@@ -3,28 +3,86 @@
  e   1.542, f   1.628,  f  1.718,  g  1.810,  g#  1.904,  A   2.000
 */
 
-/* Fundamental freq of this octave.  Ohters: 220, 440, 880, 1760 */
+/**
+ * Fundamental freq of this octave.
+ * Ohters: 220, 440, 880, 1760
+ */
 float octave = 440.0;
 
+/**
+ * tonne for piezo test
+ */
 float a0 = octave * 1.000;
+
+/**
+ * tonne for piezo test
+ */
 float b0 = (octave * 1.143);
+
+/**
+ * tonne for piezo test
+ */
 float c  = (octave * 1.218);
+
+/**
+ * tonne for piezo test
+ */
 float d  = (octave * 1.375);
+
+/**
+ * tonne for piezo test
+ */
 float e  = (octave * 1.542);
+
+/**
+ * tonne for piezo test
+ */
 float f  = (octave * 1.628);
+
+/**
+ * tonne for piezo test
+ */
 float g  = (octave * 1.810);
+
+/**
+ * tonne for piezo test
+ */
 float a  = (octave * 2.000);
+
+/**
+ * tonne for piezo test
+ */
 float b  = (octave * 2.0 * 1.143);
+
+/**
+ * tonne for piezo test
+ */
 float c2 = (octave * 2.0 * 1.218);
 
-/* Note times: q - quarter, h - half, w - whole */
+/**
+ * Quarter note
+ */
+float q = 0.25;
 
-float q = 0.25;        /* Quarter note */
-float h = (2.0 * q);    /* Half note */
-float dh = (3.0 * q);   /* Dotted half */
+/**
+ * Half note
+ */
+float h = (2.0 * q);
 
-int note_display = 0;   /* Global chooses whether to display note or not */
+/**
+ * Dotted half
+ */
+float dh = (3.0 * q);
 
+/**
+ * Global chooses whether to display note or not
+ */
+int note_display = 0;
+
+/**
+ * Play a note with given frequency & time
+ * can print as display with note_display > 0
+ */
 void note(float freq, float dur)
 {
     if(note_display)
@@ -33,6 +91,9 @@ void note(float freq, float dur)
     tone(freq,dur);
 }
 
+/**
+ * Play a basic music "piezo" for test issue
+ */
 void cof()
 {
     note(c,q);

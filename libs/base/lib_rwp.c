@@ -1,4 +1,46 @@
 /**
+ * Indices for accessing sensors connected to the A/D converter.
+ *  e.g. to read value of right photo cells use analog(photo_right)
+ */
+int photo_right = 0;
+
+/**
+ * Indices for accessing sensors connected to the A/D converter.
+ *  e.g. to read value of left photo cells use analog(photo_left)
+ */
+int photo_left = 1;
+
+
+/**
+ * Indices for accessing sensors connected to the A/D converter.
+ *  e.g. to read value of microphone sensors use analog(microphone)
+ */
+int microphone = 2;
+
+/**
+ * Motor Control Primitives
+ * Index for timer register
+ */
+int TOCx[2]     = {0x1018,     0x101A};
+
+/**
+ * Motor Control Primitives
+ * Port D direction bits
+ */
+int dir_mask[2] = {0b00010000, 0b00100000};
+
+/**
+ * Motor Control Primitives
+ * Port A PWM bits
+ */
+int pwm_mask[2] = {0b01000000, 0b00100000};
+
+/**
+ * Make sure init_motors is called after a reset
+ */
+int init_motors_dummy = init_motors();
+
+/**
  * Digital ports 1 and 2 are unassigned,
  * digital ports 3,4,5,6 are outputs
  * Return a bit from any of the port A line
@@ -24,31 +66,8 @@ int right_shaft()
     return (peek(0x1000) & 0b10000000 && 1);
 }
 
-/* Indices for accessing sensors connected to the A/D converter.
-   e.g. to read value of right photo cells use analog(photo_right) */
-
-int photo_right = 0;
-int photo_left = 1;
-int microphone = 2;
-
-/******************************************************************************/
-/*
-/* Motor Control Primitives
-/*
-/*    init_motors()     - Must be called to enable motors
-/*    motor(index, speed)   - Control velocity of motor 0 (left) or 1 (right)
-/*    drive(trans_vel, rot_vel) - Control robot translation and rotation
-/*    stop()            - Stop both motors
- */
-
-/* Setup two PWM channels for motor control */
-
-/*                 Left        Right            */
-int TOCx[2]     = {0x1018,     0x101A};     /* Index for timer register */
-int dir_mask[2] = {0b00010000, 0b00100000}; /* Port D direction bits */
-int pwm_mask[2] = {0b01000000, 0b00100000}; /* Port A PWM bits */
-
 /**
+ * Motor Control Primitives
  * Must be called to enable motors
  */
 int init_motors()
@@ -59,10 +78,6 @@ int init_motors()
     bit_clear(0x1020,0b01010000); /* Use set and clear to avoid other bits */
     pokeword(0x1016,0);       /* When TCNT = 0, OC1 fires */
 }
-
-/* Make sure init_motors is called after a reset */
-
-int init_motors_dummy = init_motors();
 
 /**
  * Stop both drive motors
@@ -119,7 +134,7 @@ void drive(int trans_vel, int rot_vel)
 int bumper()
 {
     int bmpr;
-    bmpr = analog(3);         /* Switch closure: */
+    bmpr = analog(3);                     /* Switch closure: */
 
     if(bmpr <  11) return 0b000;          /* none */
     else if(bmpr <  32) return 0b001;     /* A   */
@@ -128,7 +143,7 @@ int bumper()
     else if(bmpr <  96) return 0b100;     /*  C  */
     else if(bmpr < 117) return 0b101;     /* A C */
     else if(bmpr < 138) return 0b110;     /*  BC */
-    else                return 0b111;    /* ABC - (mechanically impossible) */
+    else                return 0b111;     /* ABC - (mechanically impossible) */
 }
 
 /**
@@ -151,9 +166,3 @@ int ir_detect()
     /* For detection, detector must be high when emitter is off, low when on */
     return ((val1 & ~val2) >> 3)  | ((val1 & ~val3) >> 4); /* HI -> LOW */
 }
-
-
-
-
-
-

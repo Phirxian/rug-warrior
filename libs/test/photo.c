@@ -8,7 +8,9 @@ void p_byte(int val)
         printf("%d", val);
 }
 
-/* therm_diff is for displaying the difference between two quantities */
+/**
+ * therm_diff is for displaying the difference between two quantities
+ */
 void therm_diff(int val)
 {
     if(val == 0)
@@ -31,6 +33,10 @@ void therm_diff(int val)
     }
 }
 
+/**
+ * always print the photo state (left, rigth)
+ * and the difference value
+ */
 void main()
 {
     int pc_left, pc_right;

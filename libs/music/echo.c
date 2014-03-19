@@ -33,11 +33,12 @@ void warb()
     beeper_off();
 }
 
-/* Sample the microphone to see how much noise there is */
-
+/**
+ * Sample the microphone to see how much noise there is
+ */
 void sample_sound()
 {
-    int s_level = 0;      /* Instantaneous sound level */
+    int s_level = 0;            /* Instantaneous sound level */
     long go_low_time = 0L;
     long current_time = 0L;
 
@@ -46,7 +47,7 @@ void sample_sound()
         while(listen_p)
         {
             current_time = mseconds();
-            s_level = abs(analog(microphone) - 128);  /* Abs difference from 128 */
+            s_level = abs(analog(microphone) - 128);    /* Abs difference from 128 */
 
             if(s_level > s_level_max)
                 s_level_max = s_level;
@@ -67,12 +68,17 @@ void sample_sound()
     }
 }
 
-/* Count the number of low high transitions during some interval.
-   Start a timer at the first low high transition, then keep checking for
-   more low high transitions until time runs out */
-
+/**
+ * Count the number of low high transitions during some interval.
+ * Start a timer at the first low high transition, then keep checking for
+ * more low high transitions until time runs out
+ */
 int echo_cmd = 0;
-float cmd_period = 1.2; /* This is how long we get to gather the sound */
+
+/**
+ * This is how long we get to gather the sound
+ */
+float cmd_period = 1.2;
 
 void capture_command()
 {

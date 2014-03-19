@@ -1,14 +1,12 @@
+/**
+ * reset button states
+ */
 persistent int test_number;
 
-/*******************/
-/* TIME PRIMITIVES */
-/*******************/
-
-/***********************************/
-/* location of various time stuff: */
-/* 0x14: time in milliseconds      */
-/***********************************/
-
+/**
+ * restart the systeme timer
+ * seconds() return 0 after this call
+ */
 void reset_system_time()
 {
     pokeword(0x14, 0);
@@ -49,7 +47,7 @@ void msleep(long msec)
 }
 
 /**
- * Old freq was 500, but 1000 sounds louder
+ * Old freq was 500 for a periode of 0.3second
  */
 void beep()
 {
@@ -91,26 +89,43 @@ void beeper_off()
     bit_clear(0x1000, 0b00001000);  /* turn power to spkr off */
 }
 
+/**
+ * set the bepper tone to be frequency Hz
+ * the subsequent function is then used to turn the bepper on
+ */
 void set_beeper_pitch(float frequency)
 {
     pokeword(0x26, (int)(1E6 / frequency));
 }
 
+/**
+ * return the current time (ms) increased by @timeout (ms)
+ */
 long timer_create_mseconds(long timeout)
 {
     return mseconds() + timeout;
 }
 
+/**
+ * return the current time (sec) increased by @timeout (ms)
+ */
 long timer_create_seconds(float timeout)
 {
     return mseconds() + (long)(timeout * 1000.);
 }
 
+/**
+ * check if the given (previous timer) are outdated
+ */
 int timer_done(long timer)
 {
     return timer < mseconds();
 }
 
+/**
+ * return the value of sensor port numbered @port
+ * range in [0 - 255]
+ */
 int analog(int port)
 {
     poke(0x1039, 0b10000000);

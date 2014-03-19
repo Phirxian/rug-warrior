@@ -1,3 +1,6 @@
+/**
+ * play all playable frequency
+ */
 void main()
 {
     int i = 1;

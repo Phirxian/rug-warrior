@@ -1,3 +1,6 @@
+/**
+ * always print the ir direction (received)
+ */
 void main()
 {
     int ir_val;

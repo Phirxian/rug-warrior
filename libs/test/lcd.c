@@ -1,3 +1,6 @@
+/**
+ * always print all rug-warrior caractere
+ */
 void main()
 {
     int j;

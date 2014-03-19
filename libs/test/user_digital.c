@@ -1,3 +1,6 @@
+/**
+ * always print the reserved user-port value
+ */
 void main()
 {
     int dig;

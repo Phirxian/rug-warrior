@@ -11,6 +11,10 @@ void therm(int val) /* Val 0 to 255 */
         printf("-");
 }
 
+/**
+ * always print the microphone value
+ * like progress-bar
+ */
 void main()
 {
     int sum, i;

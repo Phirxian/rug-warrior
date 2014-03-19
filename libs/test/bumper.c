@@ -1,3 +1,6 @@
+/**
+ * always print bumper value
+ */
 void main()
 {
     int bmpr;

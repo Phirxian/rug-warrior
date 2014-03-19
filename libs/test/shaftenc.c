@@ -1,3 +1,8 @@
+/**
+ * always print the shaft value
+ * (updated by encoder_aux() process)
+ * (automaticaly start @see shared/thread.c)
+ */
 void main()
 {
     /**

@@ -86,7 +86,7 @@ void running_forever()
 }
 
 /**
- * flags : R_MOTOR, L_MOTOR, R_MOTOR | L_MOTOR
+ * flags : R_MOTOR, L_MOTOR, C_MOTOR
  * angle : degree
  * dependency process: encoder_aux
  * @see _motor_initial_speed_
@@ -117,7 +117,7 @@ void rotate(int flags, int angle)
     _motor_right_speed_ = adjust*_motor_initial_speed_*(flags & 1)*invert;
     _motor_left_speed_ = adjust*_motor_initial_speed_*(flags & 2);
     reset_encoder_aux();
-    needed = (int)(480.*((float)(angle))/2160.);
+    needed = (int)(474.*((float)(angle))/2160.);
 
     while(_motor_left_speed_ || _motor_right_speed_)
     {
@@ -183,7 +183,7 @@ void move_behind(float distance, float marging, int minimal_speed)
 }
 
 /**
- *
+ * parrallele processes for distance update in move_behind
  */
 void detect_distance_sonar()
 {

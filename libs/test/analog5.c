@@ -1,3 +1,6 @@
+/**
+ * always print analogue(5) output
+ */
 void main()
 {
     int val;

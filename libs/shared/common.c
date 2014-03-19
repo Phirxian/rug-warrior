@@ -52,12 +52,16 @@ int max(int x, int y)
         return y;
 }
 
-/* Open loop correction term for drive motors */
-int drive_bias = 0;	
+/**
+ * Open loop correction term for drive motors
+ */
+int drive_bias = 0;
 
-/* Correct for motor bias */
-void driveb(int trans, int rot)		
-{ 
+/**
+ * Correct for motor bias
+ */
+void driveb(int trans, int rot)
+{
 	int rot_bias = (drive_bias * trans) / 100;
 	motor(0,trans - (rot + rot_bias));
 	motor(1,trans + (rot + rot_bias));

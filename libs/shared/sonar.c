@@ -1,35 +1,56 @@
-/* RugBat Software Driver
+/**
+ * Edit to select alternate jumper [0 - 3]
+ */
+int RugBat_jumper = 0;
 
-    RugBat uses line PA3 in two different ways.  Normally PA3 drives the
-    piezo buzzer -- commands such as beep(); place a square wave of a
-    certain frequency on PA3 to make the spaker sound.  RugBat's scanning
-    servo uses PA3 to move the servo back and forth.  Normally, to use
-    sonar you disable the beeper, to use the beeper you disable the sonar.
-
-    Only one RugBat unit can be connected to Rug Warrior at a time because
-    RugBat uses the PA1 and PA2 input capture lines.
-
-    RugBat_addr:
-      Bit 0: 1 Initiate sonar ping, 0 Reset sonar
-      Bit 1: 1 Disable speaker, 0, Enable speaker
-      Bit 2: 1 Disable PWM, 0, Enable PWM
-*/
-
-/*  CONSTANTS  */
-
-int RugBat_jumper = 0;  /* Edit to select alternate jumper [0 - 3] */
+/**
+ * RugBat adress acess
+ */
 int RugBat_addr = 0x4000 + (RugBat_jumper * 0x1000);
 
-/*  Addresses of MC68HC11 internal registers used by RugBat */
-
+/**
+ * Addresses of MC68HC11 internal registers used by RugBat
+ */
 int _tctl1 = 0x1020;
+
+/**
+ * Addresses of MC68HC11 internal registers used by RugBat
+ */
 int _tctl2 = 0x1021;
+
+/**
+ * Addresses of MC68HC11 internal registers used by RugBat
+ */
 int _tflg1 = 0x1023;
+
+/**
+ * Addresses of MC68HC11 internal registers used by RugBat
+ */
 int _oc1m  = 0x100C;
+
+/**
+ * Addresses of MC68HC11 internal registers used by RugBat
+ */
 int _oc1d  = 0x100D;
+
+/**
+ * Addresses of MC68HC11 internal registers used by RugBat
+ */
 int _toc1  = 0x1016;
+
+/**
+ * Addresses of MC68HC11 internal registers used by RugBat
+ */
 int _toc5  = 0x101E;
+
+/**
+ * Addresses of MC68HC11 internal registers used by RugBat
+ */
 int _tic1  = 0x1010;
+
+/**
+ * Addresses of MC68HC11 internal registers used by RugBat
+ */
 int _tic2  = 0x1012;
 
 /**
@@ -68,12 +89,6 @@ float range()
         return
             ((float)((peekword(_tic2) - peekword(_tic1)) >> 1) * 0.000569);
 }
-
-/* ************************************************************************
- * The following code is optional.  Copy this code only if you will use a
- * servo to position RugBat.
- * ************************************************************************
- */
 
 /**
  * Global, current commanded servo pos
@@ -125,7 +140,9 @@ void sonar_servo_off()
 }
 
 
-/* Empirical data for a Futaba S5102 servo: Min = 500 uSec, Max = 2450 */
+/**
+ * Empirical data for a Futaba S5102 servo: Min = 500 uSec, Max = 2450
+ */
 int servo_center = 1475;
 int servo_gain = 10;
 

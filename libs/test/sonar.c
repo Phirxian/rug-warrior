@@ -1,4 +1,6 @@
-/** Turn the RugBat then Compute the distance between the rugbat and the object */
+/**
+ * Turn the RugBat then Compute the distance between the rugbat and the object
+ */
 void main()
 {
     /* Turn the RugBat*/

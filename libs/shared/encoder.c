@@ -1,7 +1,3 @@
-int _left_enc_counts_ = 0;
-int _right_enc_counts_ = 0;
-float _check_enc_yield_time_ = 1.0;
-
 /**
  * count the switching state of encoders
  * value are stored into

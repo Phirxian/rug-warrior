@@ -59,7 +59,7 @@
 		<Unit filename="libs/behavior/follow_light.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="libs/behavior/light_distance.c">
+		<Unit filename="libs/behavior/follow_wall.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="libs/behavior/ligth_stop.c">
