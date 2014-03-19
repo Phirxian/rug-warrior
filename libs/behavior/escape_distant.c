@@ -1,8 +1,9 @@
 /**
  * Move forward, and when an obstacle is detected,
  * escape from it (move back then rotate)
+ * 
  * Last update: -
- * @version -
+ * @version Final
  */
 void main()
 {
