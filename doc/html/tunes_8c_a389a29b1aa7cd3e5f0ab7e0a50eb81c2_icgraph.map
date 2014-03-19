@@ -1,10 +1,3 @@
 <map id="play_note" name="play_note">
-<area shape="rect" id="node2" href="$tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="134,157,181,184"/>
-<area shape="rect" id="node3" href="$tunes_8c.html#aab385898c7322dcbfda7e057e52f33d1" title="pp" alt="" coords="257,5,295,32"/>
-<area shape="rect" id="node4" href="$tunes_8c.html#af6d9ec9e05c437b9572aa6bd07f93100" title="wate" alt="" coords="251,56,301,83"/>
-<area shape="rect" id="node5" href="$tunes_8c.html#a991cece580a5054465383b47cadb0535" title="classics" alt="" coords="241,107,311,133"/>
-<area shape="rect" id="node6" href="$tunes_8c.html#a31061818a5a2cf68539ca073374286d3" title="charge" alt="" coords="245,157,307,184"/>
-<area shape="rect" id="node7" href="$tunes_8c.html#a32560516df494caa35d60ad505fb8086" title="looney_tune" alt="" coords="230,208,322,235"/>
-<area shape="rect" id="node8" href="$tunes_8c.html#a700ae836bbc833421cd1f7ac0f7460c4" title="benny" alt="" coords="247,259,305,285"/>
-<area shape="rect" id="node9" href="$tunes_8c.html#acfec480eb7453765b7fa452e7b62f315" title="musicbox" alt="" coords="237,309,315,336"/>
+<area shape="rect" id="node3" href="$tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="139,5,187,32"/>
 </map>

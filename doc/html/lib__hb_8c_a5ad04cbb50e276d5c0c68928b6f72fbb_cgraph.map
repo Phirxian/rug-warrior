@@ -1,4 +1,4 @@
 <map id="_set_motor" name="_set_motor">
-<area shape="rect" id="node2" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="182,5,237,32"/>
-<area shape="rect" id="node3" href="$lib__hb_8c.html#a14a2f7ce8a5918b038b2f29adeb96771" title="_set_motor_speeds" alt="" coords="141,56,277,83"/>
+<area shape="rect" id="node3" href="$lib__hb_8c.html#a14a2f7ce8a5918b038b2f29adeb96771" title="_set_motor_speeds" alt="" coords="150,5,298,32"/>
+<area shape="rect" id="node5" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="193,56,255,83"/>
 </map>

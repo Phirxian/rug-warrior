@@ -109,10 +109,26 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>always print the shaft value (updated by <a class="el" href="shared_2encoder_8c.html#a2151421c7915bc303d0242f2d4b233c0">encoder_aux()</a> process) (automaticaly start </p>
+<dl class="section see"><dt>See Also</dt><dd>shared/thread.c) </dd></dl>
 <p>if the rotor is on pair clicks left_shaft &amp; right_shaft = 1; 0 else</p>
 
-<p>Definition at line <a class="el" href="shaftenc_8c_source.html#l00001">1</a> of file <a class="el" href="shaftenc_8c_source.html">shaftenc.c</a>.</p>
+<p>Definition at line <a class="el" href="shaftenc_8c_source.html#l00006">6</a> of file <a class="el" href="shaftenc_8c_source.html">shaftenc.c</a>.</p>
 
+<p>References <a class="el" href="shaft_8c_source.html#l00004">init_velocity()</a>, <a class="el" href="base_2lib__rwp_8c_source.html#l00056">left_shaft()</a>, <a class="el" href="base_2lib__rwp_8c_source.html#l00064">right_shaft()</a>, and <a class="el" href="base_2lib__ic_8c_source.html#l00027">sleep()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="shaft_8c.html#a655a0723b26fd4943c4f9883b69be9c6">init_velocity</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        printf(<span class="stringliteral">&quot;L %d    R %d\n&quot;</span>, <a class="code" href="base_2lib__rwp_8c.html#a49fe73be96a0657e6a3ea6669cdc9f25">left_shaft</a>(), <a class="code" href="base_2lib__rwp_8c.html#a759cd6a2d214a5b16d6e01d114385039">right_shaft</a>());</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(1.);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="ttc" id="base_2lib__rwp_8c_html_a49fe73be96a0657e6a3ea6669cdc9f25"><div class="ttname"><a href="base_2lib__rwp_8c.html#a49fe73be96a0657e6a3ea6669cdc9f25">left_shaft</a></div><div class="ttdeci">int left_shaft()</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00056">lib_rwp.c:56</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00027">lib_ic.c:27</a></div></div>
+<div class="ttc" id="shaft_8c_html_a655a0723b26fd4943c4f9883b69be9c6"><div class="ttname"><a href="shaft_8c.html#a655a0723b26fd4943c4f9883b69be9c6">init_velocity</a></div><div class="ttdeci">void init_velocity()</div><div class="ttdef"><b>Definition:</b> <a href="shaft_8c_source.html#l00004">shaft.c:4</a></div></div>
+<div class="ttc" id="base_2lib__rwp_8c_html_a759cd6a2d214a5b16d6e01d114385039"><div class="ttname"><a href="base_2lib__rwp_8c.html#a759cd6a2d214a5b16d6e01d114385039">right_shaft</a></div><div class="ttdeci">int right_shaft()</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00064">lib_rwp.c:64</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -127,7 +143,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

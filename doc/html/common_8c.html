@@ -128,14 +128,22 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Absolute value function for integers </p>
 
-<p>Definition at line <a class="el" href="common_8c_source.html#l00012">12</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
+<p>Definition at line <a class="el" href="common_8c_source.html#l00004">4</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
 
+<p>Referenced by <a class="el" href="common_8c_source.html#l00015">ap_eq()</a>, <a class="el" href="convert_8c_source.html#l00063">digits()</a>, <a class="el" href="mic_8c_source.html#l00018">main()</a>, <a class="el" href="echo_8c_source.html#l00039">sample_sound()</a>, and <a class="el" href="photo_8c_source.html#l00014">therm_diff()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordflow">if</span>(val &lt; 0)</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <span class="keywordflow">return</span> (- val);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <span class="keywordflow">return</span> val;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="common_8c_a1fd3a8b6db743b7cb7dcfd277fbb905e_icgraph.png" border="0" usemap="#common_8c_a1fd3a8b6db743b7cb7dcfd277fbb905e_icgraph" alt=""/></div>
 <map name="common_8c_a1fd3a8b6db743b7cb7dcfd277fbb905e_icgraph" id="common_8c_a1fd3a8b6db743b7cb7dcfd277fbb905e_icgraph">
-<area shape="rect" id="node2" href="echo_8c.html#a925d8efdf863cf52667ec8fcf4fb7d33" title="sample_sound" alt="" coords="96,5,203,32"/><area shape="rect" id="node4" href="common_8c.html#ac05ce549a0135a62606f40209387eec7" title="ap_eq" alt="" coords="121,56,178,83"/><area shape="rect" id="node5" href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="123,107,176,133"/><area shape="rect" id="node11" href="mic_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="124,157,175,184"/><area shape="rect" id="node12" href="photo_8c.html#a66f998077162963e411a04991dff9d0a" title="therm_diff" alt="" coords="109,208,189,235"/><area shape="rect" id="node3" href="echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="251,5,333,32"/><area shape="rect" id="node6" href="screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="265,107,319,133"/><area shape="rect" id="node7" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="417,81,468,108"/><area shape="rect" id="node8" href="test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78" title="display_mot_test" alt="" coords="382,132,503,159"/><area shape="rect" id="node9" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c" title="set_show_motors" alt="" coords="552,132,677,159"/><area shape="rect" id="node10" href="test_2motor_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="725,132,776,159"/><area shape="rect" id="node13" href="photo_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="267,208,317,235"/></map>
+<area shape="rect" id="node3" href="common_8c.html#ac05ce549a0135a62606f40209387eec7" title="ap_eq" alt="" coords="125,5,187,32"/><area shape="rect" id="node5" href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="128,56,184,83"/><area shape="rect" id="node17" href="mic_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="129,107,183,133"/><area shape="rect" id="node19" href="echo_8c.html#a925d8efdf863cf52667ec8fcf4fb7d33" title="sample_sound" alt="" coords="99,157,213,184"/><area shape="rect" id="node23" href="photo_8c.html#a66f998077162963e411a04991dff9d0a" title="therm_diff" alt="" coords="113,208,199,235"/><area shape="rect" id="node7" href="screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="277,56,336,83"/><area shape="rect" id="node9" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="438,31,493,57"/><area shape="rect" id="node11" href="test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78" title="display_mot_test" alt="" coords="400,81,531,108"/><area shape="rect" id="node13" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c" title="set_show_motors" alt="" coords="579,81,714,108"/><area shape="rect" id="node15" href="test_2motor_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="763,81,818,108"/><area shape="rect" id="node21" href="echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="261,157,352,184"/><area shape="rect" id="node25" href="photo_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="279,208,334,235"/></map>
 </div>
 </p>
 
@@ -172,8 +180,14 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Determine if VAL is approximately equal (within TOL) of CMP </p>
 
-<p>Definition at line <a class="el" href="common_8c_source.html#l00023">23</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
+<p>Definition at line <a class="el" href="common_8c_source.html#l00015">15</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
 
+<p>References <a class="el" href="common_8c_source.html#l00004">abs()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">return</span> (<a class="code" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a>(val - cmp)) &lt;= tol;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="ttc" id="common_8c_html_a1fd3a8b6db743b7cb7dcfd277fbb905e"><div class="ttname"><a href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a></div><div class="ttdeci">int abs(int val)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00004">common.c:4</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -216,14 +230,26 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Limit a VAL to the range MIN &lt;= VAL &lt;= MAX </p>
 
-<p>Definition at line <a class="el" href="common_8c_source.html#l00031">31</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
+<p>Definition at line <a class="el" href="common_8c_source.html#l00023">23</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
 
+<p>References <a class="el" href="common_8c_source.html#l00047">max()</a>, and <a class="el" href="common_8c_source.html#l00036">min()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">if</span>(val &lt; <a class="code" href="common_8c.html#abd8bbcfabb3ddef2ccaafb9928a37b95">min</a>)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="common_8c.html#abd8bbcfabb3ddef2ccaafb9928a37b95">min</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(val &gt; <a class="code" href="common_8c.html#a2f72f31bf325f0df4de4c83205568509">max</a>)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="common_8c.html#a2f72f31bf325f0df4de4c83205568509">max</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">return</span> val;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="ttc" id="common_8c_html_a2f72f31bf325f0df4de4c83205568509"><div class="ttname"><a href="common_8c.html#a2f72f31bf325f0df4de4c83205568509">max</a></div><div class="ttdeci">int max(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00047">common.c:47</a></div></div>
+<div class="ttc" id="common_8c_html_abd8bbcfabb3ddef2ccaafb9928a37b95"><div class="ttname"><a href="common_8c.html#abd8bbcfabb3ddef2ccaafb9928a37b95">min</a></div><div class="ttdeci">int min(int a, int b)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00036">common.c:36</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="common_8c_add203f675ed3f7aa8c1c55e51c5345ee_cgraph.png" border="0" usemap="#common_8c_add203f675ed3f7aa8c1c55e51c5345ee_cgraph" alt=""/></div>
 <map name="common_8c_add203f675ed3f7aa8c1c55e51c5345ee_cgraph" id="common_8c_add203f675ed3f7aa8c1c55e51c5345ee_cgraph">
-<area shape="rect" id="node2" href="common_8c.html#abd8bbcfabb3ddef2ccaafb9928a37b95" title="min" alt="" coords="99,5,141,32"/><area shape="rect" id="node3" href="common_8c.html#a2f72f31bf325f0df4de4c83205568509" title="max" alt="" coords="97,56,143,83"/></map>
+<area shape="rect" id="node3" href="common_8c.html#a2f72f31bf325f0df4de4c83205568509" title="max" alt="" coords="96,5,147,32"/><area shape="rect" id="node5" href="common_8c.html#abd8bbcfabb3ddef2ccaafb9928a37b95" title="min" alt="" coords="98,56,145,83"/></map>
 </div>
 </p>
 
@@ -254,14 +280,34 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Correct for motor bias </p>
 
-<p>Definition at line <a class="el" href="common_8c_source.html#l00066">66</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
+<p>Definition at line <a class="el" href="common_8c_source.html#l00063">63</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
 
+<p>References <a class="el" href="common_8c_source.html#l00058">drive_bias</a>, and <a class="el" href="base_2lib__rwp_8c_source.html#l00094">motor()</a>.</p>
+
+<p>Referenced by <a class="el" href="follow__light_8c_source.html#l00012">go_light()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> rot_bias = (<a class="code" href="common_8c.html#a4cefbc24512b1d6663751a35a9df6292">drive_bias</a> * trans) / 100;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a>(0,trans - (rot + rot_bias));</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a>(1,trans + (rot + rot_bias));</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="ttc" id="common_8c_html_a4cefbc24512b1d6663751a35a9df6292"><div class="ttname"><a href="common_8c.html#a4cefbc24512b1d6663751a35a9df6292">drive_bias</a></div><div class="ttdeci">int drive_bias</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00058">common.c:58</a></div></div>
+<div class="ttc" id="base_2lib__rwp_8c_html_a04268e3e9a9cdbff1cd6d5c265f11200"><div class="ttname"><a href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a></div><div class="ttdeci">void motor(int index, int vel)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00094">lib_rwp.c:94</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="common_8c_a4a336f19d2bbcc174259e39ff641d9f8_cgraph.png" border="0" usemap="#common_8c_a4a336f19d2bbcc174259e39ff641d9f8_cgraph" alt=""/></div>
 <map name="common_8c_a4a336f19d2bbcc174259e39ff641d9f8_cgraph" id="common_8c_a4a336f19d2bbcc174259e39ff641d9f8_cgraph">
 <area shape="rect" id="node2" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="113,5,167,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="common_8c_a4a336f19d2bbcc174259e39ff641d9f8_icgraph.png" border="0" usemap="#common_8c_a4a336f19d2bbcc174259e39ff641d9f8_icgraph" alt=""/></div>
+<map name="common_8c_a4a336f19d2bbcc174259e39ff641d9f8_icgraph" id="common_8c_a4a336f19d2bbcc174259e39ff641d9f8_icgraph">
+<area shape="rect" id="node3" href="follow__light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="115,31,187,57"/><area shape="rect" id="node5" href="follow__light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="235,5,373,32"/><area shape="rect" id="node7" href="follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="247,56,361,83"/></map>
 </div>
 </p>
 
@@ -292,8 +338,16 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Find the maximum of two arguments </p>
 
-<p>Definition at line <a class="el" href="common_8c_source.html#l00055">55</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
+<p>Definition at line <a class="el" href="common_8c_source.html#l00047">47</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
 
+<p>Referenced by <a class="el" href="common_8c_source.html#l00023">clip()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;{</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keywordflow">if</span>(x &gt; y)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> x;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">return</span> y;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -330,8 +384,20 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Find the minimum of two arguments </p>
 
-<p>Definition at line <a class="el" href="common_8c_source.html#l00044">44</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
+<p>Definition at line <a class="el" href="common_8c_source.html#l00036">36</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
 
+<p>References <a class="el" href="cof_8c_source.html#l00050">a</a>, and <a class="el" href="cof_8c_source.html#l00055">b</a>.</p>
+
+<p>Referenced by <a class="el" href="common_8c_source.html#l00023">clip()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="cof_8c.html#a4aec1a5be9d9a4a394a2e49e9744286e">a</a> &lt; <a class="code" href="cof_8c.html#a83fc1af92e29717b4513d121b0c72c7d">b</a>)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="cof_8c.html#a4aec1a5be9d9a4a394a2e49e9744286e">a</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="cof_8c.html#a83fc1af92e29717b4513d121b0c72c7d">b</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="ttc" id="cof_8c_html_a4aec1a5be9d9a4a394a2e49e9744286e"><div class="ttname"><a href="cof_8c.html#a4aec1a5be9d9a4a394a2e49e9744286e">a</a></div><div class="ttdeci">float a</div><div class="ttdef"><b>Definition:</b> <a href="cof_8c_source.html#l00050">cof.c:50</a></div></div>
+<div class="ttc" id="cof_8c_html_a83fc1af92e29717b4513d121b0c72c7d"><div class="ttname"><a href="cof_8c.html#a83fc1af92e29717b4513d121b0c72c7d">b</a></div><div class="ttdeci">float b</div><div class="ttdef"><b>Definition:</b> <a href="cof_8c_source.html#l00055">cof.c:55</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -353,16 +419,18 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>No two drive motors respond in exactly the same way to the same applied voltage. Use the drive_bias term to correct for biases in your robot. If your robot arcs to the right, make drive_bias positive, arcs to the left require a negative correction. </p>
+<p>Open loop correction term for drive motors </p>
 
-<p>Definition at line <a class="el" href="common_8c_source.html#l00007">7</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
+<p>Definition at line <a class="el" href="common_8c_source.html#l00058">58</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
+
+<p>Referenced by <a class="el" href="common_8c_source.html#l00063">driveb()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

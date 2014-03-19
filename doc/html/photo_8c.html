@@ -113,15 +113,41 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>always print the photo state (left, rigth) and the difference value </p>
 
-<p>Definition at line <a class="el" href="photo_8c_source.html#l00034">34</a> of file <a class="el" href="photo_8c_source.html">photo.c</a>.</p>
+<p>Definition at line <a class="el" href="photo_8c_source.html#l00040">40</a> of file <a class="el" href="photo_8c_source.html">photo.c</a>.</p>
 
+<p>References <a class="el" href="base_2lib__ic_8c_source.html#l00129">analog()</a>, <a class="el" href="photo_8c_source.html#l00001">p_byte()</a>, <a class="el" href="base_2lib__rwp_8c_source.html#l00011">photo_left</a>, <a class="el" href="base_2lib__rwp_8c_source.html#l00005">photo_right</a>, <a class="el" href="base_2lib__ic_8c_source.html#l00027">sleep()</a>, and <a class="el" href="photo_8c_source.html#l00014">therm_diff()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> pc_left, pc_right;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        pc_left  = <a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(<a class="code" href="base_2lib__rwp_8c.html#a80003173b2b20936eebe10521f94b503">photo_left</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        pc_right = <a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(<a class="code" href="base_2lib__rwp_8c.html#abf8c764cb5f5289ee3688871415dd737">photo_right</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">/* Diff thermometer points toward brighter light */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="photo_8c.html#a66f998077162963e411a04991dff9d0a">therm_diff</a>(pc_left - pc_right);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        printf(<span class="stringliteral">&quot;Photo L&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="photo_8c.html#a4ccb49abe8987fd40632afca2dbaa528">p_byte</a>(pc_left);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        printf(<span class="stringliteral">&quot; R&quot;</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="photo_8c.html#a4ccb49abe8987fd40632afca2dbaa528">p_byte</a>(pc_right);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        printf(<span class="stringliteral">&quot; \n&quot;</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(0.25);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_afa28db0c35c02b77341a6bed7aac0cb4"><div class="ttname"><a href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a></div><div class="ttdeci">int analog(int port)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00129">lib_ic.c:129</a></div></div>
+<div class="ttc" id="photo_8c_html_a4ccb49abe8987fd40632afca2dbaa528"><div class="ttname"><a href="photo_8c.html#a4ccb49abe8987fd40632afca2dbaa528">p_byte</a></div><div class="ttdeci">void p_byte(int val)</div><div class="ttdef"><b>Definition:</b> <a href="photo_8c_source.html#l00001">photo.c:1</a></div></div>
+<div class="ttc" id="photo_8c_html_a66f998077162963e411a04991dff9d0a"><div class="ttname"><a href="photo_8c.html#a66f998077162963e411a04991dff9d0a">therm_diff</a></div><div class="ttdeci">void therm_diff(int val)</div><div class="ttdef"><b>Definition:</b> <a href="photo_8c_source.html#l00014">photo.c:14</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00027">lib_ic.c:27</a></div></div>
+<div class="ttc" id="base_2lib__rwp_8c_html_a80003173b2b20936eebe10521f94b503"><div class="ttname"><a href="base_2lib__rwp_8c.html#a80003173b2b20936eebe10521f94b503">photo_left</a></div><div class="ttdeci">int photo_left</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00011">lib_rwp.c:11</a></div></div>
+<div class="ttc" id="base_2lib__rwp_8c_html_abf8c764cb5f5289ee3688871415dd737"><div class="ttname"><a href="base_2lib__rwp_8c.html#abf8c764cb5f5289ee3688871415dd737">photo_right</a></div><div class="ttdeci">int photo_right</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00005">lib_rwp.c:5</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="photo_8c_acdef7a1fd863a6d3770c1268cb06add3_cgraph.png" border="0" usemap="#photo_8c_acdef7a1fd863a6d3770c1268cb06add3_cgraph" alt=""/></div>
 <map name="photo_8c_acdef7a1fd863a6d3770c1268cb06add3_cgraph" id="photo_8c_acdef7a1fd863a6d3770c1268cb06add3_cgraph">
-<area shape="rect" id="node2" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="114,5,174,32"/><area shape="rect" id="node3" href="photo_8c.html#a66f998077162963e411a04991dff9d0a" title="therm_diff" alt="" coords="104,56,184,83"/><area shape="rect" id="node6" href="photo_8c.html#a4ccb49abe8987fd40632afca2dbaa528" title="p_byte" alt="" coords="113,107,175,133"/><area shape="rect" id="node7" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="117,157,171,184"/><area shape="rect" id="node4" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="232,31,323,57"/><area shape="rect" id="node5" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="256,81,299,108"/><area shape="rect" id="node8" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="245,157,309,184"/></map>
+<area shape="rect" id="node3" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="121,5,186,32"/><area shape="rect" id="node5" href="photo_8c.html#a4ccb49abe8987fd40632afca2dbaa528" title="p_byte" alt="" coords="121,56,186,83"/><area shape="rect" id="node7" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="125,107,181,133"/><area shape="rect" id="node11" href="photo_8c.html#a66f998077162963e411a04991dff9d0a" title="therm_diff" alt="" coords="110,157,197,184"/><area shape="rect" id="node9" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="260,107,329,133"/><area shape="rect" id="node13" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="245,157,344,184"/><area shape="rect" id="node15" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="272,208,317,235"/></map>
 </div>
 </p>
 
@@ -143,6 +169,16 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="photo_8c_source.html#l00001">1</a> of file <a class="el" href="photo_8c_source.html">photo.c</a>.</p>
 
+<p>Referenced by <a class="el" href="photo_8c_source.html#l00040">main()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="keywordflow">if</span>(val &lt; 10)</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;        printf(<span class="stringliteral">&quot;  %d&quot;</span>, val);</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(val &lt; 100)</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;        printf(<span class="stringliteral">&quot; %d&quot;</span>, val);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        printf(<span class="stringliteral">&quot;%d&quot;</span>, val);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -167,15 +203,42 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>therm_diff is for displaying the difference between two quantities </p>
 
-<p>Definition at line <a class="el" href="photo_8c_source.html#l00012">12</a> of file <a class="el" href="photo_8c_source.html">photo.c</a>.</p>
+<p>Definition at line <a class="el" href="photo_8c_source.html#l00014">14</a> of file <a class="el" href="photo_8c_source.html">photo.c</a>.</p>
 
+<p>References <a class="el" href="common_8c_source.html#l00004">abs()</a>, and <a class="el" href="screen_8c_source.html#l00024">repeat_char()</a>.</p>
+
+<p>Referenced by <a class="el" href="photo_8c_source.html#l00040">main()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">if</span>(val == 0)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        printf(<span class="stringliteral">&quot;       []       &quot;</span>); <span class="comment">/* Zero */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(val &lt; -8)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        printf(<span class="stringliteral">&quot;%c&lt;&lt;&lt;&lt;&lt;&lt;&lt;]       &quot;</span>,127);    <span class="comment">/* Less than -8 */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(val &lt; 0)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(32,8 + val);  <span class="comment">/* 32 = space */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(60,<a class="code" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a>(val)); <span class="comment">/* 60 = &quot;&lt;&quot; */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        printf(<span class="stringliteral">&quot;]       &quot;</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(val &gt; 8)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        printf(<span class="stringliteral">&quot;       [&gt;&gt;&gt;&gt;&gt;&gt;&gt;%c&quot;</span>,126);    <span class="comment">/* More than +8 */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        printf(<span class="stringliteral">&quot;       [&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(62,val);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(32,8 - val);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="ttc" id="screen_8c_html_ac8e8b349181ce150291f6cacea837914"><div class="ttname"><a href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a></div><div class="ttdeci">void repeat_char(int ch, int rep)</div><div class="ttdef"><b>Definition:</b> <a href="screen_8c_source.html#l00024">screen.c:24</a></div></div>
+<div class="ttc" id="common_8c_html_a1fd3a8b6db743b7cb7dcfd277fbb905e"><div class="ttname"><a href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a></div><div class="ttdeci">int abs(int val)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00004">common.c:4</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="photo_8c_a66f998077162963e411a04991dff9d0a_cgraph.png" border="0" usemap="#photo_8c_a66f998077162963e411a04991dff9d0a_cgraph" alt=""/></div>
 <map name="photo_8c_a66f998077162963e411a04991dff9d0a_cgraph" id="photo_8c_a66f998077162963e411a04991dff9d0a_cgraph">
-<area shape="rect" id="node2" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="133,5,224,32"/><area shape="rect" id="node3" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="157,56,200,83"/></map>
+<area shape="rect" id="node3" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="168,5,213,32"/><area shape="rect" id="node5" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="141,56,240,83"/></map>
 </div>
 </p>
 
@@ -193,7 +256,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

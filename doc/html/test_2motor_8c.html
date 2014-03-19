@@ -124,15 +124,36 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>display the motor state on the LCD screen </p>
 
-<p>Definition at line <a class="el" href="test_2motor_8c_source.html#l00001">1</a> of file <a class="el" href="test_2motor_8c_source.html">motor.c</a>.</p>
+<p>Definition at line <a class="el" href="test_2motor_8c_source.html#l00004">4</a> of file <a class="el" href="test_2motor_8c_source.html">motor.c</a>.</p>
 
+<p>References <a class="el" href="shaft_8c_source.html#l00017">get_left_clicks()</a>, <a class="el" href="shaft_8c_source.html#l00027">get_right_clicks()</a>, and <a class="el" href="screen_8c_source.html#l00005">printn()</a>.</p>
+
+<p>Referenced by <a class="el" href="test_2motor_8c_source.html#l00022">set_show_motors()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    printf(<span class="stringliteral">&quot;Motor &quot;</span>);</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="screen_8c.html#a598db0d698ebf794573aa38998ff031a">printn</a>(<a class="code" href="shaft_8c.html#a1176d8fd5c446189a5d405bbbc448df0">get_left_clicks</a>(),2);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    printf(<span class="stringliteral">&quot; L &quot;</span>);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="screen_8c.html#a598db0d698ebf794573aa38998ff031a">printn</a>(lvel,4);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    printf(<span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    printf(<span class="stringliteral">&quot;Test  &quot;</span>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="screen_8c.html#a598db0d698ebf794573aa38998ff031a">printn</a>(<a class="code" href="shaft_8c.html#a46882b7cd70183cdbcc74cab94e0196a">get_right_clicks</a>(),2);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    printf(<span class="stringliteral">&quot; R &quot;</span>);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="screen_8c.html#a598db0d698ebf794573aa38998ff031a">printn</a>(rvel,4);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    printf(<span class="stringliteral">&quot; &quot;</span>);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    printf(<span class="stringliteral">&quot; \n&quot;</span>);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
+<div class="ttc" id="shaft_8c_html_a46882b7cd70183cdbcc74cab94e0196a"><div class="ttname"><a href="shaft_8c.html#a46882b7cd70183cdbcc74cab94e0196a">get_right_clicks</a></div><div class="ttdeci">int get_right_clicks()</div><div class="ttdef"><b>Definition:</b> <a href="shaft_8c_source.html#l00027">shaft.c:27</a></div></div>
+<div class="ttc" id="screen_8c_html_a598db0d698ebf794573aa38998ff031a"><div class="ttname"><a href="screen_8c.html#a598db0d698ebf794573aa38998ff031a">printn</a></div><div class="ttdeci">void printn(int val, int cols)</div><div class="ttdef"><b>Definition:</b> <a href="screen_8c_source.html#l00005">screen.c:5</a></div></div>
+<div class="ttc" id="shaft_8c_html_a1176d8fd5c446189a5d405bbbc448df0"><div class="ttname"><a href="shaft_8c.html#a1176d8fd5c446189a5d405bbbc448df0">get_left_clicks</a></div><div class="ttdeci">int get_left_clicks()</div><div class="ttdef"><b>Definition:</b> <a href="shaft_8c_source.html#l00017">shaft.c:17</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="test_2motor_8c_ae795df409b1689e7122dab70480e9b78_cgraph.png" border="0" usemap="#test_2motor_8c_ae795df409b1689e7122dab70480e9b78_cgraph" alt=""/></div>
 <map name="test_2motor_8c_ae795df409b1689e7122dab70480e9b78_cgraph" id="test_2motor_8c_ae795df409b1689e7122dab70480e9b78_cgraph">
-<area shape="rect" id="node2" href="screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="206,31,261,57"/><area shape="rect" id="node6" href="shaft_8c.html#a1176d8fd5c446189a5d405bbbc448df0" title="get_left_clicks" alt="" coords="180,81,287,108"/><area shape="rect" id="node7" href="shaft_8c.html#a46882b7cd70183cdbcc74cab94e0196a" title="get_right_clicks" alt="" coords="177,132,290,159"/><area shape="rect" id="node3" href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="357,5,411,32"/><area shape="rect" id="node5" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="339,56,429,83"/><area shape="rect" id="node4" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="477,5,520,32"/></map>
+<area shape="rect" id="node3" href="shaft_8c.html#a1176d8fd5c446189a5d405bbbc448df0" title="get_left_clicks" alt="" coords="189,5,299,32"/><area shape="rect" id="node5" href="shaft_8c.html#a46882b7cd70183cdbcc74cab94e0196a" title="get_right_clicks" alt="" coords="184,56,304,83"/><area shape="rect" id="node7" href="screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="215,107,273,133"/><area shape="rect" id="node9" href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="373,81,429,108"/><area shape="rect" id="node13" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="352,132,451,159"/><area shape="rect" id="node11" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="499,81,544,108"/></map>
 </div>
 </p>
 
@@ -159,15 +180,95 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>basic motor test </p>
 
-<p>Definition at line <a class="el" href="test_2motor_8c_source.html#l00023">23</a> of file <a class="el" href="test_2motor_8c_source.html">motor.c</a>.</p>
+<p>Definition at line <a class="el" href="test_2motor_8c_source.html#l00032">32</a> of file <a class="el" href="test_2motor_8c_source.html">motor.c</a>.</p>
 
+<p>References <a class="el" href="shaft_8c_source.html#l00004">init_velocity()</a>, <a class="el" href="test_2motor_8c_source.html#l00022">set_show_motors()</a>, and <a class="el" href="base_2lib__ic_8c_source.html#l00027">sleep()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> i;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">float</span> interval = 0.5; <span class="comment">/* Click counting Interval for velocity computation */</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="shaft_8c.html#a655a0723b26fd4943c4f9883b69be9c6">init_velocity</a>();      <span class="comment">/* Turn on automatic velocity measuring */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">for</span>(i = 0; i &lt;= 100; i = i + 10)  <span class="comment">/* Move forward with increasing speed */</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <a class="code" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c">set_show_motors</a>(i,i);         <span class="comment">/* Both motors move forward */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(interval);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordflow">for</span>(i = 0; i &lt;= 2; i++)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <a class="code" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c">set_show_motors</a>(100,100);     <span class="comment">/* +Max */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(interval);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordflow">for</span>(i = 0; i &lt;= 2; i++)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <a class="code" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c">set_show_motors</a>(0,0);         <span class="comment">/* Stop */</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(interval);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">for</span>(i = 0; i &lt;= 100; i = i + 10)  <span class="comment">/* Move backward with increasing speed */</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c">set_show_motors</a>((- i), (- i));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(interval);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">for</span>(i = 0; i &lt;= 2; i++)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c">set_show_motors</a>(-100,-100);    <span class="comment">/* -Max */</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(interval);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">for</span>(i = 0; i &lt;= 2; i++)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <a class="code" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c">set_show_motors</a>(0,0);         <span class="comment">/* Stop */</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(interval);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">for</span>(i = 0; i &lt;= 100; i = i + 10)  <span class="comment">/* Spin with increasing speed */</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <a class="code" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c">set_show_motors</a>(i,(- i));     <span class="comment">/* Left fwd, right backward */</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(interval);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">for</span>(i = 0; i &lt;= 2; i++)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c">set_show_motors</a>(100,-100);    <span class="comment">/* +-Max */</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(interval);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">for</span>(i = 0; i &lt;= 200; i = i + 10)  <span class="comment">/* Reverse direction while spinning */</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <a class="code" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c">set_show_motors</a>((100 - i), (i - 100));</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(interval);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">for</span>(i = 0; i &lt;= 2; i++)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <a class="code" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c">set_show_motors</a>(-100,100);    <span class="comment">/* -+Max */</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(interval);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordflow">for</span>(i = 0; i &lt;= 2; i++)</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        {</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <a class="code" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c">set_show_motors</a>(0,0);         <span class="comment">/* Stop */</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(interval);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00027">lib_ic.c:27</a></div></div>
+<div class="ttc" id="shaft_8c_html_a655a0723b26fd4943c4f9883b69be9c6"><div class="ttname"><a href="shaft_8c.html#a655a0723b26fd4943c4f9883b69be9c6">init_velocity</a></div><div class="ttdeci">void init_velocity()</div><div class="ttdef"><b>Definition:</b> <a href="shaft_8c_source.html#l00004">shaft.c:4</a></div></div>
+<div class="ttc" id="test_2motor_8c_html_a9382922728322499a2a494319f2f948c"><div class="ttname"><a href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c">set_show_motors</a></div><div class="ttdeci">void set_show_motors(int left, int right)</div><div class="ttdef"><b>Definition:</b> <a href="test_2motor_8c_source.html#l00022">motor.c:22</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="test_2motor_8c_acdef7a1fd863a6d3770c1268cb06add3_cgraph.png" border="0" usemap="#test_2motor_8c_acdef7a1fd863a6d3770c1268cb06add3_cgraph" alt=""/></div>
 <map name="test_2motor_8c_acdef7a1fd863a6d3770c1268cb06add3_cgraph" id="test_2motor_8c_acdef7a1fd863a6d3770c1268cb06add3_cgraph">
-<area shape="rect" id="node2" href="shaft_8c.html#a655a0723b26fd4943c4f9883b69be9c6" title="init_velocity" alt="" coords="121,31,212,57"/><area shape="rect" id="node3" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c" title="set_show_motors" alt="" coords="104,81,229,108"/><area shape="rect" id="node12" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="140,132,193,159"/><area shape="rect" id="node4" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="311,31,366,57"/><area shape="rect" id="node5" href="test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78" title="display_mot_test" alt="" coords="278,81,399,108"/><area shape="rect" id="node6" href="screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="478,31,533,57"/><area shape="rect" id="node10" href="shaft_8c.html#a1176d8fd5c446189a5d405bbbc448df0" title="get_left_clicks" alt="" coords="452,81,559,108"/><area shape="rect" id="node11" href="shaft_8c.html#a46882b7cd70183cdbcc74cab94e0196a" title="get_right_clicks" alt="" coords="449,132,562,159"/><area shape="rect" id="node7" href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="629,5,683,32"/><area shape="rect" id="node9" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="611,56,701,83"/><area shape="rect" id="node8" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="749,5,792,32"/><area shape="rect" id="node13" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="307,132,371,159"/></map>
+<area shape="rect" id="node3" href="shaft_8c.html#a655a0723b26fd4943c4f9883b69be9c6" title="init_velocity" alt="" coords="129,5,225,32"/><area shape="rect" id="node5" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c" title="set_show_motors" alt="" coords="110,56,245,83"/><area shape="rect" id="node23" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="149,107,205,133"/><area shape="rect" id="node7" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="328,5,389,32"/><area shape="rect" id="node9" href="test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78" title="display_mot_test" alt="" coords="293,56,424,83"/><area shape="rect" id="node11" href="shaft_8c.html#a1176d8fd5c446189a5d405bbbc448df0" title="get_left_clicks" alt="" coords="477,5,587,32"/><area shape="rect" id="node13" href="shaft_8c.html#a46882b7cd70183cdbcc74cab94e0196a" title="get_right_clicks" alt="" coords="472,56,592,83"/><area shape="rect" id="node15" href="screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="503,107,561,133"/><area shape="rect" id="node17" href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="661,81,717,108"/><area shape="rect" id="node21" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="640,132,739,159"/><area shape="rect" id="node19" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="787,81,832,108"/><area shape="rect" id="node25" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="324,107,393,133"/></map>
 </div>
 </p>
 
@@ -196,15 +297,27 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>set the motor speed and display on the LCD screen </p>
 
-<p>Definition at line <a class="el" href="test_2motor_8c_source.html#l00016">16</a> of file <a class="el" href="test_2motor_8c_source.html">motor.c</a>.</p>
+<p>Definition at line <a class="el" href="test_2motor_8c_source.html#l00022">22</a> of file <a class="el" href="test_2motor_8c_source.html">motor.c</a>.</p>
 
+<p>References <a class="el" href="test_2motor_8c_source.html#l00004">display_mot_test()</a>, and <a class="el" href="base_2lib__rwp_8c_source.html#l00094">motor()</a>.</p>
+
+<p>Referenced by <a class="el" href="test_2motor_8c_source.html#l00032">main()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a>(0, left);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a>(1, right);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78">display_mot_test</a>(left, right);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="ttc" id="test_2motor_8c_html_ae795df409b1689e7122dab70480e9b78"><div class="ttname"><a href="test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78">display_mot_test</a></div><div class="ttdeci">void display_mot_test(int lvel, int rvel)</div><div class="ttdef"><b>Definition:</b> <a href="test_2motor_8c_source.html#l00004">motor.c:4</a></div></div>
+<div class="ttc" id="base_2lib__rwp_8c_html_a04268e3e9a9cdbff1cd6d5c265f11200"><div class="ttname"><a href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a></div><div class="ttdeci">void motor(int index, int vel)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00094">lib_rwp.c:94</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="test_2motor_8c_a9382922728322499a2a494319f2f948c_cgraph.png" border="0" usemap="#test_2motor_8c_a9382922728322499a2a494319f2f948c_cgraph" alt=""/></div>
 <map name="test_2motor_8c_a9382922728322499a2a494319f2f948c_cgraph" id="test_2motor_8c_a9382922728322499a2a494319f2f948c_cgraph">
-<area shape="rect" id="node2" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="213,31,267,57"/><area shape="rect" id="node3" href="test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78" title="display_mot_test" alt="" coords="179,81,301,108"/><area shape="rect" id="node4" href="screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="379,31,434,57"/><area shape="rect" id="node8" href="shaft_8c.html#a1176d8fd5c446189a5d405bbbc448df0" title="get_left_clicks" alt="" coords="353,81,460,108"/><area shape="rect" id="node9" href="shaft_8c.html#a46882b7cd70183cdbcc74cab94e0196a" title="get_right_clicks" alt="" coords="350,132,463,159"/><area shape="rect" id="node5" href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="531,5,584,32"/><area shape="rect" id="node7" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="512,56,603,83"/><area shape="rect" id="node6" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="651,5,693,32"/></map>
+<area shape="rect" id="node3" href="test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78" title="display_mot_test" alt="" coords="189,56,320,83"/><area shape="rect" id="node17" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="224,107,285,133"/><area shape="rect" id="node5" href="shaft_8c.html#a1176d8fd5c446189a5d405bbbc448df0" title="get_left_clicks" alt="" coords="373,5,483,32"/><area shape="rect" id="node7" href="shaft_8c.html#a46882b7cd70183cdbcc74cab94e0196a" title="get_right_clicks" alt="" coords="368,56,488,83"/><area shape="rect" id="node9" href="screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="399,107,457,133"/><area shape="rect" id="node11" href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="557,81,613,108"/><area shape="rect" id="node15" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="536,132,635,159"/><area shape="rect" id="node13" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="683,81,728,108"/></map>
 </div>
 </p>
 
@@ -222,7 +335,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

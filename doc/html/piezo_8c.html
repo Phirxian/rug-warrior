@@ -109,9 +109,29 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>play song </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="cof_8c.html#a554069deb0b27e12100c8fcf80e96d0d">cof()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="piezo_8c_source.html#l00001">1</a> of file <a class="el" href="piezo_8c_source.html">piezo.c</a>.</p>
+<p>Definition at line <a class="el" href="piezo_8c_source.html#l00005">5</a> of file <a class="el" href="piezo_8c_source.html">piezo.c</a>.</p>
 
+<p>References <a class="el" href="cof_8c_source.html#l00097">cof()</a>, and <a class="el" href="cof_8c_source.html#l00080">note_display</a>.</p>
+<div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordtype">int</span> ctr = 0;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        printf(<span class="stringliteral">&quot; \n&quot;</span>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        ctr++;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        <span class="comment">/* Enable note frequency display */</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="cof_8c.html#a63becf4060ace9f3ac68f8b929ec174e">note_display</a> = 1;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <a class="code" href="cof_8c.html#a554069deb0b27e12100c8fcf80e96d0d">cof</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="comment">/* Disable display */</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="cof_8c.html#a63becf4060ace9f3ac68f8b929ec174e">note_display</a> = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="ttc" id="cof_8c_html_a554069deb0b27e12100c8fcf80e96d0d"><div class="ttname"><a href="cof_8c.html#a554069deb0b27e12100c8fcf80e96d0d">cof</a></div><div class="ttdeci">void cof()</div><div class="ttdef"><b>Definition:</b> <a href="cof_8c_source.html#l00097">cof.c:97</a></div></div>
+<div class="ttc" id="cof_8c_html_a63becf4060ace9f3ac68f8b929ec174e"><div class="ttname"><a href="cof_8c.html#a63becf4060ace9f3ac68f8b929ec174e">note_display</a></div><div class="ttdeci">int note_display</div><div class="ttdef"><b>Definition:</b> <a href="cof_8c_source.html#l00080">cof.c:80</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -126,7 +146,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

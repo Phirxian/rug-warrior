@@ -97,8 +97,79 @@ Functions</h2></td></tr>
 <tr class="separator:a598db0d698ebf794573aa38998ff031a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8e8b349181ce150291f6cacea837914"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a> (int ch, int rep)</td></tr>
 <tr class="separator:ac8e8b349181ce150291f6cacea837914"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a933751989174a13eb0301583a36ef170"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="screen_8c.html#a933751989174a13eb0301583a36ef170">print_diff</a> (int diff)</td></tr>
+<tr class="separator:a933751989174a13eb0301583a36ef170"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a class="anchor" id="a933751989174a13eb0301583a36ef170"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_diff </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>diff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Display a difference proportionately (the more there is difference, the more of char displaying ') Can be used to show a difference between 2 captors </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">diff</td><td>- difference going from -100 to 100 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="screen_8c_source.html#l00037">37</a> of file <a class="el" href="screen_8c_source.html">screen.c</a>.</p>
+
+<p>References <a class="el" href="screen_8c_source.html#l00024">repeat_char()</a>.</p>
+
+<p>Referenced by <a class="el" href="follow__light_8c_source.html#l00012">go_light()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">char</span> PATTERN_LEFT = <span class="charliteral">&#39;&lt;&#39;</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">char</span> PATTERN_RIGHT = <span class="charliteral">&#39;&gt;&#39;</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">/* Number of digits to will be written*/</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> number_digits;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    number_digits = (int) diff / (100/8);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span>(diff &gt; 0)    <span class="comment">/* Write on the right side */</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(<span class="charliteral">&#39; &#39;</span>, 8); <span class="comment">/* Margin*/</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(PATTERN_RIGHT, number_digits);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(diff &lt; 0)      <span class="comment">/* Write on the left side */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        number_digits = -number_digits;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(<span class="charliteral">&#39; &#39;</span>, 8-number_digits); <span class="comment">/* Dynamic Margin*/</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(PATTERN_LEFT, number_digits);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
+<div class="ttc" id="screen_8c_html_ac8e8b349181ce150291f6cacea837914"><div class="ttname"><a href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a></div><div class="ttdeci">void repeat_char(int ch, int rep)</div><div class="ttdef"><b>Definition:</b> <a href="screen_8c_source.html#l00024">screen.c:24</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="screen_8c_a933751989174a13eb0301583a36ef170_cgraph.png" border="0" usemap="#screen_8c_a933751989174a13eb0301583a36ef170_cgraph" alt=""/></div>
+<map name="screen_8c_a933751989174a13eb0301583a36ef170_cgraph" id="screen_8c_a933751989174a13eb0301583a36ef170_cgraph">
+<area shape="rect" id="node3" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="131,5,229,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="screen_8c_a933751989174a13eb0301583a36ef170_icgraph.png" border="0" usemap="#screen_8c_a933751989174a13eb0301583a36ef170_icgraph" alt=""/></div>
+<map name="screen_8c_a933751989174a13eb0301583a36ef170_icgraph" id="screen_8c_a933751989174a13eb0301583a36ef170_icgraph">
+<area shape="rect" id="node3" href="follow__light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="131,31,203,57"/><area shape="rect" id="node5" href="follow__light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="251,5,389,32"/><area shape="rect" id="node7" href="follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="263,56,377,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a598db0d698ebf794573aa38998ff031a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -126,6 +197,26 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="screen_8c_source.html#l00005">5</a> of file <a class="el" href="screen_8c_source.html">screen.c</a>.</p>
 
+<p>References <a class="el" href="convert_8c_source.html#l00063">digits()</a>, and <a class="el" href="screen_8c_source.html#l00024">repeat_char()</a>.</p>
+
+<p>Referenced by <a class="el" href="test_2motor_8c_source.html#l00004">display_mot_test()</a>, and <a class="el" href="1meter_8c_source.html#l00007">main()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordtype">int</span> digs;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    digs = <a class="code" href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc">digits</a>(val);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="comment">/* May not be possible to print in required number of cols */</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">if</span>(digs &gt;= cols)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        printf(<span class="stringliteral">&quot;%d&quot;</span>, val);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(32,cols - digs);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        printf(<span class="stringliteral">&quot;%d&quot;</span>,val);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="ttc" id="convert_8c_html_a89059167767e145e6fd47ada117f0ebc"><div class="ttname"><a href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc">digits</a></div><div class="ttdeci">int digits(int signed_val)</div><div class="ttdef"><b>Definition:</b> <a href="convert_8c_source.html#l00063">convert.c:63</a></div></div>
+<div class="ttc" id="screen_8c_html_ac8e8b349181ce150291f6cacea837914"><div class="ttname"><a href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a></div><div class="ttdeci">void repeat_char(int ch, int rep)</div><div class="ttdef"><b>Definition:</b> <a href="screen_8c_source.html#l00024">screen.c:24</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -140,7 +231,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="screen_8c_a598db0d698ebf794573aa38998ff031a_icgraph.png" border="0" usemap="#screen_8c_a598db0d698ebf794573aa38998ff031a_icgraph" alt=""/></div>
 <map name="screen_8c_a598db0d698ebf794573aa38998ff031a_icgraph" id="screen_8c_a598db0d698ebf794573aa38998ff031a_icgraph">
-<area shape="rect" id="node2" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="145,5,196,32"/><area shape="rect" id="node3" href="test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78" title="display_mot_test" alt="" coords="110,56,231,83"/><area shape="rect" id="node4" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c" title="set_show_motors" alt="" coords="280,56,405,83"/><area shape="rect" id="node5" href="test_2motor_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="453,56,504,83"/></map>
+<area shape="rect" id="node3" href="test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78" title="display_mot_test" alt="" coords="112,5,243,32"/><area shape="rect" id="node9" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="150,56,205,83"/><area shape="rect" id="node5" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c" title="set_show_motors" alt="" coords="291,5,426,32"/><area shape="rect" id="node7" href="test_2motor_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="475,5,530,32"/></map>
 </div>
 </p>
 
@@ -173,12 +264,20 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="screen_8c_source.html#l00024">24</a> of file <a class="el" href="screen_8c_source.html">screen.c</a>.</p>
 
+<p>Referenced by <a class="el" href="screen_8c_source.html#l00037">print_diff()</a>, <a class="el" href="screen_8c_source.html#l00005">printn()</a>, and <a class="el" href="photo_8c_source.html#l00014">therm_diff()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">int</span> j = 0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">for</span>(j = 0; j &lt; rep; j++)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        printf(<span class="stringliteral">&quot;%c&quot;</span>, ch);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="screen_8c_ac8e8b349181ce150291f6cacea837914_icgraph.png" border="0" usemap="#screen_8c_ac8e8b349181ce150291f6cacea837914_icgraph" alt=""/></div>
 <map name="screen_8c_ac8e8b349181ce150291f6cacea837914_icgraph" id="screen_8c_ac8e8b349181ce150291f6cacea837914_icgraph">
-<area shape="rect" id="node2" href="screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="157,56,211,83"/><area shape="rect" id="node7" href="photo_8c.html#a66f998077162963e411a04991dff9d0a" title="therm_diff" alt="" coords="144,107,224,133"/><area shape="rect" id="node3" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="308,5,359,32"/><area shape="rect" id="node4" href="test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78" title="display_mot_test" alt="" coords="273,56,394,83"/><area shape="rect" id="node5" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c" title="set_show_motors" alt="" coords="443,56,568,83"/><area shape="rect" id="node6" href="test_2motor_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="616,56,667,83"/><area shape="rect" id="node8" href="photo_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="308,107,359,133"/></map>
+<area shape="rect" id="node3" href="screen_8c.html#a933751989174a13eb0301583a36ef170" title="print_diff" alt="" coords="157,63,235,89"/><area shape="rect" id="node11" href="screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="167,120,225,147"/><area shape="rect" id="node21" href="photo_8c.html#a66f998077162963e411a04991dff9d0a" title="therm_diff" alt="" coords="153,183,239,209"/><area shape="rect" id="node5" href="follow__light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="317,56,389,83"/><area shape="rect" id="node7" href="follow__light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="467,5,605,32"/><area shape="rect" id="node9" href="follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="479,56,593,83"/><area shape="rect" id="node13" href="test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78" title="display_mot_test" alt="" coords="288,107,419,133"/><area shape="rect" id="node19" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="326,157,381,184"/><area shape="rect" id="node15" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c" title="set_show_motors" alt="" coords="469,107,603,133"/><area shape="rect" id="node17" href="test_2motor_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="654,107,709,133"/><area shape="rect" id="node23" href="photo_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="326,208,381,235"/></map>
 </div>
 </p>
 
@@ -187,7 +286,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

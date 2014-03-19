@@ -1,5 +1,5 @@
 <map id="_set_motor" name="_set_motor">
-<area shape="rect" id="node2" href="$lib__hb_8c.html#a55a302772158e1f15f1c90992f535272" title="fd" alt="" coords="150,5,189,32"/>
-<area shape="rect" id="node3" href="$lib__hb_8c.html#a3f5edef0489aca523a64a40e8fe16320" title="bk" alt="" coords="150,56,189,83"/>
-<area shape="rect" id="node4" href="$lib__hb_8c.html#a8c2b1ad56a0ecf04cd02e951dfb6c9da" title="motor" alt="" coords="142,107,197,133"/>
+<area shape="rect" id="node3" href="$lib__hb_8c.html#a3f5edef0489aca523a64a40e8fe16320" title="bk" alt="" coords="161,5,199,32"/>
+<area shape="rect" id="node5" href="$lib__hb_8c.html#a55a302772158e1f15f1c90992f535272" title="fd" alt="" coords="161,56,199,83"/>
+<area shape="rect" id="node7" href="$lib__hb_8c.html#a8c2b1ad56a0ecf04cd02e951dfb6c9da" title="motor" alt="" coords="149,107,211,133"/>
 </map>

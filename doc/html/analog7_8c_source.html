@@ -86,27 +86,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">analog7.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="analog7_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="analog7_8c.html#acdef7a1fd863a6d3770c1268cb06add3">    1</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a>()</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="keywordtype">int</span> val;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    printf(<span class="stringliteral">&quot; \n \n&quot;</span>);</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordflow">while</span>(1)</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        val = <a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(7);</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="convert_8c.html#af80345410eaff31ee093c3e514bb9426">thermometer</a>(val,0,255);</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        printf(<span class="stringliteral">&quot;Analog-%d: %d\n&quot;</span>,7, val);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(0.25);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    }</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div>
-<div class="ttc" id="base_2lib__ic_8c_html_afa28db0c35c02b77341a6bed7aac0cb4"><div class="ttname"><a href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a></div><div class="ttdeci">int analog(int port)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00111">lib_ic.c:111</a></div></div>
-<div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00035">lib_ic.c:35</a></div></div>
+<a href="analog7_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="analog7_8c.html#acdef7a1fd863a6d3770c1268cb06add3">    4</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a>()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordtype">int</span> val;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    printf(<span class="stringliteral">&quot; \n \n&quot;</span>);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        val = <a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(7);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="convert_8c.html#af80345410eaff31ee093c3e514bb9426">thermometer</a>(val,0,255);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        printf(<span class="stringliteral">&quot;Analog-%d: %d\n&quot;</span>,7, val);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(0.25);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_afa28db0c35c02b77341a6bed7aac0cb4"><div class="ttname"><a href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a></div><div class="ttdeci">int analog(int port)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00129">lib_ic.c:129</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00027">lib_ic.c:27</a></div></div>
 <div class="ttc" id="convert_8c_html_af80345410eaff31ee093c3e514bb9426"><div class="ttname"><a href="convert_8c.html#af80345410eaff31ee093c3e514bb9426">thermometer</a></div><div class="ttdeci">int thermometer(int val, int low, int high)</div><div class="ttdef"><b>Definition:</b> <a href="convert_8c_source.html#l00039">convert.c:39</a></div></div>
-<div class="ttc" id="1meter_8c_html_acdef7a1fd863a6d3770c1268cb06add3"><div class="ttname"><a href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a></div><div class="ttdeci">void main()</div><div class="ttdef"><b>Definition:</b> <a href="1meter_8c_source.html#l00013">1meter.c:13</a></div></div>
+<div class="ttc" id="1meter_8c_html_acdef7a1fd863a6d3770c1268cb06add3"><div class="ttname"><a href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a></div><div class="ttdeci">void main()</div><div class="ttdef"><b>Definition:</b> <a href="1meter_8c_source.html#l00007">1meter.c:7</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

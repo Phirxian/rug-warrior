@@ -1,5 +1,6 @@
 <map id="range" name="range">
-<area shape="rect" id="node2" href="$convert_8c.html#af80345410eaff31ee093c3e514bb9426" title="thermometer" alt="" coords="110,5,205,32"/>
-<area shape="rect" id="node4" href="$test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="132,56,183,83"/>
-<area shape="rect" id="node3" href="$analog5_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="253,5,304,32"/>
+<area shape="rect" id="node3" href="$shared_2motor_8c.html#a042beb97f3b48827212848a3a96ed41b" title="detect_distance_sonar" alt="" coords="113,5,279,32"/>
+<area shape="rect" id="node5" href="$ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="329,31,383,57"/>
+<area shape="rect" id="node8" href="$convert_8c.html#af80345410eaff31ee093c3e514bb9426" title="thermometer" alt="" coords="142,107,250,133"/>
+<area shape="rect" id="node10" href="$analog5_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="329,107,383,133"/>
 </map>

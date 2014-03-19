@@ -1,12 +1,12 @@
 <map id="echo_control" name="echo_control">
-<area shape="rect" id="node2" href="$echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="149,132,200,159"/>
-<area shape="rect" id="node7" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="552,56,605,83"/>
-<area shape="rect" id="node3" href="$echo_8c.html#a30c8746d91a7cba8f120e337d0a25c2f" title="twitch" alt="" coords="281,5,338,32"/>
-<area shape="rect" id="node9" href="$base_2lib__ic_8c.html#ac01536f2a7ceb0d4c7e5e6a6d59c3871" title="beeper_on" alt="" coords="268,107,351,133"/>
-<area shape="rect" id="node10" href="$base_2lib__ic_8c.html#aebfeaced338ec2353b5d133eebfb3ebb" title="set_beeper_pitch" alt="" coords="249,157,370,184"/>
-<area shape="rect" id="node11" href="$base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428" title="beeper_off" alt="" coords="268,208,351,235"/>
-<area shape="rect" id="node4" href="$echo_8c.html#a95e08d0f0c9ef53423e1a81cfe3561db" title="twitch_aux" alt="" coords="419,5,504,32"/>
-<area shape="rect" id="node5" href="$base_2lib__rwp_8c.html#a9032e2468648895fa936f08f6a831bf9" title="drive" alt="" coords="553,5,604,32"/>
-<area shape="rect" id="node6" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="658,5,713,32"/>
-<area shape="rect" id="node8" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="653,56,717,83"/>
+<area shape="rect" id="node3" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="579,27,635,53"/>
+<area shape="rect" id="node7" href="$echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="158,103,210,129"/>
+<area shape="rect" id="node5" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="683,27,752,53"/>
+<area shape="rect" id="node9" href="$echo_8c.html#a30c8746d91a7cba8f120e337d0a25c2f" title="twitch" alt="" coords="296,77,355,104"/>
+<area shape="rect" id="node18" href="$base_2lib__ic_8c.html#ac01536f2a7ceb0d4c7e5e6a6d59c3871" title="beeper_on" alt="" coords="280,128,371,155"/>
+<area shape="rect" id="node20" href="$base_2lib__ic_8c.html#aebfeaced338ec2353b5d133eebfb3ebb" title="set_beeper_pitch" alt="" coords="259,179,391,205"/>
+<area shape="rect" id="node23" href="$base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428" title="beeper_off" alt="" coords="280,229,371,256"/>
+<area shape="rect" id="node11" href="$echo_8c.html#a95e08d0f0c9ef53423e1a81cfe3561db" title="twitch_aux" alt="" coords="441,77,530,104"/>
+<area shape="rect" id="node13" href="$base_2lib__rwp_8c.html#a9032e2468648895fa936f08f6a831bf9" title="drive" alt="" coords="580,77,633,104"/>
+<area shape="rect" id="node15" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="687,77,748,104"/>
 </map>

@@ -1,4 +1,8 @@
 <map id="set_servo" name="set_servo">
-<area shape="rect" id="node2" href="$shared_2sonar_8c.html#a3e946f741a74a116374de8566c6caba6" title="scan" alt="" coords="133,5,184,32"/>
-<area shape="rect" id="node3" href="$test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="133,56,184,83"/>
+<area shape="rect" id="node3" href="$ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="505,30,559,57"/>
+<area shape="rect" id="node5" href="$shared_2sonar_8c.html#a3e946f741a74a116374de8566c6caba6" title="scan" alt="" coords="193,42,245,69"/>
+<area shape="rect" id="node12" href="$shared_2sonar_8c.html#adbc6a71221630bf8ea9b1d173e0f7b9d" title="scan_display_position" alt="" coords="139,118,299,145"/>
+<area shape="rect" id="node7" href="$wall__scan_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="374,30,429,57"/>
+<area shape="rect" id="node9" href="$shared_2motor_8c.html#aebcea414da69739d6ef8500243accfd6" title="move_behind" alt="" coords="347,81,455,108"/>
+<area shape="rect" id="node14" href="$test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="374,132,429,158"/>
 </map>

@@ -1,0 +1,4 @@
+<map id="reset_encoder_aux" name="reset_encoder_aux">
+<area shape="rect" id="node3" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="197,5,253,32"/>
+<area shape="rect" id="node5" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="301,5,371,32"/>
+</map>

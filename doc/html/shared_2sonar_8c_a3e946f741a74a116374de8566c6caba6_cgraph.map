@@ -1,6 +1,6 @@
 <map id="scan" name="scan">
-<area shape="rect" id="node2" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="117,5,171,32"/>
-<area shape="rect" id="node4" href="$shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd" title="set_servo" alt="" coords="105,56,183,83"/>
-<area shape="rect" id="node3" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="245,5,309,32"/>
-<area shape="rect" id="node5" href="$shared_2sonar_8c.html#a58495e4ae9f36f8f7acbca793a9477c7" title="pwm_servo" alt="" coords="233,56,322,83"/>
+<area shape="rect" id="node3" href="$shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd" title="set_servo" alt="" coords="107,5,191,32"/>
+<area shape="rect" id="node7" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="121,56,177,83"/>
+<area shape="rect" id="node5" href="$shared_2sonar_8c.html#a58495e4ae9f36f8f7acbca793a9477c7" title="pwm_servo" alt="" coords="241,5,335,32"/>
+<area shape="rect" id="node9" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="253,56,323,83"/>
 </map>

@@ -1,0 +1,10 @@
+<map id="main" name="main">
+<area shape="rect" id="node3" href="$base_2lib__rwp_8c.html#a49fe73be96a0657e6a3ea6669cdc9f25" title="left_shaft" alt="" coords="114,5,195,32"/>
+<area shape="rect" id="node5" href="$screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="125,56,184,83"/>
+<area shape="rect" id="node13" href="$base_2lib__rwp_8c.html#a759cd6a2d214a5b16d6e01d114385039" title="right_shaft" alt="" coords="109,107,200,133"/>
+<area shape="rect" id="node15" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="127,157,183,184"/>
+<area shape="rect" id="node7" href="$convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="269,31,325,57"/>
+<area shape="rect" id="node11" href="$screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="248,81,347,108"/>
+<area shape="rect" id="node9" href="$common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="395,31,440,57"/>
+<area shape="rect" id="node17" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="263,157,332,184"/>
+</map>

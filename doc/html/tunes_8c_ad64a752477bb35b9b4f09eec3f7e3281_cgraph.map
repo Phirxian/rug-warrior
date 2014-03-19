@@ -1,6 +1,6 @@
 <map id="play_note_2" name="play_note_2">
-<area shape="rect" id="node2" href="$base_2lib__ic_8c.html#aebfeaced338ec2353b5d133eebfb3ebb" title="set_beeper_pitch" alt="" coords="147,5,269,32"/>
-<area shape="rect" id="node3" href="$base_2lib__ic_8c.html#ac01536f2a7ceb0d4c7e5e6a6d59c3871" title="beeper_on" alt="" coords="167,56,249,83"/>
-<area shape="rect" id="node4" href="$base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428" title="beeper_off" alt="" coords="167,107,249,133"/>
-<area shape="rect" id="node5" href="$tunes_8c.html#a02f694a5858b7ab04b5f7d18c0f6be5e" title="music_command" alt="" coords="147,157,269,184"/>
+<area shape="rect" id="node3" href="$base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428" title="beeper_off" alt="" coords="173,5,264,32"/>
+<area shape="rect" id="node5" href="$base_2lib__ic_8c.html#ac01536f2a7ceb0d4c7e5e6a6d59c3871" title="beeper_on" alt="" coords="173,56,264,83"/>
+<area shape="rect" id="node7" href="$tunes_8c.html#a02f694a5858b7ab04b5f7d18c0f6be5e" title="music_command" alt="" coords="153,107,285,133"/>
+<area shape="rect" id="node9" href="$base_2lib__ic_8c.html#aebfeaced338ec2353b5d133eebfb3ebb" title="set_beeper_pitch" alt="" coords="153,157,285,184"/>
 </map>

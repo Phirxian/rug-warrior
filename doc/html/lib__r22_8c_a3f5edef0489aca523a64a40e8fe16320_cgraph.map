@@ -1,5 +1,5 @@
 <map id="bk" name="bk">
-<area shape="rect" id="node2" href="$lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb" title="_set_motor" alt="" coords="94,31,181,57"/>
-<area shape="rect" id="node3" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="270,5,325,32"/>
-<area shape="rect" id="node4" href="$lib__hb_8c.html#a14a2f7ce8a5918b038b2f29adeb96771" title="_set_motor_speeds" alt="" coords="229,56,365,83"/>
+<area shape="rect" id="node3" href="$lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb" title="_set_motor" alt="" coords="94,31,189,57"/>
+<area shape="rect" id="node5" href="$lib__hb_8c.html#a14a2f7ce8a5918b038b2f29adeb96771" title="_set_motor_speeds" alt="" coords="238,5,386,32"/>
+<area shape="rect" id="node7" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="281,56,343,83"/>
 </map>

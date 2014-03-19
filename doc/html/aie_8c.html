@@ -109,9 +109,19 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>play all playable frequency </p>
 
-<p>Definition at line <a class="el" href="aie_8c_source.html#l00001">1</a> of file <a class="el" href="aie_8c_source.html">aie.c</a>.</p>
+<p>Definition at line <a class="el" href="aie_8c_source.html#l00004">4</a> of file <a class="el" href="aie_8c_source.html">aie.c</a>.</p>
 
+<p>References <a class="el" href="cof_8c_source.html#l00086">note()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordtype">int</span> i = 1;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">for</span>(; i&lt;100; ++i)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        <a class="code" href="cof_8c.html#a55c38cdc83b8334c8cb0a55638dfd650">note</a>((<span class="keywordtype">float</span>)i*440.,1.);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;}</div>
+<div class="ttc" id="cof_8c_html_a55c38cdc83b8334c8cb0a55638dfd650"><div class="ttname"><a href="cof_8c.html#a55c38cdc83b8334c8cb0a55638dfd650">note</a></div><div class="ttdeci">void note(float freq, float dur)</div><div class="ttdef"><b>Definition:</b> <a href="cof_8c_source.html#l00086">cof.c:86</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -126,7 +136,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

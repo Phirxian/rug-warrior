@@ -1,4 +1,4 @@
 <map id="therm_diff" name="therm_diff">
-<area shape="rect" id="node2" href="$screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="133,5,224,32"/>
-<area shape="rect" id="node3" href="$common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="157,56,200,83"/>
+<area shape="rect" id="node3" href="$common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="168,5,213,32"/>
+<area shape="rect" id="node5" href="$screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="141,56,240,83"/>
 </map>

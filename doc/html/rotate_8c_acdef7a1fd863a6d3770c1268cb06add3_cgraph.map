@@ -1,10 +1,9 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$base_2lib__rwp_8c.html#adac0e25b6c0b34901f454931a366bf51" title="init_motors" alt="" coords="105,5,191,32"/>
-<area shape="rect" id="node3" href="$shared_2motor_8c.html#adb9f04d0113231e1cc65bd880e19b918" title="rotate" alt="" coords="121,132,175,159"/>
-<area shape="rect" id="node5" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="260,43,313,69"/>
-<area shape="rect" id="node4" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="259,93,314,120"/>
-<area shape="rect" id="node7" href="$shared_2motor_8c.html#af075ff93ea9486ef03788b5c0b12707b" title="feetToMotor" alt="" coords="241,144,333,171"/>
-<area shape="rect" id="node8" href="$convert_8c.html#a616c6cbada9a0cc9a076a510a274764a" title="cmToFeet" alt="" coords="246,195,327,221"/>
-<area shape="rect" id="node9" href="$base_2lib__rwp_8c.html#a8c528baf37154d347366083f0f816846" title="stop" alt="" coords="263,245,310,272"/>
-<area shape="rect" id="node6" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="381,43,445,69"/>
+<area shape="rect" id="node3" href="$base_2lib__rwp_8c.html#adac0e25b6c0b34901f454931a366bf51" title="init_motors" alt="" coords="131,31,226,57"/>
+<area shape="rect" id="node5" href="$rotate_8c.html#a26d71955529c6b3d9bf09f67d9fe0671" title="rotate_test_all_for" alt="" coords="109,81,248,108"/>
+<area shape="rect" id="node7" href="$shared_2motor_8c.html#a24845bf7b423f5ec436b3dc429584961" title="rotate" alt="" coords="296,56,357,83"/>
+<area shape="rect" id="node11" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="597,56,653,83"/>
+<area shape="rect" id="node9" href="$shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3" title="reset_encoder_aux" alt="" coords="405,5,549,32"/>
+<area shape="rect" id="node15" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="447,56,508,83"/>
+<area shape="rect" id="node13" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="701,56,771,83"/>
 </map>

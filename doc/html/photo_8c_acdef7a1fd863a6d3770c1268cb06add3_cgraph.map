@@ -1,9 +1,9 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="114,5,174,32"/>
-<area shape="rect" id="node3" href="$photo_8c.html#a66f998077162963e411a04991dff9d0a" title="therm_diff" alt="" coords="104,56,184,83"/>
-<area shape="rect" id="node6" href="$photo_8c.html#a4ccb49abe8987fd40632afca2dbaa528" title="p_byte" alt="" coords="113,107,175,133"/>
-<area shape="rect" id="node7" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="117,157,171,184"/>
-<area shape="rect" id="node4" href="$screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="232,31,323,57"/>
-<area shape="rect" id="node5" href="$common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="256,81,299,108"/>
-<area shape="rect" id="node8" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="245,157,309,184"/>
+<area shape="rect" id="node3" href="$base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="121,5,186,32"/>
+<area shape="rect" id="node5" href="$photo_8c.html#a4ccb49abe8987fd40632afca2dbaa528" title="p_byte" alt="" coords="121,56,186,83"/>
+<area shape="rect" id="node7" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="125,107,181,133"/>
+<area shape="rect" id="node11" href="$photo_8c.html#a66f998077162963e411a04991dff9d0a" title="therm_diff" alt="" coords="110,157,197,184"/>
+<area shape="rect" id="node9" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="260,107,329,133"/>
+<area shape="rect" id="node13" href="$screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="245,157,344,184"/>
+<area shape="rect" id="node15" href="$common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="272,208,317,235"/>
 </map>

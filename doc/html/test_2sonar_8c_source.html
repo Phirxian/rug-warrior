@@ -86,40 +86,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">sonar.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="test_2sonar_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3">    1</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a>()</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="keywordtype">int</span> pos;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    pos = -100;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="shared_2sonar_8c.html#a4536c29acdd706cb369a5b5f32ce57a1">init_sonar</a>();</div>
+<a href="test_2sonar_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3">    4</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a>()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="comment">/* Turn the RugBat*/</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <a class="code" href="shared_2sonar_8c.html#a429dc232d3a74189590dfc6e470b4b7e">sonar_init_servo</a>();</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">while</span>(pos &lt;= 100)</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        printf(<span class="stringliteral">&quot;%d - &quot;</span>, pos);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd">set_servo</a>(pos);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="shared_2sonar_8c.html#ad8136df344f340b0653c27e3317c08f5">ping</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        printf(<span class="stringliteral">&quot;%f\n&quot;</span>, <a class="code" href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016">range</a>());</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        pos += 10;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(1.);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="shared_2sonar_8c.html#af4c3fee4924e35db9312e92135f61f94">sonar_servo_off</a>();</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <a class="code" href="shared_2sonar_8c.html#adbc6a71221630bf8ea9b1d173e0f7b9d">scan_display_position</a>(-100,100, 5); <span class="comment">/* 5 loop*/</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    printf(<span class="stringliteral">&quot;END OF LOOPS&quot;</span>);</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(5.0);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    printf(<span class="stringliteral">&quot;\n\n&quot;</span>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="shared_2sonar_8c.html#af4c3fee4924e35db9312e92135f61f94">sonar_servo_off</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">/* Calculate the distance continious between an object and the sonar */</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="shared_2sonar_8c.html#a4536c29acdd706cb369a5b5f32ce57a1">init_sonar</a>();</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="shared_2sonar_8c.html#ad8136df344f340b0653c27e3317c08f5">ping</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        printf(<span class="stringliteral">&quot;%f\n&quot;</span>, <a class="code" href="convert_8c.html#a5a3e9377eb57d2b216ee3869c9eeabcd">feetToCm</a>(<a class="code" href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016">range</a>()));</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(2.0);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
-<div class="ttc" id="shared_2sonar_8c_html_af4c3fee4924e35db9312e92135f61f94"><div class="ttname"><a href="shared_2sonar_8c.html#af4c3fee4924e35db9312e92135f61f94">sonar_servo_off</a></div><div class="ttdeci">void sonar_servo_off()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00119">sonar.c:119</a></div></div>
-<div class="ttc" id="shared_2sonar_8c_html_ad8136df344f340b0653c27e3317c08f5"><div class="ttname"><a href="shared_2sonar_8c.html#ad8136df344f340b0653c27e3317c08f5">ping</a></div><div class="ttdeci">void ping()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00049">sonar.c:49</a></div></div>
-<div class="ttc" id="shared_2sonar_8c_html_a429dc232d3a74189590dfc6e470b4b7e"><div class="ttname"><a href="shared_2sonar_8c.html#a429dc232d3a74189590dfc6e470b4b7e">sonar_init_servo</a></div><div class="ttdeci">void sonar_init_servo()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00106">sonar.c:106</a></div></div>
-<div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00035">lib_ic.c:35</a></div></div>
-<div class="ttc" id="shared_2sonar_8c_html_a222f05c4901d3ffb622e9846e40526bd"><div class="ttname"><a href="shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd">set_servo</a></div><div class="ttdeci">void set_servo(int pos)</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00142">sonar.c:142</a></div></div>
-<div class="ttc" id="shared_2sonar_8c_html_aa79c7e06f14884f4008cc28e35896016"><div class="ttname"><a href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016">range</a></div><div class="ttdeci">float range()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00062">sonar.c:62</a></div></div>
-<div class="ttc" id="1meter_8c_html_acdef7a1fd863a6d3770c1268cb06add3"><div class="ttname"><a href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a></div><div class="ttdeci">void main()</div><div class="ttdef"><b>Definition:</b> <a href="1meter_8c_source.html#l00013">1meter.c:13</a></div></div>
-<div class="ttc" id="shared_2sonar_8c_html_a4536c29acdd706cb369a5b5f32ce57a1"><div class="ttname"><a href="shared_2sonar_8c.html#a4536c29acdd706cb369a5b5f32ce57a1">init_sonar</a></div><div class="ttdeci">void init_sonar()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00039">sonar.c:39</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_af4c3fee4924e35db9312e92135f61f94"><div class="ttname"><a href="shared_2sonar_8c.html#af4c3fee4924e35db9312e92135f61f94">sonar_servo_off</a></div><div class="ttdeci">void sonar_servo_off()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00135">sonar.c:135</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_ad8136df344f340b0653c27e3317c08f5"><div class="ttname"><a href="shared_2sonar_8c.html#ad8136df344f340b0653c27e3317c08f5">ping</a></div><div class="ttdeci">void ping()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00071">sonar.c:71</a></div></div>
+<div class="ttc" id="convert_8c_html_a5a3e9377eb57d2b216ee3869c9eeabcd"><div class="ttname"><a href="convert_8c.html#a5a3e9377eb57d2b216ee3869c9eeabcd">feetToCm</a></div><div class="ttdeci">float feetToCm(float cm)</div><div class="ttdef"><b>Definition:</b> <a href="convert_8c_source.html#l00014">convert.c:14</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_adbc6a71221630bf8ea9b1d173e0f7b9d"><div class="ttname"><a href="shared_2sonar_8c.html#adbc6a71221630bf8ea9b1d173e0f7b9d">scan_display_position</a></div><div class="ttdeci">void scan_display_position(int low_pos, int high_pos, int nLoop)</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00199">sonar.c:199</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_a429dc232d3a74189590dfc6e470b4b7e"><div class="ttname"><a href="shared_2sonar_8c.html#a429dc232d3a74189590dfc6e470b4b7e">sonar_init_servo</a></div><div class="ttdeci">void sonar_init_servo()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00122">sonar.c:122</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00027">lib_ic.c:27</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_aa79c7e06f14884f4008cc28e35896016"><div class="ttname"><a href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016">range</a></div><div class="ttdeci">float range()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00084">sonar.c:84</a></div></div>
+<div class="ttc" id="1meter_8c_html_acdef7a1fd863a6d3770c1268cb06add3"><div class="ttname"><a href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a></div><div class="ttdeci">void main()</div><div class="ttdef"><b>Definition:</b> <a href="1meter_8c_source.html#l00007">1meter.c:7</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_a4536c29acdd706cb369a5b5f32ce57a1"><div class="ttname"><a href="shared_2sonar_8c.html#a4536c29acdd706cb369a5b5f32ce57a1">init_sonar</a></div><div class="ttdeci">void init_sonar()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00060">sonar.c:60</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -1,13 +1,16 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$shared_2sonar_8c.html#a4536c29acdd706cb369a5b5f32ce57a1" title="init_sonar" alt="" coords="123,5,202,32"/>
-<area shape="rect" id="node3" href="$shared_2sonar_8c.html#a429dc232d3a74189590dfc6e470b4b7e" title="sonar_init_servo" alt="" coords="104,56,221,83"/>
-<area shape="rect" id="node5" href="$shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd" title="set_servo" alt="" coords="123,107,202,133"/>
-<area shape="rect" id="node7" href="$shared_2sonar_8c.html#ad8136df344f340b0653c27e3317c08f5" title="ping" alt="" coords="139,157,186,184"/>
-<area shape="rect" id="node8" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="313,183,367,209"/>
-<area shape="rect" id="node10" href="$shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016" title="range" alt="" coords="135,259,190,285"/>
-<area shape="rect" id="node11" href="$shared_2sonar_8c.html#af4c3fee4924e35db9312e92135f61f94" title="sonar_servo_off" alt="" coords="105,309,220,336"/>
-<area shape="rect" id="node4" href="$shared_2sonar_8c.html#a820ae5b5b352c676e51b8b36120055ea" title="sonar_enable_servo" alt="" coords="271,56,409,83"/>
-<area shape="rect" id="node6" href="$shared_2sonar_8c.html#a58495e4ae9f36f8f7acbca793a9477c7" title="pwm_servo" alt="" coords="295,107,385,133"/>
-<area shape="rect" id="node9" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="459,183,523,209"/>
-<area shape="rect" id="node12" href="$shared_2sonar_8c.html#a4f1b909d6e33e828b93f5fcbfa0a906a" title="sonar_disable_servo" alt="" coords="269,309,411,336"/>
+<area shape="rect" id="node3" href="$convert_8c.html#a5a3e9377eb57d2b216ee3869c9eeabcd" title="feetToCm" alt="" coords="148,5,231,32"/>
+<area shape="rect" id="node5" href="$shared_2sonar_8c.html#a4536c29acdd706cb369a5b5f32ce57a1" title="init_sonar" alt="" coords="147,56,231,83"/>
+<area shape="rect" id="node9" href="$shared_2sonar_8c.html#ad8136df344f340b0653c27e3317c08f5" title="ping" alt="" coords="165,107,214,133"/>
+<area shape="rect" id="node11" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="365,157,421,184"/>
+<area shape="rect" id="node15" href="$shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016" title="range" alt="" coords="160,208,219,235"/>
+<area shape="rect" id="node17" href="$shared_2sonar_8c.html#adbc6a71221630bf8ea9b1d173e0f7b9d" title="scan_display_position" alt="" coords="109,259,269,285"/>
+<area shape="rect" id="node25" href="$shared_2sonar_8c.html#a429dc232d3a74189590dfc6e470b4b7e" title="sonar_init_servo" alt="" coords="126,309,253,336"/>
+<area shape="rect" id="node29" href="$shared_2sonar_8c.html#af4c3fee4924e35db9312e92135f61f94" title="sonar_servo_off" alt="" coords="128,360,251,387"/>
+<area shape="rect" id="node7" href="$base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428" title="beeper_off" alt="" coords="348,56,439,83"/>
+<area shape="rect" id="node13" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="531,157,600,184"/>
+<area shape="rect" id="node19" href="$shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd" title="set_servo" alt="" coords="351,259,435,285"/>
+<area shape="rect" id="node21" href="$shared_2sonar_8c.html#a58495e4ae9f36f8f7acbca793a9477c7" title="pwm_servo" alt="" coords="518,259,613,285"/>
+<area shape="rect" id="node27" href="$shared_2sonar_8c.html#a820ae5b5b352c676e51b8b36120055ea" title="sonar_enable_servo" alt="" coords="318,309,469,336"/>
+<area shape="rect" id="node31" href="$shared_2sonar_8c.html#a4f1b909d6e33e828b93f5fcbfa0a906a" title="sonar_disable_servo" alt="" coords="317,360,469,387"/>
 </map>

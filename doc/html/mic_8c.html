@@ -111,9 +111,31 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>always print the microphone value like progress-bar </p>
 
-<p>Definition at line <a class="el" href="mic_8c_source.html#l00014">14</a> of file <a class="el" href="mic_8c_source.html">mic.c</a>.</p>
+<p>Definition at line <a class="el" href="mic_8c_source.html#l00018">18</a> of file <a class="el" href="mic_8c_source.html">mic.c</a>.</p>
 
+<p>References <a class="el" href="common_8c_source.html#l00004">abs()</a>, <a class="el" href="base_2lib__ic_8c_source.html#l00129">analog()</a>, and <a class="el" href="mic_8c_source.html#l00001">therm()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> sum, i;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="comment">/*  leds(0);    /* Mic may detect electrial noise caused by IR osc */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        sum = 0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">for</span>(i = 0; i &lt; 64; i++)                 <span class="comment">/* Average over 64 values */</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            sum = sum + <a class="code" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a>(<a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(2) - 128);   <span class="comment">/* Each sample in range 0 to 128 */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="mic_8c.html#afa2cd0d98543e1570169ad42b07bed22">therm</a>(sum &gt;&gt; 5);             <span class="comment">/* Divide by 64 to average samples and multiply by */</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        printf(<span class="stringliteral">&quot;Microphone Test\n&quot;</span>); <span class="comment">/* 2 to convert therm() range from 128 to 256 */</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_afa28db0c35c02b77341a6bed7aac0cb4"><div class="ttname"><a href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a></div><div class="ttdeci">int analog(int port)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00129">lib_ic.c:129</a></div></div>
+<div class="ttc" id="mic_8c_html_afa2cd0d98543e1570169ad42b07bed22"><div class="ttname"><a href="mic_8c.html#afa2cd0d98543e1570169ad42b07bed22">therm</a></div><div class="ttdeci">void therm(int val)</div><div class="ttdef"><b>Definition:</b> <a href="mic_8c_source.html#l00001">mic.c:1</a></div></div>
+<div class="ttc" id="common_8c_html_a1fd3a8b6db743b7cb7dcfd277fbb905e"><div class="ttname"><a href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a></div><div class="ttdeci">int abs(int val)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00004">common.c:4</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -141,6 +163,19 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="mic_8c_source.html#l00001">1</a> of file <a class="el" href="mic_8c_source.html">mic.c</a>.</p>
 
+<p>Referenced by <a class="el" href="mic_8c_source.html#l00018">main()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;{</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    <span class="keywordtype">int</span> j;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    <span class="keywordtype">int</span> blks;                               <span class="comment">/* Number of blocks that are set: val/16 */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    blks = (val &gt;&gt; 4) + (1 &amp; (val &gt;&gt; 3));   <span class="comment">/* Divide with round off */</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordflow">for</span>(j = 1; j&lt;= blks; j++)</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        printf(<span class="stringliteral">&quot;&gt;&quot;</span>);</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">for</span>(j = blks; j &lt; 16; j++)</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        printf(<span class="stringliteral">&quot;-&quot;</span>);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -155,7 +190,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

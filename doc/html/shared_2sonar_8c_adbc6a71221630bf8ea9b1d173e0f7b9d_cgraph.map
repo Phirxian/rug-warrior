@@ -1,0 +1,6 @@
+<map id="scan_display_position" name="scan_display_position">
+<area shape="rect" id="node3" href="$shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd" title="set_servo" alt="" coords="214,5,298,32"/>
+<area shape="rect" id="node7" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="228,56,284,83"/>
+<area shape="rect" id="node5" href="$shared_2sonar_8c.html#a58495e4ae9f36f8f7acbca793a9477c7" title="pwm_servo" alt="" coords="347,5,442,32"/>
+<area shape="rect" id="node9" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="360,56,429,83"/>
+</map>

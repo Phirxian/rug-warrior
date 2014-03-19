@@ -113,9 +113,17 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the number of left clicks and reset to 0 </p>
 
-<p>Definition at line <a class="el" href="shaft_8c_source.html#l00018">18</a> of file <a class="el" href="shaft_8c_source.html">shaft.c</a>.</p>
+<p>Definition at line <a class="el" href="shaft_8c_source.html#l00017">17</a> of file <a class="el" href="shaft_8c_source.html">shaft.c</a>.</p>
 
+<p>Referenced by <a class="el" href="test_2motor_8c_source.html#l00004">display_mot_test()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> clks = left_clicks;   <span class="comment">/* If called at regular intervals this funciton returns */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    left_clicks = 0;          <span class="comment">/* the the left velocity in units of clicks per interval */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> clks;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -139,9 +147,17 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Get the number of right clicks and reset to 0 </p>
 
-<p>Definition at line <a class="el" href="shaft_8c_source.html#l00025">25</a> of file <a class="el" href="shaft_8c_source.html">shaft.c</a>.</p>
+<p>Definition at line <a class="el" href="shaft_8c_source.html#l00027">27</a> of file <a class="el" href="shaft_8c_source.html">shaft.c</a>.</p>
 
+<p>Referenced by <a class="el" href="test_2motor_8c_source.html#l00004">display_mot_test()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> clks = peek(0x1027);  <span class="comment">/* PACNT is only an 8-bit register -- be sure to */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    poke(0x1027,0);           <span class="comment">/* call it often enough so that it dosen&#39;t overflow */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> clks;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -165,9 +181,20 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Enable PA7 pulse counting and PA0 interrupt </p>
 
-<p>Definition at line <a class="el" href="shaft_8c_source.html#l00008">8</a> of file <a class="el" href="shaft_8c_source.html">shaft.c</a>.</p>
+<p>Definition at line <a class="el" href="shaft_8c_source.html#l00004">4</a> of file <a class="el" href="shaft_8c_source.html">shaft.c</a>.</p>
 
+<p>Referenced by <a class="el" href="test_2motor_8c_source.html#l00032">main()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    poke(0x1026,0b01010000);  <span class="comment">/* PACTL  PA7 input, trigger on rising edge */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    poke(0x1027,0);           <span class="comment">/* PACNT  init to 0 */</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    left_clicks = 0;          <span class="comment">/* Global referenced by interrupt routine */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    bit_clear(0x1021,0b10);   <span class="comment">/* TCTL2 Assign values to the two lowest order bits */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    bit_set(0x1021,0b01);     <span class="comment">/* of tctl2 without changing any other bits */</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    bit_set(0x1022,0b01);     <span class="comment">/* TMSK1  enable IC3 interrupts */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -182,7 +209,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

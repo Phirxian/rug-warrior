@@ -1,5 +1,5 @@
 <map id="left_shaft" name="left_shaft">
-<area shape="rect" id="node2" href="$shared_2motor_8c.html#a2151421c7915bc303d0242f2d4b233c0" title="encoder_aux" alt="" coords="131,5,227,32"/>
-<area shape="rect" id="node4" href="$encoder_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="153,56,204,83"/>
-<area shape="rect" id="node3" href="$1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="275,5,325,32"/>
+<area shape="rect" id="node3" href="$shared_2encoder_8c.html#a2151421c7915bc303d0242f2d4b233c0" title="encoder_aux" alt="" coords="136,5,240,32"/>
+<area shape="rect" id="node7" href="$test_2encoder_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="161,56,215,83"/>
+<area shape="rect" id="node5" href="$1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="289,5,343,32"/>
 </map>

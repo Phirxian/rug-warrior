@@ -86,43 +86,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">shaft.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="shaft_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* Shaft.c */</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/* Utility functions for monitoring the shaft encoders */</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/* Functions for reading left and right &quot;velocities&quot; using PA7s pulse counter */</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/* and an interrupt routine (in speed.icb) to catch pulses on PA0 */</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="shaft_8c.html#a655a0723b26fd4943c4f9883b69be9c6">    8</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="shaft_8c.html#a655a0723b26fd4943c4f9883b69be9c6">init_velocity</a>()        <span class="comment">/* Enable PA7 pulse counting and PA0 interrupt */</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    poke(0x1026,0b01010000);  <span class="comment">/* PACTL  PA7 input, trigger on rising edge */</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    poke(0x1027,0);       <span class="comment">/* PACNT  init to 0 */</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    left_clicks = 0;      <span class="comment">/* Global referenced by interrupt routine */</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    bit_clear(0x1021,0b10);   <span class="comment">/* TCTL2 Assign values to the two lowest order bits */</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    bit_set(0x1021,0b01);   <span class="comment">/* of tctl2 without changing any other bits */</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    bit_set(0x1022,0b01);     <span class="comment">/* TMSK1  enable IC3 interrupts */</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="shaft_8c.html#a1176d8fd5c446189a5d405bbbc448df0">   18</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="shaft_8c.html#a1176d8fd5c446189a5d405bbbc448df0">get_left_clicks</a>()       <span class="comment">/* Get the number of clicks and reset to 0 */</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> clks = left_clicks;   <span class="comment">/* If called at regular intervals this funciton returns */</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    left_clicks = 0;      <span class="comment">/* the the left velocity in units of clicks per interval */</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordflow">return</span> clks;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;}</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="shaft_8c.html#a46882b7cd70183cdbcc74cab94e0196a">   25</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="shaft_8c.html#a46882b7cd70183cdbcc74cab94e0196a">get_right_clicks</a>()      <span class="comment">/* Same as above for right Shaft encoder */</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">int</span> clks = peek(0x1027);  <span class="comment">/* PACNT is only an 8-bit register -- be sure to */</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    poke(0x1027,0);       <span class="comment">/* call it often enough so that it dosen&#39;t overflow */</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">return</span> clks;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
-<div class="ttc" id="shaft_8c_html_a655a0723b26fd4943c4f9883b69be9c6"><div class="ttname"><a href="shaft_8c.html#a655a0723b26fd4943c4f9883b69be9c6">init_velocity</a></div><div class="ttdeci">void init_velocity()</div><div class="ttdef"><b>Definition:</b> <a href="shaft_8c_source.html#l00008">shaft.c:8</a></div></div>
-<div class="ttc" id="shaft_8c_html_a46882b7cd70183cdbcc74cab94e0196a"><div class="ttname"><a href="shaft_8c.html#a46882b7cd70183cdbcc74cab94e0196a">get_right_clicks</a></div><div class="ttdeci">int get_right_clicks()</div><div class="ttdef"><b>Definition:</b> <a href="shaft_8c_source.html#l00025">shaft.c:25</a></div></div>
-<div class="ttc" id="shaft_8c_html_a1176d8fd5c446189a5d405bbbc448df0"><div class="ttname"><a href="shaft_8c.html#a1176d8fd5c446189a5d405bbbc448df0">get_left_clicks</a></div><div class="ttdeci">int get_left_clicks()</div><div class="ttdef"><b>Definition:</b> <a href="shaft_8c_source.html#l00018">shaft.c:18</a></div></div>
+<a href="shaft_8c.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="shaft_8c.html#a655a0723b26fd4943c4f9883b69be9c6">    4</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="shaft_8c.html#a655a0723b26fd4943c4f9883b69be9c6">init_velocity</a>()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    poke(0x1026,0b01010000);  <span class="comment">/* PACTL  PA7 input, trigger on rising edge */</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    poke(0x1027,0);           <span class="comment">/* PACNT  init to 0 */</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    left_clicks = 0;          <span class="comment">/* Global referenced by interrupt routine */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    bit_clear(0x1021,0b10);   <span class="comment">/* TCTL2 Assign values to the two lowest order bits */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    bit_set(0x1021,0b01);     <span class="comment">/* of tctl2 without changing any other bits */</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    bit_set(0x1022,0b01);     <span class="comment">/* TMSK1  enable IC3 interrupts */</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="shaft_8c.html#a1176d8fd5c446189a5d405bbbc448df0">   17</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="shaft_8c.html#a1176d8fd5c446189a5d405bbbc448df0">get_left_clicks</a>()</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> clks = left_clicks;   <span class="comment">/* If called at regular intervals this funciton returns */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    left_clicks = 0;          <span class="comment">/* the the left velocity in units of clicks per interval */</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> clks;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="shaft_8c.html#a46882b7cd70183cdbcc74cab94e0196a">   27</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="shaft_8c.html#a46882b7cd70183cdbcc74cab94e0196a">get_right_clicks</a>()</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">int</span> clks = peek(0x1027);  <span class="comment">/* PACNT is only an 8-bit register -- be sure to */</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    poke(0x1027,0);           <span class="comment">/* call it often enough so that it dosen&#39;t overflow */</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">return</span> clks;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
+<div class="ttc" id="shaft_8c_html_a655a0723b26fd4943c4f9883b69be9c6"><div class="ttname"><a href="shaft_8c.html#a655a0723b26fd4943c4f9883b69be9c6">init_velocity</a></div><div class="ttdeci">void init_velocity()</div><div class="ttdef"><b>Definition:</b> <a href="shaft_8c_source.html#l00004">shaft.c:4</a></div></div>
+<div class="ttc" id="shaft_8c_html_a46882b7cd70183cdbcc74cab94e0196a"><div class="ttname"><a href="shaft_8c.html#a46882b7cd70183cdbcc74cab94e0196a">get_right_clicks</a></div><div class="ttdeci">int get_right_clicks()</div><div class="ttdef"><b>Definition:</b> <a href="shaft_8c_source.html#l00027">shaft.c:27</a></div></div>
+<div class="ttc" id="shaft_8c_html_a1176d8fd5c446189a5d405bbbc448df0"><div class="ttname"><a href="shaft_8c.html#a1176d8fd5c446189a5d405bbbc448df0">get_left_clicks</a></div><div class="ttdeci">int get_left_clicks()</div><div class="ttdef"><b>Definition:</b> <a href="shaft_8c_source.html#l00017">shaft.c:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:12 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

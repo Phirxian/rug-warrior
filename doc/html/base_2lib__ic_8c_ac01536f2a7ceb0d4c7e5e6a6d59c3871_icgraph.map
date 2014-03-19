@@ -1,16 +1,9 @@
 <map id="beeper_on" name="beeper_on">
-<area shape="rect" id="node2" href="$lib__hb_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="159,56,206,83"/>
-<area shape="rect" id="node3" href="$echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="157,107,208,133"/>
-<area shape="rect" id="node6" href="$tunes_8c.html#ad64a752477bb35b9b4f09eec3f7e3281" title="play_note_2" alt="" coords="137,157,229,184"/>
-<area shape="rect" id="node4" href="$echo_8c.html#a185bec48275b377b760853a63644fc23" title="echo_control" alt="" coords="277,107,373,133"/>
-<area shape="rect" id="node5" href="$echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="421,107,504,133"/>
-<area shape="rect" id="node7" href="$tunes_8c.html#a389a29b1aa7cd3e5f0ab7e0a50eb81c2" title="play_note" alt="" coords="286,157,365,184"/>
-<area shape="rect" id="node8" href="$tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="439,157,486,184"/>
-<area shape="rect" id="node9" href="$tunes_8c.html#aab385898c7322dcbfda7e057e52f33d1" title="pp" alt="" coords="579,5,618,32"/>
-<area shape="rect" id="node10" href="$tunes_8c.html#af6d9ec9e05c437b9572aa6bd07f93100" title="wate" alt="" coords="573,56,624,83"/>
-<area shape="rect" id="node11" href="$tunes_8c.html#a991cece580a5054465383b47cadb0535" title="classics" alt="" coords="563,107,634,133"/>
-<area shape="rect" id="node12" href="$tunes_8c.html#a31061818a5a2cf68539ca073374286d3" title="charge" alt="" coords="568,157,629,184"/>
-<area shape="rect" id="node13" href="$tunes_8c.html#a32560516df494caa35d60ad505fb8086" title="looney_tune" alt="" coords="553,208,645,235"/>
-<area shape="rect" id="node14" href="$tunes_8c.html#a700ae836bbc833421cd1f7ac0f7460c4" title="benny" alt="" coords="570,259,627,285"/>
-<area shape="rect" id="node15" href="$tunes_8c.html#acfec480eb7453765b7fa452e7b62f315" title="musicbox" alt="" coords="559,309,638,336"/>
+<area shape="rect" id="node3" href="$tunes_8c.html#ad64a752477bb35b9b4f09eec3f7e3281" title="play_note_2" alt="" coords="144,5,243,32"/>
+<area shape="rect" id="node9" href="$lib__hb_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="168,56,219,83"/>
+<area shape="rect" id="node11" href="$echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="167,107,219,133"/>
+<area shape="rect" id="node5" href="$tunes_8c.html#a389a29b1aa7cd3e5f0ab7e0a50eb81c2" title="play_note" alt="" coords="301,5,385,32"/>
+<area shape="rect" id="node7" href="$tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="464,5,512,32"/>
+<area shape="rect" id="node13" href="$echo_8c.html#a185bec48275b377b760853a63644fc23" title="echo_control" alt="" coords="291,107,395,133"/>
+<area shape="rect" id="node15" href="$echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="443,107,533,133"/>
 </map>

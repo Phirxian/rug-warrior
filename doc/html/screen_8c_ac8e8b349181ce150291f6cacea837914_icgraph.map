@@ -1,9 +1,13 @@
 <map id="repeat_char" name="repeat_char">
-<area shape="rect" id="node2" href="$screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="157,56,211,83"/>
-<area shape="rect" id="node7" href="$photo_8c.html#a66f998077162963e411a04991dff9d0a" title="therm_diff" alt="" coords="144,107,224,133"/>
-<area shape="rect" id="node3" href="$1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="308,5,359,32"/>
-<area shape="rect" id="node4" href="$test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78" title="display_mot_test" alt="" coords="273,56,394,83"/>
-<area shape="rect" id="node5" href="$test_2motor_8c.html#a9382922728322499a2a494319f2f948c" title="set_show_motors" alt="" coords="443,56,568,83"/>
-<area shape="rect" id="node6" href="$test_2motor_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="616,56,667,83"/>
-<area shape="rect" id="node8" href="$photo_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="308,107,359,133"/>
+<area shape="rect" id="node3" href="$screen_8c.html#a933751989174a13eb0301583a36ef170" title="print_diff" alt="" coords="157,63,235,89"/>
+<area shape="rect" id="node11" href="$screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="167,120,225,147"/>
+<area shape="rect" id="node21" href="$photo_8c.html#a66f998077162963e411a04991dff9d0a" title="therm_diff" alt="" coords="153,183,239,209"/>
+<area shape="rect" id="node5" href="$follow__light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="317,56,389,83"/>
+<area shape="rect" id="node7" href="$follow__light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="467,5,605,32"/>
+<area shape="rect" id="node9" href="$follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="479,56,593,83"/>
+<area shape="rect" id="node13" href="$test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78" title="display_mot_test" alt="" coords="288,107,419,133"/>
+<area shape="rect" id="node19" href="$1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="326,157,381,184"/>
+<area shape="rect" id="node15" href="$test_2motor_8c.html#a9382922728322499a2a494319f2f948c" title="set_show_motors" alt="" coords="469,107,603,133"/>
+<area shape="rect" id="node17" href="$test_2motor_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="654,107,709,133"/>
+<area shape="rect" id="node23" href="$photo_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="326,208,381,235"/>
 </map>

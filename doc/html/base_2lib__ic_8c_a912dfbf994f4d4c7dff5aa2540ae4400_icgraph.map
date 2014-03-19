@@ -1,14 +1,7 @@
 <map id="beep" name="beep">
-<area shape="rect" id="node2" href="$lib__hb_8c.html#a0cdb3a3b9e978d9470d299807e7238cd" title="start_press" alt="" coords="105,5,191,32"/>
-<area shape="rect" id="node3" href="$lib__hb_8c.html#a58ba1f6f55e0bade7190f4db26184683" title="stop_press" alt="" coords="105,56,191,83"/>
-<area shape="rect" id="node4" href="$lib__hb_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="118,107,178,133"/>
-<area shape="rect" id="node5" href="$lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="120,157,176,184"/>
-<area shape="rect" id="node6" href="$tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="125,208,171,235"/>
-<area shape="rect" id="node7" href="$tunes_8c.html#aab385898c7322dcbfda7e057e52f33d1" title="pp" alt="" coords="267,56,306,83"/>
-<area shape="rect" id="node8" href="$tunes_8c.html#af6d9ec9e05c437b9572aa6bd07f93100" title="wate" alt="" coords="261,107,312,133"/>
-<area shape="rect" id="node9" href="$tunes_8c.html#a991cece580a5054465383b47cadb0535" title="classics" alt="" coords="251,157,322,184"/>
-<area shape="rect" id="node10" href="$tunes_8c.html#a31061818a5a2cf68539ca073374286d3" title="charge" alt="" coords="256,208,317,235"/>
-<area shape="rect" id="node11" href="$tunes_8c.html#a32560516df494caa35d60ad505fb8086" title="looney_tune" alt="" coords="241,259,333,285"/>
-<area shape="rect" id="node12" href="$tunes_8c.html#a700ae836bbc833421cd1f7ac0f7460c4" title="benny" alt="" coords="258,309,315,336"/>
-<area shape="rect" id="node13" href="$tunes_8c.html#acfec480eb7453765b7fa452e7b62f315" title="musicbox" alt="" coords="247,360,326,387"/>
+<area shape="rect" id="node3" href="$lib__hb_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="125,5,190,32"/>
+<area shape="rect" id="node5" href="$lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="127,56,187,83"/>
+<area shape="rect" id="node7" href="$tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="133,107,181,133"/>
+<area shape="rect" id="node9" href="$lib__hb_8c.html#a0cdb3a3b9e978d9470d299807e7238cd" title="start_press" alt="" coords="110,157,205,184"/>
+<area shape="rect" id="node11" href="$lib__hb_8c.html#a58ba1f6f55e0bade7190f4db26184683" title="stop_press" alt="" coords="111,208,203,235"/>
 </map>

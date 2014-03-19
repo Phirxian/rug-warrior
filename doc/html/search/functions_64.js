@@ -1,6 +1,7 @@
 var searchData=
 [
   ['degtorad',['degToRad',['../convert_8c.html#ae645817fbf89677ab8a3f779b4a10ae8',1,'convert.c']]],
+  ['detect_5fdistance_5fsonar',['detect_distance_sonar',['../shared_2motor_8c.html#a042beb97f3b48827212848a3a96ed41b',1,'motor.c']]],
   ['digital',['digital',['../base_2lib__rwp_8c.html#a3eb7db79d996b92f7063b65dc34b3484',1,'digital(int port):&#160;lib_rwp.c'],['../lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484',1,'digital(int port):&#160;lib_hb.c'],['../lib__r22_8c.html#a3eb7db79d996b92f7063b65dc34b3484',1,'digital(int port):&#160;lib_r22.c'],['../lib__rw10_8c.html#a3eb7db79d996b92f7063b65dc34b3484',1,'digital(int port):&#160;lib_rw10.c'],['../lib__rw11_8c.html#a3eb7db79d996b92f7063b65dc34b3484',1,'digital(int port):&#160;lib_rw11.c']]],
   ['digits',['digits',['../convert_8c.html#a89059167767e145e6fd47ada117f0ebc',1,'convert.c']]],
   ['dip_5fswitch',['dip_switch',['../lib__r22_8c.html#a5ed481f88895f103240c678460c12968',1,'lib_r22.c']]],

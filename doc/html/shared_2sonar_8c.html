@@ -114,6 +114,8 @@ Functions</h2></td></tr>
 <tr class="separator:a222f05c4901d3ffb622e9846e40526bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e946f741a74a116374de8566c6caba6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared_2sonar_8c.html#a3e946f741a74a116374de8566c6caba6">scan</a> (int low_pos, int high_pos)</td></tr>
 <tr class="separator:a3e946f741a74a116374de8566c6caba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbc6a71221630bf8ea9b1d173e0f7b9d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="shared_2sonar_8c.html#adbc6a71221630bf8ea9b1d173e0f7b9d">scan_display_position</a> (int low_pos, int high_pos, int nLoop)</td></tr>
+<tr class="separator:adbc6a71221630bf8ea9b1d173e0f7b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -163,14 +165,34 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Enable input capture of rising edge waveforms on lines PA1 and PA2. <a class="el" href="shared_2sonar_8c.html#a4536c29acdd706cb369a5b5f32ce57a1">init_sonar()</a> must be called before <a class="el" href="shared_2sonar_8c.html#ad8136df344f340b0653c27e3317c08f5">ping()</a>. </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00039">39</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00060">60</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+
+<p>References <a class="el" href="shared_2sonar_8c_source.html#l00019">_tctl2</a>, and <a class="el" href="base_2lib__ic_8c_source.html#l00084">beeper_off()</a>.</p>
+
+<p>Referenced by <a class="el" href="ligth__stop_8c_source.html#l00009">main()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428">beeper_off</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    bit_set(<a class="code" href="shared_2sonar_8c.html#aa2a466dd3209e5a86a6c2035e31e63a4">_tctl2</a>,0b010100); <span class="comment">/* Use bit_set and bit_clear rather than */</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    bit_clear(<a class="code" href="shared_2sonar_8c.html#aa2a466dd3209e5a86a6c2035e31e63a4">_tctl2</a>,0b101000);   <span class="comment">/* poke to avoid changing other tctl2 bits */</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="ttc" id="shared_2sonar_8c_html_aa2a466dd3209e5a86a6c2035e31e63a4"><div class="ttname"><a href="shared_2sonar_8c.html#aa2a466dd3209e5a86a6c2035e31e63a4">_tctl2</a></div><div class="ttdeci">int _tctl2</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00019">sonar.c:19</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_a35b95a4506fe38aa8c942b178cdda428"><div class="ttname"><a href="base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428">beeper_off</a></div><div class="ttdeci">void beeper_off()</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00084">lib_ic.c:84</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="shared_2sonar_8c_a4536c29acdd706cb369a5b5f32ce57a1_cgraph.png" border="0" usemap="#shared_2sonar_8c_a4536c29acdd706cb369a5b5f32ce57a1_cgraph" alt=""/></div>
+<map name="shared_2sonar_8c_a4536c29acdd706cb369a5b5f32ce57a1_cgraph" id="shared_2sonar_8c_a4536c29acdd706cb369a5b5f32ce57a1_cgraph">
+<area shape="rect" id="node3" href="base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428" title="beeper_off" alt="" coords="139,5,229,32"/></map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="shared_2sonar_8c_a4536c29acdd706cb369a5b5f32ce57a1_icgraph.png" border="0" usemap="#shared_2sonar_8c_a4536c29acdd706cb369a5b5f32ce57a1_icgraph" alt=""/></div>
 <map name="shared_2sonar_8c_a4536c29acdd706cb369a5b5f32ce57a1_icgraph" id="shared_2sonar_8c_a4536c29acdd706cb369a5b5f32ce57a1_icgraph">
-<area shape="rect" id="node2" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="133,5,184,32"/></map>
+<area shape="rect" id="node3" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="139,5,194,32"/></map>
 </div>
 </p>
 
@@ -190,8 +212,21 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Initiate a sonar pulse. init_sonar must be called before a ping can be sent. </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00049">49</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00071">71</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
 
+<p>References <a class="el" href="shared_2sonar_8c_source.html#l00024">_tflg1</a>, <a class="el" href="shared_2sonar_8c_source.html#l00009">RugBat_addr</a>, and <a class="el" href="base_2lib__ic_8c_source.html#l00027">sleep()</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2motor_8c_source.html#l00188">detect_distance_sonar()</a>, and <a class="el" href="ligth__stop_8c_source.html#l00009">main()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    poke(<a class="code" href="shared_2sonar_8c.html#acc2bac68be85b5a6b815b2eba1b722f9">_tflg1</a>,0b10);        <span class="comment">/* Writing 1 clears echo received flag */</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    bit_set(<a class="code" href="shared_2sonar_8c.html#a12c3dfe0abee002f7f04e26bd760df73">RugBat_addr</a>,0b001);   <span class="comment">/* Initiate a PING */</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(0.030);         <span class="comment">/* Wait 30 milliseconds for an echo */</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    bit_clear(<a class="code" href="shared_2sonar_8c.html#a12c3dfe0abee002f7f04e26bd760df73">RugBat_addr</a>,0b001); <span class="comment">/* Clear the echo line */</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00027">lib_ic.c:27</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_acc2bac68be85b5a6b815b2eba1b722f9"><div class="ttname"><a href="shared_2sonar_8c.html#acc2bac68be85b5a6b815b2eba1b722f9">_tflg1</a></div><div class="ttdeci">int _tflg1</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00024">sonar.c:24</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_a12c3dfe0abee002f7f04e26bd760df73"><div class="ttname"><a href="shared_2sonar_8c.html#a12c3dfe0abee002f7f04e26bd760df73">RugBat_addr</a></div><div class="ttdeci">int RugBat_addr</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00009">sonar.c:9</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -206,7 +241,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="shared_2sonar_8c_ad8136df344f340b0653c27e3317c08f5_icgraph.png" border="0" usemap="#shared_2sonar_8c_ad8136df344f340b0653c27e3317c08f5_icgraph" alt=""/></div>
 <map name="shared_2sonar_8c_ad8136df344f340b0653c27e3317c08f5_icgraph" id="shared_2sonar_8c_ad8136df344f340b0653c27e3317c08f5_icgraph">
-<area shape="rect" id="node2" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="101,5,152,32"/></map>
+<area shape="rect" id="node3" href="shared_2motor_8c.html#a042beb97f3b48827212848a3a96ed41b" title="detect_distance_sonar" alt="" coords="105,5,271,32"/><area shape="rect" id="node5" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="321,31,375,57"/></map>
 </div>
 </p>
 
@@ -227,14 +262,22 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Set servo pules length to usec. </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00134">134</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00152">152</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
 
+<p>References <a class="el" href="shared_2sonar_8c_source.html#l00044">_toc5</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00160">set_servo()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    pokeword(<a class="code" href="shared_2sonar_8c.html#abe6af8d1e21a17069a3d09f0d7d2296c">_toc5</a>,usec&lt;&lt;1);   <span class="comment">/* Convert 1/2 uSec ticks to 1 uSec units */</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;}</div>
+<div class="ttc" id="shared_2sonar_8c_html_abe6af8d1e21a17069a3d09f0d7d2296c"><div class="ttname"><a href="shared_2sonar_8c.html#abe6af8d1e21a17069a3d09f0d7d2296c">_toc5</a></div><div class="ttdeci">int _toc5</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00044">sonar.c:44</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="shared_2sonar_8c_a58495e4ae9f36f8f7acbca793a9477c7_icgraph.png" border="0" usemap="#shared_2sonar_8c_a58495e4ae9f36f8f7acbca793a9477c7_icgraph" alt=""/></div>
 <map name="shared_2sonar_8c_a58495e4ae9f36f8f7acbca793a9477c7_icgraph" id="shared_2sonar_8c_a58495e4ae9f36f8f7acbca793a9477c7_icgraph">
-<area shape="rect" id="node2" href="shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd" title="set_servo" alt="" coords="145,31,223,57"/><area shape="rect" id="node3" href="shared_2sonar_8c.html#a3e946f741a74a116374de8566c6caba6" title="scan" alt="" coords="272,5,323,32"/><area shape="rect" id="node4" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="272,56,323,83"/></map>
+<area shape="rect" id="node3" href="shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd" title="set_servo" alt="" coords="150,42,234,69"/><area shape="rect" id="node5" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="649,30,703,57"/><area shape="rect" id="node7" href="shared_2sonar_8c.html#a3e946f741a74a116374de8566c6caba6" title="scan" alt="" coords="337,42,389,69"/><area shape="rect" id="node14" href="shared_2sonar_8c.html#adbc6a71221630bf8ea9b1d173e0f7b9d" title="scan_display_position" alt="" coords="283,118,443,145"/><area shape="rect" id="node9" href="wall__scan_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="518,30,573,57"/><area shape="rect" id="node11" href="shared_2motor_8c.html#aebcea414da69739d6ef8500243accfd6" title="move_behind" alt="" coords="491,81,599,108"/><area shape="rect" id="node16" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="518,132,573,158"/></map>
 </div>
 </p>
 
@@ -254,14 +297,28 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Compute range in feet. <a class="el" href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016">range()</a> returns a meaningful result only when called after <a class="el" href="shared_2sonar_8c.html#ad8136df344f340b0653c27e3317c08f5">ping()</a>. If <a class="el" href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016">range()</a> returns -1.0 then no valid echo was received. </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00062">62</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00084">84</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
 
+<p>References <a class="el" href="shared_2sonar_8c_source.html#l00024">_tflg1</a>, <a class="el" href="shared_2sonar_8c_source.html#l00049">_tic1</a>, and <a class="el" href="shared_2sonar_8c_source.html#l00054">_tic2</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2motor_8c_source.html#l00188">detect_distance_sonar()</a>, <a class="el" href="ligth__stop_8c_source.html#l00009">main()</a>, and <a class="el" href="convert_8c_source.html#l00039">thermometer()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordflow">if</span>((peek(<a class="code" href="shared_2sonar_8c.html#acc2bac68be85b5a6b815b2eba1b722f9">_tflg1</a>) &amp; 0b10) == 0)     <span class="comment">/* If IC2 didn&#39;t see echo */</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordflow">return</span> -1.0;    <span class="comment">/* Let calling routine decide which flag */</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordflow">else</span>          <span class="comment">/*  indicates no echo */</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">return</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            ((<span class="keywordtype">float</span>)((peekword(<a class="code" href="shared_2sonar_8c.html#aef57c859539d92064f8b8fa6d6ed6c69">_tic2</a>) - peekword(<a class="code" href="shared_2sonar_8c.html#af9f873bb3d62a8c571d0cb79605ee823">_tic1</a>)) &gt;&gt; 1) * 0.000569);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="ttc" id="shared_2sonar_8c_html_af9f873bb3d62a8c571d0cb79605ee823"><div class="ttname"><a href="shared_2sonar_8c.html#af9f873bb3d62a8c571d0cb79605ee823">_tic1</a></div><div class="ttdeci">int _tic1</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00049">sonar.c:49</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_acc2bac68be85b5a6b815b2eba1b722f9"><div class="ttname"><a href="shared_2sonar_8c.html#acc2bac68be85b5a6b815b2eba1b722f9">_tflg1</a></div><div class="ttdeci">int _tflg1</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00024">sonar.c:24</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_aef57c859539d92064f8b8fa6d6ed6c69"><div class="ttname"><a href="shared_2sonar_8c.html#aef57c859539d92064f8b8fa6d6ed6c69">_tic2</a></div><div class="ttdeci">int _tic2</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00054">sonar.c:54</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="shared_2sonar_8c_aa79c7e06f14884f4008cc28e35896016_icgraph.png" border="0" usemap="#shared_2sonar_8c_aa79c7e06f14884f4008cc28e35896016_icgraph" alt=""/></div>
 <map name="shared_2sonar_8c_aa79c7e06f14884f4008cc28e35896016_icgraph" id="shared_2sonar_8c_aa79c7e06f14884f4008cc28e35896016_icgraph">
-<area shape="rect" id="node2" href="convert_8c.html#af80345410eaff31ee093c3e514bb9426" title="thermometer" alt="" coords="110,5,205,32"/><area shape="rect" id="node4" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="132,56,183,83"/><area shape="rect" id="node3" href="analog5_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="253,5,304,32"/></map>
+<area shape="rect" id="node3" href="shared_2motor_8c.html#a042beb97f3b48827212848a3a96ed41b" title="detect_distance_sonar" alt="" coords="113,5,279,32"/><area shape="rect" id="node5" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="329,31,383,57"/><area shape="rect" id="node8" href="convert_8c.html#af80345410eaff31ee093c3e514bb9426" title="thermometer" alt="" coords="142,107,250,133"/><area shape="rect" id="node10" href="analog5_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="329,107,383,133"/></map>
 </div>
 </p>
 
@@ -292,14 +349,155 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Make the servo scan back and forth between low_pos and high_pos Delay tells the servo how long to wait between steps </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00151">151</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00169">169</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
 
+<p>References <a class="el" href="shared_2sonar_8c_source.html#l00101">scan_delay</a>, <a class="el" href="shared_2sonar_8c_source.html#l00096">servo_pos</a>, <a class="el" href="shared_2sonar_8c_source.html#l00160">set_servo()</a>, and <a class="el" href="base_2lib__ic_8c_source.html#l00027">sleep()</a>.</p>
+
+<p>Referenced by <a class="el" href="wall__scan_8c_source.html#l00009">main()</a>, and <a class="el" href="shared_2motor_8c_source.html#l00141">move_behind()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;{</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="comment">/* Standard step size */</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keywordtype">int</span> step = 1;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="comment">/* Start can fail otherwise*/</span></div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    <a class="code" href="shared_2sonar_8c.html#a5c515407443765ab45ab6a33685af08f">servo_pos</a> = (low_pos + high_pos) / 2;</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    {</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">if</span>((<a class="code" href="shared_2sonar_8c.html#a5c515407443765ab45ab6a33685af08f">servo_pos</a> &lt; low_pos) || (<a class="code" href="shared_2sonar_8c.html#a5c515407443765ab45ab6a33685af08f">servo_pos</a> &gt; high_pos))</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        {</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="comment">/* Don&#39;t reverse instantly */</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(3.0 * <a class="code" href="shared_2sonar_8c.html#ab016905d43821e09cb2c489fc4071e2c">scan_delay</a>);</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            step = (- step);</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        }</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;        <a class="code" href="shared_2sonar_8c.html#a5c515407443765ab45ab6a33685af08f">servo_pos</a> = <a class="code" href="shared_2sonar_8c.html#a5c515407443765ab45ab6a33685af08f">servo_pos</a> + step;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;        <a class="code" href="shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd">set_servo</a>(<a class="code" href="shared_2sonar_8c.html#a5c515407443765ab45ab6a33685af08f">servo_pos</a>);</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(<a class="code" href="shared_2sonar_8c.html#ab016905d43821e09cb2c489fc4071e2c">scan_delay</a>);</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    }</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;}</div>
+<div class="ttc" id="shared_2sonar_8c_html_ab016905d43821e09cb2c489fc4071e2c"><div class="ttname"><a href="shared_2sonar_8c.html#ab016905d43821e09cb2c489fc4071e2c">scan_delay</a></div><div class="ttdeci">float scan_delay</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00101">sonar.c:101</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00027">lib_ic.c:27</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_a222f05c4901d3ffb622e9846e40526bd"><div class="ttname"><a href="shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd">set_servo</a></div><div class="ttdeci">void set_servo(int pos)</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00160">sonar.c:160</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_a5c515407443765ab45ab6a33685af08f"><div class="ttname"><a href="shared_2sonar_8c.html#a5c515407443765ab45ab6a33685af08f">servo_pos</a></div><div class="ttdeci">int servo_pos</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00096">sonar.c:96</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="shared_2sonar_8c_a3e946f741a74a116374de8566c6caba6_cgraph.png" border="0" usemap="#shared_2sonar_8c_a3e946f741a74a116374de8566c6caba6_cgraph" alt=""/></div>
 <map name="shared_2sonar_8c_a3e946f741a74a116374de8566c6caba6_cgraph" id="shared_2sonar_8c_a3e946f741a74a116374de8566c6caba6_cgraph">
-<area shape="rect" id="node2" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="117,5,171,32"/><area shape="rect" id="node4" href="shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd" title="set_servo" alt="" coords="105,56,183,83"/><area shape="rect" id="node3" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="245,5,309,32"/><area shape="rect" id="node5" href="shared_2sonar_8c.html#a58495e4ae9f36f8f7acbca793a9477c7" title="pwm_servo" alt="" coords="233,56,322,83"/></map>
+<area shape="rect" id="node3" href="shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd" title="set_servo" alt="" coords="107,5,191,32"/><area shape="rect" id="node7" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="121,56,177,83"/><area shape="rect" id="node5" href="shared_2sonar_8c.html#a58495e4ae9f36f8f7acbca793a9477c7" title="pwm_servo" alt="" coords="241,5,335,32"/><area shape="rect" id="node9" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="253,56,323,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="shared_2sonar_8c_a3e946f741a74a116374de8566c6caba6_icgraph.png" border="0" usemap="#shared_2sonar_8c_a3e946f741a74a116374de8566c6caba6_icgraph" alt=""/></div>
+<map name="shared_2sonar_8c_a3e946f741a74a116374de8566c6caba6_icgraph" id="shared_2sonar_8c_a3e946f741a74a116374de8566c6caba6_icgraph">
+<area shape="rect" id="node3" href="wall__scan_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="134,5,189,32"/><area shape="rect" id="node5" href="shared_2motor_8c.html#aebcea414da69739d6ef8500243accfd6" title="move_behind" alt="" coords="107,56,215,83"/><area shape="rect" id="node7" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="265,56,319,83"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="adbc6a71221630bf8ea9b1d173e0f7b9d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void scan_display_position </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>low_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>high_pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nLoop</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Make the servo scan back and forth between low_pos and high_pos Delay tells the servo how long to wait between steps ADD : Print the actual position of the rugBat between -100 &amp; 100 And make a predetermined number of loop </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nLoop</td><td>- number of laps remaining (must be superior to 1) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00199">199</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+
+<p>References <a class="el" href="shared_2sonar_8c_source.html#l00101">scan_delay</a>, <a class="el" href="shared_2sonar_8c_source.html#l00096">servo_pos</a>, <a class="el" href="shared_2sonar_8c_source.html#l00160">set_servo()</a>, and <a class="el" href="base_2lib__ic_8c_source.html#l00027">sleep()</a>.</p>
+
+<p>Referenced by <a class="el" href="test_2sonar_8c_source.html#l00004">main()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;{</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keywordtype">int</span> step = 1;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    <span class="keywordflow">if</span>(nLoop &lt; 1)</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    {</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="comment">/* Standard step size */</span></div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="comment">/* Start can fail otherwise*/</span></div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <a class="code" href="shared_2sonar_8c.html#a5c515407443765ab45ab6a33685af08f">servo_pos</a> = (low_pos + high_pos) / 2;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    {</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">if</span>((<a class="code" href="shared_2sonar_8c.html#a5c515407443765ab45ab6a33685af08f">servo_pos</a> &lt; low_pos) || (<a class="code" href="shared_2sonar_8c.html#a5c515407443765ab45ab6a33685af08f">servo_pos</a> &gt; high_pos))</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="comment">/* Don&#39;t reverse instantly */</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(3.0 * <a class="code" href="shared_2sonar_8c.html#ab016905d43821e09cb2c489fc4071e2c">scan_delay</a>);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            step = (- step);</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        }</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <a class="code" href="shared_2sonar_8c.html#a5c515407443765ab45ab6a33685af08f">servo_pos</a> = <a class="code" href="shared_2sonar_8c.html#a5c515407443765ab45ab6a33685af08f">servo_pos</a> + step;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <a class="code" href="shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd">set_servo</a>(<a class="code" href="shared_2sonar_8c.html#a5c515407443765ab45ab6a33685af08f">servo_pos</a>);</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        printf(<span class="stringliteral">&quot;Position %d\n&quot;</span>, <a class="code" href="shared_2sonar_8c.html#a5c515407443765ab45ab6a33685af08f">servo_pos</a>);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(<a class="code" href="shared_2sonar_8c.html#ab016905d43821e09cb2c489fc4071e2c">scan_delay</a>);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="shared_2sonar_8c.html#a5c515407443765ab45ab6a33685af08f">servo_pos</a> == 100)    <span class="comment">/* A laps has been realized */</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        {</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            nLoop--;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        }</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordflow">if</span>(nLoop == 0)    <span class="comment">/* All loop are realized */</span></div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        {</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        }</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;}</div>
+<div class="ttc" id="shared_2sonar_8c_html_ab016905d43821e09cb2c489fc4071e2c"><div class="ttname"><a href="shared_2sonar_8c.html#ab016905d43821e09cb2c489fc4071e2c">scan_delay</a></div><div class="ttdeci">float scan_delay</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00101">sonar.c:101</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00027">lib_ic.c:27</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_a222f05c4901d3ffb622e9846e40526bd"><div class="ttname"><a href="shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd">set_servo</a></div><div class="ttdeci">void set_servo(int pos)</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00160">sonar.c:160</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_a5c515407443765ab45ab6a33685af08f"><div class="ttname"><a href="shared_2sonar_8c.html#a5c515407443765ab45ab6a33685af08f">servo_pos</a></div><div class="ttdeci">int servo_pos</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00096">sonar.c:96</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="shared_2sonar_8c_adbc6a71221630bf8ea9b1d173e0f7b9d_cgraph.png" border="0" usemap="#shared_2sonar_8c_adbc6a71221630bf8ea9b1d173e0f7b9d_cgraph" alt=""/></div>
+<map name="shared_2sonar_8c_adbc6a71221630bf8ea9b1d173e0f7b9d_cgraph" id="shared_2sonar_8c_adbc6a71221630bf8ea9b1d173e0f7b9d_cgraph">
+<area shape="rect" id="node3" href="shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd" title="set_servo" alt="" coords="214,5,298,32"/><area shape="rect" id="node7" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="228,56,284,83"/><area shape="rect" id="node5" href="shared_2sonar_8c.html#a58495e4ae9f36f8f7acbca793a9477c7" title="pwm_servo" alt="" coords="347,5,442,32"/><area shape="rect" id="node9" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="360,56,429,83"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="shared_2sonar_8c_adbc6a71221630bf8ea9b1d173e0f7b9d_icgraph.png" border="0" usemap="#shared_2sonar_8c_adbc6a71221630bf8ea9b1d173e0f7b9d_icgraph" alt=""/></div>
+<map name="shared_2sonar_8c_adbc6a71221630bf8ea9b1d173e0f7b9d_icgraph" id="shared_2sonar_8c_adbc6a71221630bf8ea9b1d173e0f7b9d_icgraph">
+<area shape="rect" id="node3" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="214,5,269,32"/></map>
 </div>
 </p>
 
@@ -320,8 +518,18 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 <p>Set the servo to a position between -100 and +100. Zero points forward. </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00142">142</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00160">160</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
 
+<p>References <a class="el" href="shared_2sonar_8c_source.html#l00152">pwm_servo()</a>, <a class="el" href="shared_2sonar_8c_source.html#l00146">servo_center</a>, and <a class="el" href="shared_2sonar_8c_source.html#l00147">servo_gain</a>.</p>
+
+<p>Referenced by <a class="el" href="ligth__stop_8c_source.html#l00009">main()</a>, <a class="el" href="shared_2sonar_8c_source.html#l00169">scan()</a>, and <a class="el" href="shared_2sonar_8c_source.html#l00199">scan_display_position()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;{</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="shared_2sonar_8c.html#a58495e4ae9f36f8f7acbca793a9477c7">pwm_servo</a>(pos * <a class="code" href="shared_2sonar_8c.html#a16173e2bababcc06ef9fccb294efb2c9">servo_gain</a> + <a class="code" href="shared_2sonar_8c.html#a031b324910933b8d3c81e00421ae74a0">servo_center</a>);</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
+<div class="ttc" id="shared_2sonar_8c_html_a58495e4ae9f36f8f7acbca793a9477c7"><div class="ttname"><a href="shared_2sonar_8c.html#a58495e4ae9f36f8f7acbca793a9477c7">pwm_servo</a></div><div class="ttdeci">void pwm_servo(int usec)</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00152">sonar.c:152</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_a031b324910933b8d3c81e00421ae74a0"><div class="ttname"><a href="shared_2sonar_8c.html#a031b324910933b8d3c81e00421ae74a0">servo_center</a></div><div class="ttdeci">int servo_center</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00146">sonar.c:146</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_a16173e2bababcc06ef9fccb294efb2c9"><div class="ttname"><a href="shared_2sonar_8c.html#a16173e2bababcc06ef9fccb294efb2c9">servo_gain</a></div><div class="ttdeci">int servo_gain</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00147">sonar.c:147</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -336,7 +544,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="shared_2sonar_8c_a222f05c4901d3ffb622e9846e40526bd_icgraph.png" border="0" usemap="#shared_2sonar_8c_a222f05c4901d3ffb622e9846e40526bd_icgraph" alt=""/></div>
 <map name="shared_2sonar_8c_a222f05c4901d3ffb622e9846e40526bd_icgraph" id="shared_2sonar_8c_a222f05c4901d3ffb622e9846e40526bd_icgraph">
-<area shape="rect" id="node2" href="shared_2sonar_8c.html#a3e946f741a74a116374de8566c6caba6" title="scan" alt="" coords="133,5,184,32"/><area shape="rect" id="node3" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="133,56,184,83"/></map>
+<area shape="rect" id="node3" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="505,30,559,57"/><area shape="rect" id="node5" href="shared_2sonar_8c.html#a3e946f741a74a116374de8566c6caba6" title="scan" alt="" coords="193,42,245,69"/><area shape="rect" id="node12" href="shared_2sonar_8c.html#adbc6a71221630bf8ea9b1d173e0f7b9d" title="scan_display_position" alt="" coords="139,118,299,145"/><area shape="rect" id="node7" href="wall__scan_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="374,30,429,57"/><area shape="rect" id="node9" href="shared_2motor_8c.html#aebcea414da69739d6ef8500243accfd6" title="move_behind" alt="" coords="347,81,455,108"/><area shape="rect" id="node14" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="374,132,429,158"/></map>
 </div>
 </p>
 
@@ -356,14 +564,22 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Terminate servo action </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00098">98</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00114">114</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
 
+<p>References <a class="el" href="shared_2sonar_8c_source.html#l00009">RugBat_addr</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00135">sonar_servo_off()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;{</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    poke(<a class="code" href="shared_2sonar_8c.html#a12c3dfe0abee002f7f04e26bd760df73">RugBat_addr</a>,0b100); <span class="comment">/* Speaker on, Sonar PWM off */</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
+<div class="ttc" id="shared_2sonar_8c_html_a12c3dfe0abee002f7f04e26bd760df73"><div class="ttname"><a href="shared_2sonar_8c.html#a12c3dfe0abee002f7f04e26bd760df73">RugBat_addr</a></div><div class="ttdeci">int RugBat_addr</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00009">sonar.c:9</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="shared_2sonar_8c_a4f1b909d6e33e828b93f5fcbfa0a906a_icgraph.png" border="0" usemap="#shared_2sonar_8c_a4f1b909d6e33e828b93f5fcbfa0a906a_icgraph" alt=""/></div>
 <map name="shared_2sonar_8c_a4f1b909d6e33e828b93f5fcbfa0a906a_icgraph" id="shared_2sonar_8c_a4f1b909d6e33e828b93f5fcbfa0a906a_icgraph">
-<area shape="rect" id="node2" href="shared_2sonar_8c.html#af4c3fee4924e35db9312e92135f61f94" title="sonar_servo_off" alt="" coords="195,5,309,32"/><area shape="rect" id="node3" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="357,5,408,32"/></map>
+<area shape="rect" id="node3" href="shared_2sonar_8c.html#af4c3fee4924e35db9312e92135f61f94" title="sonar_servo_off" alt="" coords="205,5,328,32"/><area shape="rect" id="node5" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="377,5,431,32"/></map>
 </div>
 </p>
 
@@ -383,14 +599,22 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Make it possible for the servo to run. </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00090">90</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00106">106</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
 
+<p>References <a class="el" href="shared_2sonar_8c_source.html#l00009">RugBat_addr</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00122">sonar_init_servo()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;{</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    poke(<a class="code" href="shared_2sonar_8c.html#a12c3dfe0abee002f7f04e26bd760df73">RugBat_addr</a>,0b010); <span class="comment">/* Speaker off, Sonar PWM on */</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;}</div>
+<div class="ttc" id="shared_2sonar_8c_html_a12c3dfe0abee002f7f04e26bd760df73"><div class="ttname"><a href="shared_2sonar_8c.html#a12c3dfe0abee002f7f04e26bd760df73">RugBat_addr</a></div><div class="ttdeci">int RugBat_addr</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00009">sonar.c:9</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="shared_2sonar_8c_a820ae5b5b352c676e51b8b36120055ea_icgraph.png" border="0" usemap="#shared_2sonar_8c_a820ae5b5b352c676e51b8b36120055ea_icgraph" alt=""/></div>
 <map name="shared_2sonar_8c_a820ae5b5b352c676e51b8b36120055ea_icgraph" id="shared_2sonar_8c_a820ae5b5b352c676e51b8b36120055ea_icgraph">
-<area shape="rect" id="node2" href="shared_2sonar_8c.html#a429dc232d3a74189590dfc6e470b4b7e" title="sonar_init_servo" alt="" coords="192,5,309,32"/><area shape="rect" id="node3" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="357,5,408,32"/></map>
+<area shape="rect" id="node3" href="shared_2sonar_8c.html#a429dc232d3a74189590dfc6e470b4b7e" title="sonar_init_servo" alt="" coords="206,5,333,32"/><area shape="rect" id="node5" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="382,5,437,32"/></map>
 </div>
 </p>
 
@@ -410,8 +634,26 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Setup PA3 to produce the PWM signal for the servo. </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00106">106</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00122">122</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
 
+<p>References <a class="el" href="shared_2sonar_8c_source.html#l00034">_oc1d</a>, <a class="el" href="shared_2sonar_8c_source.html#l00029">_oc1m</a>, <a class="el" href="shared_2sonar_8c_source.html#l00014">_tctl1</a>, <a class="el" href="shared_2sonar_8c_source.html#l00039">_toc1</a>, <a class="el" href="shared_2sonar_8c_source.html#l00044">_toc5</a>, and <a class="el" href="shared_2sonar_8c_source.html#l00106">sonar_enable_servo()</a>.</p>
+
+<p>Referenced by <a class="el" href="ligth__stop_8c_source.html#l00009">main()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="shared_2sonar_8c.html#a820ae5b5b352c676e51b8b36120055ea">sonar_enable_servo</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    bit_set(<a class="code" href="shared_2sonar_8c.html#af19ee435a5b83c0a8c328ea16f39dc06">_tctl1</a>,0b11);          <span class="comment">/* OC5 sets pin PA3 */</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    bit_set(<a class="code" href="shared_2sonar_8c.html#abc9dfed8df6ecfb1a486856c53b2e7c9">_oc1m</a>,0b1000);         <span class="comment">/* OC1 affects PA3 */</span></div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    bit_clear(<a class="code" href="shared_2sonar_8c.html#a6661787666cd8eb58d2c294e4ea1a759">_oc1d</a>,0b1000);       <span class="comment">/* The OC1 effect is to clear PA3 */</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    pokeword(<a class="code" href="shared_2sonar_8c.html#ab279a0d0a1dbef356d011879e98d54dd">_toc1</a>,0x0000);        <span class="comment">/* OC1 fires on TCNT overflow */</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    pokeword(<a class="code" href="shared_2sonar_8c.html#abe6af8d1e21a17069a3d09f0d7d2296c">_toc5</a>,0xFFFF);        <span class="comment">/* On for maximum time */</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;}</div>
+<div class="ttc" id="shared_2sonar_8c_html_a820ae5b5b352c676e51b8b36120055ea"><div class="ttname"><a href="shared_2sonar_8c.html#a820ae5b5b352c676e51b8b36120055ea">sonar_enable_servo</a></div><div class="ttdeci">void sonar_enable_servo()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00106">sonar.c:106</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_ab279a0d0a1dbef356d011879e98d54dd"><div class="ttname"><a href="shared_2sonar_8c.html#ab279a0d0a1dbef356d011879e98d54dd">_toc1</a></div><div class="ttdeci">int _toc1</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00039">sonar.c:39</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_a6661787666cd8eb58d2c294e4ea1a759"><div class="ttname"><a href="shared_2sonar_8c.html#a6661787666cd8eb58d2c294e4ea1a759">_oc1d</a></div><div class="ttdeci">int _oc1d</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00034">sonar.c:34</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_abe6af8d1e21a17069a3d09f0d7d2296c"><div class="ttname"><a href="shared_2sonar_8c.html#abe6af8d1e21a17069a3d09f0d7d2296c">_toc5</a></div><div class="ttdeci">int _toc5</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00044">sonar.c:44</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_af19ee435a5b83c0a8c328ea16f39dc06"><div class="ttname"><a href="shared_2sonar_8c.html#af19ee435a5b83c0a8c328ea16f39dc06">_tctl1</a></div><div class="ttdeci">int _tctl1</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00014">sonar.c:14</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_abc9dfed8df6ecfb1a486856c53b2e7c9"><div class="ttname"><a href="shared_2sonar_8c.html#abc9dfed8df6ecfb1a486856c53b2e7c9">_oc1m</a></div><div class="ttdeci">int _oc1m</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00029">sonar.c:29</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -426,7 +668,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="shared_2sonar_8c_a429dc232d3a74189590dfc6e470b4b7e_icgraph.png" border="0" usemap="#shared_2sonar_8c_a429dc232d3a74189590dfc6e470b4b7e_icgraph" alt=""/></div>
 <map name="shared_2sonar_8c_a429dc232d3a74189590dfc6e470b4b7e_icgraph" id="shared_2sonar_8c_a429dc232d3a74189590dfc6e470b4b7e_icgraph">
-<area shape="rect" id="node2" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="171,5,221,32"/></map>
+<area shape="rect" id="node3" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="182,5,237,32"/></map>
 </div>
 </p>
 
@@ -446,8 +688,20 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Turn the servo off. </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00119">119</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00135">135</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
 
+<p>References <a class="el" href="shared_2sonar_8c_source.html#l00029">_oc1m</a>, <a class="el" href="shared_2sonar_8c_source.html#l00014">_tctl1</a>, and <a class="el" href="shared_2sonar_8c_source.html#l00114">sonar_disable_servo()</a>.</p>
+
+<p>Referenced by <a class="el" href="ligth__stop_8c_source.html#l00009">main()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="shared_2sonar_8c.html#a4f1b909d6e33e828b93f5fcbfa0a906a">sonar_disable_servo</a>();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    bit_clear(<a class="code" href="shared_2sonar_8c.html#af19ee435a5b83c0a8c328ea16f39dc06">_tctl1</a>,0b11);        <span class="comment">/* OC5 won&#39;t bother PA3 */</span></div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    bit_clear(<a class="code" href="shared_2sonar_8c.html#abc9dfed8df6ecfb1a486856c53b2e7c9">_oc1m</a>,0b1000);       <span class="comment">/* Neither will OC1 */</span></div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;}</div>
+<div class="ttc" id="shared_2sonar_8c_html_a4f1b909d6e33e828b93f5fcbfa0a906a"><div class="ttname"><a href="shared_2sonar_8c.html#a4f1b909d6e33e828b93f5fcbfa0a906a">sonar_disable_servo</a></div><div class="ttdeci">void sonar_disable_servo()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00114">sonar.c:114</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_af19ee435a5b83c0a8c328ea16f39dc06"><div class="ttname"><a href="shared_2sonar_8c.html#af19ee435a5b83c0a8c328ea16f39dc06">_tctl1</a></div><div class="ttdeci">int _tctl1</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00014">sonar.c:14</a></div></div>
+<div class="ttc" id="shared_2sonar_8c_html_abc9dfed8df6ecfb1a486856c53b2e7c9"><div class="ttname"><a href="shared_2sonar_8c.html#abc9dfed8df6ecfb1a486856c53b2e7c9">_oc1m</a></div><div class="ttdeci">int _oc1m</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00029">sonar.c:29</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -462,7 +716,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="shared_2sonar_8c_af4c3fee4924e35db9312e92135f61f94_icgraph.png" border="0" usemap="#shared_2sonar_8c_af4c3fee4924e35db9312e92135f61f94_icgraph" alt=""/></div>
 <map name="shared_2sonar_8c_af4c3fee4924e35db9312e92135f61f94_icgraph" id="shared_2sonar_8c_af4c3fee4924e35db9312e92135f61f94_icgraph">
-<area shape="rect" id="node2" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="168,5,219,32"/></map>
+<area shape="rect" id="node3" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="177,5,231,32"/></map>
 </div>
 </p>
 
@@ -478,8 +732,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Addresses of MC68HC11 internal registers used by RugBat </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00029">29</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00034">34</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00122">sonar_init_servo()</a>.</p>
 
 </div>
 </div>
@@ -492,8 +749,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Addresses of MC68HC11 internal registers used by RugBat </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00028">28</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00029">29</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00122">sonar_init_servo()</a>, and <a class="el" href="shared_2sonar_8c_source.html#l00135">sonar_servo_off()</a>.</p>
 
 </div>
 </div>
@@ -506,8 +766,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Addresses of MC68HC11 internal registers used by RugBat </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00025">25</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00014">14</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00122">sonar_init_servo()</a>, and <a class="el" href="shared_2sonar_8c_source.html#l00135">sonar_servo_off()</a>.</p>
 
 </div>
 </div>
@@ -520,8 +783,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Addresses of MC68HC11 internal registers used by RugBat </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00026">26</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00019">19</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00060">init_sonar()</a>.</p>
 
 </div>
 </div>
@@ -534,8 +800,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Addresses of MC68HC11 internal registers used by RugBat </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00027">27</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00024">24</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00071">ping()</a>, and <a class="el" href="shared_2sonar_8c_source.html#l00084">range()</a>.</p>
 
 </div>
 </div>
@@ -548,8 +817,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Addresses of MC68HC11 internal registers used by RugBat </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00032">32</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00049">49</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00084">range()</a>.</p>
 
 </div>
 </div>
@@ -562,8 +834,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Addresses of MC68HC11 internal registers used by RugBat </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00033">33</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00054">54</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00084">range()</a>.</p>
 
 </div>
 </div>
@@ -576,8 +851,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Addresses of MC68HC11 internal registers used by RugBat </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00030">30</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00039">39</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00122">sonar_init_servo()</a>.</p>
 
 </div>
 </div>
@@ -590,8 +868,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Addresses of MC68HC11 internal registers used by RugBat </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00031">31</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00044">44</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00152">pwm_servo()</a>, and <a class="el" href="shared_2sonar_8c_source.html#l00122">sonar_init_servo()</a>.</p>
 
 </div>
 </div>
@@ -604,8 +885,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>RugBat adress acess </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00021">21</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00009">9</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00071">ping()</a>, <a class="el" href="shared_2sonar_8c_source.html#l00114">sonar_disable_servo()</a>, and <a class="el" href="shared_2sonar_8c_source.html#l00106">sonar_enable_servo()</a>.</p>
 
 </div>
 </div>
@@ -618,8 +902,9 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Edit to select alternate jumper [0 - 3] </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00020">20</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00004">4</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
 
 </div>
 </div>
@@ -634,7 +919,9 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Wait between commanded positions </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00085">85</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00101">101</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00169">scan()</a>, and <a class="el" href="shared_2sonar_8c_source.html#l00199">scan_display_position()</a>.</p>
 
 </div>
 </div>
@@ -647,8 +934,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Empirical data for a Futaba S5102 servo: Min = 500 uSec, Max = 2450 </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00128">128</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00146">146</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00160">set_servo()</a>.</p>
 
 </div>
 </div>
@@ -662,7 +952,9 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00129">129</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00147">147</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00160">set_servo()</a>.</p>
 
 </div>
 </div>
@@ -677,14 +969,16 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>Global, current commanded servo pos </p>
 
-<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00080">80</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+<p>Definition at line <a class="el" href="shared_2sonar_8c_source.html#l00096">96</a> of file <a class="el" href="shared_2sonar_8c_source.html">sonar.c</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00169">scan()</a>, and <a class="el" href="shared_2sonar_8c_source.html#l00199">scan_display_position()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

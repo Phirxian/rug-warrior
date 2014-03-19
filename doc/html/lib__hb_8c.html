@@ -181,6 +181,13 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00313">313</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>Referenced by <a class="el" href="lib__hb_8c_source.html#l00295">analog()</a>, and <a class="el" href="lib__hb_8c_source.html#l00339">knob()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;{</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    poke(0x1039, 0b10000000);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    poke(0x1030, port);</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    <span class="keywordflow">return</span> peek(0x1031);</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -224,12 +231,28 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00245">245</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>References <a class="el" href="lib__hb_8c_source.html#l00196">_motor_speed</a>, <a class="el" href="lib__hb_8c_source.html#l00256">_set_motor_speeds()</a>, and <a class="el" href="base_2lib__rwp_8c_source.html#l00094">motor()</a>.</p>
+
+<p>Referenced by <a class="el" href="lib__hb_8c_source.html#l00214">bk()</a>, <a class="el" href="lib__hb_8c_source.html#l00209">fd()</a>, and <a class="el" href="lib__hb_8c_source.html#l00234">motor()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;{</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    bit_set(0x0e, 1 &lt;&lt; (4 + <a class="code" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a>));    <span class="comment">/* turn motor on */</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <span class="keywordflow">if</span> (dir)</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    bit_set(0x0e, 1 &lt;&lt; <a class="code" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a>);  <span class="comment">/* set direction for backward */</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    bit_clear(0x0e, 1 &lt;&lt; <a class="code" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a>);    <span class="comment">/* set dir for forward */</span></div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <a class="code" href="lib__hb_8c.html#a7e268a46ff5738936191b2e2750db66a">_motor_speed</a>[<a class="code" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a>]= speed;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <a class="code" href="lib__hb_8c.html#a14a2f7ce8a5918b038b2f29adeb96771">_set_motor_speeds</a>();</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;}</div>
+<div class="ttc" id="lib__hb_8c_html_a14a2f7ce8a5918b038b2f29adeb96771"><div class="ttname"><a href="lib__hb_8c.html#a14a2f7ce8a5918b038b2f29adeb96771">_set_motor_speeds</a></div><div class="ttdeci">void _set_motor_speeds()</div><div class="ttdef"><b>Definition:</b> <a href="lib__hb_8c_source.html#l00256">lib_hb.c:256</a></div></div>
+<div class="ttc" id="lib__hb_8c_html_a7e268a46ff5738936191b2e2750db66a"><div class="ttname"><a href="lib__hb_8c.html#a7e268a46ff5738936191b2e2750db66a">_motor_speed</a></div><div class="ttdeci">int _motor_speed[]</div><div class="ttdef"><b>Definition:</b> <a href="lib__hb_8c_source.html#l00196">lib_hb.c:196</a></div></div>
+<div class="ttc" id="base_2lib__rwp_8c_html_a04268e3e9a9cdbff1cd6d5c265f11200"><div class="ttname"><a href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a></div><div class="ttdeci">void motor(int index, int vel)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00094">lib_rwp.c:94</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lib__hb_8c_a5ad04cbb50e276d5c0c68928b6f72fbb_cgraph.png" border="0" usemap="#lib__hb_8c_a5ad04cbb50e276d5c0c68928b6f72fbb_cgraph" alt=""/></div>
 <map name="lib__hb_8c_a5ad04cbb50e276d5c0c68928b6f72fbb_cgraph" id="lib__hb_8c_a5ad04cbb50e276d5c0c68928b6f72fbb_cgraph">
-<area shape="rect" id="node2" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="182,5,237,32"/><area shape="rect" id="node3" href="lib__hb_8c.html#a14a2f7ce8a5918b038b2f29adeb96771" title="_set_motor_speeds" alt="" coords="141,56,277,83"/></map>
+<area shape="rect" id="node3" href="lib__hb_8c.html#a14a2f7ce8a5918b038b2f29adeb96771" title="_set_motor_speeds" alt="" coords="150,5,298,32"/><area shape="rect" id="node5" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="193,56,255,83"/></map>
 </div>
 </p>
 
@@ -238,7 +261,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lib__hb_8c_a5ad04cbb50e276d5c0c68928b6f72fbb_icgraph.png" border="0" usemap="#lib__hb_8c_a5ad04cbb50e276d5c0c68928b6f72fbb_icgraph" alt=""/></div>
 <map name="lib__hb_8c_a5ad04cbb50e276d5c0c68928b6f72fbb_icgraph" id="lib__hb_8c_a5ad04cbb50e276d5c0c68928b6f72fbb_icgraph">
-<area shape="rect" id="node2" href="lib__hb_8c.html#a55a302772158e1f15f1c90992f535272" title="fd" alt="" coords="150,5,189,32"/><area shape="rect" id="node3" href="lib__hb_8c.html#a3f5edef0489aca523a64a40e8fe16320" title="bk" alt="" coords="150,56,189,83"/><area shape="rect" id="node4" href="lib__hb_8c.html#a8c2b1ad56a0ecf04cd02e951dfb6c9da" title="motor" alt="" coords="142,107,197,133"/></map>
+<area shape="rect" id="node3" href="lib__hb_8c.html#a3f5edef0489aca523a64a40e8fe16320" title="bk" alt="" coords="161,5,199,32"/><area shape="rect" id="node5" href="lib__hb_8c.html#a55a302772158e1f15f1c90992f535272" title="fd" alt="" coords="161,56,199,83"/><area shape="rect" id="node7" href="lib__hb_8c.html#a8c2b1ad56a0ecf04cd02e951dfb6c9da" title="motor" alt="" coords="149,107,211,133"/></map>
 </div>
 </p>
 
@@ -259,12 +282,27 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00256">256</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>References <a class="el" href="lib__hb_8c_source.html#l00196">_motor_speed</a>, and <a class="el" href="lib__hb_8c_source.html#l00198">_speed_table</a>.</p>
+
+<p>Referenced by <a class="el" href="lib__hb_8c_source.html#l00245">_set_motor()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;{</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    <span class="keywordtype">int</span> speed01= (<a class="code" href="lib__hb_8c.html#ab937b20dd80c12afb097e7b45379dc6b">_speed_table</a>[<a class="code" href="lib__hb_8c.html#a7e268a46ff5738936191b2e2750db66a">_motor_speed</a>[0]] &lt;&lt; 8)</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      + <a class="code" href="lib__hb_8c.html#ab937b20dd80c12afb097e7b45379dc6b">_speed_table</a>[<a class="code" href="lib__hb_8c.html#a7e268a46ff5738936191b2e2750db66a">_motor_speed</a>[1]];</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keywordtype">int</span> speed23= (<a class="code" href="lib__hb_8c.html#ab937b20dd80c12afb097e7b45379dc6b">_speed_table</a>[<a class="code" href="lib__hb_8c.html#a7e268a46ff5738936191b2e2750db66a">_motor_speed</a>[2]] &lt;&lt; 8)</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      + <a class="code" href="lib__hb_8c.html#ab937b20dd80c12afb097e7b45379dc6b">_speed_table</a>[<a class="code" href="lib__hb_8c.html#a7e268a46ff5738936191b2e2750db66a">_motor_speed</a>[3]];</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    pokeword(0x22, speed01);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    pokeword(0x24, speed23);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}</div>
+<div class="ttc" id="lib__hb_8c_html_a7e268a46ff5738936191b2e2750db66a"><div class="ttname"><a href="lib__hb_8c.html#a7e268a46ff5738936191b2e2750db66a">_motor_speed</a></div><div class="ttdeci">int _motor_speed[]</div><div class="ttdef"><b>Definition:</b> <a href="lib__hb_8c_source.html#l00196">lib_hb.c:196</a></div></div>
+<div class="ttc" id="lib__hb_8c_html_ab937b20dd80c12afb097e7b45379dc6b"><div class="ttname"><a href="lib__hb_8c.html#ab937b20dd80c12afb097e7b45379dc6b">_speed_table</a></div><div class="ttdeci">int _speed_table[]</div><div class="ttdef"><b>Definition:</b> <a href="lib__hb_8c_source.html#l00198">lib_hb.c:198</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lib__hb_8c_a14a2f7ce8a5918b038b2f29adeb96771_icgraph.png" border="0" usemap="#lib__hb_8c_a14a2f7ce8a5918b038b2f29adeb96771_icgraph" alt=""/></div>
 <map name="lib__hb_8c_a14a2f7ce8a5918b038b2f29adeb96771_icgraph" id="lib__hb_8c_a14a2f7ce8a5918b038b2f29adeb96771_icgraph">
-<area shape="rect" id="node2" href="lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb" title="_set_motor" alt="" coords="190,56,277,83"/><area shape="rect" id="node3" href="lib__hb_8c.html#a55a302772158e1f15f1c90992f535272" title="fd" alt="" coords="334,5,373,32"/><area shape="rect" id="node4" href="lib__hb_8c.html#a3f5edef0489aca523a64a40e8fe16320" title="bk" alt="" coords="334,56,373,83"/><area shape="rect" id="node5" href="lib__hb_8c.html#a8c2b1ad56a0ecf04cd02e951dfb6c9da" title="motor" alt="" coords="326,107,381,133"/></map>
+<area shape="rect" id="node3" href="lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb" title="_set_motor" alt="" coords="203,56,298,83"/><area shape="rect" id="node5" href="lib__hb_8c.html#a3f5edef0489aca523a64a40e8fe16320" title="bk" alt="" coords="358,5,397,32"/><area shape="rect" id="node7" href="lib__hb_8c.html#a55a302772158e1f15f1c90992f535272" title="fd" alt="" coords="358,56,397,83"/><area shape="rect" id="node9" href="lib__hb_8c.html#a8c2b1ad56a0ecf04cd02e951dfb6c9da" title="motor" alt="" coords="347,107,408,133"/></map>
 </div>
 </p>
 
@@ -285,6 +323,11 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00224">224</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>Referenced by <a class="el" href="lib__hb_8c_source.html#l00229">ao()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;{</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    poke(0x0e, 0b0000000);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -312,12 +355,33 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00295">295</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>References <a class="el" href="lib__hb_8c_source.html#l00313">_raw_analog()</a>, <a class="el" href="base_2lib__ic_8c_source.html#l00052">beep()</a>, and <a class="el" href="base_2lib__rwp_8c_source.html#l00048">digital()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;{</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordflow">if</span> (port &lt; 7) </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="lib__hb_8c.html#ab45352baf6161b1799e924c298b7384d">_raw_analog</a>(port);</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    }</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (port &lt; 16)</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    {</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="keywordflow">return</span> 255 * !<a class="code" href="base_2lib__rwp_8c.html#a3eb7db79d996b92f7063b65dc34b3484">digital</a>(port);</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        printf(<span class="stringliteral">&quot;Analog port out of range\n&quot;</span>);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        <a class="code" href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400">beep</a>();</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    }</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;}</div>
+<div class="ttc" id="lib__hb_8c_html_ab45352baf6161b1799e924c298b7384d"><div class="ttname"><a href="lib__hb_8c.html#ab45352baf6161b1799e924c298b7384d">_raw_analog</a></div><div class="ttdeci">int _raw_analog(int port)</div><div class="ttdef"><b>Definition:</b> <a href="lib__hb_8c_source.html#l00313">lib_hb.c:313</a></div></div>
+<div class="ttc" id="base_2lib__rwp_8c_html_a3eb7db79d996b92f7063b65dc34b3484"><div class="ttname"><a href="base_2lib__rwp_8c.html#a3eb7db79d996b92f7063b65dc34b3484">digital</a></div><div class="ttdeci">int digital(int port)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00048">lib_rwp.c:48</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_a912dfbf994f4d4c7dff5aa2540ae4400"><div class="ttname"><a href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400">beep</a></div><div class="ttdeci">void beep()</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00052">lib_ic.c:52</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lib__hb_8c_afa28db0c35c02b77341a6bed7aac0cb4_cgraph.png" border="0" usemap="#lib__hb_8c_afa28db0c35c02b77341a6bed7aac0cb4_cgraph" alt=""/></div>
 <map name="lib__hb_8c_afa28db0c35c02b77341a6bed7aac0cb4_cgraph" id="lib__hb_8c_afa28db0c35c02b77341a6bed7aac0cb4_cgraph">
-<area shape="rect" id="node2" href="lib__hb_8c.html#ab45352baf6161b1799e924c298b7384d" title="_raw_analog" alt="" coords="115,5,210,32"/><area shape="rect" id="node3" href="base_2lib__rwp_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="135,56,191,83"/><area shape="rect" id="node4" href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400" title="beep" alt="" coords="137,107,188,133"/><area shape="rect" id="node5" href="base_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="259,107,306,133"/><area shape="rect" id="node6" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="355,107,408,133"/><area shape="rect" id="node7" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="456,107,520,133"/></map>
+<area shape="rect" id="node3" href="lib__hb_8c.html#ab45352baf6161b1799e924c298b7384d" title="_raw_analog" alt="" coords="120,5,221,32"/><area shape="rect" id="node5" href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400" title="beep" alt="" coords="143,56,198,83"/><area shape="rect" id="node13" href="base_2lib__rwp_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="141,107,201,133"/><area shape="rect" id="node7" href="base_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="269,56,320,83"/><area shape="rect" id="node9" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="368,56,424,83"/><area shape="rect" id="node11" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="472,56,541,83"/></map>
 </div>
 </p>
 
@@ -338,6 +402,14 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00229">229</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>References <a class="el" href="lib__hb_8c_source.html#l00224">alloff()</a>.</p>
+
+<p>Referenced by <a class="el" href="lib__rw10_8c_source.html#l00205">alloff()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;{</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <a class="code" href="lib__hb_8c.html#ad6cb702751d048f67025d99608424796">alloff</a>();</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}</div>
+<div class="ttc" id="lib__hb_8c_html_ad6cb702751d048f67025d99608424796"><div class="ttname"><a href="lib__hb_8c.html#ad6cb702751d048f67025d99608424796">alloff</a></div><div class="ttdeci">void alloff()</div><div class="ttdef"><b>Definition:</b> <a href="lib__hb_8c_source.html#l00224">lib_hb.c:224</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -373,6 +445,12 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00129">129</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>References <a class="el" href="base_2lib__ic_8c_source.html#l00060">tone()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8">tone</a>(500., .1);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_aabe762cad0063d9271131f3cc306a0e8"><div class="ttname"><a href="base_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8">tone</a></div><div class="ttdeci">void tone(float frequency, float length)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00060">lib_ic.c:60</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -398,7 +476,12 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00149">149</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;{</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    bit_clear(0x1022, 0b00001000);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    bit_clear(0x1020, 0b00000001);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    bit_clear(0x1000, 0b00001000);  <span class="comment">/* turn power to spkr off */</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ac01536f2a7ceb0d4c7e5e6a6d59c3871"></a>
@@ -415,7 +498,11 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00143">143</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;{</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    bit_set(0x1020, 0b00000001);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    bit_set(0x1022, 0b00001000);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3f5edef0489aca523a64a40e8fe16320"></a>
@@ -434,12 +521,19 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00214">214</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>References <a class="el" href="lib__hb_8c_source.html#l00245">_set_motor()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;{   </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <a class="code" href="lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb">_set_motor</a>(<a class="code" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a>, 1, 7);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;}</div>
+<div class="ttc" id="lib__hb_8c_html_a5ad04cbb50e276d5c0c68928b6f72fbb"><div class="ttname"><a href="lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb">_set_motor</a></div><div class="ttdeci">void _set_motor(int motor, int dir, int speed)</div><div class="ttdef"><b>Definition:</b> <a href="lib__hb_8c_source.html#l00245">lib_hb.c:245</a></div></div>
+<div class="ttc" id="base_2lib__rwp_8c_html_a04268e3e9a9cdbff1cd6d5c265f11200"><div class="ttname"><a href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a></div><div class="ttdeci">void motor(int index, int vel)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00094">lib_rwp.c:94</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lib__hb_8c_a3f5edef0489aca523a64a40e8fe16320_cgraph.png" border="0" usemap="#lib__hb_8c_a3f5edef0489aca523a64a40e8fe16320_cgraph" alt=""/></div>
 <map name="lib__hb_8c_a3f5edef0489aca523a64a40e8fe16320_cgraph" id="lib__hb_8c_a3f5edef0489aca523a64a40e8fe16320_cgraph">
-<area shape="rect" id="node2" href="lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb" title="_set_motor" alt="" coords="94,31,181,57"/><area shape="rect" id="node3" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="270,5,325,32"/><area shape="rect" id="node4" href="lib__hb_8c.html#a14a2f7ce8a5918b038b2f29adeb96771" title="_set_motor_speeds" alt="" coords="229,56,365,83"/></map>
+<area shape="rect" id="node3" href="lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb" title="_set_motor" alt="" coords="94,31,189,57"/><area shape="rect" id="node5" href="lib__hb_8c.html#a14a2f7ce8a5918b038b2f29adeb96771" title="_set_motor_speeds" alt="" coords="238,5,386,32"/><area shape="rect" id="node7" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="281,56,343,83"/></map>
 </div>
 </p>
 
@@ -461,6 +555,27 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00320">320</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>References <a class="el" href="base_2lib__ic_8c_source.html#l00129">analog()</a>, and <a class="el" href="base_2lib__ic_8c_source.html#l00052">beep()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;{</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    <span class="keywordflow">if</span> (port &lt; 7) <span class="comment">/* analogs */</span></div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(port) &lt; 255;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    <span class="keywordflow">if</span> (port == 7) <span class="comment">/* TIC1 */</span></div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordflow">return</span> !(peek(0x1000) &amp; 1);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keywordflow">if</span> (port == 8) <span class="comment">/* TIC2 */</span></div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">return</span> !(peek(0x1000) &amp; 2);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;    <span class="keywordflow">if</span> (port == 9) <span class="comment">/* PAI */</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        <span class="keywordflow">return</span> !(peek(0x1000) &amp; 128);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <span class="keywordflow">if</span> (port &lt; 16) <span class="comment">/* normal bit of 7fff as gotten from digital chip */</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      <span class="keywordflow">return</span> !((peek(0x7fff) &gt;&gt; (port - 10)) &amp; 1);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    printf(<span class="stringliteral">&quot;Digital port outof range\n&quot;</span>);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400">beep</a>();</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    }</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_afa28db0c35c02b77341a6bed7aac0cb4"><div class="ttname"><a href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a></div><div class="ttdeci">int analog(int port)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00129">lib_ic.c:129</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_a912dfbf994f4d4c7dff5aa2540ae4400"><div class="ttname"><a href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400">beep</a></div><div class="ttdeci">void beep()</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00052">lib_ic.c:52</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -488,12 +603,19 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00209">209</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>References <a class="el" href="lib__hb_8c_source.html#l00245">_set_motor()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;{</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <a class="code" href="lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb">_set_motor</a>(<a class="code" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a>, 0, 7);</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}</div>
+<div class="ttc" id="lib__hb_8c_html_a5ad04cbb50e276d5c0c68928b6f72fbb"><div class="ttname"><a href="lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb">_set_motor</a></div><div class="ttdeci">void _set_motor(int motor, int dir, int speed)</div><div class="ttdef"><b>Definition:</b> <a href="lib__hb_8c_source.html#l00245">lib_hb.c:245</a></div></div>
+<div class="ttc" id="base_2lib__rwp_8c_html_a04268e3e9a9cdbff1cd6d5c265f11200"><div class="ttname"><a href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a></div><div class="ttdeci">void motor(int index, int vel)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00094">lib_rwp.c:94</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lib__hb_8c_a55a302772158e1f15f1c90992f535272_cgraph.png" border="0" usemap="#lib__hb_8c_a55a302772158e1f15f1c90992f535272_cgraph" alt=""/></div>
 <map name="lib__hb_8c_a55a302772158e1f15f1c90992f535272_cgraph" id="lib__hb_8c_a55a302772158e1f15f1c90992f535272_cgraph">
-<area shape="rect" id="node2" href="lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb" title="_set_motor" alt="" coords="94,31,181,57"/><area shape="rect" id="node3" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="270,5,325,32"/><area shape="rect" id="node4" href="lib__hb_8c.html#a14a2f7ce8a5918b038b2f29adeb96771" title="_set_motor_speeds" alt="" coords="229,56,365,83"/></map>
+<area shape="rect" id="node3" href="lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb" title="_set_motor" alt="" coords="94,31,189,57"/><area shape="rect" id="node5" href="lib__hb_8c.html#a14a2f7ce8a5918b038b2f29adeb96771" title="_set_motor_speeds" alt="" coords="238,5,386,32"/><area shape="rect" id="node7" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="281,56,343,83"/></map>
 </div>
 </p>
 
@@ -513,7 +635,10 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00352">352</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;{</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;    poke(0x0a, 0);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="af282a0e0f6790a16082e81d5e0689b57"></a>
@@ -531,6 +656,12 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00339">339</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>References <a class="el" href="lib__hb_8c_source.html#l00313">_raw_analog()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;{</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="lib__hb_8c.html#ab45352baf6161b1799e924c298b7384d">_raw_analog</a>(7);</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;}</div>
+<div class="ttc" id="lib__hb_8c_html_ab45352baf6161b1799e924c298b7384d"><div class="ttname"><a href="lib__hb_8c.html#ab45352baf6161b1799e924c298b7384d">_raw_analog</a></div><div class="ttdeci">int _raw_analog(int port)</div><div class="ttdef"><b>Definition:</b> <a href="lib__hb_8c_source.html#l00313">lib_hb.c:313</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -568,12 +699,23 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00234">234</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>References <a class="el" href="lib__hb_8c_source.html#l00245">_set_motor()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;{</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;  <span class="keywordflow">if</span> (speed&gt;100) speed=100;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;  <span class="keywordflow">if</span> (speed&lt;-100) speed=-100;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;  <span class="keywordflow">if</span> (speed &gt;= 0)</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <a class="code" href="lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb">_set_motor</a>(m, 0, (speed + 3) / 14);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;  <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <a class="code" href="lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb">_set_motor</a>(m, 1, (-speed + 3) / 14);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;}</div>
+<div class="ttc" id="lib__hb_8c_html_a5ad04cbb50e276d5c0c68928b6f72fbb"><div class="ttname"><a href="lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb">_set_motor</a></div><div class="ttdeci">void _set_motor(int motor, int dir, int speed)</div><div class="ttdef"><b>Definition:</b> <a href="lib__hb_8c_source.html#l00245">lib_hb.c:245</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lib__hb_8c_a8c2b1ad56a0ecf04cd02e951dfb6c9da_cgraph.png" border="0" usemap="#lib__hb_8c_a8c2b1ad56a0ecf04cd02e951dfb6c9da_cgraph" alt=""/></div>
 <map name="lib__hb_8c_a8c2b1ad56a0ecf04cd02e951dfb6c9da_cgraph" id="lib__hb_8c_a8c2b1ad56a0ecf04cd02e951dfb6c9da_cgraph">
-<area shape="rect" id="node2" href="lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb" title="_set_motor" alt="" coords="110,31,197,57"/><area shape="rect" id="node3" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="286,5,341,32"/><area shape="rect" id="node4" href="lib__hb_8c.html#a14a2f7ce8a5918b038b2f29adeb96771" title="_set_motor_speeds" alt="" coords="245,56,381,83"/></map>
+<area shape="rect" id="node3" href="lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb" title="_set_motor" alt="" coords="115,31,210,57"/><area shape="rect" id="node5" href="lib__hb_8c.html#a14a2f7ce8a5918b038b2f29adeb96771" title="_set_motor_speeds" alt="" coords="259,5,407,32"/><area shape="rect" id="node7" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="303,56,364,83"/></map>
 </div>
 </p>
 
@@ -594,7 +736,17 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00117">117</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keywordtype">long</span> end_time= mseconds() + msec;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordflow">while</span> (1) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">/* if the following test doesn&#39;t execute at least once a second,</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment">       msleep may not halt */</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">long</span> done= mseconds()-end_time;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">if</span> (done &gt;= 0L &amp;&amp; done &lt;= 1000L) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab32a8ae225a031b09e355e0813bec06f"></a>
@@ -613,6 +765,12 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00219">219</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>Referenced by <a class="el" href="lib__rw10_8c_source.html#l00210">ao()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;{</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    bit_clear(0x0e, 1 &lt;&lt; (4 + <a class="code" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a>));</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;}</div>
+<div class="ttc" id="base_2lib__rwp_8c_html_a04268e3e9a9cdbff1cd6d5c265f11200"><div class="ttname"><a href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a></div><div class="ttdeci">void motor(int index, int vel)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00094">lib_rwp.c:94</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -639,7 +797,10 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00410">410</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;{</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;    <span class="keywordflow">return</span> (peekword(0x100e) &amp; 0x7fff) % mod;</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a6089a104ffb48b4c9705527f5287c418"></a>
@@ -656,7 +817,11 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00097">97</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;{</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    pokeword(0x14, 0);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    pokeword(0x12, 0);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab53334924c8ee90693b8d48d8f74793d"></a>
@@ -673,7 +838,10 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00108">108</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;{</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordflow">return</span> ((<span class="keywordtype">float</span>) mseconds()) / 1000.;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aebfeaced338ec2353b5d133eebfb3ebb"></a>
@@ -691,7 +859,10 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00156">156</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;{</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    pokeword(0x26, (<span class="keywordtype">int</span>)(1E6 / frequency));</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;}    </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa5113ec47ecf6d5c15614c9353cb9a08"></a>
@@ -710,6 +881,13 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00112">112</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>References <a class="el" href="base_2lib__ic_8c_source.html#l00035">msleep()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777">msleep</a>((<span class="keywordtype">long</span>)(<span class="keywordtype">int</span>)(<a class="code" href="base_2lib__ic_8c.html#ab53334924c8ee90693b8d48d8f74793d">seconds</a> * 1000.));</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_aa3650dfb953be0fa6fb4e6a625d3f777"><div class="ttname"><a href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777">msleep</a></div><div class="ttdeci">void msleep(long msec)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00035">lib_ic.c:35</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_ab53334924c8ee90693b8d48d8f74793d"><div class="ttname"><a href="base_2lib__ic_8c.html#ab53334924c8ee90693b8d48d8f74793d">seconds</a></div><div class="ttdeci">float seconds()</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00019">lib_ic.c:19</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -736,6 +914,11 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00276">276</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>Referenced by <a class="el" href="lib__hb_8c_source.html#l00281">start_press()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;{</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="keywordflow">return</span> ! (0x80 &amp; (peek(0x7fff)));</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -762,12 +945,21 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00281">281</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>References <a class="el" href="base_2lib__ic_8c_source.html#l00052">beep()</a>, and <a class="el" href="lib__hb_8c_source.html#l00276">start_button()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;{</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordflow">while</span> (!<a class="code" href="lib__hb_8c.html#a310f6d16b7c5f8c8c86a2ca3cc8fb537">start_button</a>());</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="lib__hb_8c.html#a310f6d16b7c5f8c8c86a2ca3cc8fb537">start_button</a>());</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400">beep</a>();</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;}</div>
+<div class="ttc" id="lib__hb_8c_html_a310f6d16b7c5f8c8c86a2ca3cc8fb537"><div class="ttname"><a href="lib__hb_8c.html#a310f6d16b7c5f8c8c86a2ca3cc8fb537">start_button</a></div><div class="ttdeci">int start_button()</div><div class="ttdef"><b>Definition:</b> <a href="lib__hb_8c_source.html#l00276">lib_hb.c:276</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_a912dfbf994f4d4c7dff5aa2540ae4400"><div class="ttname"><a href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400">beep</a></div><div class="ttdeci">void beep()</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00052">lib_ic.c:52</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lib__hb_8c_a0cdb3a3b9e978d9470d299807e7238cd_cgraph.png" border="0" usemap="#lib__hb_8c_a0cdb3a3b9e978d9470d299807e7238cd_cgraph" alt=""/></div>
 <map name="lib__hb_8c_a0cdb3a3b9e978d9470d299807e7238cd_cgraph" id="lib__hb_8c_a0cdb3a3b9e978d9470d299807e7238cd_cgraph">
-<area shape="rect" id="node2" href="lib__hb_8c.html#a310f6d16b7c5f8c8c86a2ca3cc8fb537" title="start_button" alt="" coords="141,5,232,32"/><area shape="rect" id="node3" href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400" title="beep" alt="" coords="161,56,212,83"/><area shape="rect" id="node4" href="base_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="281,56,327,83"/><area shape="rect" id="node5" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="376,56,429,83"/><area shape="rect" id="node6" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="477,56,541,83"/></map>
+<area shape="rect" id="node3" href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400" title="beep" alt="" coords="173,5,227,32"/><area shape="rect" id="node11" href="lib__hb_8c.html#a310f6d16b7c5f8c8c86a2ca3cc8fb537" title="start_button" alt="" coords="149,56,251,83"/><area shape="rect" id="node5" href="base_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="299,5,349,32"/><area shape="rect" id="node7" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="397,5,453,32"/><area shape="rect" id="node9" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="501,5,571,32"/></map>
 </div>
 </p>
 
@@ -788,6 +980,11 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00271">271</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>Referenced by <a class="el" href="lib__hb_8c_source.html#l00288">stop_press()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;{</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordflow">return</span> ! (0x40 &amp; (peek(0x7fff)));</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -814,12 +1011,21 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00288">288</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>References <a class="el" href="base_2lib__ic_8c_source.html#l00052">beep()</a>, and <a class="el" href="lib__hb_8c_source.html#l00271">stop_button()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;{</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordflow">while</span> (!<a class="code" href="lib__hb_8c.html#a6e7a4ff7e766f85295d9095966336185">stop_button</a>());</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="lib__hb_8c.html#a6e7a4ff7e766f85295d9095966336185">stop_button</a>());</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400">beep</a>();</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_a912dfbf994f4d4c7dff5aa2540ae4400"><div class="ttname"><a href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400">beep</a></div><div class="ttdeci">void beep()</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00052">lib_ic.c:52</a></div></div>
+<div class="ttc" id="lib__hb_8c_html_a6e7a4ff7e766f85295d9095966336185"><div class="ttname"><a href="lib__hb_8c.html#a6e7a4ff7e766f85295d9095966336185">stop_button</a></div><div class="ttdeci">int stop_button()</div><div class="ttdef"><b>Definition:</b> <a href="lib__hb_8c_source.html#l00271">lib_hb.c:271</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lib__hb_8c_a58ba1f6f55e0bade7190f4db26184683_cgraph.png" border="0" usemap="#lib__hb_8c_a58ba1f6f55e0bade7190f4db26184683_cgraph" alt=""/></div>
 <map name="lib__hb_8c_a58ba1f6f55e0bade7190f4db26184683_cgraph" id="lib__hb_8c_a58ba1f6f55e0bade7190f4db26184683_cgraph">
-<area shape="rect" id="node2" href="lib__hb_8c.html#a6e7a4ff7e766f85295d9095966336185" title="stop_button" alt="" coords="141,5,232,32"/><area shape="rect" id="node3" href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400" title="beep" alt="" coords="161,56,212,83"/><area shape="rect" id="node4" href="base_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="281,56,327,83"/><area shape="rect" id="node5" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="376,56,429,83"/><area shape="rect" id="node6" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="477,56,541,83"/></map>
+<area shape="rect" id="node3" href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400" title="beep" alt="" coords="169,5,223,32"/><area shape="rect" id="node11" href="lib__hb_8c.html#a6e7a4ff7e766f85295d9095966336185" title="stop_button" alt="" coords="147,56,245,83"/><area shape="rect" id="node5" href="base_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="293,5,344,32"/><area shape="rect" id="node7" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="392,5,448,32"/><area shape="rect" id="node9" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="496,5,565,32"/></map>
 </div>
 </p>
 
@@ -839,7 +1045,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00405">405</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;{bit_clear(0x39, 0b00000001);}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a3e1bd2d0965fad8b3da59f6c566b7d99"></a>
@@ -856,7 +1063,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00404">404</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;{bit_set(0x39, 0b00000001);}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a6d7aaee4c992a4706ee2f5c4d8e65f20"></a>
@@ -873,7 +1081,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00398">398</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;{bit_clear(0x39, 0b00000100);}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae01d4ace8ba76b19d6576a42ca149804"></a>
@@ -890,7 +1099,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00397">397</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;{bit_set(0x39, 0b00000100);}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aabe762cad0063d9271131f3cc306a0e8"></a>
@@ -919,12 +1129,24 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00135">135</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>References <a class="el" href="base_2lib__ic_8c_source.html#l00084">beeper_off()</a>, <a class="el" href="base_2lib__ic_8c_source.html#l00075">beeper_on()</a>, <a class="el" href="base_2lib__ic_8c_source.html#l00096">set_beeper_pitch()</a>, and <a class="el" href="base_2lib__ic_8c_source.html#l00027">sleep()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;{</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#aebfeaced338ec2353b5d133eebfb3ebb">set_beeper_pitch</a>(frequency);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#ac01536f2a7ceb0d4c7e5e6a6d59c3871">beeper_on</a>();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(length);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428">beeper_off</a>();</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_aebfeaced338ec2353b5d133eebfb3ebb"><div class="ttname"><a href="base_2lib__ic_8c.html#aebfeaced338ec2353b5d133eebfb3ebb">set_beeper_pitch</a></div><div class="ttdeci">void set_beeper_pitch(float frequency)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00096">lib_ic.c:96</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_a35b95a4506fe38aa8c942b178cdda428"><div class="ttname"><a href="base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428">beeper_off</a></div><div class="ttdeci">void beeper_off()</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00084">lib_ic.c:84</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00027">lib_ic.c:27</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_ac01536f2a7ceb0d4c7e5e6a6d59c3871"><div class="ttname"><a href="base_2lib__ic_8c.html#ac01536f2a7ceb0d4c7e5e6a6d59c3871">beeper_on</a></div><div class="ttdeci">void beeper_on()</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00075">lib_ic.c:75</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="lib__hb_8c_aabe762cad0063d9271131f3cc306a0e8_cgraph.png" border="0" usemap="#lib__hb_8c_aabe762cad0063d9271131f3cc306a0e8_cgraph" alt=""/></div>
 <map name="lib__hb_8c_aabe762cad0063d9271131f3cc306a0e8_cgraph" id="lib__hb_8c_aabe762cad0063d9271131f3cc306a0e8_cgraph">
-<area shape="rect" id="node2" href="base_2lib__ic_8c.html#aebfeaced338ec2353b5d133eebfb3ebb" title="set_beeper_pitch" alt="" coords="102,5,223,32"/><area shape="rect" id="node3" href="base_2lib__ic_8c.html#ac01536f2a7ceb0d4c7e5e6a6d59c3871" title="beeper_on" alt="" coords="121,56,204,83"/><area shape="rect" id="node4" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="136,107,189,133"/><area shape="rect" id="node6" href="base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428" title="beeper_off" alt="" coords="121,157,204,184"/><area shape="rect" id="node5" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="272,107,336,133"/></map>
+<area shape="rect" id="node3" href="base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428" title="beeper_off" alt="" coords="125,5,216,32"/><area shape="rect" id="node5" href="base_2lib__ic_8c.html#ac01536f2a7ceb0d4c7e5e6a6d59c3871" title="beeper_on" alt="" coords="125,56,216,83"/><area shape="rect" id="node7" href="base_2lib__ic_8c.html#aebfeaced338ec2353b5d133eebfb3ebb" title="set_beeper_pitch" alt="" coords="105,107,237,133"/><area shape="rect" id="node9" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="143,157,199,184"/><area shape="rect" id="node11" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="285,157,355,184"/></map>
 </div>
 </p>
 
@@ -942,6 +1164,8 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00196">196</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
+
+<p>Referenced by <a class="el" href="lib__hb_8c_source.html#l00245">_set_motor()</a>, <a class="el" href="lib__hb_8c_source.html#l00256">_set_motor_speeds()</a>, <a class="el" href="lib__r22_8c_source.html#l00308">motor4_left()</a>, <a class="el" href="lib__r22_8c_source.html#l00319">motor4_right()</a>, <a class="el" href="lib__r22_8c_source.html#l00330">motor5_left()</a>, and <a class="el" href="lib__r22_8c_source.html#l00341">motor5_right()</a>.</p>
 
 </div>
 </div>
@@ -967,12 +1191,14 @@ Here is the call graph for this function:</div>
 </div><!-- fragment -->
 <p>Definition at line <a class="el" href="lib__hb_8c_source.html#l00198">198</a> of file <a class="el" href="lib__hb_8c_source.html">lib_hb.c</a>.</p>
 
+<p>Referenced by <a class="el" href="lib__hb_8c_source.html#l00256">_set_motor_speeds()</a>, and <a class="el" href="lib__rw10_8c_source.html#l00216">motor()</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

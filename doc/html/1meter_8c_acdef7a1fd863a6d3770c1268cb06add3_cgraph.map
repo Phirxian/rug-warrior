@@ -1,14 +1,15 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$base_2lib__rwp_8c.html#adac0e25b6c0b34901f454931a366bf51" title="init_motors" alt="" coords="109,5,195,32"/>
-<area shape="rect" id="node3" href="$shared_2motor_8c.html#a2151421c7915bc303d0242f2d4b233c0" title="encoder_aux" alt="" coords="104,56,200,83"/>
-<area shape="rect" id="node6" href="$shared_2motor_8c.html#af2c4ffd5a44c4fed16acb57148f0c117" title="running" alt="" coords="120,107,184,133"/>
-<area shape="rect" id="node8" href="$screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="125,157,179,184"/>
-<area shape="rect" id="node12" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="125,233,179,260"/>
-<area shape="rect" id="node4" href="$base_2lib__rwp_8c.html#a49fe73be96a0657e6a3ea6669cdc9f25" title="left_shaft" alt="" coords="255,5,331,32"/>
-<area shape="rect" id="node5" href="$base_2lib__rwp_8c.html#a759cd6a2d214a5b16d6e01d114385039" title="right_shaft" alt="" coords="252,56,335,83"/>
-<area shape="rect" id="node7" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="266,107,321,133"/>
-<area shape="rect" id="node9" href="$convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="267,157,320,184"/>
-<area shape="rect" id="node11" href="$screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="248,208,339,235"/>
-<area shape="rect" id="node10" href="$common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="387,157,429,184"/>
-<area shape="rect" id="node13" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="261,259,325,285"/>
+<area shape="rect" id="node3" href="$shared_2encoder_8c.html#a2151421c7915bc303d0242f2d4b233c0" title="encoder_aux" alt="" coords="109,56,213,83"/>
+<area shape="rect" id="node9" href="$base_2lib__rwp_8c.html#adac0e25b6c0b34901f454931a366bf51" title="init_motors" alt="" coords="114,107,209,133"/>
+<area shape="rect" id="node11" href="$screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="132,157,191,184"/>
+<area shape="rect" id="node19" href="$shared_2motor_8c.html#af2c4ffd5a44c4fed16acb57148f0c117" title="running" alt="" coords="126,233,197,260"/>
+<area shape="rect" id="node23" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="453,259,509,285"/>
+<area shape="rect" id="node5" href="$base_2lib__rwp_8c.html#a49fe73be96a0657e6a3ea6669cdc9f25" title="left_shaft" alt="" coords="293,5,374,32"/>
+<area shape="rect" id="node7" href="$base_2lib__rwp_8c.html#a759cd6a2d214a5b16d6e01d114385039" title="right_shaft" alt="" coords="288,56,379,83"/>
+<area shape="rect" id="node13" href="$convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="305,107,361,133"/>
+<area shape="rect" id="node17" href="$screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="284,157,383,184"/>
+<area shape="rect" id="node15" href="$common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="459,107,504,133"/>
+<area shape="rect" id="node21" href="$shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3" title="reset_encoder_aux" alt="" coords="261,208,405,235"/>
+<area shape="rect" id="node27" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="303,309,364,336"/>
+<area shape="rect" id="node25" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="557,259,627,285"/>
 </map>

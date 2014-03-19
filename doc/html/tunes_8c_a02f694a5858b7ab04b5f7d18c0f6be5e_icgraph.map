@@ -1,12 +1,5 @@
 <map id="music_command" name="music_command">
-<area shape="rect" id="node2" href="$tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="446,157,493,184"/>
-<area shape="rect" id="node10" href="$tunes_8c.html#ad64a752477bb35b9b4f09eec3f7e3281" title="play_note_2" alt="" coords="177,183,269,209"/>
-<area shape="rect" id="node3" href="$tunes_8c.html#aab385898c7322dcbfda7e057e52f33d1" title="pp" alt="" coords="569,5,607,32"/>
-<area shape="rect" id="node4" href="$tunes_8c.html#af6d9ec9e05c437b9572aa6bd07f93100" title="wate" alt="" coords="563,56,613,83"/>
-<area shape="rect" id="node5" href="$tunes_8c.html#a991cece580a5054465383b47cadb0535" title="classics" alt="" coords="553,107,623,133"/>
-<area shape="rect" id="node6" href="$tunes_8c.html#a31061818a5a2cf68539ca073374286d3" title="charge" alt="" coords="557,157,619,184"/>
-<area shape="rect" id="node7" href="$tunes_8c.html#a32560516df494caa35d60ad505fb8086" title="looney_tune" alt="" coords="542,208,634,235"/>
-<area shape="rect" id="node8" href="$tunes_8c.html#a700ae836bbc833421cd1f7ac0f7460c4" title="benny" alt="" coords="559,259,617,285"/>
-<area shape="rect" id="node9" href="$tunes_8c.html#acfec480eb7453765b7fa452e7b62f315" title="musicbox" alt="" coords="549,309,627,336"/>
-<area shape="rect" id="node11" href="$tunes_8c.html#a389a29b1aa7cd3e5f0ab7e0a50eb81c2" title="play_note" alt="" coords="318,183,397,209"/>
+<area shape="rect" id="node3" href="$tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="467,5,515,32"/>
+<area shape="rect" id="node5" href="$tunes_8c.html#ad64a752477bb35b9b4f09eec3f7e3281" title="play_note_2" alt="" coords="187,31,285,57"/>
+<area shape="rect" id="node7" href="$tunes_8c.html#a389a29b1aa7cd3e5f0ab7e0a50eb81c2" title="play_note" alt="" coords="334,31,418,57"/>
 </map>

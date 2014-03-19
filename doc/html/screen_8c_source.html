@@ -110,13 +110,37 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">for</span>(j = 0; j &lt; rep; j++)</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        printf(<span class="stringliteral">&quot;%c&quot;</span>, ch);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="screen_8c.html#a933751989174a13eb0301583a36ef170">   37</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="screen_8c.html#a933751989174a13eb0301583a36ef170">print_diff</a>(<span class="keywordtype">int</span> diff)</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">char</span> PATTERN_LEFT = <span class="charliteral">&#39;&lt;&#39;</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">char</span> PATTERN_RIGHT = <span class="charliteral">&#39;&gt;&#39;</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="comment">/* Number of digits to will be written*/</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> number_digits;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    number_digits = (int) diff / (100/8);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span>(diff &gt; 0)    <span class="comment">/* Write on the right side */</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(<span class="charliteral">&#39; &#39;</span>, 8); <span class="comment">/* Margin*/</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(PATTERN_RIGHT, number_digits);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(diff &lt; 0)      <span class="comment">/* Write on the left side */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        number_digits = -number_digits;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(<span class="charliteral">&#39; &#39;</span>, 8-number_digits); <span class="comment">/* Dynamic Margin*/</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(PATTERN_LEFT, number_digits);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
 <div class="ttc" id="convert_8c_html_a89059167767e145e6fd47ada117f0ebc"><div class="ttname"><a href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc">digits</a></div><div class="ttdeci">int digits(int signed_val)</div><div class="ttdef"><b>Definition:</b> <a href="convert_8c_source.html#l00063">convert.c:63</a></div></div>
 <div class="ttc" id="screen_8c_html_ac8e8b349181ce150291f6cacea837914"><div class="ttname"><a href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a></div><div class="ttdeci">void repeat_char(int ch, int rep)</div><div class="ttdef"><b>Definition:</b> <a href="screen_8c_source.html#l00024">screen.c:24</a></div></div>
 <div class="ttc" id="screen_8c_html_a598db0d698ebf794573aa38998ff031a"><div class="ttname"><a href="screen_8c.html#a598db0d698ebf794573aa38998ff031a">printn</a></div><div class="ttdeci">void printn(int val, int cols)</div><div class="ttdef"><b>Definition:</b> <a href="screen_8c_source.html#l00005">screen.c:5</a></div></div>
+<div class="ttc" id="screen_8c_html_a933751989174a13eb0301583a36ef170"><div class="ttname"><a href="screen_8c.html#a933751989174a13eb0301583a36ef170">print_diff</a></div><div class="ttdeci">void print_diff(int diff)</div><div class="ttdef"><b>Definition:</b> <a href="screen_8c_source.html#l00037">screen.c:37</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

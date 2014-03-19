@@ -1,8 +1,8 @@
 <map id="display_mot_test" name="display_mot_test">
-<area shape="rect" id="node2" href="$screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="206,31,261,57"/>
-<area shape="rect" id="node6" href="$shaft_8c.html#a1176d8fd5c446189a5d405bbbc448df0" title="get_left_clicks" alt="" coords="180,81,287,108"/>
-<area shape="rect" id="node7" href="$shaft_8c.html#a46882b7cd70183cdbcc74cab94e0196a" title="get_right_clicks" alt="" coords="177,132,290,159"/>
-<area shape="rect" id="node3" href="$convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="357,5,411,32"/>
-<area shape="rect" id="node5" href="$screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="339,56,429,83"/>
-<area shape="rect" id="node4" href="$common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="477,5,520,32"/>
+<area shape="rect" id="node3" href="$shaft_8c.html#a1176d8fd5c446189a5d405bbbc448df0" title="get_left_clicks" alt="" coords="189,5,299,32"/>
+<area shape="rect" id="node5" href="$shaft_8c.html#a46882b7cd70183cdbcc74cab94e0196a" title="get_right_clicks" alt="" coords="184,56,304,83"/>
+<area shape="rect" id="node7" href="$screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="215,107,273,133"/>
+<area shape="rect" id="node9" href="$convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="373,81,429,108"/>
+<area shape="rect" id="node13" href="$screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="352,132,451,159"/>
+<area shape="rect" id="node11" href="$common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="499,81,544,108"/>
 </map>

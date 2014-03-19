@@ -1,5 +1,9 @@
 <map id="pwm_servo" name="pwm_servo">
-<area shape="rect" id="node2" href="$shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd" title="set_servo" alt="" coords="145,31,223,57"/>
-<area shape="rect" id="node3" href="$shared_2sonar_8c.html#a3e946f741a74a116374de8566c6caba6" title="scan" alt="" coords="272,5,323,32"/>
-<area shape="rect" id="node4" href="$test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="272,56,323,83"/>
+<area shape="rect" id="node3" href="$shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd" title="set_servo" alt="" coords="150,42,234,69"/>
+<area shape="rect" id="node5" href="$ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="649,30,703,57"/>
+<area shape="rect" id="node7" href="$shared_2sonar_8c.html#a3e946f741a74a116374de8566c6caba6" title="scan" alt="" coords="337,42,389,69"/>
+<area shape="rect" id="node14" href="$shared_2sonar_8c.html#adbc6a71221630bf8ea9b1d173e0f7b9d" title="scan_display_position" alt="" coords="283,118,443,145"/>
+<area shape="rect" id="node9" href="$wall__scan_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="518,30,573,57"/>
+<area shape="rect" id="node11" href="$shared_2motor_8c.html#aebcea414da69739d6ef8500243accfd6" title="move_behind" alt="" coords="491,81,599,108"/>
+<area shape="rect" id="node16" href="$test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="518,132,573,158"/>
 </map>

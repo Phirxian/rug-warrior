@@ -1,0 +1,17 @@
+<map id="go_light_detection" name="go_light_detection">
+<area shape="rect" id="node3" href="$shared_2escape_8c.html#ab24efb0c5ba4846a0a497f8b726dee61" title="escape" alt="" coords="194,62,262,89"/>
+<area shape="rect" id="node19" href="$follow__light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="192,214,264,241"/>
+<area shape="rect" id="node34" href="$base_2lib__rwp_8c.html#a0bcda6b2106a42058fe25734f7b6efc0" title="ir_detect" alt="" coords="630,214,709,241"/>
+<area shape="rect" id="node5" href="$base_2lib__rwp_8c.html#a9032e2468648895fa936f08f6a831bf9" title="drive" alt="" coords="324,88,377,114"/>
+<area shape="rect" id="node9" href="$shared_2motor_8c.html#a24845bf7b423f5ec436b3dc429584961" title="rotate" alt="" coords="320,37,381,64"/>
+<area shape="rect" id="node13" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="641,37,697,64"/>
+<area shape="rect" id="node7" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="479,88,540,114"/>
+<area shape="rect" id="node11" href="$shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3" title="reset_encoder_aux" alt="" coords="437,37,581,64"/>
+<area shape="rect" id="node15" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="757,126,827,153"/>
+<area shape="rect" id="node21" href="$common_8c.html#a4a336f19d2bbcc174259e39ff641d9f8" title="driveb" alt="" coords="320,138,381,165"/>
+<area shape="rect" id="node24" href="$photo__cell_8c.html#aed625017ad241b64d0cbf108dcca7b2a" title="light_diff" alt="" coords="313,189,388,216"/>
+<area shape="rect" id="node28" href="$screen_8c.html#a933751989174a13eb0301583a36ef170" title="print_diff" alt="" coords="312,240,389,266"/>
+<area shape="rect" id="node32" href="$base_2lib__rwp_8c.html#a8c528baf37154d347366083f0f816846" title="stop" alt="" coords="325,290,376,317"/>
+<area shape="rect" id="node26" href="$base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="477,189,542,216"/>
+<area shape="rect" id="node30" href="$screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="460,240,559,266"/>
+</map>

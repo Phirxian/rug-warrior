@@ -1,0 +1,18 @@
+<map id="go_light_touch" name="go_light_touch">
+<area shape="rect" id="node3" href="$shared_2bumper_8c.html#a3e0043a27cabda922c8ce5cbd7264047" title="bumper_detection" alt="" coords="168,285,307,311"/>
+<area shape="rect" id="node9" href="$shared_2escape_8c.html#ab24efb0c5ba4846a0a497f8b726dee61" title="escape" alt="" coords="203,57,271,83"/>
+<area shape="rect" id="node25" href="$follow__light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="201,209,273,235"/>
+<area shape="rect" id="node5" href="$base_2lib__rwp_8c.html#a6368ba2819f669bf17962d89b3fca203" title="bumper" alt="" coords="357,335,429,362"/>
+<area shape="rect" id="node7" href="$base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="519,310,585,337"/>
+<area shape="rect" id="node11" href="$base_2lib__rwp_8c.html#a9032e2468648895fa936f08f6a831bf9" title="drive" alt="" coords="367,82,420,109"/>
+<area shape="rect" id="node15" href="$shared_2motor_8c.html#a24845bf7b423f5ec436b3dc429584961" title="rotate" alt="" coords="363,31,424,58"/>
+<area shape="rect" id="node19" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="672,6,728,33"/>
+<area shape="rect" id="node13" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="521,82,583,109"/>
+<area shape="rect" id="node17" href="$shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3" title="reset_encoder_aux" alt="" coords="480,31,624,58"/>
+<area shape="rect" id="node21" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="776,6,845,33"/>
+<area shape="rect" id="node27" href="$common_8c.html#a4a336f19d2bbcc174259e39ff641d9f8" title="driveb" alt="" coords="363,133,424,159"/>
+<area shape="rect" id="node30" href="$photo__cell_8c.html#aed625017ad241b64d0cbf108dcca7b2a" title="light_diff" alt="" coords="356,285,431,311"/>
+<area shape="rect" id="node33" href="$screen_8c.html#a933751989174a13eb0301583a36ef170" title="print_diff" alt="" coords="355,234,432,261"/>
+<area shape="rect" id="node37" href="$base_2lib__rwp_8c.html#a8c528baf37154d347366083f0f816846" title="stop" alt="" coords="368,183,419,210"/>
+<area shape="rect" id="node35" href="$screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="503,234,601,261"/>
+</map>

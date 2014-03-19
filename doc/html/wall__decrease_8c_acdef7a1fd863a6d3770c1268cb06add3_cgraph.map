@@ -1,0 +1,22 @@
+<map id="main" name="main">
+<area shape="rect" id="node3" href="$shared_2motor_8c.html#a042beb97f3b48827212848a3a96ed41b" title="detect_distance_sonar" alt="" coords="110,107,277,133"/>
+<area shape="rect" id="node5" href="$shared_2sonar_8c.html#ad8136df344f340b0653c27e3317c08f5" title="ping" alt="" coords="377,56,426,83"/>
+<area shape="rect" id="node7" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="737,309,793,336"/>
+<area shape="rect" id="node11" href="$convert_8c.html#a5a3e9377eb57d2b216ee3869c9eeabcd" title="feetToCm" alt="" coords="360,5,443,32"/>
+<area shape="rect" id="node13" href="$shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016" title="range" alt="" coords="372,157,431,184"/>
+<area shape="rect" id="node17" href="$base_2lib__rwp_8c.html#adac0e25b6c0b34901f454931a366bf51" title="init_motors" alt="" coords="146,259,241,285"/>
+<area shape="rect" id="node19" href="$shared_2sonar_8c.html#a4536c29acdd706cb369a5b5f32ce57a1" title="init_sonar" alt="" coords="151,208,235,235"/>
+<area shape="rect" id="node23" href="$shared_2motor_8c.html#aebcea414da69739d6ef8500243accfd6" title="move_behind" alt="" coords="139,360,247,387"/>
+<area shape="rect" id="node28" href="$shared_2sonar_8c.html#a222f05c4901d3ffb622e9846e40526bd" title="set_servo" alt="" coords="555,563,639,589"/>
+<area shape="rect" id="node45" href="$shared_2sonar_8c.html#a429dc232d3a74189590dfc6e470b4b7e" title="sonar_init_servo" alt="" coords="130,512,257,539"/>
+<area shape="rect" id="node49" href="$shared_2sonar_8c.html#af4c3fee4924e35db9312e92135f61f94" title="sonar_servo_off" alt="" coords="132,563,255,589"/>
+<area shape="rect" id="node9" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="861,309,931,336"/>
+<area shape="rect" id="node21" href="$base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428" title="beeper_off" alt="" coords="356,208,447,235"/>
+<area shape="rect" id="node25" href="$shared_2sonar_8c.html#a3e946f741a74a116374de8566c6caba6" title="scan" alt="" coords="375,411,427,437"/>
+<area shape="rect" id="node32" href="$shared_2motor_8c.html#ace7572c6e4f698960dddbd986cb672c3" title="running_forever" alt="" coords="340,360,463,387"/>
+<area shape="rect" id="node30" href="$shared_2sonar_8c.html#a58495e4ae9f36f8f7acbca793a9477c7" title="pwm_servo" alt="" coords="718,563,813,589"/>
+<area shape="rect" id="node34" href="$shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3" title="reset_encoder_aux" alt="" coords="525,461,669,488"/>
+<area shape="rect" id="node37" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="567,360,628,387"/>
+<area shape="rect" id="node47" href="$shared_2sonar_8c.html#a820ae5b5b352c676e51b8b36120055ea" title="sonar_enable_servo" alt="" coords="326,512,477,539"/>
+<area shape="rect" id="node51" href="$shared_2sonar_8c.html#a4f1b909d6e33e828b93f5fcbfa0a906a" title="sonar_disable_servo" alt="" coords="325,563,477,589"/>
+</map>

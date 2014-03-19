@@ -1,9 +1,12 @@
 var searchData=
 [
   ['d',['d',['../cof_8c.html#a3fbbd8a3959e76a2bc3455d3bade52dc',1,'cof.c']]],
+  ['dark',['DARK',['../follow__light_8c.html#afdbac66ae4531cbbf563ef2e4ea46f75',1,'follow_light.c']]],
+  ['dark_5fenvironnement',['DARK_ENVIRONNEMENT',['../global_8c.html#ad23d5a56d4dd8262bf6551b7b060cbcc',1,'global.c']]],
   ['ddrc',['ddrc',['../regdefs_8c.html#a4c22e0c466f82b9967bde5ee5edc7bac',1,'regdefs.c']]],
   ['ddrd',['ddrd',['../regdefs_8c.html#ac81a75d556d4c4d9e3bad42e790b85a7',1,'regdefs.c']]],
   ['degtorad',['degToRad',['../convert_8c.html#ae645817fbf89677ab8a3f779b4a10ae8',1,'convert.c']]],
+  ['detect_5fdistance_5fsonar',['detect_distance_sonar',['../shared_2motor_8c.html#a042beb97f3b48827212848a3a96ed41b',1,'motor.c']]],
   ['dh',['dh',['../cof_8c.html#ab8173eb050646f416fc232b9eb5c0882',1,'cof.c']]],
   ['digital',['digital',['../base_2lib__rwp_8c.html#a3eb7db79d996b92f7063b65dc34b3484',1,'digital(int port):&#160;lib_rwp.c'],['../lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484',1,'digital(int port):&#160;lib_hb.c'],['../lib__r22_8c.html#a3eb7db79d996b92f7063b65dc34b3484',1,'digital(int port):&#160;lib_r22.c'],['../lib__rw10_8c.html#a3eb7db79d996b92f7063b65dc34b3484',1,'digital(int port):&#160;lib_rw10.c'],['../lib__rw11_8c.html#a3eb7db79d996b92f7063b65dc34b3484',1,'digital(int port):&#160;lib_rw11.c']]],
   ['digits',['digits',['../convert_8c.html#a89059167767e145e6fd47ada117f0ebc',1,'convert.c']]],

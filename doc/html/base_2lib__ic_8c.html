@@ -142,15 +142,23 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return the value of sensor port numbered  range in [0 - 255] </p>
 
-<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00111">111</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
+<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00129">129</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
 
+<p>Referenced by <a class="el" href="base_2lib__rwp_8c_source.html#l00134">bumper()</a>, <a class="el" href="lib__hb_8c_source.html#l00320">digital()</a>, <a class="el" href="photo__cell_8c_source.html#l00006">light_diff()</a>, <a class="el" href="analog5_8c_source.html#l00004">main()</a>, and <a class="el" href="echo_8c_source.html#l00039">sample_sound()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;{</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    poke(0x1039, 0b10000000);</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    poke(0x1030, port);</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordflow">return</span> peek(0x1031);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="base_2lib__ic_8c_afa28db0c35c02b77341a6bed7aac0cb4_icgraph.png" border="0" usemap="#base_2lib__ic_8c_afa28db0c35c02b77341a6bed7aac0cb4_icgraph" alt=""/></div>
 <map name="base_2lib__ic_8c_afa28db0c35c02b77341a6bed7aac0cb4_icgraph" id="base_2lib__ic_8c_afa28db0c35c02b77341a6bed7aac0cb4_icgraph">
-<area shape="rect" id="node2" href="base_2lib__rwp_8c.html#a6368ba2819f669bf17962d89b3fca203" title="bumper" alt="" coords="135,5,201,32"/><area shape="rect" id="node4" href="lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="140,56,196,83"/><area shape="rect" id="node5" href="echo_8c.html#a925d8efdf863cf52667ec8fcf4fb7d33" title="sample_sound" alt="" coords="115,107,221,133"/><area shape="rect" id="node7" href="analog5_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="143,157,193,184"/><area shape="rect" id="node3" href="bumper_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="285,5,336,32"/><area shape="rect" id="node6" href="echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="269,107,352,133"/></map>
+<area shape="rect" id="node3" href="base_2lib__rwp_8c.html#a6368ba2819f669bf17962d89b3fca203" title="bumper" alt="" coords="141,5,213,32"/><area shape="rect" id="node13" href="lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="147,56,207,83"/><area shape="rect" id="node15" href="photo__cell_8c.html#aed625017ad241b64d0cbf108dcca7b2a" title="light_diff" alt="" coords="140,107,215,133"/><area shape="rect" id="node22" href="analog5_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="150,157,205,184"/><area shape="rect" id="node24" href="echo_8c.html#a925d8efdf863cf52667ec8fcf4fb7d33" title="sample_sound" alt="" coords="120,208,235,235"/><area shape="rect" id="node5" href="shared_2bumper_8c.html#a3e0043a27cabda922c8ce5cbd7264047" title="bumper_detection" alt="" coords="283,5,421,32"/><area shape="rect" id="node11" href="test_2bumper_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="325,56,379,83"/><area shape="rect" id="node7" href="behavior_2escape_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="511,5,566,32"/><area shape="rect" id="node9" href="follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="481,56,596,83"/><area shape="rect" id="node17" href="follow__light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="316,107,388,133"/><area shape="rect" id="node19" href="follow__light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="469,107,608,133"/><area shape="rect" id="node26" href="echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="307,208,397,235"/></map>
 </div>
 </p>
 
@@ -168,10 +176,18 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Old freq was 500, but 1000 sounds louder </p>
+<p>Old freq was 500 for a periode of 0.3second </p>
 
-<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00057">57</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
+<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00052">52</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
 
+<p>References <a class="el" href="base_2lib__ic_8c_source.html#l00060">tone()</a>.</p>
+
+<p>Referenced by <a class="el" href="lib__hb_8c_source.html#l00295">analog()</a>, <a class="el" href="lib__hb_8c_source.html#l00320">digital()</a>, <a class="el" href="tunes_8c_source.html#l00064">play()</a>, <a class="el" href="lib__hb_8c_source.html#l00281">start_press()</a>, and <a class="el" href="lib__hb_8c_source.html#l00288">stop_press()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8">tone</a>(1000., .3);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_aabe762cad0063d9271131f3cc306a0e8"><div class="ttname"><a href="base_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8">tone</a></div><div class="ttdeci">void tone(float frequency, float length)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00060">lib_ic.c:60</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -186,7 +202,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="base_2lib__ic_8c_a912dfbf994f4d4c7dff5aa2540ae4400_icgraph.png" border="0" usemap="#base_2lib__ic_8c_a912dfbf994f4d4c7dff5aa2540ae4400_icgraph" alt=""/></div>
 <map name="base_2lib__ic_8c_a912dfbf994f4d4c7dff5aa2540ae4400_icgraph" id="base_2lib__ic_8c_a912dfbf994f4d4c7dff5aa2540ae4400_icgraph">
-<area shape="rect" id="node2" href="lib__hb_8c.html#a0cdb3a3b9e978d9470d299807e7238cd" title="start_press" alt="" coords="105,5,191,32"/><area shape="rect" id="node3" href="lib__hb_8c.html#a58ba1f6f55e0bade7190f4db26184683" title="stop_press" alt="" coords="105,56,191,83"/><area shape="rect" id="node4" href="lib__hb_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="118,107,178,133"/><area shape="rect" id="node5" href="lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="120,157,176,184"/><area shape="rect" id="node6" href="tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="125,208,171,235"/><area shape="rect" id="node7" href="tunes_8c.html#aab385898c7322dcbfda7e057e52f33d1" title="pp" alt="" coords="267,56,306,83"/><area shape="rect" id="node8" href="tunes_8c.html#af6d9ec9e05c437b9572aa6bd07f93100" title="wate" alt="" coords="261,107,312,133"/><area shape="rect" id="node9" href="tunes_8c.html#a991cece580a5054465383b47cadb0535" title="classics" alt="" coords="251,157,322,184"/><area shape="rect" id="node10" href="tunes_8c.html#a31061818a5a2cf68539ca073374286d3" title="charge" alt="" coords="256,208,317,235"/><area shape="rect" id="node11" href="tunes_8c.html#a32560516df494caa35d60ad505fb8086" title="looney_tune" alt="" coords="241,259,333,285"/><area shape="rect" id="node12" href="tunes_8c.html#a700ae836bbc833421cd1f7ac0f7460c4" title="benny" alt="" coords="258,309,315,336"/><area shape="rect" id="node13" href="tunes_8c.html#acfec480eb7453765b7fa452e7b62f315" title="musicbox" alt="" coords="247,360,326,387"/></map>
+<area shape="rect" id="node3" href="lib__hb_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="125,5,190,32"/><area shape="rect" id="node5" href="lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="127,56,187,83"/><area shape="rect" id="node7" href="tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="133,107,181,133"/><area shape="rect" id="node9" href="lib__hb_8c.html#a0cdb3a3b9e978d9470d299807e7238cd" title="start_press" alt="" coords="110,157,205,184"/><area shape="rect" id="node11" href="lib__hb_8c.html#a58ba1f6f55e0bade7190f4db26184683" title="stop_press" alt="" coords="111,208,203,235"/></map>
 </div>
 </p>
 
@@ -204,15 +220,24 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>disable beeper output </p>
 
-<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00083">83</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
+<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00084">84</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
 
+<p>Referenced by <a class="el" href="shared_2sonar_8c_source.html#l00060">init_sonar()</a>, <a class="el" href="tunes_8c_source.html#l00198">play_note_2()</a>, <a class="el" href="lib__hb_8c_source.html#l00135">tone()</a>, and <a class="el" href="echo_8c_source.html#l00021">warb()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    bit_clear(0x1022, 0b00001000);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    bit_clear(0x1020, 0b00000001);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    pokeword(0x26, 0);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    bit_clear(0x1000, 0b00001000);  <span class="comment">/* turn power to spkr off */</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="base_2lib__ic_8c_a35b95a4506fe38aa8c942b178cdda428_icgraph.png" border="0" usemap="#base_2lib__ic_8c_a35b95a4506fe38aa8c942b178cdda428_icgraph" alt=""/></div>
 <map name="base_2lib__ic_8c_a35b95a4506fe38aa8c942b178cdda428_icgraph" id="base_2lib__ic_8c_a35b95a4506fe38aa8c942b178cdda428_icgraph">
-<area shape="rect" id="node2" href="lib__hb_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="159,56,206,83"/><area shape="rect" id="node3" href="echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="157,107,208,133"/><area shape="rect" id="node6" href="tunes_8c.html#ad64a752477bb35b9b4f09eec3f7e3281" title="play_note_2" alt="" coords="137,157,229,184"/><area shape="rect" id="node4" href="echo_8c.html#a185bec48275b377b760853a63644fc23" title="echo_control" alt="" coords="277,107,373,133"/><area shape="rect" id="node5" href="echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="421,107,504,133"/><area shape="rect" id="node7" href="tunes_8c.html#a389a29b1aa7cd3e5f0ab7e0a50eb81c2" title="play_note" alt="" coords="286,157,365,184"/><area shape="rect" id="node8" href="tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="439,157,486,184"/><area shape="rect" id="node9" href="tunes_8c.html#aab385898c7322dcbfda7e057e52f33d1" title="pp" alt="" coords="579,5,618,32"/><area shape="rect" id="node10" href="tunes_8c.html#af6d9ec9e05c437b9572aa6bd07f93100" title="wate" alt="" coords="573,56,624,83"/><area shape="rect" id="node11" href="tunes_8c.html#a991cece580a5054465383b47cadb0535" title="classics" alt="" coords="563,107,634,133"/><area shape="rect" id="node12" href="tunes_8c.html#a31061818a5a2cf68539ca073374286d3" title="charge" alt="" coords="568,157,629,184"/><area shape="rect" id="node13" href="tunes_8c.html#a32560516df494caa35d60ad505fb8086" title="looney_tune" alt="" coords="553,208,645,235"/><area shape="rect" id="node14" href="tunes_8c.html#a700ae836bbc833421cd1f7ac0f7460c4" title="benny" alt="" coords="570,259,627,285"/><area shape="rect" id="node15" href="tunes_8c.html#acfec480eb7453765b7fa452e7b62f315" title="musicbox" alt="" coords="559,309,638,336"/></map>
+<area shape="rect" id="node3" href="shared_2sonar_8c.html#a4536c29acdd706cb369a5b5f32ce57a1" title="init_sonar" alt="" coords="151,5,235,32"/><area shape="rect" id="node7" href="tunes_8c.html#ad64a752477bb35b9b4f09eec3f7e3281" title="play_note_2" alt="" coords="144,56,243,83"/><area shape="rect" id="node13" href="lib__hb_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="168,107,219,133"/><area shape="rect" id="node15" href="echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="167,157,219,184"/><area shape="rect" id="node5" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="315,5,370,32"/><area shape="rect" id="node9" href="tunes_8c.html#a389a29b1aa7cd3e5f0ab7e0a50eb81c2" title="play_note" alt="" coords="301,56,385,83"/><area shape="rect" id="node11" href="tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="464,56,512,83"/><area shape="rect" id="node17" href="echo_8c.html#a185bec48275b377b760853a63644fc23" title="echo_control" alt="" coords="291,157,395,184"/><area shape="rect" id="node19" href="echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="443,157,533,184"/></map>
 </div>
 </p>
 
@@ -230,15 +255,22 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>enable beeper output </p>
 
-<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00077">77</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
+<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00075">75</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
 
+<p>Referenced by <a class="el" href="tunes_8c_source.html#l00198">play_note_2()</a>, <a class="el" href="lib__hb_8c_source.html#l00135">tone()</a>, and <a class="el" href="echo_8c_source.html#l00021">warb()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    bit_set(0x1020, 0b00000001);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    bit_set(0x1022, 0b00001000);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="base_2lib__ic_8c_ac01536f2a7ceb0d4c7e5e6a6d59c3871_icgraph.png" border="0" usemap="#base_2lib__ic_8c_ac01536f2a7ceb0d4c7e5e6a6d59c3871_icgraph" alt=""/></div>
 <map name="base_2lib__ic_8c_ac01536f2a7ceb0d4c7e5e6a6d59c3871_icgraph" id="base_2lib__ic_8c_ac01536f2a7ceb0d4c7e5e6a6d59c3871_icgraph">
-<area shape="rect" id="node2" href="lib__hb_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="159,56,206,83"/><area shape="rect" id="node3" href="echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="157,107,208,133"/><area shape="rect" id="node6" href="tunes_8c.html#ad64a752477bb35b9b4f09eec3f7e3281" title="play_note_2" alt="" coords="137,157,229,184"/><area shape="rect" id="node4" href="echo_8c.html#a185bec48275b377b760853a63644fc23" title="echo_control" alt="" coords="277,107,373,133"/><area shape="rect" id="node5" href="echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="421,107,504,133"/><area shape="rect" id="node7" href="tunes_8c.html#a389a29b1aa7cd3e5f0ab7e0a50eb81c2" title="play_note" alt="" coords="286,157,365,184"/><area shape="rect" id="node8" href="tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="439,157,486,184"/><area shape="rect" id="node9" href="tunes_8c.html#aab385898c7322dcbfda7e057e52f33d1" title="pp" alt="" coords="579,5,618,32"/><area shape="rect" id="node10" href="tunes_8c.html#af6d9ec9e05c437b9572aa6bd07f93100" title="wate" alt="" coords="573,56,624,83"/><area shape="rect" id="node11" href="tunes_8c.html#a991cece580a5054465383b47cadb0535" title="classics" alt="" coords="563,107,634,133"/><area shape="rect" id="node12" href="tunes_8c.html#a31061818a5a2cf68539ca073374286d3" title="charge" alt="" coords="568,157,629,184"/><area shape="rect" id="node13" href="tunes_8c.html#a32560516df494caa35d60ad505fb8086" title="looney_tune" alt="" coords="553,208,645,235"/><area shape="rect" id="node14" href="tunes_8c.html#a700ae836bbc833421cd1f7ac0f7460c4" title="benny" alt="" coords="570,259,627,285"/><area shape="rect" id="node15" href="tunes_8c.html#acfec480eb7453765b7fa452e7b62f315" title="musicbox" alt="" coords="559,309,638,336"/></map>
+<area shape="rect" id="node3" href="tunes_8c.html#ad64a752477bb35b9b4f09eec3f7e3281" title="play_note_2" alt="" coords="144,5,243,32"/><area shape="rect" id="node9" href="lib__hb_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="168,56,219,83"/><area shape="rect" id="node11" href="echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="167,107,219,133"/><area shape="rect" id="node5" href="tunes_8c.html#a389a29b1aa7cd3e5f0ab7e0a50eb81c2" title="play_note" alt="" coords="301,5,385,32"/><area shape="rect" id="node7" href="tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="464,5,512,32"/><area shape="rect" id="node13" href="echo_8c.html#a185bec48275b377b760853a63644fc23" title="echo_control" alt="" coords="291,107,395,133"/><area shape="rect" id="node15" href="echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="443,107,533,133"/></map>
 </div>
 </p>
 
@@ -258,8 +290,11 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>gives process that calls it 256 ticks (over 1/4 sec) more to run before being swapped out call repeatedly to hog processor indefinitely </p>
 
-<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00127">127</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
-
+<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00145">145</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;{</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    poke(0x0a, 0);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aa3650dfb953be0fa6fb4e6a625d3f777"></a>
@@ -275,15 +310,30 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>yield the current process for  </p>
 
-<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00040">40</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
+<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00035">35</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
 
+<p>Referenced by <a class="el" href="base_2lib__rwp_8c_source.html#l00154">ir_detect()</a>, and <a class="el" href="base_2lib__ic_8c_source.html#l00027">sleep()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;{</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">long</span> end_time= mseconds() + msec;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="comment">/* if the following test doesn&#39;t execute at least once a second,</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">           msleep may not halt */</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">long</span> done= mseconds()-end_time;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">if</span>(done &gt;= 0L &amp;&amp; done &lt;= 1000L) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="base_2lib__ic_8c_aa3650dfb953be0fa6fb4e6a625d3f777_icgraph.png" border="0" usemap="#base_2lib__ic_8c_aa3650dfb953be0fa6fb4e6a625d3f777_icgraph" alt=""/></div>
 <map name="base_2lib__ic_8c_aa3650dfb953be0fa6fb4e6a625d3f777_icgraph" id="base_2lib__ic_8c_aa3650dfb953be0fa6fb4e6a625d3f777_icgraph">
-<area shape="rect" id="node2" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="127,436,180,463"/><area shape="rect" id="node36" href="base_2lib__rwp_8c.html#a0bcda6b2106a42058fe25734f7b6efc0" title="ir_detect" alt="" coords="117,613,189,640"/><area shape="rect" id="node3" href="base_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="257,259,303,285"/><area shape="rect" id="node9" href="tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="570,208,617,235"/><area shape="rect" id="node21" href="tunes_8c.html#a65053c134684581c6c673317b11ea735" title="bicycle" alt="" coords="405,309,467,336"/><area shape="rect" id="node22" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="255,360,305,387"/><area shape="rect" id="node23" href="lib__rw10_8c.html#a51dbebf8f091329175ab0d44426a40c6" title="frob" alt="" coords="258,411,302,437"/><area shape="rect" id="node24" href="echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="568,563,619,589"/><area shape="rect" id="node25" href="echo_8c.html#a185bec48275b377b760853a63644fc23" title="echo_control" alt="" coords="685,537,781,564"/><area shape="rect" id="node27" href="echo_8c.html#a42efcf4d578c48f2cee299e4086dd417" title="capture_command" alt="" coords="371,664,501,691"/><area shape="rect" id="node28" href="echo_8c.html#a95e08d0f0c9ef53423e1a81cfe3561db" title="twitch_aux" alt="" coords="237,563,323,589"/><area shape="rect" id="node30" href="echo_8c.html#a126686bb849f61aca5d2fc14f452f827" title="rpt" alt="" coords="417,461,455,488"/><area shape="rect" id="node31" href="shared_2motor_8c.html#adb9f04d0113231e1cc65bd880e19b918" title="rotate" alt="" coords="253,715,307,741"/><area shape="rect" id="node33" href="shared_2sonar_8c.html#ad8136df344f340b0653c27e3317c08f5" title="ping" alt="" coords="257,107,303,133"/><area shape="rect" id="node35" href="shared_2sonar_8c.html#a3e946f741a74a116374de8566c6caba6" title="scan" alt="" coords="255,157,305,184"/><area shape="rect" id="node4" href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400" title="beep" alt="" coords="411,157,461,184"/><area shape="rect" id="node17" href="cof_8c.html#a55c38cdc83b8334c8cb0a55638dfd650" title="note" alt="" coords="413,259,459,285"/><area shape="rect" id="node5" href="lib__hb_8c.html#a0cdb3a3b9e978d9470d299807e7238cd" title="start_press" alt="" coords="550,56,637,83"/><area shape="rect" id="node6" href="lib__hb_8c.html#a58ba1f6f55e0bade7190f4db26184683" title="stop_press" alt="" coords="550,107,637,133"/><area shape="rect" id="node7" href="lib__hb_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="563,157,623,184"/><area shape="rect" id="node8" href="lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="565,5,621,32"/><area shape="rect" id="node10" href="tunes_8c.html#aab385898c7322dcbfda7e057e52f33d1" title="pp" alt="" coords="714,81,753,108"/><area shape="rect" id="node11" href="tunes_8c.html#af6d9ec9e05c437b9572aa6bd07f93100" title="wate" alt="" coords="708,132,759,159"/><area shape="rect" id="node12" href="tunes_8c.html#a991cece580a5054465383b47cadb0535" title="classics" alt="" coords="698,183,769,209"/><area shape="rect" id="node13" href="tunes_8c.html#a31061818a5a2cf68539ca073374286d3" title="charge" alt="" coords="703,233,764,260"/><area shape="rect" id="node14" href="tunes_8c.html#a32560516df494caa35d60ad505fb8086" title="looney_tune" alt="" coords="687,284,779,311"/><area shape="rect" id="node15" href="tunes_8c.html#a700ae836bbc833421cd1f7ac0f7460c4" title="benny" alt="" coords="705,335,762,361"/><area shape="rect" id="node16" href="tunes_8c.html#acfec480eb7453765b7fa452e7b62f315" title="musicbox" alt="" coords="694,31,773,57"/><area shape="rect" id="node18" href="cof_8c.html#a554069deb0b27e12100c8fcf80e96d0d" title="cof" alt="" coords="573,259,613,285"/><area shape="rect" id="node20" href="aie_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="568,309,619,336"/><area shape="rect" id="node19" href="piezo_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="708,385,759,412"/><area shape="rect" id="node26" href="echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="829,537,912,564"/><area shape="rect" id="node29" href="echo_8c.html#a30c8746d91a7cba8f120e337d0a25c2f" title="twitch" alt="" coords="407,563,465,589"/><area shape="rect" id="node32" href="rotate_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="411,715,461,741"/><area shape="rect" id="node34" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="411,107,461,133"/><area shape="rect" id="node37" href="ir_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="255,765,305,792"/></map>
+<area shape="rect" id="node3" href="base_2lib__rwp_8c.html#a0bcda6b2106a42058fe25734f7b6efc0" title="ir_detect" alt="" coords="123,23,202,49"/><area shape="rect" id="node9" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="135,605,191,632"/><area shape="rect" id="node5" href="escape__distant_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="303,23,358,49"/><area shape="rect" id="node7" href="follow__light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="864,48,1003,75"/><area shape="rect" id="node11" href="base_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="305,833,356,860"/><area shape="rect" id="node19" href="tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="720,732,768,759"/><area shape="rect" id="node34" href="tunes_8c.html#a65053c134684581c6c673317b11ea735" title="bicycle" alt="" coords="510,783,575,809"/><area shape="rect" id="node36" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="717,631,771,657"/><area shape="rect" id="node38" href="shared_2escape_8c.html#ab24efb0c5ba4846a0a497f8b726dee61" title="escape" alt="" coords="710,175,778,201"/><area shape="rect" id="node45" href="rotate_8c.html#a26d71955529c6b3d9bf09f67d9fe0671" title="rotate_test_all_for" alt="" coords="675,428,813,455"/><area shape="rect" id="node49" href="lib__rw10_8c.html#a51dbebf8f091329175ab0d44426a40c6" title="frob" alt="" coords="307,884,354,911"/><area shape="rect" id="node51" href="echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="718,1087,770,1113"/><area shape="rect" id="node53" href="echo_8c.html#a185bec48275b377b760853a63644fc23" title="echo_control" alt="" coords="881,1087,985,1113"/><area shape="rect" id="node57" href="echo_8c.html#a42efcf4d578c48f2cee299e4086dd417" title="capture_command" alt="" coords="862,1137,1005,1164"/><area shape="rect" id="node60" href="echo_8c.html#a95e08d0f0c9ef53423e1a81cfe3561db" title="twitch_aux" alt="" coords="286,1087,375,1113"/><area shape="rect" id="node66" href="echo_8c.html#a126686bb849f61aca5d2fc14f452f827" title="rpt" alt="" coords="913,1188,953,1215"/><area shape="rect" id="node71" href="shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3" title="reset_encoder_aux" alt="" coords="259,327,403,353"/><area shape="rect" id="node73" href="shared_2motor_8c.html#af2c4ffd5a44c4fed16acb57148f0c117" title="running" alt="" coords="507,631,578,657"/><area shape="rect" id="node76" href="shared_2motor_8c.html#ace7572c6e4f698960dddbd986cb672c3" title="running_forever" alt="" coords="481,377,604,404"/><area shape="rect" id="node79" href="shared_2motor_8c.html#aebcea414da69739d6ef8500243accfd6" title="move_behind" alt="" coords="690,504,798,531"/><area shape="rect" id="node89" href="shared_2encoder_8c.html#ab8ddfa602191ae55f459cdb21f1ec5e5" title="check_encoder" alt="" coords="271,73,390,100"/><area shape="rect" id="node94" href="shared_2motor_8c.html#a042beb97f3b48827212848a3a96ed41b" title="detect_distance_sonar" alt="" coords="459,225,626,252"/><area shape="rect" id="node97" href="shared_2sonar_8c.html#ad8136df344f340b0653c27e3317c08f5" title="ping" alt="" coords="306,276,355,303"/><area shape="rect" id="node101" href="shared_2sonar_8c.html#a3e946f741a74a116374de8566c6caba6" title="scan" alt="" coords="305,529,357,556"/><area shape="rect" id="node106" href="shared_2sonar_8c.html#adbc6a71221630bf8ea9b1d173e0f7b9d" title="scan_display_position" alt="" coords="251,124,411,151"/><area shape="rect" id="node13" href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400" title="beep" alt="" coords="515,884,570,911"/><area shape="rect" id="node25" href="cof_8c.html#a55c38cdc83b8334c8cb0a55638dfd650" title="note" alt="" coords="517,833,568,860"/><area shape="rect" id="node15" href="lib__hb_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="711,985,777,1012"/><area shape="rect" id="node17" href="lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="714,833,774,860"/><area shape="rect" id="node21" href="lib__hb_8c.html#a0cdb3a3b9e978d9470d299807e7238cd" title="start_press" alt="" coords="697,935,791,961"/><area shape="rect" id="node23" href="lib__hb_8c.html#a58ba1f6f55e0bade7190f4db26184683" title="stop_press" alt="" coords="698,884,790,911"/><area shape="rect" id="node27" href="cof_8c.html#a554069deb0b27e12100c8fcf80e96d0d" title="cof" alt="" coords="723,783,765,809"/><area shape="rect" id="node32" href="aie_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="717,681,771,708"/><area shape="rect" id="node29" href="piezo_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="906,783,961,809"/><area shape="rect" id="node40" href="behavior_2escape_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="906,225,961,252"/><area shape="rect" id="node43" href="follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="876,175,991,201"/><area shape="rect" id="node47" href="rotate_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="906,428,961,455"/><area shape="rect" id="node55" href="echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="1053,1137,1144,1164"/><area shape="rect" id="node62" href="echo_8c.html#a30c8746d91a7cba8f120e337d0a25c2f" title="twitch" alt="" coords="513,1087,572,1113"/><area shape="rect" id="node83" href="shared_2motor_8c.html#a24845bf7b423f5ec436b3dc429584961" title="rotate" alt="" coords="512,327,573,353"/><area shape="rect" id="node81" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="906,276,961,303"/><area shape="rect" id="node86" href="menu_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="717,327,771,353"/><area shape="rect" id="node103" href="wall__scan_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="515,479,570,505"/><area shape="rect" id="node108" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="515,124,570,151"/></map>
 </div>
 </p>
 
@@ -301,9 +351,14 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>restart the systeme timer <a class="el" href="base_2lib__ic_8c.html#ab53334924c8ee90693b8d48d8f74793d">seconds()</a> return 0 after this call </p>
 
-<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00021">21</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
-
+<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00010">10</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    pokeword(0x14, 0);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    pokeword(0x12, 0);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab53334924c8ee90693b8d48d8f74793d"></a>
@@ -320,8 +375,11 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>returns valid time from 0 to 32,767 minutes (approx) </p>
 
-<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00030">30</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
-
+<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00019">19</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">return</span> ((<span class="keywordtype">float</span>) mseconds()) / 1000.;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aebfeaced338ec2353b5d133eebfb3ebb"></a>
@@ -337,15 +395,21 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>set the bepper tone to be frequency Hz the subsequent function is then used to turn the bepper on </p>
 
-<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00091">91</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
+<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00096">96</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
 
+<p>Referenced by <a class="el" href="tunes_8c_source.html#l00198">play_note_2()</a>, <a class="el" href="lib__hb_8c_source.html#l00135">tone()</a>, and <a class="el" href="echo_8c_source.html#l00021">warb()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    pokeword(0x26, (<span class="keywordtype">int</span>)(1E6 / frequency));</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="base_2lib__ic_8c_aebfeaced338ec2353b5d133eebfb3ebb_icgraph.png" border="0" usemap="#base_2lib__ic_8c_aebfeaced338ec2353b5d133eebfb3ebb_icgraph" alt=""/></div>
 <map name="base_2lib__ic_8c_aebfeaced338ec2353b5d133eebfb3ebb_icgraph" id="base_2lib__ic_8c_aebfeaced338ec2353b5d133eebfb3ebb_icgraph">
-<area shape="rect" id="node2" href="lib__hb_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="199,56,246,83"/><area shape="rect" id="node3" href="echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="197,107,248,133"/><area shape="rect" id="node6" href="tunes_8c.html#ad64a752477bb35b9b4f09eec3f7e3281" title="play_note_2" alt="" coords="177,157,269,184"/><area shape="rect" id="node4" href="echo_8c.html#a185bec48275b377b760853a63644fc23" title="echo_control" alt="" coords="317,107,413,133"/><area shape="rect" id="node5" href="echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="461,107,544,133"/><area shape="rect" id="node7" href="tunes_8c.html#a389a29b1aa7cd3e5f0ab7e0a50eb81c2" title="play_note" alt="" coords="326,157,405,184"/><area shape="rect" id="node8" href="tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="479,157,526,184"/><area shape="rect" id="node9" href="tunes_8c.html#aab385898c7322dcbfda7e057e52f33d1" title="pp" alt="" coords="619,5,658,32"/><area shape="rect" id="node10" href="tunes_8c.html#af6d9ec9e05c437b9572aa6bd07f93100" title="wate" alt="" coords="613,56,664,83"/><area shape="rect" id="node11" href="tunes_8c.html#a991cece580a5054465383b47cadb0535" title="classics" alt="" coords="603,107,674,133"/><area shape="rect" id="node12" href="tunes_8c.html#a31061818a5a2cf68539ca073374286d3" title="charge" alt="" coords="608,157,669,184"/><area shape="rect" id="node13" href="tunes_8c.html#a32560516df494caa35d60ad505fb8086" title="looney_tune" alt="" coords="593,208,685,235"/><area shape="rect" id="node14" href="tunes_8c.html#a700ae836bbc833421cd1f7ac0f7460c4" title="benny" alt="" coords="610,259,667,285"/><area shape="rect" id="node15" href="tunes_8c.html#acfec480eb7453765b7fa452e7b62f315" title="musicbox" alt="" coords="599,309,678,336"/></map>
+<area shape="rect" id="node3" href="tunes_8c.html#ad64a752477bb35b9b4f09eec3f7e3281" title="play_note_2" alt="" coords="187,5,285,32"/><area shape="rect" id="node9" href="lib__hb_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="211,56,261,83"/><area shape="rect" id="node11" href="echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="210,107,262,133"/><area shape="rect" id="node5" href="tunes_8c.html#a389a29b1aa7cd3e5f0ab7e0a50eb81c2" title="play_note" alt="" coords="343,5,427,32"/><area shape="rect" id="node7" href="tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="507,5,555,32"/><area shape="rect" id="node13" href="echo_8c.html#a185bec48275b377b760853a63644fc23" title="echo_control" alt="" coords="333,107,437,133"/><area shape="rect" id="node15" href="echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="485,107,576,133"/></map>
 </div>
 </p>
 
@@ -364,9 +428,19 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>yield the current process for  </p>
 
-<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00035">35</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
+<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00027">27</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
 
+<p>References <a class="el" href="base_2lib__ic_8c_source.html#l00035">msleep()</a>.</p>
+
+<p>Referenced by <a class="el" href="tunes_8c_source.html#l00233">bicycle()</a>, <a class="el" href="echo_8c_source.html#l00083">capture_command()</a>, <a class="el" href="shared_2encoder_8c_source.html#l00063">check_encoder()</a>, <a class="el" href="shared_2motor_8c_source.html#l00188">detect_distance_sonar()</a>, <a class="el" href="echo_8c_source.html#l00112">echo_control()</a>, <a class="el" href="shared_2escape_8c_source.html#l00008">escape()</a>, <a class="el" href="lib__rw10_8c_source.html#l00023">frob()</a>, <a class="el" href="1meter_8c_source.html#l00007">main()</a>, <a class="el" href="shared_2motor_8c_source.html#l00141">move_behind()</a>, <a class="el" href="shared_2sonar_8c_source.html#l00071">ping()</a>, <a class="el" href="tunes_8c_source.html#l00064">play()</a>, <a class="el" href="shared_2encoder_8c_source.html#l00030">reset_encoder_aux()</a>, <a class="el" href="rotate_8c_source.html#l00001">rotate_test_all_for()</a>, <a class="el" href="echo_8c_source.html#l00135">rpt()</a>, <a class="el" href="shared_2motor_8c_source.html#l00017">running()</a>, <a class="el" href="shared_2motor_8c_source.html#l00058">running_forever()</a>, <a class="el" href="shared_2sonar_8c_source.html#l00169">scan()</a>, <a class="el" href="shared_2sonar_8c_source.html#l00199">scan_display_position()</a>, <a class="el" href="base_2lib__ic_8c_source.html#l00060">tone()</a>, <a class="el" href="echo_8c_source.html#l00098">twitch_aux()</a>, and <a class="el" href="echo_8c_source.html#l00021">warb()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777">msleep</a>((<span class="keywordtype">long</span>)(<a class="code" href="base_2lib__ic_8c.html#ab53334924c8ee90693b8d48d8f74793d">seconds</a> * 1000.));</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_aa3650dfb953be0fa6fb4e6a625d3f777"><div class="ttname"><a href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777">msleep</a></div><div class="ttdeci">void msleep(long msec)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00035">lib_ic.c:35</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_ab53334924c8ee90693b8d48d8f74793d"><div class="ttname"><a href="base_2lib__ic_8c.html#ab53334924c8ee90693b8d48d8f74793d">seconds</a></div><div class="ttdeci">float seconds()</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00019">lib_ic.c:19</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -381,7 +455,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="base_2lib__ic_8c_aa5113ec47ecf6d5c15614c9353cb9a08_icgraph.png" border="0" usemap="#base_2lib__ic_8c_aa5113ec47ecf6d5c15614c9353cb9a08_icgraph" alt=""/></div>
 <map name="base_2lib__ic_8c_aa5113ec47ecf6d5c15614c9353cb9a08_icgraph" id="base_2lib__ic_8c_aa5113ec47ecf6d5c15614c9353cb9a08_icgraph">
-<area shape="rect" id="node2" href="base_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="126,233,173,260"/><area shape="rect" id="node8" href="tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="439,183,486,209"/><area shape="rect" id="node20" href="tunes_8c.html#a65053c134684581c6c673317b11ea735" title="bicycle" alt="" coords="274,284,337,311"/><area shape="rect" id="node21" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="124,335,175,361"/><area shape="rect" id="node22" href="lib__rw10_8c.html#a51dbebf8f091329175ab0d44426a40c6" title="frob" alt="" coords="127,385,171,412"/><area shape="rect" id="node23" href="echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="437,537,488,564"/><area shape="rect" id="node24" href="echo_8c.html#a185bec48275b377b760853a63644fc23" title="echo_control" alt="" coords="555,512,651,539"/><area shape="rect" id="node26" href="echo_8c.html#a42efcf4d578c48f2cee299e4086dd417" title="capture_command" alt="" coords="241,639,370,665"/><area shape="rect" id="node27" href="echo_8c.html#a95e08d0f0c9ef53423e1a81cfe3561db" title="twitch_aux" alt="" coords="107,537,192,564"/><area shape="rect" id="node29" href="echo_8c.html#a126686bb849f61aca5d2fc14f452f827" title="rpt" alt="" coords="286,436,325,463"/><area shape="rect" id="node30" href="shared_2motor_8c.html#adb9f04d0113231e1cc65bd880e19b918" title="rotate" alt="" coords="122,689,177,716"/><area shape="rect" id="node32" href="shared_2sonar_8c.html#ad8136df344f340b0653c27e3317c08f5" title="ping" alt="" coords="126,740,173,767"/><area shape="rect" id="node34" href="shared_2sonar_8c.html#a3e946f741a74a116374de8566c6caba6" title="scan" alt="" coords="124,791,175,817"/><area shape="rect" id="node3" href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400" title="beep" alt="" coords="280,233,331,260"/><area shape="rect" id="node16" href="cof_8c.html#a55c38cdc83b8334c8cb0a55638dfd650" title="note" alt="" coords="282,132,329,159"/><area shape="rect" id="node4" href="lib__hb_8c.html#a0cdb3a3b9e978d9470d299807e7238cd" title="start_press" alt="" coords="419,233,506,260"/><area shape="rect" id="node5" href="lib__hb_8c.html#a58ba1f6f55e0bade7190f4db26184683" title="stop_press" alt="" coords="419,284,506,311"/><area shape="rect" id="node6" href="lib__hb_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="433,385,493,412"/><area shape="rect" id="node7" href="lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="435,335,491,361"/><area shape="rect" id="node9" href="tunes_8c.html#aab385898c7322dcbfda7e057e52f33d1" title="pp" alt="" coords="583,56,622,83"/><area shape="rect" id="node10" href="tunes_8c.html#af6d9ec9e05c437b9572aa6bd07f93100" title="wate" alt="" coords="577,107,628,133"/><area shape="rect" id="node11" href="tunes_8c.html#a991cece580a5054465383b47cadb0535" title="classics" alt="" coords="567,157,638,184"/><area shape="rect" id="node12" href="tunes_8c.html#a31061818a5a2cf68539ca073374286d3" title="charge" alt="" coords="572,208,633,235"/><area shape="rect" id="node13" href="tunes_8c.html#a32560516df494caa35d60ad505fb8086" title="looney_tune" alt="" coords="557,259,649,285"/><area shape="rect" id="node14" href="tunes_8c.html#a700ae836bbc833421cd1f7ac0f7460c4" title="benny" alt="" coords="574,309,631,336"/><area shape="rect" id="node15" href="tunes_8c.html#acfec480eb7453765b7fa452e7b62f315" title="musicbox" alt="" coords="563,360,642,387"/><area shape="rect" id="node17" href="cof_8c.html#a554069deb0b27e12100c8fcf80e96d0d" title="cof" alt="" coords="443,132,483,159"/><area shape="rect" id="node19" href="aie_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="437,81,488,108"/><area shape="rect" id="node18" href="piezo_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="577,5,628,32"/><area shape="rect" id="node25" href="echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="699,512,781,539"/><area shape="rect" id="node28" href="echo_8c.html#a30c8746d91a7cba8f120e337d0a25c2f" title="twitch" alt="" coords="277,537,334,564"/><area shape="rect" id="node31" href="rotate_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="280,689,331,716"/><area shape="rect" id="node33" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="280,740,331,767"/></map>
+<area shape="rect" id="node3" href="tunes_8c.html#a65053c134684581c6c673317b11ea735" title="bicycle" alt="" coords="369,896,434,923"/><area shape="rect" id="node5" href="echo_8c.html#a42efcf4d578c48f2cee299e4086dd417" title="capture_command" alt="" coords="721,86,863,112"/><area shape="rect" id="node9" href="shared_2encoder_8c.html#ab8ddfa602191ae55f459cdb21f1ec5e5" title="check_encoder" alt="" coords="130,136,249,163"/><area shape="rect" id="node11" href="shared_2motor_8c.html#a042beb97f3b48827212848a3a96ed41b" title="detect_distance_sonar" alt="" coords="318,136,485,163"/><area shape="rect" id="node15" href="echo_8c.html#a185bec48275b377b760853a63644fc23" title="echo_control" alt="" coords="740,770,844,796"/><area shape="rect" id="node18" href="shared_2escape_8c.html#ab24efb0c5ba4846a0a497f8b726dee61" title="escape" alt="" coords="569,440,637,467"/><area shape="rect" id="node26" href="lib__rw10_8c.html#a51dbebf8f091329175ab0d44426a40c6" title="frob" alt="" coords="166,339,213,366"/><area shape="rect" id="node28" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="575,618,630,644"/><area shape="rect" id="node30" href="shared_2motor_8c.html#aebcea414da69739d6ef8500243accfd6" title="move_behind" alt="" coords="549,263,657,290"/><area shape="rect" id="node33" href="shared_2sonar_8c.html#ad8136df344f340b0653c27e3317c08f5" title="ping" alt="" coords="165,187,214,214"/><area shape="rect" id="node37" href="tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="579,947,627,974"/><area shape="rect" id="node39" href="shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3" title="reset_encoder_aux" alt="" coords="117,491,261,518"/><area shape="rect" id="node41" href="shared_2motor_8c.html#af2c4ffd5a44c4fed16acb57148f0c117" title="running" alt="" coords="366,592,437,619"/><area shape="rect" id="node44" href="shared_2motor_8c.html#ace7572c6e4f698960dddbd986cb672c3" title="running_forever" alt="" coords="340,390,463,416"/><area shape="rect" id="node53" href="rotate_8c.html#a26d71955529c6b3d9bf09f67d9fe0671" title="rotate_test_all_for" alt="" coords="533,542,672,568"/><area shape="rect" id="node58" href="echo_8c.html#a126686bb849f61aca5d2fc14f452f827" title="rpt" alt="" coords="772,1074,812,1100"/><area shape="rect" id="node63" href="shared_2sonar_8c.html#a3e946f741a74a116374de8566c6caba6" title="scan" alt="" coords="163,288,215,315"/><area shape="rect" id="node68" href="shared_2sonar_8c.html#adbc6a71221630bf8ea9b1d173e0f7b9d" title="scan_display_position" alt="" coords="109,846,269,872"/><area shape="rect" id="node72" href="base_2lib__ic_8c.html#aabe762cad0063d9271131f3cc306a0e8" title="tone" alt="" coords="164,947,215,974"/><area shape="rect" id="node95" href="echo_8c.html#a95e08d0f0c9ef53423e1a81cfe3561db" title="twitch_aux" alt="" coords="145,744,234,771"/><area shape="rect" id="node99" href="echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="577,744,629,771"/><area shape="rect" id="node7" href="echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="912,770,1003,796"/><area shape="rect" id="node13" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="765,187,819,214"/><area shape="rect" id="node20" href="behavior_2escape_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="765,390,819,416"/><area shape="rect" id="node22" href="follow__light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="723,491,861,518"/><area shape="rect" id="node24" href="follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="735,440,849,467"/><area shape="rect" id="node48" href="shared_2motor_8c.html#a24845bf7b423f5ec436b3dc429584961" title="rotate" alt="" coords="371,491,432,518"/><area shape="rect" id="node51" href="menu_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="575,491,630,518"/><area shape="rect" id="node55" href="rotate_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="765,542,819,568"/><area shape="rect" id="node65" href="wall__scan_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="374,339,429,366"/><area shape="rect" id="node70" href="test_2sonar_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="374,846,429,872"/><area shape="rect" id="node74" href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400" title="beep" alt="" coords="374,1048,429,1075"/><area shape="rect" id="node85" href="cof_8c.html#a55c38cdc83b8334c8cb0a55638dfd650" title="note" alt="" coords="376,947,427,974"/><area shape="rect" id="node76" href="lib__hb_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="570,1048,635,1075"/><area shape="rect" id="node78" href="lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="573,1099,633,1126"/><area shape="rect" id="node81" href="lib__hb_8c.html#a0cdb3a3b9e978d9470d299807e7238cd" title="start_press" alt="" coords="555,1150,650,1176"/><area shape="rect" id="node83" href="lib__hb_8c.html#a58ba1f6f55e0bade7190f4db26184683" title="stop_press" alt="" coords="557,998,649,1024"/><area shape="rect" id="node87" href="cof_8c.html#a554069deb0b27e12100c8fcf80e96d0d" title="cof" alt="" coords="582,896,623,923"/><area shape="rect" id="node92" href="aie_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="575,846,630,872"/><area shape="rect" id="node89" href="piezo_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="765,896,819,923"/><area shape="rect" id="node97" href="echo_8c.html#a30c8746d91a7cba8f120e337d0a25c2f" title="twitch" alt="" coords="372,744,431,771"/></map>
 </div>
 </p>
 
@@ -400,9 +474,13 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return the current time (ms) increased by  (ms) </p>
 
-<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00096">96</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
-
+<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00104">104</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;{</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">return</span> mseconds() + timeout;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a103a241f9babfefa4a5a754bb2368253"></a>
@@ -418,9 +496,13 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>return the current time (sec) increased by  (ms) </p>
 
-<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00101">101</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
-
+<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00112">112</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">return</span> mseconds() + (long)(timeout * 1000.);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a2a0f0ec3bd9ebf537a7a728b9b837f0e"></a>
@@ -436,9 +518,13 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>check if the given (previous timer) are outdated </p>
 
-<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00106">106</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
-
+<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00120">120</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keywordflow">return</span> timer &lt; mseconds();</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aabe762cad0063d9271131f3cc306a0e8"></a>
@@ -466,8 +552,23 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>1/2 cycle delay in .5us goes in 0x26 and 0x27 </p>
 
-<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00065">65</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
+<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00060">60</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
 
+<p>References <a class="el" href="base_2lib__ic_8c_source.html#l00027">sleep()</a>.</p>
+
+<p>Referenced by <a class="el" href="base_2lib__ic_8c_source.html#l00052">beep()</a>, <a class="el" href="tunes_8c_source.html#l00233">bicycle()</a>, and <a class="el" href="cof_8c_source.html#l00086">note()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    pokeword(0x26, (<span class="keywordtype">int</span>)(1E6 / frequency));</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    bit_set(0x1020, 0b00000001);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(length);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    bit_clear(0x1020, 0b00000001);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="comment">/*  following is important to reduce # of interrupts</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">    when tone is off  */</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    pokeword(0x26, 0);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    bit_clear(0x1000, 8);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00027">lib_ic.c:27</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -482,7 +583,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="base_2lib__ic_8c_aabe762cad0063d9271131f3cc306a0e8_icgraph.png" border="0" usemap="#base_2lib__ic_8c_aabe762cad0063d9271131f3cc306a0e8_icgraph" alt=""/></div>
 <map name="base_2lib__ic_8c_aabe762cad0063d9271131f3cc306a0e8_icgraph" id="base_2lib__ic_8c_aabe762cad0063d9271131f3cc306a0e8_icgraph">
-<area shape="rect" id="node2" href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400" title="beep" alt="" coords="108,132,159,159"/><area shape="rect" id="node15" href="cof_8c.html#a55c38cdc83b8334c8cb0a55638dfd650" title="note" alt="" coords="110,233,157,260"/><area shape="rect" id="node19" href="tunes_8c.html#a65053c134684581c6c673317b11ea735" title="bicycle" alt="" coords="102,284,165,311"/><area shape="rect" id="node3" href="lib__hb_8c.html#a0cdb3a3b9e978d9470d299807e7238cd" title="start_press" alt="" coords="214,5,301,32"/><area shape="rect" id="node4" href="lib__hb_8c.html#a58ba1f6f55e0bade7190f4db26184683" title="stop_press" alt="" coords="214,56,301,83"/><area shape="rect" id="node5" href="lib__hb_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="227,107,287,133"/><area shape="rect" id="node6" href="lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="229,157,285,184"/><area shape="rect" id="node7" href="tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="234,208,281,235"/><area shape="rect" id="node8" href="tunes_8c.html#aab385898c7322dcbfda7e057e52f33d1" title="pp" alt="" coords="377,31,415,57"/><area shape="rect" id="node9" href="tunes_8c.html#af6d9ec9e05c437b9572aa6bd07f93100" title="wate" alt="" coords="371,81,421,108"/><area shape="rect" id="node10" href="tunes_8c.html#a991cece580a5054465383b47cadb0535" title="classics" alt="" coords="361,132,431,159"/><area shape="rect" id="node11" href="tunes_8c.html#a31061818a5a2cf68539ca073374286d3" title="charge" alt="" coords="365,183,427,209"/><area shape="rect" id="node12" href="tunes_8c.html#a32560516df494caa35d60ad505fb8086" title="looney_tune" alt="" coords="350,233,442,260"/><area shape="rect" id="node13" href="tunes_8c.html#a700ae836bbc833421cd1f7ac0f7460c4" title="benny" alt="" coords="367,284,425,311"/><area shape="rect" id="node14" href="tunes_8c.html#acfec480eb7453765b7fa452e7b62f315" title="musicbox" alt="" coords="357,335,435,361"/><area shape="rect" id="node16" href="cof_8c.html#a554069deb0b27e12100c8fcf80e96d0d" title="cof" alt="" coords="237,259,277,285"/><area shape="rect" id="node18" href="aie_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="232,309,283,336"/><area shape="rect" id="node17" href="piezo_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="371,385,421,412"/></map>
+<area shape="rect" id="node3" href="base_2lib__ic_8c.html#a912dfbf994f4d4c7dff5aa2540ae4400" title="beep" alt="" coords="110,113,165,140"/><area shape="rect" id="node15" href="tunes_8c.html#a65053c134684581c6c673317b11ea735" title="bicycle" alt="" coords="105,189,170,216"/><area shape="rect" id="node17" href="cof_8c.html#a55c38cdc83b8334c8cb0a55638dfd650" title="note" alt="" coords="112,252,163,279"/><area shape="rect" id="node5" href="lib__hb_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="234,5,299,32"/><area shape="rect" id="node7" href="lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="237,56,297,83"/><area shape="rect" id="node9" href="tunes_8c.html#a61c7b7a1cc359cd0de25088e9c3d5017" title="play" alt="" coords="243,208,291,235"/><area shape="rect" id="node11" href="lib__hb_8c.html#a0cdb3a3b9e978d9470d299807e7238cd" title="start_press" alt="" coords="219,107,314,133"/><area shape="rect" id="node13" href="lib__hb_8c.html#a58ba1f6f55e0bade7190f4db26184683" title="stop_press" alt="" coords="221,157,313,184"/><area shape="rect" id="node19" href="cof_8c.html#a554069deb0b27e12100c8fcf80e96d0d" title="cof" alt="" coords="246,259,287,285"/><area shape="rect" id="node24" href="aie_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="239,309,294,336"/><area shape="rect" id="node21" href="piezo_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="363,259,418,285"/></map>
 </div>
 </p>
 
@@ -498,15 +599,18 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>reset button states </p>
 
-<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00010">10</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
+<p>Definition at line <a class="el" href="base_2lib__ic_8c_source.html#l00004">4</a> of file <a class="el" href="base_2lib__ic_8c_source.html">lib_ic.c</a>.</p>
+
+<p>Referenced by <a class="el" href="menu_8c_source.html#l00018">main()</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

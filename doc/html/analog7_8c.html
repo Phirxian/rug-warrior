@@ -109,15 +109,33 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>always print analogue(6) output </p>
 
-<p>Definition at line <a class="el" href="analog7_8c_source.html#l00001">1</a> of file <a class="el" href="analog7_8c_source.html">analog7.c</a>.</p>
+<p>Definition at line <a class="el" href="analog7_8c_source.html#l00004">4</a> of file <a class="el" href="analog7_8c_source.html">analog7.c</a>.</p>
 
+<p>References <a class="el" href="base_2lib__ic_8c_source.html#l00129">analog()</a>, <a class="el" href="base_2lib__ic_8c_source.html#l00027">sleep()</a>, and <a class="el" href="convert_8c_source.html#l00039">thermometer()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordtype">int</span> val;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    printf(<span class="stringliteral">&quot; \n \n&quot;</span>);</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        val = <a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(7);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="convert_8c.html#af80345410eaff31ee093c3e514bb9426">thermometer</a>(val,0,255);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        printf(<span class="stringliteral">&quot;Analog-%d: %d\n&quot;</span>,7, val);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(0.25);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_afa28db0c35c02b77341a6bed7aac0cb4"><div class="ttname"><a href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a></div><div class="ttdeci">int analog(int port)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00129">lib_ic.c:129</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00027">lib_ic.c:27</a></div></div>
+<div class="ttc" id="convert_8c_html_af80345410eaff31ee093c3e514bb9426"><div class="ttname"><a href="convert_8c.html#af80345410eaff31ee093c3e514bb9426">thermometer</a></div><div class="ttdeci">int thermometer(int val, int low, int high)</div><div class="ttdef"><b>Definition:</b> <a href="convert_8c_source.html#l00039">convert.c:39</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="analog7_8c_acdef7a1fd863a6d3770c1268cb06add3_cgraph.png" border="0" usemap="#analog7_8c_acdef7a1fd863a6d3770c1268cb06add3_cgraph" alt=""/></div>
 <map name="analog7_8c_acdef7a1fd863a6d3770c1268cb06add3_cgraph" id="analog7_8c_acdef7a1fd863a6d3770c1268cb06add3_cgraph">
-<area shape="rect" id="node2" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="122,5,182,32"/><area shape="rect" id="node3" href="convert_8c.html#af80345410eaff31ee093c3e514bb9426" title="thermometer" alt="" coords="105,56,199,83"/><area shape="rect" id="node5" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="125,107,179,133"/><area shape="rect" id="node4" href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016" title="range" alt="" coords="253,56,307,83"/><area shape="rect" id="node6" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="248,107,312,133"/></map>
+<area shape="rect" id="node3" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="131,5,197,32"/><area shape="rect" id="node5" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="136,56,192,83"/><area shape="rect" id="node9" href="convert_8c.html#af80345410eaff31ee093c3e514bb9426" title="thermometer" alt="" coords="110,107,218,133"/><area shape="rect" id="node7" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="267,56,336,83"/><area shape="rect" id="node11" href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016" title="range" alt="" coords="272,107,331,133"/></map>
 </div>
 </p>
 
@@ -126,7 +144,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

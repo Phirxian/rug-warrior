@@ -142,6 +142,22 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="firmware_2lib__rwp_8c_source.html#l00151">151</a> of file <a class="el" href="firmware_2lib__rwp_8c_source.html">lib_rwp.c</a>.</p>
 
+<p>References <a class="el" href="base_2lib__ic_8c_source.html#l00129">analog()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;{</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">int</span> bmpr;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    bmpr = <a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(3);         <span class="comment">/* Switch closure: */</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordflow">if</span>(bmpr &lt;  11) <span class="keywordflow">return</span> 0b000;          <span class="comment">/* none */</span></div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(bmpr &lt;  32) <span class="keywordflow">return</span> 0b001;     <span class="comment">/* A   */</span></div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(bmpr &lt;  53) <span class="keywordflow">return</span> 0b010;     <span class="comment">/*  B  */</span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(bmpr &lt;  74) <span class="keywordflow">return</span> 0b011;     <span class="comment">/* AB  */</span></div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(bmpr &lt;  96) <span class="keywordflow">return</span> 0b100;     <span class="comment">/*  C  */</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(bmpr &lt; 117) <span class="keywordflow">return</span> 0b101;     <span class="comment">/* A C */</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(bmpr &lt; 138) <span class="keywordflow">return</span> 0b110;     <span class="comment">/*  BC */</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordflow">else</span>                 <span class="keywordflow">return</span> 0b111;    <span class="comment">/* ABC - (mechanically impossible) */</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_afa28db0c35c02b77341a6bed7aac0cb4"><div class="ttname"><a href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a></div><div class="ttdeci">int analog(int port)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00129">lib_ic.c:129</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -179,6 +195,13 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="firmware_2lib__rwp_8c_source.html#l00140">140</a> of file <a class="el" href="firmware_2lib__rwp_8c_source.html">lib_rwp.c</a>.</p>
 
+<p>References <a class="el" href="base_2lib__rwp_8c_source.html#l00094">motor()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;{</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <a class="code" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a>(0,trans_vel - rot_vel);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <a class="code" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a>(1,trans_vel + rot_vel);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;}</div>
+<div class="ttc" id="base_2lib__rwp_8c_html_a04268e3e9a9cdbff1cd6d5c265f11200"><div class="ttname"><a href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a></div><div class="ttdeci">void motor(int index, int vel)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00094">lib_rwp.c:94</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -204,7 +227,14 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="firmware_2lib__rwp_8c_source.html#l00099">99</a> of file <a class="el" href="firmware_2lib__rwp_8c_source.html">lib_rwp.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    bit_set(0x1009,0b110000); <span class="comment">/* Set PD4,5 as outputs for motor direction */</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    poke(0x100C,0b01100000);  <span class="comment">/* OC1M Output compare 1 affects PA5,6 */</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    bit_set(0x1020,0b10100000);     <span class="comment">/* TCTL1 OC3 turns off PA5, OC2 PA6 */</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    bit_clear(0x1020,0b01010000); <span class="comment">/* Use set and clear to avoid other bits */</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    pokeword(0x1016,0);       <span class="comment">/* When TCNT = 0, OC1 fires */</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0bcda6b2106a42058fe25734f7b6efc0"></a>
@@ -222,6 +252,23 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="firmware_2lib__rwp_8c_source.html#l00177">177</a> of file <a class="el" href="firmware_2lib__rwp_8c_source.html">lib_rwp.c</a>.</p>
 
+<p>References <a class="el" href="base_2lib__ic_8c_source.html#l00035">msleep()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;{</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keywordtype">int</span> val1, val2, val3;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    val1 = peek(0x100A) &amp; 0b10000;    <span class="comment">/* IR Detector connected to PE4 */</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    bit_set(0x1008,0b0100);       <span class="comment">/* Turn on Left emitter, PD2 */</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777">msleep</a>(1L);               <span class="comment">/* Wait 1 millisecond */</span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    val2 = peek(0x100A) &amp; 0b10000;    <span class="comment">/* Should be Low if signal detected */</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    bit_clear(0x1008,0b0100);     <span class="comment">/* Turn off Left emitter */</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    bit_set(0x1008,0b1000);       <span class="comment">/* Turn on Right emitter, PD3 */</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777">msleep</a>(1L);               <span class="comment">/* Wait 1 millisecond */</span></div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    val3 = peek(0x100A) &amp; 0b10000;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    bit_clear(0x1008,0b1100);     <span class="comment">/* Turn emitters off */</span></div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="comment">/* For detection, detector must be high when emitter is off, low when on */</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordflow">return</span> ((val1 &amp; ~val2) &gt;&gt; 3)  | ((val1 &amp; ~val3) &gt;&gt; 4); <span class="comment">/* HI -&gt; LOW */</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_aa3650dfb953be0fa6fb4e6a625d3f777"><div class="ttname"><a href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777">msleep</a></div><div class="ttdeci">void msleep(long msec)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00035">lib_ic.c:35</a></div></div>
+</div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -247,7 +294,10 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="firmware_2lib__rwp_8c_source.html#l00035">35</a> of file <a class="el" href="firmware_2lib__rwp_8c_source.html">lib_rwp.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> (peek(0x1000) &amp; 0b00000001);   <span class="comment">/*  1  or 0 */</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a759cd6a2d214a5b16d6e01d114385039"></a>
@@ -264,7 +314,10 @@ Here is the call graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="firmware_2lib__rwp_8c_source.html#l00043">43</a> of file <a class="el" href="firmware_2lib__rwp_8c_source.html">lib_rwp.c</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> (peek(0x1000) &amp; 0b10000000 &amp;&amp; 1);  <span class="comment">/* 0x80 -&gt; 1 */</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a8c528baf37154d347366083f0f816846"></a>
@@ -282,6 +335,13 @@ Here is the call graph for this function:</div>
 
 <p>Definition at line <a class="el" href="firmware_2lib__rwp_8c_source.html#l00119">119</a> of file <a class="el" href="firmware_2lib__rwp_8c_source.html">lib_rwp.c</a>.</p>
 
+<p>References <a class="el" href="base_2lib__rwp_8c_source.html#l00036">pwm_mask</a>.</p>
+<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    bit_clear(0x100D,<a class="code" href="base_2lib__rwp_8c.html#af583a71fc7eabd31426624437cd1a8f3">pwm_mask</a>[0]);    <span class="comment">/* Let OC1 turn off motors rather */</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    bit_clear(0x100D,<a class="code" href="base_2lib__rwp_8c.html#af583a71fc7eabd31426624437cd1a8f3">pwm_mask</a>[1]);    <span class="comment">/* than turn them on */</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;}</div>
+<div class="ttc" id="base_2lib__rwp_8c_html_af583a71fc7eabd31426624437cd1a8f3"><div class="ttname"><a href="base_2lib__rwp_8c.html#af583a71fc7eabd31426624437cd1a8f3">pwm_mask</a></div><div class="ttdeci">int pwm_mask[2]</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00036">lib_rwp.c:36</a></div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
@@ -386,7 +446,7 @@ Here is the call graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

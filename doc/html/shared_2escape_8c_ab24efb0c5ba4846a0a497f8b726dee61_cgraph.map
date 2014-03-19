@@ -1,0 +1,8 @@
+<map id="escape" name="escape">
+<area shape="rect" id="node3" href="$base_2lib__rwp_8c.html#a9032e2468648895fa936f08f6a831bf9" title="drive" alt="" coords="127,5,180,32"/>
+<area shape="rect" id="node7" href="$shared_2motor_8c.html#a24845bf7b423f5ec436b3dc429584961" title="rotate" alt="" coords="123,56,184,83"/>
+<area shape="rect" id="node11" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="424,81,480,108"/>
+<area shape="rect" id="node5" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="273,5,335,32"/>
+<area shape="rect" id="node9" href="$shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3" title="reset_encoder_aux" alt="" coords="232,56,376,83"/>
+<area shape="rect" id="node13" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="528,81,597,108"/>
+</map>

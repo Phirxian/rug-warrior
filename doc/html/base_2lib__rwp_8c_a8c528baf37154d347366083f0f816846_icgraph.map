@@ -1,4 +1,5 @@
 <map id="stop" name="stop">
-<area shape="rect" id="node2" href="$shared_2motor_8c.html#adb9f04d0113231e1cc65bd880e19b918" title="rotate" alt="" coords="102,5,157,32"/>
-<area shape="rect" id="node3" href="$rotate_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="205,5,256,32"/>
+<area shape="rect" id="node3" href="$follow__light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="104,31,176,57"/>
+<area shape="rect" id="node5" href="$follow__light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="224,5,363,32"/>
+<area shape="rect" id="node7" href="$follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="236,56,351,83"/>
 </map>

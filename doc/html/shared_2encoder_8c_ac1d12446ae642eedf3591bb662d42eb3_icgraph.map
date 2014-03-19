@@ -1,0 +1,15 @@
+<map id="reset_encoder_aux" name="reset_encoder_aux">
+<area shape="rect" id="node3" href="$shared_2motor_8c.html#a24845bf7b423f5ec436b3dc429584961" title="rotate" alt="" coords="228,157,289,184"/>
+<area shape="rect" id="node19" href="$shared_2motor_8c.html#af2c4ffd5a44c4fed16acb57148f0c117" title="running" alt="" coords="223,233,294,260"/>
+<area shape="rect" id="node23" href="$shared_2motor_8c.html#ace7572c6e4f698960dddbd986cb672c3" title="running_forever" alt="" coords="197,56,320,83"/>
+<area shape="rect" id="node5" href="$shared_2escape_8c.html#ab24efb0c5ba4846a0a497f8b726dee61" title="escape" alt="" coords="403,157,471,184"/>
+<area shape="rect" id="node13" href="$menu_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="410,208,465,235"/>
+<area shape="rect" id="node15" href="$rotate_8c.html#a26d71955529c6b3d9bf09f67d9fe0671" title="rotate_test_all_for" alt="" coords="368,107,507,133"/>
+<area shape="rect" id="node7" href="$follow__light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="555,157,693,184"/>
+<area shape="rect" id="node9" href="$follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="567,208,681,235"/>
+<area shape="rect" id="node11" href="$behavior_2escape_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="597,56,651,83"/>
+<area shape="rect" id="node17" href="$rotate_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="597,107,651,133"/>
+<area shape="rect" id="node21" href="$1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="410,259,465,285"/>
+<area shape="rect" id="node26" href="$shared_2motor_8c.html#aebcea414da69739d6ef8500243accfd6" title="move_behind" alt="" coords="383,5,491,32"/>
+<area shape="rect" id="node28" href="$ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="597,5,651,32"/>
+</map>

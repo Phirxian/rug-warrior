@@ -1,3 +1,6 @@
 <map id="bumper" name="bumper">
-<area shape="rect" id="node2" href="$bumper_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="120,5,171,32"/>
+<area shape="rect" id="node3" href="$shared_2bumper_8c.html#a3e0043a27cabda922c8ce5cbd7264047" title="bumper_detection" alt="" coords="125,31,264,57"/>
+<area shape="rect" id="node9" href="$test_2bumper_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="167,81,222,108"/>
+<area shape="rect" id="node5" href="$behavior_2escape_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="342,5,397,32"/>
+<area shape="rect" id="node7" href="$follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="312,56,427,83"/>
 </map>

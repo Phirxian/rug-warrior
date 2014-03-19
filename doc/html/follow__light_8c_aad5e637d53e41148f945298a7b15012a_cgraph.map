@@ -1,0 +1,9 @@
+<map id="go_light" name="go_light">
+<area shape="rect" id="node3" href="$common_8c.html#a4a336f19d2bbcc174259e39ff641d9f8" title="driveb" alt="" coords="133,5,195,32"/>
+<area shape="rect" id="node7" href="$photo__cell_8c.html#aed625017ad241b64d0cbf108dcca7b2a" title="light_diff" alt="" coords="127,56,201,83"/>
+<area shape="rect" id="node11" href="$screen_8c.html#a933751989174a13eb0301583a36ef170" title="print_diff" alt="" coords="125,107,203,133"/>
+<area shape="rect" id="node15" href="$base_2lib__rwp_8c.html#a8c528baf37154d347366083f0f816846" title="stop" alt="" coords="139,157,189,184"/>
+<area shape="rect" id="node5" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="269,5,331,32"/>
+<area shape="rect" id="node9" href="$base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="267,56,333,83"/>
+<area shape="rect" id="node13" href="$screen_8c.html#ac8e8b349181ce150291f6cacea837914" title="repeat_char" alt="" coords="251,107,349,133"/>
+</map>

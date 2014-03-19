@@ -1,4 +1,4 @@
 <map id="init_motors" name="init_motors">
-<area shape="rect" id="node2" href="$1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="161,5,212,32"/>
-<area shape="rect" id="node3" href="$lib__rw10_8c.html#a2284a454776748e677a7eda5d64ef0fe" title="init_on_load" alt="" coords="141,56,232,83"/>
+<area shape="rect" id="node3" href="$lib__rw10_8c.html#a2284a454776748e677a7eda5d64ef0fe" title="init_on_load" alt="" coords="149,5,248,32"/>
+<area shape="rect" id="node5" href="$1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="171,56,226,83"/>
 </map>

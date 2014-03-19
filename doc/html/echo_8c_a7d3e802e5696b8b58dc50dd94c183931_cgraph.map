@@ -1,18 +1,18 @@
 <map id="start_echo" name="start_echo">
-<area shape="rect" id="node2" href="$echo_8c.html#a925d8efdf863cf52667ec8fcf4fb7d33" title="sample_sound" alt="" coords="136,56,243,83"/>
-<area shape="rect" id="node5" href="$echo_8c.html#a42efcf4d578c48f2cee299e4086dd417" title="capture_command" alt="" coords="571,107,701,133"/>
-<area shape="rect" id="node8" href="$echo_8c.html#a185bec48275b377b760853a63644fc23" title="echo_control" alt="" coords="141,208,237,235"/>
-<area shape="rect" id="node17" href="$echo_8c.html#a126686bb849f61aca5d2fc14f452f827" title="rpt" alt="" coords="617,157,655,184"/>
-<area shape="rect" id="node3" href="$common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="300,5,343,32"/>
-<area shape="rect" id="node4" href="$base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="291,56,351,83"/>
-<area shape="rect" id="node6" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="749,208,803,235"/>
-<area shape="rect" id="node7" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="851,208,915,235"/>
-<area shape="rect" id="node9" href="$echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="296,335,347,361"/>
-<area shape="rect" id="node10" href="$echo_8c.html#a30c8746d91a7cba8f120e337d0a25c2f" title="twitch" alt="" coords="433,461,490,488"/>
-<area shape="rect" id="node14" href="$base_2lib__ic_8c.html#ac01536f2a7ceb0d4c7e5e6a6d59c3871" title="beeper_on" alt="" coords="420,259,503,285"/>
-<area shape="rect" id="node15" href="$base_2lib__ic_8c.html#aebfeaced338ec2353b5d133eebfb3ebb" title="set_beeper_pitch" alt="" coords="401,309,522,336"/>
-<area shape="rect" id="node16" href="$base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428" title="beeper_off" alt="" coords="420,360,503,387"/>
-<area shape="rect" id="node11" href="$echo_8c.html#a95e08d0f0c9ef53423e1a81cfe3561db" title="twitch_aux" alt="" coords="593,461,679,488"/>
-<area shape="rect" id="node12" href="$base_2lib__rwp_8c.html#a9032e2468648895fa936f08f6a831bf9" title="drive" alt="" coords="751,461,801,488"/>
-<area shape="rect" id="node13" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="855,461,910,488"/>
+<area shape="rect" id="node3" href="$echo_8c.html#a42efcf4d578c48f2cee299e4086dd417" title="capture_command" alt="" coords="603,5,746,32"/>
+<area shape="rect" id="node9" href="$echo_8c.html#a185bec48275b377b760853a63644fc23" title="echo_control" alt="" coords="149,107,253,133"/>
+<area shape="rect" id="node30" href="$echo_8c.html#a126686bb849f61aca5d2fc14f452f827" title="rpt" alt="" coords="655,56,695,83"/>
+<area shape="rect" id="node33" href="$echo_8c.html#a925d8efdf863cf52667ec8fcf4fb7d33" title="sample_sound" alt="" coords="144,259,259,285"/>
+<area shape="rect" id="node5" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="795,107,851,133"/>
+<area shape="rect" id="node7" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="899,107,968,133"/>
+<area shape="rect" id="node12" href="$echo_8c.html#a5037b4aeedd961c217f951f7b64ae381" title="warb" alt="" coords="314,208,366,235"/>
+<area shape="rect" id="node14" href="$echo_8c.html#a30c8746d91a7cba8f120e337d0a25c2f" title="twitch" alt="" coords="459,360,517,387"/>
+<area shape="rect" id="node23" href="$base_2lib__ic_8c.html#ac01536f2a7ceb0d4c7e5e6a6d59c3871" title="beeper_on" alt="" coords="443,157,533,184"/>
+<area shape="rect" id="node25" href="$base_2lib__ic_8c.html#aebfeaced338ec2353b5d133eebfb3ebb" title="set_beeper_pitch" alt="" coords="422,208,554,235"/>
+<area shape="rect" id="node28" href="$base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428" title="beeper_off" alt="" coords="443,259,533,285"/>
+<area shape="rect" id="node16" href="$echo_8c.html#a95e08d0f0c9ef53423e1a81cfe3561db" title="twitch_aux" alt="" coords="630,360,719,387"/>
+<area shape="rect" id="node18" href="$base_2lib__rwp_8c.html#a9032e2468648895fa936f08f6a831bf9" title="drive" alt="" coords="796,360,849,387"/>
+<area shape="rect" id="node20" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="903,360,964,387"/>
+<area shape="rect" id="node35" href="$common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e" title="abs" alt="" coords="317,259,363,285"/>
+<area shape="rect" id="node37" href="$base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="307,309,373,336"/>
 </map>

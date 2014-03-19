@@ -96,60 +96,59 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;        printf(<span class="stringliteral">&quot;%d&quot;</span>, val);</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">/* therm_diff is for displaying the difference between two quantities */</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="photo_8c.html#a66f998077162963e411a04991dff9d0a">   12</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="photo_8c.html#a66f998077162963e411a04991dff9d0a">therm_diff</a>(<span class="keywordtype">int</span> val)</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">if</span>(val == 0)</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        printf(<span class="stringliteral">&quot;       []       &quot;</span>); <span class="comment">/* Zero */</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(val &lt; -8)</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        printf(<span class="stringliteral">&quot;%c&lt;&lt;&lt;&lt;&lt;&lt;&lt;]       &quot;</span>,127);    <span class="comment">/* Less than -8 */</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(val &lt; 0)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(32,8 + val);  <span class="comment">/* 32 = space */</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(60,<a class="code" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a>(val)); <span class="comment">/* 60 = &quot;&lt;&quot; */</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        printf(<span class="stringliteral">&quot;]       &quot;</span>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(val &gt; 8)</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        printf(<span class="stringliteral">&quot;       [&gt;&gt;&gt;&gt;&gt;&gt;&gt;%c&quot;</span>,126);    <span class="comment">/* More than +8 */</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        printf(<span class="stringliteral">&quot;       [&quot;</span>);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(62,val);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(32,8 - val);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="photo_8c.html#acdef7a1fd863a6d3770c1268cb06add3">   34</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a>()</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">int</span> pc_left, pc_right;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">while</span>(1)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        pc_left  = <a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(<a class="code" href="base_2lib__rwp_8c.html#a80003173b2b20936eebe10521f94b503">photo_left</a>);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        pc_right = <a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(<a class="code" href="base_2lib__rwp_8c.html#abf8c764cb5f5289ee3688871415dd737">photo_right</a>);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">/* Diff thermometer points toward brighter light */</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <a class="code" href="photo_8c.html#a66f998077162963e411a04991dff9d0a">therm_diff</a>(pc_left - pc_right);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        printf(<span class="stringliteral">&quot;Photo L&quot;</span>);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="photo_8c.html#a4ccb49abe8987fd40632afca2dbaa528">p_byte</a>(pc_left);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        printf(<span class="stringliteral">&quot; R&quot;</span>);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="photo_8c.html#a4ccb49abe8987fd40632afca2dbaa528">p_byte</a>(pc_right);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        printf(<span class="stringliteral">&quot; \n&quot;</span>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(0.25);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
-<div class="ttc" id="base_2lib__ic_8c_html_afa28db0c35c02b77341a6bed7aac0cb4"><div class="ttname"><a href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a></div><div class="ttdeci">int analog(int port)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00111">lib_ic.c:111</a></div></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="photo_8c.html#a66f998077162963e411a04991dff9d0a">   14</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="photo_8c.html#a66f998077162963e411a04991dff9d0a">therm_diff</a>(<span class="keywordtype">int</span> val)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">if</span>(val == 0)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        printf(<span class="stringliteral">&quot;       []       &quot;</span>); <span class="comment">/* Zero */</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(val &lt; -8)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        printf(<span class="stringliteral">&quot;%c&lt;&lt;&lt;&lt;&lt;&lt;&lt;]       &quot;</span>,127);    <span class="comment">/* Less than -8 */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(val &lt; 0)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(32,8 + val);  <span class="comment">/* 32 = space */</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(60,<a class="code" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a>(val)); <span class="comment">/* 60 = &quot;&lt;&quot; */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        printf(<span class="stringliteral">&quot;]       &quot;</span>);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(val &gt; 8)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        printf(<span class="stringliteral">&quot;       [&gt;&gt;&gt;&gt;&gt;&gt;&gt;%c&quot;</span>,126);    <span class="comment">/* More than +8 */</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        printf(<span class="stringliteral">&quot;       [&quot;</span>);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(62,val);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a>(32,8 - val);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="photo_8c.html#acdef7a1fd863a6d3770c1268cb06add3">   40</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a>()</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> pc_left, pc_right;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordflow">while</span>(1)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        pc_left  = <a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(<a class="code" href="base_2lib__rwp_8c.html#a80003173b2b20936eebe10521f94b503">photo_left</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        pc_right = <a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(<a class="code" href="base_2lib__rwp_8c.html#abf8c764cb5f5289ee3688871415dd737">photo_right</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">/* Diff thermometer points toward brighter light */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <a class="code" href="photo_8c.html#a66f998077162963e411a04991dff9d0a">therm_diff</a>(pc_left - pc_right);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        printf(<span class="stringliteral">&quot;Photo L&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="photo_8c.html#a4ccb49abe8987fd40632afca2dbaa528">p_byte</a>(pc_left);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        printf(<span class="stringliteral">&quot; R&quot;</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="photo_8c.html#a4ccb49abe8987fd40632afca2dbaa528">p_byte</a>(pc_right);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        printf(<span class="stringliteral">&quot; \n&quot;</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(0.25);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="ttc" id="base_2lib__ic_8c_html_afa28db0c35c02b77341a6bed7aac0cb4"><div class="ttname"><a href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a></div><div class="ttdeci">int analog(int port)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00129">lib_ic.c:129</a></div></div>
 <div class="ttc" id="photo_8c_html_a4ccb49abe8987fd40632afca2dbaa528"><div class="ttname"><a href="photo_8c.html#a4ccb49abe8987fd40632afca2dbaa528">p_byte</a></div><div class="ttdeci">void p_byte(int val)</div><div class="ttdef"><b>Definition:</b> <a href="photo_8c_source.html#l00001">photo.c:1</a></div></div>
 <div class="ttc" id="screen_8c_html_ac8e8b349181ce150291f6cacea837914"><div class="ttname"><a href="screen_8c.html#ac8e8b349181ce150291f6cacea837914">repeat_char</a></div><div class="ttdeci">void repeat_char(int ch, int rep)</div><div class="ttdef"><b>Definition:</b> <a href="screen_8c_source.html#l00024">screen.c:24</a></div></div>
-<div class="ttc" id="photo_8c_html_a66f998077162963e411a04991dff9d0a"><div class="ttname"><a href="photo_8c.html#a66f998077162963e411a04991dff9d0a">therm_diff</a></div><div class="ttdeci">void therm_diff(int val)</div><div class="ttdef"><b>Definition:</b> <a href="photo_8c_source.html#l00012">photo.c:12</a></div></div>
-<div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00035">lib_ic.c:35</a></div></div>
-<div class="ttc" id="base_2lib__rwp_8c_html_a80003173b2b20936eebe10521f94b503"><div class="ttname"><a href="base_2lib__rwp_8c.html#a80003173b2b20936eebe10521f94b503">photo_left</a></div><div class="ttdeci">int photo_left</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00031">lib_rwp.c:31</a></div></div>
-<div class="ttc" id="common_8c_html_a1fd3a8b6db743b7cb7dcfd277fbb905e"><div class="ttname"><a href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a></div><div class="ttdeci">int abs(int val)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00012">common.c:12</a></div></div>
-<div class="ttc" id="1meter_8c_html_acdef7a1fd863a6d3770c1268cb06add3"><div class="ttname"><a href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a></div><div class="ttdeci">void main()</div><div class="ttdef"><b>Definition:</b> <a href="1meter_8c_source.html#l00013">1meter.c:13</a></div></div>
-<div class="ttc" id="base_2lib__rwp_8c_html_abf8c764cb5f5289ee3688871415dd737"><div class="ttname"><a href="base_2lib__rwp_8c.html#abf8c764cb5f5289ee3688871415dd737">photo_right</a></div><div class="ttdeci">int photo_right</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00030">lib_rwp.c:30</a></div></div>
+<div class="ttc" id="photo_8c_html_a66f998077162963e411a04991dff9d0a"><div class="ttname"><a href="photo_8c.html#a66f998077162963e411a04991dff9d0a">therm_diff</a></div><div class="ttdeci">void therm_diff(int val)</div><div class="ttdef"><b>Definition:</b> <a href="photo_8c_source.html#l00014">photo.c:14</a></div></div>
+<div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00027">lib_ic.c:27</a></div></div>
+<div class="ttc" id="base_2lib__rwp_8c_html_a80003173b2b20936eebe10521f94b503"><div class="ttname"><a href="base_2lib__rwp_8c.html#a80003173b2b20936eebe10521f94b503">photo_left</a></div><div class="ttdeci">int photo_left</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00011">lib_rwp.c:11</a></div></div>
+<div class="ttc" id="common_8c_html_a1fd3a8b6db743b7cb7dcfd277fbb905e"><div class="ttname"><a href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a></div><div class="ttdeci">int abs(int val)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00004">common.c:4</a></div></div>
+<div class="ttc" id="1meter_8c_html_acdef7a1fd863a6d3770c1268cb06add3"><div class="ttname"><a href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3">main</a></div><div class="ttdeci">void main()</div><div class="ttdef"><b>Definition:</b> <a href="1meter_8c_source.html#l00007">1meter.c:7</a></div></div>
+<div class="ttc" id="base_2lib__rwp_8c_html_abf8c764cb5f5289ee3688871415dd737"><div class="ttname"><a href="base_2lib__rwp_8c.html#abf8c764cb5f5289ee3688871415dd737">photo_right</a></div><div class="ttdeci">int photo_right</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00005">lib_rwp.c:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 13 2014 18:26:46 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>
