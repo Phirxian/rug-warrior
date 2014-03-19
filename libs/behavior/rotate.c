@@ -1,36 +1,47 @@
+/*
+ * Rotation tests, using one or both motors
+ * with +/- a given angle
+ * @param degree Angle in degrees
+ */
+
 void rotate_test_all_for(int degree)
 {
-    printf("center %d\n", degree);
+    printf("Center %d\n", degree);
     rotate(C_MOTOR, degree);
     sleep(1.);
 
-    printf("inv center %d\n", -degree);
+    printf("Inv center %d\n", -degree);
     rotate(C_MOTOR, -degree);
     sleep(1.);
 
-    printf("left %d\n", degree);
+    printf("Left %d\n", degree);
     rotate(L_MOTOR, degree);
     sleep(1.);
 
-    printf("inv left %d\n", -degree);
+    printf("Inv left %d\n", -degree);
     rotate(L_MOTOR, -degree);
     sleep(1.);
 
-    printf("right %d\n", degree);
+    printf("Right %d\n", degree);
     rotate(R_MOTOR, degree);
     sleep(1.);
 
-    printf("inv right %d\n", -degree);
+    printf("Inv right %d\n", -degree);
     rotate(R_MOTOR, -degree);
     sleep(1.);
 }
 
+/*
+ * Rotation tests
+ * Last update: -
+ * @version Final
+ */
 void main()
 {
     init_motors();
 
     _motor_initial_speed_ = 100;
-    printf("rotate sample using %d speed\n", _motor_initial_speed_);
+    printf("Rotate sample using %d speed\n", _motor_initial_speed_);
 
     rotate_test_all_for(45);
     rotate_test_all_for(90);
