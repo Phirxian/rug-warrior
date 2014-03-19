@@ -4,7 +4,7 @@ void main()
     init_sonar();
     sonar_init_servo();
 
-    printf("Runs until a wall is found 85cm\n");
+    printf("Follow a light source 20 cm away\n");
 
     set_servo(0);
     sleep(0.175);
@@ -13,7 +13,7 @@ void main()
     _move_behind_detected_distance_ = feetToCm(range());
     start_process(detect_distance_sonar());
 
-    move_behind(85.0, 1.0, 30);
+    move_behind(20.0, 1.0, 30);
 
     _detect_distance_process_running_ = 0;
     while(_detect_distance_process_running_ != 1);
