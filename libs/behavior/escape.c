@@ -1,6 +1,7 @@
 /**
  * Move forward, and when the skirt is pushed,
  * escape from an obstacle (move back then rotate)
+ * 
  * Last update: 14:25, Mar. 4, 2014
  * @version 1.1, utilisation des 2 moteurs pour accelerer la rotation par 2
  */
