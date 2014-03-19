@@ -1,3 +1,11 @@
+/*
+ * Run at a maximum speed until an obstacle is detected 85 cm away, then stop.
+ * 30 represents the minimum speed the robot will run at.
+ * These 2 values are passed to move_behind()
+ *
+ * Last update: -
+ * @version Final
+ */
 void main()
 {
     init_motors();
