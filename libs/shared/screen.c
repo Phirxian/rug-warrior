@@ -30,29 +30,43 @@ void repeat_char(int ch, int rep)
 }
 
 /**
- * Display a difference proportionately (the more there is difference, the more of char displaying ')
+ * Display a value with a constant number of digits => "  1" OR " 10" OR "100"
+ */
+void p_byte(int val)
+{
+    if(val < 10)
+        printf("  %d", val);
+    else if(val < 100)
+        printf(" %d", val);
+    else
+        printf("%d", val);
+}
+
+/**
+ * Display a difference proportionately
  * Can be used to show a difference between 2 captors
- * @param diff - difference going from -100 to 100
+ * @param diff - difference
  */
 void print_diff(int diff)
 {
-    char PATTERN_LEFT = '<';
-    char PATTERN_RIGHT = '>';
-    /* Number of digits to will be written*/
-    int number_digits;
-    number_digits = (int) diff / (100/8);
 
-    if(diff > 0)    /* Write on the right side */
+    if(diff == 0)
+        printf("       []       "); /* Zero */
+    else if(diff < -8)
+        printf("%c<<<<<<<]       ",127);    /* Less than -8 */
+    else if(diff < 0)
     {
-        repeat_char(' ', 8); /* Margin*/
-        repeat_char(PATTERN_RIGHT, number_digits);
+        repeat_char(32,8 + diff);  /* 32 = space */
+        repeat_char(60,abs(diff)); /* 60 = "<" */
+        printf("]       ");
     }
-    else if(diff < 0)      /* Write on the left side */
+    else if(diff > 8)
+        printf("       [>>>>>>>%c",126);    /* More than +8 */
+    else
     {
-        number_digits = -number_digits;
-        repeat_char(' ', 8-number_digits); /* Dynamic Margin*/
-        repeat_char(PATTERN_LEFT, number_digits);
+        printf("       [");
+        repeat_char(62,diff);
+        repeat_char(32,8 - diff);
     }
 
-    printf("\n");
 }
