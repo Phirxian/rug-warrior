@@ -1,13 +1,6 @@
-#define LIGHT 0
-#define DARK  1
-
 /**
  * The robot following/avoid a light infinitely
- * @global _mode_light_ if mode == LIGHT, the robot go to the light
- * if mode == DARK, the robot go to the dark
- * 
- * Last update: -
- * @version Final
+ * @global _mode_light_ it must be set
  */
 void go_light() {
     
@@ -16,10 +9,10 @@ void go_light() {
     
         int diff;
         diff = light_diff();
-	diff *= _light_environnement_; /* The light environnement */
+		diff *= _light_environnement_; /* The light environnement */
 		
         /* Invert the mode */
-        if (_mode_light_ == DARK) {
+        if (_mode_light_ == GO_DARK) {
             diff= -diff;
         }
         
@@ -36,11 +29,7 @@ void go_light() {
 
 /**
  * Avoid objects and go to the light or dark
- * @global _mode_light_ if mode != LIGHT, the robot go to the light
- * if mode == DARK, the robot go to the dark
- * 
- * Last update: -
- * @version -
+ * @global _mode_light_ it must be set
  */
 void go_light_detection() {
 
@@ -68,11 +57,7 @@ void go_light_detection() {
 
 /**
  * Escape objects and go to the light or dark
- * @global _mode_light_ if mode == LIGHT, the robot go to the light
- * if mode == DARK, the robot go to the dark
- * 
- * Last update: -
- * @version -
+ * @global _mode_light_ it must be set
  */
 void go_light_touch() {
 	
@@ -99,14 +84,12 @@ void go_light_touch() {
 	_go_light_touch_running_ = -1;
 }
 
-/**
- * test case
- */
+
 void main() {
-	_light_environnement_ = LIGHT_ENVIRONNEMENT;
+	light_environnement();
 	init_motors();
 	_motor_initial_speed_ = 50;
-	_mode_light_ = LIGHT;
-	go_light_touched();
+	_mode_light_ = GO_LIGHT;
+	go_light_touch();
 	
 }
