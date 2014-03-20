@@ -12,9 +12,8 @@ void go_light_stop(int distance)
     int avCells; /* The average value between photo cells */
 
     _go_light_stop_running_ = 1;
-    distance = cmToPhotons(distance);
-    margin = cmToPhotons(_motor_initial_speed_/10);
-    avCells = (analog(photo_left) + analog(photo_right))/2;
+    distance = cmToPhotons(distance+1); /* Photos cells and protection added */
+    margin = cmToPhotons(_motor_initial_speed_/20);
     goForward = 1;
 
     while(_go_light_stop_running_ && (goForward != 0))
@@ -33,7 +32,7 @@ void go_light_stop(int distance)
         display_info(); /* Display the difference and values of photo cells */
 
         avCells = (analog(photo_left) + analog(photo_right))/2; /* Refresh the average of cells */
-        goForward = (avCells > distance+margin) - (avCells < distance-margin);
+        goForward = (avCells > (distance +margin) - (avCells < (distance -margin)));
         driveb(goForward*_motor_initial_speed_, diff);
 
 
@@ -52,21 +51,17 @@ void go_light_stop(int distance)
  */
 int cmToPhotons(int distance)
 {
-    if(distance > MAX_STOP_DISTANCE)
+    if(0 > distance || distance > MAX_STOP_DISTANCE)
     {
-        distance = -1;
+        return 0;
     }
-    else
-    {
-        distance = (int)((float)distance * CM_TO_LIGHT_COEFFICIENT);
-    }
+    return (int)((float)distance * CM_TO_LIGHT_COEFFICIENT);
 }
 
 void main()
 {
-    init_motors();
     _mode_light_ = GO_LIGHT;
     light_environnement();
-    _motor_initial_speed_ = 50;
+    _motor_initial_speed_ = 100;
     go_light_stop(20);
 }

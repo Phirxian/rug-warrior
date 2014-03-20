@@ -52,5 +52,4 @@ void display_info()
     printf(" R");
     p_byte(pc_right);
     printf(" \n");
-    sleep(0.25); /* Avoid the aliasing */
 }
