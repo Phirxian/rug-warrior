@@ -1,7 +1,7 @@
 /**
  * Move forward, and when an obstacle is detected,
  * escape from it (move back then rotate)
- * 
+ *
  * Last update: -
  * @version Final
  */
@@ -28,11 +28,12 @@ void main()
         /* ir has to be different from 0 */
         if(ir != OBSTACLE_NONE)
         {
-            /* Stop the robot */
+            /* kill process, don't stop the robot */
             kill_process(pid);
 
-            escape(ir);
             /* The robot can go forward after the detection */
+            escape(ir);
+
             _motor_initial_speed_ = 100;
             pid = start_process(running_forever());
         }

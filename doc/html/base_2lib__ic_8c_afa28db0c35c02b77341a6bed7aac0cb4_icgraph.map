@@ -1,14 +1,22 @@
 <map id="analog" name="analog">
-<area shape="rect" id="node3" href="$base_2lib__rwp_8c.html#a6368ba2819f669bf17962d89b3fca203" title="bumper" alt="" coords="141,5,213,32"/>
-<area shape="rect" id="node13" href="$lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="147,56,207,83"/>
-<area shape="rect" id="node15" href="$photo__cell_8c.html#aed625017ad241b64d0cbf108dcca7b2a" title="light_diff" alt="" coords="140,107,215,133"/>
-<area shape="rect" id="node22" href="$analog5_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="150,157,205,184"/>
-<area shape="rect" id="node24" href="$echo_8c.html#a925d8efdf863cf52667ec8fcf4fb7d33" title="sample_sound" alt="" coords="120,208,235,235"/>
-<area shape="rect" id="node5" href="$shared_2bumper_8c.html#a3e0043a27cabda922c8ce5cbd7264047" title="bumper_detection" alt="" coords="283,5,421,32"/>
-<area shape="rect" id="node11" href="$test_2bumper_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="325,56,379,83"/>
-<area shape="rect" id="node7" href="$behavior_2escape_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="511,5,566,32"/>
-<area shape="rect" id="node9" href="$follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="481,56,596,83"/>
-<area shape="rect" id="node17" href="$follow__light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="316,107,388,133"/>
-<area shape="rect" id="node19" href="$follow__light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="469,107,608,133"/>
-<area shape="rect" id="node26" href="$echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="307,208,397,235"/>
+<area shape="rect" id="node2" href="$base_2lib__rwp_8c.html#a6368ba2819f669bf17962d89b3fca203" title="bumper" alt="" coords="135,56,201,83"/>
+<area shape="rect" id="node10" href="$lib__hb_8c.html#a3eb7db79d996b92f7063b65dc34b3484" title="digital" alt="" coords="140,309,196,336"/>
+<area shape="rect" id="node11" href="$photo__cell_8c.html#acb7ee4e5a55a9cf8a9171673ad9ba2b5" title="display_info" alt="" coords="123,360,213,387"/>
+<area shape="rect" id="node12" href="$light_8c.html#afc29dd698687a94f8d311603ce720249" title="go_light_stop" alt="" coords="289,259,388,285"/>
+<area shape="rect" id="node14" href="$photo__cell_8c.html#aed625017ad241b64d0cbf108dcca7b2a" title="light_diff" alt="" coords="133,157,203,184"/>
+<area shape="rect" id="node18" href="$photo__cell_8c.html#a56bb761e9fb23ceac4bfcc855fecd089" title="light_environnement" alt="" coords="269,208,408,235"/>
+<area shape="rect" id="node19" href="$analog5_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="143,411,193,437"/>
+<area shape="rect" id="node20" href="$echo_8c.html#a925d8efdf863cf52667ec8fcf4fb7d33" title="sample_sound" alt="" coords="115,461,221,488"/>
+<area shape="rect" id="node3" href="$shared_2bumper_8c.html#a3e0043a27cabda922c8ce5cbd7264047" title="bumper_detection" alt="" coords="276,5,401,32"/>
+<area shape="rect" id="node9" href="$test_2bumper_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="313,56,364,83"/>
+<area shape="rect" id="node4" href="$behavior_2escape_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="500,5,551,32"/>
+<area shape="rect" id="node5" href="$light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="472,56,579,83"/>
+<area shape="rect" id="node7" href="$light_8c.html#a9fadc58f1cdc44e627a5377611ef4b90" title="go_light_stop_touch" alt="" coords="456,208,595,235"/>
+<area shape="rect" id="node6" href="$follow__light_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="643,107,693,133"/>
+<area shape="rect" id="node8" href="$ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="643,208,693,235"/>
+<area shape="rect" id="node13" href="$menu_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="500,259,551,285"/>
+<area shape="rect" id="node15" href="$follow__wall_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="313,157,364,184"/>
+<area shape="rect" id="node16" href="$light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="305,107,372,133"/>
+<area shape="rect" id="node17" href="$light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="462,107,589,133"/>
+<area shape="rect" id="node21" href="$echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="297,461,380,488"/>
 </map>

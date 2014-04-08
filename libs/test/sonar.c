@@ -5,7 +5,7 @@ void main()
 {
     /* Turn the RugBat*/
     sonar_init_servo();
-    scan_display_position(-100,100, 5); /* 5 loop*/
+    scan_display_position(-100,100, 1);
     printf("END OF LOOPS");
     sleep(5.0);
     printf("\n\n");

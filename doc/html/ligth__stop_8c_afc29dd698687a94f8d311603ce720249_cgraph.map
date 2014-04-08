@@ -1,0 +1,8 @@
+<map id="go_light_stop" name="go_light_stop">
+<area shape="rect" id="node2" href="$base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="305,25,365,52"/>
+<area shape="rect" id="node3" href="$convert_8c.html#a8e9035f19ecd73ced0e62b18df104afd" title="cmToPhotons" alt="" coords="153,25,255,52"/>
+<area shape="rect" id="node4" href="$common_8c.html#a4a336f19d2bbcc174259e39ff641d9f8" title="driveb" alt="" coords="175,127,233,153"/>
+<area shape="rect" id="node6" href="$photo__cell_8c.html#aed625017ad241b64d0cbf108dcca7b2a" title="light_diff" alt="" coords="169,76,239,103"/>
+<area shape="rect" id="node7" href="$base_2lib__rwp_8c.html#a8c528baf37154d347366083f0f816846" title="stop" alt="" coords="181,177,227,204"/>
+<area shape="rect" id="node5" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="307,127,362,153"/>
+</map>

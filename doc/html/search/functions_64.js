@@ -6,6 +6,7 @@ var searchData=
   ['digits',['digits',['../convert_8c.html#a89059167767e145e6fd47ada117f0ebc',1,'convert.c']]],
   ['dip_5fswitch',['dip_switch',['../lib__r22_8c.html#a5ed481f88895f103240c678460c12968',1,'lib_r22.c']]],
   ['dip_5fswitches',['dip_switches',['../lib__r22_8c.html#ae5dbbdf904b527ea111e21c960761e3c',1,'lib_r22.c']]],
+  ['display_5finfo',['display_info',['../photo__cell_8c.html#acb7ee4e5a55a9cf8a9171673ad9ba2b5',1,'photo_cell.c']]],
   ['display_5fmot_5ftest',['display_mot_test',['../test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78',1,'motor.c']]],
   ['drive',['drive',['../base_2lib__rwp_8c.html#a9032e2468648895fa936f08f6a831bf9',1,'drive(int trans_vel, int rot_vel):&#160;lib_rwp.c'],['../lib__rw11_8c.html#aef7fa61166aa28b717d01bd6d44b5cdb',1,'drive(float trans_vel, float rot_vel):&#160;lib_rw11.c'],['../firmware_2lib__rwp_8c.html#a9032e2468648895fa936f08f6a831bf9',1,'drive(int trans_vel, int rot_vel):&#160;lib_rwp.c']]],
   ['driveb',['driveb',['../common_8c.html#a4a336f19d2bbcc174259e39ff641d9f8',1,'common.c']]],

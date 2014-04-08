@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>Rug-warrior: /root/Desktop/rug-warrior/libs/shared/common.c File Reference</title>
+<title>Rug-warrior: /mnt/midnight/rug-warrior/libs/shared/common.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -106,6 +106,10 @@ Functions</h2></td></tr>
 <tr class="separator:a2f72f31bf325f0df4de4c83205568509"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a336f19d2bbcc174259e39ff641d9f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8c.html#a4a336f19d2bbcc174259e39ff641d9f8">driveb</a> (int trans, int rot)</td></tr>
 <tr class="separator:a4a336f19d2bbcc174259e39ff641d9f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af16a33698050e484dc75fe85b77f97d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8c.html#af16a33698050e484dc75fe85b77f97d6">floor</a> (float value)</td></tr>
+<tr class="separator:af16a33698050e484dc75fe85b77f97d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa885262c25eeae868438c7e48f0d26a4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="common_8c.html#aa885262c25eeae868438c7e48f0d26a4">round</a> (float value)</td></tr>
+<tr class="separator:aa885262c25eeae868438c7e48f0d26a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -130,7 +134,7 @@ Variables</h2></td></tr>
 
 <p>Definition at line <a class="el" href="common_8c_source.html#l00004">4</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
 
-<p>Referenced by <a class="el" href="common_8c_source.html#l00015">ap_eq()</a>, <a class="el" href="convert_8c_source.html#l00063">digits()</a>, <a class="el" href="mic_8c_source.html#l00018">main()</a>, <a class="el" href="echo_8c_source.html#l00039">sample_sound()</a>, and <a class="el" href="photo_8c_source.html#l00014">therm_diff()</a>.</p>
+<p>Referenced by <a class="el" href="common_8c_source.html#l00015">ap_eq()</a>, <a class="el" href="convert_8c_source.html#l00089">digits()</a>, <a class="el" href="mic_8c_source.html#l00018">main()</a>, <a class="el" href="screen_8c_source.html#l00050">print_diff()</a>, <a class="el" href="echo_8c_source.html#l00039">sample_sound()</a>, and <a class="el" href="photo_8c_source.html#l00014">therm_diff()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordflow">if</span>(val &lt; 0)</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        <span class="keywordflow">return</span> (- val);</div>
@@ -143,7 +147,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="common_8c_a1fd3a8b6db743b7cb7dcfd277fbb905e_icgraph.png" border="0" usemap="#common_8c_a1fd3a8b6db743b7cb7dcfd277fbb905e_icgraph" alt=""/></div>
 <map name="common_8c_a1fd3a8b6db743b7cb7dcfd277fbb905e_icgraph" id="common_8c_a1fd3a8b6db743b7cb7dcfd277fbb905e_icgraph">
-<area shape="rect" id="node3" href="common_8c.html#ac05ce549a0135a62606f40209387eec7" title="ap_eq" alt="" coords="125,5,187,32"/><area shape="rect" id="node5" href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="128,56,184,83"/><area shape="rect" id="node17" href="mic_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="129,107,183,133"/><area shape="rect" id="node19" href="echo_8c.html#a925d8efdf863cf52667ec8fcf4fb7d33" title="sample_sound" alt="" coords="99,157,213,184"/><area shape="rect" id="node23" href="photo_8c.html#a66f998077162963e411a04991dff9d0a" title="therm_diff" alt="" coords="113,208,199,235"/><area shape="rect" id="node7" href="screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="277,56,336,83"/><area shape="rect" id="node9" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="438,31,493,57"/><area shape="rect" id="node11" href="test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78" title="display_mot_test" alt="" coords="400,81,531,108"/><area shape="rect" id="node13" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c" title="set_show_motors" alt="" coords="579,81,714,108"/><area shape="rect" id="node15" href="test_2motor_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="763,81,818,108"/><area shape="rect" id="node21" href="echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="261,157,352,184"/><area shape="rect" id="node25" href="photo_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="279,208,334,235"/></map>
+<area shape="rect" id="node2" href="common_8c.html#ac05ce549a0135a62606f40209387eec7" title="ap_eq" alt="" coords="121,5,178,32"/><area shape="rect" id="node3" href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc" title="digits" alt="" coords="123,56,176,83"/><area shape="rect" id="node9" href="mic_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="124,107,175,133"/><area shape="rect" id="node10" href="screen_8c.html#a933751989174a13eb0301583a36ef170" title="print_diff" alt="" coords="113,157,185,184"/><area shape="rect" id="node16" href="echo_8c.html#a925d8efdf863cf52667ec8fcf4fb7d33" title="sample_sound" alt="" coords="96,208,203,235"/><area shape="rect" id="node18" href="photo_8c.html#a66f998077162963e411a04991dff9d0a" title="therm_diff" alt="" coords="109,259,189,285"/><area shape="rect" id="node4" href="screen_8c.html#a598db0d698ebf794573aa38998ff031a" title="printn" alt="" coords="269,56,323,83"/><area shape="rect" id="node5" href="1meter_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="428,5,479,32"/><area shape="rect" id="node6" href="test_2motor_8c.html#ae795df409b1689e7122dab70480e9b78" title="display_mot_test" alt="" coords="393,56,514,83"/><area shape="rect" id="node7" href="test_2motor_8c.html#a9382922728322499a2a494319f2f948c" title="set_show_motors" alt="" coords="565,56,691,83"/><area shape="rect" id="node8" href="test_2motor_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="739,56,789,83"/><area shape="rect" id="node11" href="light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="263,107,329,133"/><area shape="rect" id="node15" href="photo__cell_8c.html#acb7ee4e5a55a9cf8a9171673ad9ba2b5" title="display_info" alt="" coords="251,157,341,184"/><area shape="rect" id="node12" href="light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="390,107,517,133"/><area shape="rect" id="node13" href="light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="400,157,507,184"/><area shape="rect" id="node14" href="follow__light_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="603,157,653,184"/><area shape="rect" id="node17" href="echo_8c.html#a7d3e802e5696b8b58dc50dd94c183931" title="start_echo" alt="" coords="255,208,337,235"/><area shape="rect" id="node19" href="photo_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="271,259,321,285"/></map>
 </div>
 </p>
 
@@ -284,7 +288,7 @@ Here is the call graph for this function:</div>
 
 <p>References <a class="el" href="common_8c_source.html#l00058">drive_bias</a>, and <a class="el" href="base_2lib__rwp_8c_source.html#l00094">motor()</a>.</p>
 
-<p>Referenced by <a class="el" href="follow__light_8c_source.html#l00012">go_light()</a>.</p>
+<p>Referenced by <a class="el" href="light_8c_source.html#l00005">go_light()</a>, and <a class="el" href="light_8c_source.html#l00096">go_light_stop()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> rot_bias = (<a class="code" href="common_8c.html#a4cefbc24512b1d6663751a35a9df6292">drive_bias</a> * trans) / 100;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a>(0,trans - (rot + rot_bias));</div>
@@ -307,7 +311,42 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="common_8c_a4a336f19d2bbcc174259e39ff641d9f8_icgraph.png" border="0" usemap="#common_8c_a4a336f19d2bbcc174259e39ff641d9f8_icgraph" alt=""/></div>
 <map name="common_8c_a4a336f19d2bbcc174259e39ff641d9f8_icgraph" id="common_8c_a4a336f19d2bbcc174259e39ff641d9f8_icgraph">
-<area shape="rect" id="node3" href="follow__light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="115,31,187,57"/><area shape="rect" id="node5" href="follow__light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="235,5,373,32"/><area shape="rect" id="node7" href="follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="247,56,361,83"/></map>
+<area shape="rect" id="node2" href="light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="128,56,195,83"/><area shape="rect" id="node6" href="light_8c.html#afc29dd698687a94f8d311603ce720249" title="go_light_stop" alt="" coords="112,107,211,133"/><area shape="rect" id="node3" href="light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="265,5,391,32"/><area shape="rect" id="node4" href="light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="275,56,381,83"/><area shape="rect" id="node5" href="follow__light_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="445,56,496,83"/><area shape="rect" id="node7" href="menu_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="303,107,353,133"/><area shape="rect" id="node8" href="light_8c.html#a9fadc58f1cdc44e627a5377611ef4b90" title="go_light_stop_touch" alt="" coords="259,157,397,184"/><area shape="rect" id="node9" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="445,157,496,184"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="af16a33698050e484dc75fe85b77f97d6"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int floor </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the loweress value (lower troncate) </p>
+
+<p>Definition at line <a class="el" href="common_8c_source.html#l00073">73</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
+
+<p>Referenced by <a class="el" href="common_8c_source.html#l00082">round()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span>(value &gt;= 0.0) <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(value - 0.5);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)<a class="code" href="common_8c.html#af16a33698050e484dc75fe85b77f97d6">floor</a>(value + 0.5);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="ttc" id="common_8c_html_af16a33698050e484dc75fe85b77f97d6"><div class="ttname"><a href="common_8c.html#af16a33698050e484dc75fe85b77f97d6">floor</a></div><div class="ttdeci">int floor(float value)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00073">common.c:73</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="common_8c_af16a33698050e484dc75fe85b77f97d6_icgraph.png" border="0" usemap="#common_8c_af16a33698050e484dc75fe85b77f97d6_icgraph" alt=""/></div>
+<map name="common_8c_af16a33698050e484dc75fe85b77f97d6_icgraph" id="common_8c_af16a33698050e484dc75fe85b77f97d6_icgraph">
+<area shape="rect" id="node2" href="common_8c.html#aa885262c25eeae868438c7e48f0d26a4" title="round" alt="" coords="102,183,157,209"/><area shape="rect" id="node3" href="shared_2motor_8c.html#a24845bf7b423f5ec436b3dc429584961" title="rotate" alt="" coords="206,183,261,209"/><area shape="rect" id="node4" href="shared_2escape_8c.html#ab24efb0c5ba4846a0a497f8b726dee61" title="escape" alt="" coords="341,107,405,133"/><area shape="rect" id="node11" href="follow__wall_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="348,157,399,184"/><area shape="rect" id="node12" href="maze_8c.html#a4e0bb97a2a351e13f4fb003a30e54231" title="maze_process" alt="" coords="320,208,427,235"/><area shape="rect" id="node14" href="menu_8c.html#a26d71955529c6b3d9bf09f67d9fe0671" title="rotate_test_all_for" alt="" coords="310,259,437,285"/><area shape="rect" id="node5" href="light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="491,5,618,32"/><area shape="rect" id="node6" href="light_8c.html#a9fadc58f1cdc44e627a5377611ef4b90" title="go_light_stop_touch" alt="" coords="485,56,624,83"/><area shape="rect" id="node8" href="light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="501,107,608,133"/><area shape="rect" id="node10" href="behavior_2escape_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="529,157,580,184"/><area shape="rect" id="node7" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="672,56,723,83"/><area shape="rect" id="node9" href="follow__light_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="672,107,723,133"/><area shape="rect" id="node13" href="maze_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="529,208,580,235"/><area shape="rect" id="node15" href="menu_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="529,259,580,285"/></map>
 </div>
 </p>
 
@@ -388,7 +427,7 @@ Here is the caller graph for this function:</div>
 
 <p>References <a class="el" href="cof_8c_source.html#l00050">a</a>, and <a class="el" href="cof_8c_source.html#l00055">b</a>.</p>
 
-<p>Referenced by <a class="el" href="common_8c_source.html#l00023">clip()</a>.</p>
+<p>Referenced by <a class="el" href="common_8c_source.html#l00023">clip()</a>, and <a class="el" href="photo__cell_8c_source.html#l00017">light_environnement()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;{</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">if</span>(<a class="code" href="cof_8c.html#a4aec1a5be9d9a4a394a2e49e9744286e">a</a> &lt; <a class="code" href="cof_8c.html#a83fc1af92e29717b4513d121b0c72c7d">b</a>)</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="cof_8c.html#a4aec1a5be9d9a4a394a2e49e9744286e">a</a>;</div>
@@ -403,7 +442,53 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="common_8c_abd8bbcfabb3ddef2ccaafb9928a37b95_icgraph.png" border="0" usemap="#common_8c_abd8bbcfabb3ddef2ccaafb9928a37b95_icgraph" alt=""/></div>
 <map name="common_8c_abd8bbcfabb3ddef2ccaafb9928a37b95_icgraph" id="common_8c_abd8bbcfabb3ddef2ccaafb9928a37b95_icgraph">
-<area shape="rect" id="node2" href="common_8c.html#add203f675ed3f7aa8c1c55e51c5345ee" title="clip" alt="" coords="96,5,139,32"/></map>
+<area shape="rect" id="node2" href="common_8c.html#add203f675ed3f7aa8c1c55e51c5345ee" title="clip" alt="" coords="144,5,187,32"/><area shape="rect" id="node3" href="photo__cell_8c.html#a56bb761e9fb23ceac4bfcc855fecd089" title="light_environnement" alt="" coords="96,56,235,83"/><area shape="rect" id="node4" href="follow__light_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="327,31,377,57"/><area shape="rect" id="node5" href="light_8c.html#a9fadc58f1cdc44e627a5377611ef4b90" title="go_light_stop_touch" alt="" coords="283,81,421,108"/><area shape="rect" id="node6" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="469,81,520,108"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa885262c25eeae868438c7e48f0d26a4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int round </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>return the hihtess value (hiter troncate) </p>
+
+<p>Definition at line <a class="el" href="common_8c_source.html#l00082">82</a> of file <a class="el" href="common_8c_source.html">common.c</a>.</p>
+
+<p>References <a class="el" href="common_8c_source.html#l00073">floor()</a>.</p>
+
+<p>Referenced by <a class="el" href="shared_2motor_8c_source.html#l00090">rotate()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">if</span>(value &gt;= 0.0) <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(value + 0.5);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)<a class="code" href="common_8c.html#af16a33698050e484dc75fe85b77f97d6">floor</a>(value - 0.5);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
+<div class="ttc" id="common_8c_html_af16a33698050e484dc75fe85b77f97d6"><div class="ttname"><a href="common_8c.html#af16a33698050e484dc75fe85b77f97d6">floor</a></div><div class="ttdeci">int floor(float value)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00073">common.c:73</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="common_8c_aa885262c25eeae868438c7e48f0d26a4_cgraph.png" border="0" usemap="#common_8c_aa885262c25eeae868438c7e48f0d26a4_cgraph" alt=""/></div>
+<map name="common_8c_aa885262c25eeae868438c7e48f0d26a4_cgraph" id="common_8c_aa885262c25eeae868438c7e48f0d26a4_cgraph">
+<area shape="rect" id="node2" href="common_8c.html#af16a33698050e484dc75fe85b77f97d6" title="floor" alt="" coords="110,5,157,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="common_8c_aa885262c25eeae868438c7e48f0d26a4_icgraph.png" border="0" usemap="#common_8c_aa885262c25eeae868438c7e48f0d26a4_icgraph" alt=""/></div>
+<map name="common_8c_aa885262c25eeae868438c7e48f0d26a4_icgraph" id="common_8c_aa885262c25eeae868438c7e48f0d26a4_icgraph">
+<area shape="rect" id="node2" href="shared_2motor_8c.html#a24845bf7b423f5ec436b3dc429584961" title="rotate" alt="" coords="110,183,165,209"/><area shape="rect" id="node3" href="shared_2escape_8c.html#ab24efb0c5ba4846a0a497f8b726dee61" title="escape" alt="" coords="245,107,309,133"/><area shape="rect" id="node10" href="follow__wall_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="252,157,303,184"/><area shape="rect" id="node11" href="maze_8c.html#a4e0bb97a2a351e13f4fb003a30e54231" title="maze_process" alt="" coords="224,208,331,235"/><area shape="rect" id="node13" href="menu_8c.html#a26d71955529c6b3d9bf09f67d9fe0671" title="rotate_test_all_for" alt="" coords="214,259,341,285"/><area shape="rect" id="node4" href="light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="395,5,522,32"/><area shape="rect" id="node5" href="light_8c.html#a9fadc58f1cdc44e627a5377611ef4b90" title="go_light_stop_touch" alt="" coords="389,56,528,83"/><area shape="rect" id="node7" href="light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="405,107,512,133"/><area shape="rect" id="node9" href="behavior_2escape_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="433,157,484,184"/><area shape="rect" id="node6" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="576,56,627,83"/><area shape="rect" id="node8" href="follow__light_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="576,107,627,133"/><area shape="rect" id="node12" href="maze_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="433,208,484,235"/><area shape="rect" id="node14" href="menu_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="433,259,484,285"/></map>
 </div>
 </p>
 
@@ -430,7 +515,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 12:16:33 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

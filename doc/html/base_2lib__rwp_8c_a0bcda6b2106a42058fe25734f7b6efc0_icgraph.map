@@ -1,4 +1,6 @@
 <map id="ir_detect" name="ir_detect">
-<area shape="rect" id="node3" href="$follow__light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="133,5,272,32"/>
-<area shape="rect" id="node5" href="$escape__distant_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="175,56,230,83"/>
+<area shape="rect" id="node2" href="$light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="126,5,253,32"/>
+<area shape="rect" id="node3" href="$escape__distant_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="164,56,215,83"/>
+<area shape="rect" id="node4" href="$maze_8c.html#a4e0bb97a2a351e13f4fb003a30e54231" title="maze_process" alt="" coords="136,107,243,133"/>
+<area shape="rect" id="node5" href="$maze_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="301,107,352,133"/>
 </map>

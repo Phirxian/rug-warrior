@@ -1,6 +1,8 @@
 <map id="rotate" name="rotate">
-<area shape="rect" id="node3" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="156,5,217,32"/>
-<area shape="rect" id="node5" href="$shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3" title="reset_encoder_aux" alt="" coords="115,56,259,83"/>
-<area shape="rect" id="node7" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="307,56,363,83"/>
-<area shape="rect" id="node9" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="411,56,480,83"/>
+<area shape="rect" id="node2" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="149,5,203,32"/>
+<area shape="rect" id="node3" href="$shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3" title="reset_encoder_aux" alt="" coords="110,56,242,83"/>
+<area shape="rect" id="node6" href="$common_8c.html#aa885262c25eeae868438c7e48f0d26a4" title="round" alt="" coords="149,107,203,133"/>
+<area shape="rect" id="node4" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="291,56,344,83"/>
+<area shape="rect" id="node5" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="392,56,456,83"/>
+<area shape="rect" id="node7" href="$common_8c.html#af16a33698050e484dc75fe85b77f97d6" title="floor" alt="" coords="294,107,341,133"/>
 </map>

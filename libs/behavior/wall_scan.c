@@ -9,8 +9,8 @@
 void main()
 {
     int scan;
+    float last;
 
-    init_motors();
     init_sonar();
     sonar_init_servo();
 
@@ -18,6 +18,7 @@ void main()
 
     set_servo(0);
     sleep(0.175);
+    _motor_initial_speed_ = 100;
 
     ping();
     _move_behind_detected_distance_ = feetToCm(range());
@@ -25,8 +26,12 @@ void main()
 
     move_behind(85.0, 1.0, 30);
 
-    _detect_distance_process_running_ = 0;
-    while(_detect_distance_process_running_ != 1);
+    printf("wait\n");
+
+    stop_process(_detect_distance_process_running_);
+    wait_process(_detect_distance_process_running_);
+
+    printf("scan\n");
 
     for(scan = -100; scan<100; ++scan)
     {

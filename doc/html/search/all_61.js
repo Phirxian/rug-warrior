@@ -8,7 +8,6 @@ var searchData=
   ['adr2',['adr2',['../regdefs_8c.html#a9461be74079871d170d5bb9b5d56461e',1,'regdefs.c']]],
   ['adr3',['adr3',['../regdefs_8c.html#acf46118ae8a2323b8a0ab12b0721352c',1,'regdefs.c']]],
   ['adr4',['adr4',['../regdefs_8c.html#a7fb94fc82ef04ab4c93d26dd7b0ae535',1,'regdefs.c']]],
-  ['aie_2ec',['aie.c',['../aie_8c.html',1,'']]],
   ['alloff',['alloff',['../lib__hb_8c.html#ad6cb702751d048f67025d99608424796',1,'alloff():&#160;lib_hb.c'],['../lib__r22_8c.html#ad6cb702751d048f67025d99608424796',1,'alloff():&#160;lib_r22.c'],['../lib__rw10_8c.html#ad6cb702751d048f67025d99608424796',1,'alloff():&#160;lib_rw10.c']]],
   ['analog',['analog',['../base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4',1,'analog(int port):&#160;lib_ic.c'],['../lib__hb_8c.html#afa28db0c35c02b77341a6bed7aac0cb4',1,'analog(int port):&#160;lib_hb.c'],['../firmware_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4',1,'analog(int port):&#160;lib_ic.c'],['../lib__r22_8c.html#afa28db0c35c02b77341a6bed7aac0cb4',1,'analog(int port):&#160;lib_r22.c'],['../lib__rw10_8c.html#afa28db0c35c02b77341a6bed7aac0cb4',1,'analog(int port):&#160;lib_rw10.c'],['../lib__rw11_8c.html#afa28db0c35c02b77341a6bed7aac0cb4',1,'analog(int port):&#160;lib_rw11.c']]],
   ['analog5_2ec',['analog5.c',['../analog5_8c.html',1,'']]],

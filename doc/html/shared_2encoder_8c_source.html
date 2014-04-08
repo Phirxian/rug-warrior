@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>Rug-warrior: /root/Desktop/rug-warrior/libs/shared/encoder.c Source File</title>
+<title>Rug-warrior: /mnt/midnight/rug-warrior/libs/shared/encoder.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -97,10 +97,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        r_new = <a class="code" href="base_2lib__rwp_8c.html#a759cd6a2d214a5b16d6e01d114385039">right_shaft</a>();</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">if</span>(l_old &amp; ~l_new)</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            _left_enc_counts_++;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <a class="code" href="global_8c.html#ab8bb67bf1d7c853459429b601f25df67">_left_enc_counts_</a>++;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">if</span>(r_old &amp; ~r_new)</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            _right_enc_counts_++;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <a class="code" href="global_8c.html#a58035eb22e1e198536412237909f2a41">_right_enc_counts_</a>++;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        l_old = l_new;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        r_old = r_new;</div>
@@ -109,22 +109,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3">   30</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3">reset_encoder_aux</a>()</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;{</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">while</span>(_left_enc_counts_)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">while</span>(<a class="code" href="global_8c.html#ab8bb67bf1d7c853459429b601f25df67">_left_enc_counts_</a>)</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        _left_enc_counts_ = 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="global_8c.html#ab8bb67bf1d7c853459429b601f25df67">_left_enc_counts_</a> = 0;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(0.001);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">while</span>(_right_enc_counts_)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">while</span>(<a class="code" href="global_8c.html#a58035eb22e1e198536412237909f2a41">_right_enc_counts_</a>)</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        _right_enc_counts_ = 0;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="global_8c.html#a58035eb22e1e198536412237909f2a41">_right_enc_counts_</a> = 0;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(0.001);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="shared_2encoder_8c.html#a349492e4c7c080375830f94d859a2e70">   49</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="shared_2encoder_8c.html#a349492e4c7c080375830f94d859a2e70">encoder_reset</a>()</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    _left_enc_counts_ = 0;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    _right_enc_counts_ = 0;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="global_8c.html#ab8bb67bf1d7c853459429b601f25df67">_left_enc_counts_</a> = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <a class="code" href="global_8c.html#a58035eb22e1e198536412237909f2a41">_right_enc_counts_</a> = 0;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="shared_2encoder_8c.html#ab8ddfa602191ae55f459cdb21f1ec5e5">   63</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="shared_2encoder_8c.html#ab8ddfa602191ae55f459cdb21f1ec5e5">check_encoder</a>()</div>
@@ -134,10 +134,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">while</span>(1)</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(_check_enc_yield_time_);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span>(last_right == _right_enc_counts_ &amp;&amp;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;           last_left == _left_enc_counts_ &amp;&amp;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;           _right_enc_counts_ != 0)</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(<a class="code" href="global_8c.html#a9a33181dbbfa6f2d5e496bc3d6f1bda3">_check_enc_yield_time_</a>);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span>(last_right == <a class="code" href="global_8c.html#a58035eb22e1e198536412237909f2a41">_right_enc_counts_</a> &amp;&amp;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;           last_left == <a class="code" href="global_8c.html#ab8bb67bf1d7c853459429b601f25df67">_left_enc_counts_</a> &amp;&amp;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;           <a class="code" href="global_8c.html#a58035eb22e1e198536412237909f2a41">_right_enc_counts_</a> != 0)</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        {</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <a class="code" href="global_8c.html#af8130452f51bc1fdcb241cc631aafb15">_running_process_running_</a> = 0;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <a class="code" href="global_8c.html#a77e5c0e73fd3881bde85219f62677bdc">_move_behind_process_running_</a> = 0;</div>
@@ -145,25 +145,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <a class="code" href="global_8c.html#a84d5c7a5501f124b4b3bc93850a906d7">_motor_left_speed_</a> = 0;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <a class="code" href="global_8c.html#a0eb0d339001d94378320b2e9a317ea60">_motor_right_speed_</a> = 0;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        last_right = _right_enc_counts_;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        last_left = _left_enc_counts_;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        last_right = <a class="code" href="global_8c.html#a58035eb22e1e198536412237909f2a41">_right_enc_counts_</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        last_left = <a class="code" href="global_8c.html#ab8bb67bf1d7c853459429b601f25df67">_left_enc_counts_</a>;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;}</div>
-<div class="ttc" id="global_8c_html_a84d5c7a5501f124b4b3bc93850a906d7"><div class="ttname"><a href="global_8c.html#a84d5c7a5501f124b4b3bc93850a906d7">_motor_left_speed_</a></div><div class="ttdeci">int _motor_left_speed_</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00023">global.c:23</a></div></div>
+<div class="ttc" id="global_8c_html_a84d5c7a5501f124b4b3bc93850a906d7"><div class="ttname"><a href="global_8c.html#a84d5c7a5501f124b4b3bc93850a906d7">_motor_left_speed_</a></div><div class="ttdeci">int _motor_left_speed_</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00055">global.c:55</a></div></div>
 <div class="ttc" id="shared_2encoder_8c_html_ac1d12446ae642eedf3591bb662d42eb3"><div class="ttname"><a href="shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3">reset_encoder_aux</a></div><div class="ttdeci">void reset_encoder_aux()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2encoder_8c_source.html#l00030">encoder.c:30</a></div></div>
 <div class="ttc" id="shared_2encoder_8c_html_ab8ddfa602191ae55f459cdb21f1ec5e5"><div class="ttname"><a href="shared_2encoder_8c.html#ab8ddfa602191ae55f459cdb21f1ec5e5">check_encoder</a></div><div class="ttdeci">void check_encoder()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2encoder_8c_source.html#l00063">encoder.c:63</a></div></div>
-<div class="ttc" id="global_8c_html_a0eb0d339001d94378320b2e9a317ea60"><div class="ttname"><a href="global_8c.html#a0eb0d339001d94378320b2e9a317ea60">_motor_right_speed_</a></div><div class="ttdeci">int _motor_right_speed_</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00022">global.c:22</a></div></div>
+<div class="ttc" id="global_8c_html_a0eb0d339001d94378320b2e9a317ea60"><div class="ttname"><a href="global_8c.html#a0eb0d339001d94378320b2e9a317ea60">_motor_right_speed_</a></div><div class="ttdeci">int _motor_right_speed_</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00054">global.c:54</a></div></div>
 <div class="ttc" id="base_2lib__rwp_8c_html_a49fe73be96a0657e6a3ea6669cdc9f25"><div class="ttname"><a href="base_2lib__rwp_8c.html#a49fe73be96a0657e6a3ea6669cdc9f25">left_shaft</a></div><div class="ttdeci">int left_shaft()</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00056">lib_rwp.c:56</a></div></div>
+<div class="ttc" id="global_8c_html_ab8bb67bf1d7c853459429b601f25df67"><div class="ttname"><a href="global_8c.html#ab8bb67bf1d7c853459429b601f25df67">_left_enc_counts_</a></div><div class="ttdeci">int _left_enc_counts_</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00047">global.c:47</a></div></div>
 <div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00027">lib_ic.c:27</a></div></div>
 <div class="ttc" id="base_2lib__rwp_8c_html_a759cd6a2d214a5b16d6e01d114385039"><div class="ttname"><a href="base_2lib__rwp_8c.html#a759cd6a2d214a5b16d6e01d114385039">right_shaft</a></div><div class="ttdeci">int right_shaft()</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00064">lib_rwp.c:64</a></div></div>
-<div class="ttc" id="global_8c_html_af8130452f51bc1fdcb241cc631aafb15"><div class="ttname"><a href="global_8c.html#af8130452f51bc1fdcb241cc631aafb15">_running_process_running_</a></div><div class="ttdeci">int _running_process_running_</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00026">global.c:26</a></div></div>
+<div class="ttc" id="global_8c_html_a58035eb22e1e198536412237909f2a41"><div class="ttname"><a href="global_8c.html#a58035eb22e1e198536412237909f2a41">_right_enc_counts_</a></div><div class="ttdeci">int _right_enc_counts_</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00046">global.c:46</a></div></div>
+<div class="ttc" id="global_8c_html_a9a33181dbbfa6f2d5e496bc3d6f1bda3"><div class="ttname"><a href="global_8c.html#a9a33181dbbfa6f2d5e496bc3d6f1bda3">_check_enc_yield_time_</a></div><div class="ttdeci">float _check_enc_yield_time_</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00071">global.c:71</a></div></div>
+<div class="ttc" id="global_8c_html_af8130452f51bc1fdcb241cc631aafb15"><div class="ttname"><a href="global_8c.html#af8130452f51bc1fdcb241cc631aafb15">_running_process_running_</a></div><div class="ttdeci">int _running_process_running_</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00062">global.c:62</a></div></div>
 <div class="ttc" id="shared_2encoder_8c_html_a349492e4c7c080375830f94d859a2e70"><div class="ttname"><a href="shared_2encoder_8c.html#a349492e4c7c080375830f94d859a2e70">encoder_reset</a></div><div class="ttdeci">void encoder_reset()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2encoder_8c_source.html#l00049">encoder.c:49</a></div></div>
 <div class="ttc" id="shared_2encoder_8c_html_a2151421c7915bc303d0242f2d4b233c0"><div class="ttname"><a href="shared_2encoder_8c.html#a2151421c7915bc303d0242f2d4b233c0">encoder_aux</a></div><div class="ttdeci">void encoder_aux()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2encoder_8c_source.html#l00007">encoder.c:7</a></div></div>
-<div class="ttc" id="global_8c_html_a77e5c0e73fd3881bde85219f62677bdc"><div class="ttname"><a href="global_8c.html#a77e5c0e73fd3881bde85219f62677bdc">_move_behind_process_running_</a></div><div class="ttdeci">int _move_behind_process_running_</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00027">global.c:27</a></div></div>
+<div class="ttc" id="global_8c_html_a77e5c0e73fd3881bde85219f62677bdc"><div class="ttname"><a href="global_8c.html#a77e5c0e73fd3881bde85219f62677bdc">_move_behind_process_running_</a></div><div class="ttdeci">int _move_behind_process_running_</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00063">global.c:63</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 12:16:32 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

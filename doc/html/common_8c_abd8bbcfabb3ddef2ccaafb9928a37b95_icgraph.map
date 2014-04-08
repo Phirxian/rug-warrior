@@ -1,3 +1,7 @@
 <map id="min" name="min">
-<area shape="rect" id="node2" href="$common_8c.html#add203f675ed3f7aa8c1c55e51c5345ee" title="clip" alt="" coords="96,5,139,32"/>
+<area shape="rect" id="node2" href="$common_8c.html#add203f675ed3f7aa8c1c55e51c5345ee" title="clip" alt="" coords="144,5,187,32"/>
+<area shape="rect" id="node3" href="$photo__cell_8c.html#a56bb761e9fb23ceac4bfcc855fecd089" title="light_environnement" alt="" coords="96,56,235,83"/>
+<area shape="rect" id="node4" href="$follow__light_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="327,31,377,57"/>
+<area shape="rect" id="node5" href="$light_8c.html#a9fadc58f1cdc44e627a5377611ef4b90" title="go_light_stop_touch" alt="" coords="283,81,421,108"/>
+<area shape="rect" id="node6" href="$ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="469,81,520,108"/>
 </map>

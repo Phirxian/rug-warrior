@@ -1,15 +1,4 @@
 /**
- * calculate the approximate time needed to run
- * in @feet with given speed [-100 : 100]
- */
-float feetToMotor(float feet, int speed)
-{
-    float tmp = (float)speed;
-    float inv = 100./tmp;
-    return (feet/0.67)*inv;
-}
-
-/**
  * start it with thread
  * dependency : encoder_aux() process
  * ! reset the encoders count
@@ -19,9 +8,11 @@ void running()
     int diff;
     int inv = (-1)*(_motor_initial_speed_ < 0) +
               (_motor_initial_speed_ > 0);
+
     _motor_right_speed_ = inv*_motor_initial_speed_;
     _motor_left_speed_ = inv*_motor_initial_speed_;
     _running_process_running_ = 1;
+
     reset_encoder_aux();
 
     while(_running_process_running_ && (_motor_left_speed_ > 0 || _motor_right_speed_ > 0))
@@ -58,11 +49,14 @@ void running()
 void running_forever()
 {
     int diff;
+
     int inv = (-1)*(_motor_initial_speed_ < 0) +
               (_motor_initial_speed_ > 0);
+
     _motor_right_speed_ = inv*_motor_initial_speed_;
     _motor_left_speed_ = inv*_motor_initial_speed_;
     _running_process_running_ = 1;
+
     reset_encoder_aux();
 
     while(_running_process_running_)
@@ -82,6 +76,7 @@ void running_forever()
 
     motor(0, 0);
     motor(1, 0);
+
     _running_process_running_ = -1;
 }
 
@@ -97,27 +92,32 @@ void rotate(int flags, int angle)
     int invert;
     int needed;
     int adjust;
+    int speed = _motor_initial_speed_;
+
     float radius;
 
     if(flags < 0 || flags > 3)
         return;
 
-    radius = 14.;
+    radius = 436.;
     invert = 1;
     adjust = -(angle < 0) + (angle > 0);
     angle = (angle < 0)*(-angle) + (angle > 0)*angle;
 
     if(flags == 3)
     {
-        angle /= 2;
         invert *= -1;
+        angle /= 2;
         radius /= 2.;
+        speed /= 2;
     }
 
-    _motor_right_speed_ = adjust*_motor_initial_speed_*(flags & 1)*invert;
-    _motor_left_speed_ = adjust*_motor_initial_speed_*(flags & 2);
+    _motor_right_speed_ = adjust*speed*(flags & 1)*invert;
+    _motor_left_speed_ = adjust*speed*(flags & 2);
+
     reset_encoder_aux();
-    needed = (int)(474.*((float)(angle))/2160.);
+
+    needed = round(radius*((float)(angle))/2160.);
 
     while(_motor_left_speed_ || _motor_right_speed_)
     {
@@ -141,11 +141,14 @@ void rotate(int flags, int angle)
 void move_behind(float distance, float marging, int minimal_speed)
 {
     float last;
+
     int scan;
-    int pid;
-    pid = 0;
+    int pid = 0;
+
     _move_behind_process_running_ = 1;
     _running_process_running_ = -1;
+
+    printf("start\n");
 
     while(_move_behind_process_running_)
     {
@@ -175,9 +178,7 @@ void move_behind(float distance, float marging, int minimal_speed)
         sleep(_process_yield_time_);
     }
 
-    _running_process_running_ = 0;
-
-    while(_running_process_running_ != -1);
+    join_process(_running_process_running_);
 
     _move_behind_process_running_ = -1;
 }
@@ -193,7 +194,6 @@ void detect_distance_sonar()
     {
         ping();
         _move_behind_detected_distance_ = feetToCm(range());
-        printf("%f\n", _move_behind_detected_distance_);
         sleep(_process_yield_time_);
     }
 

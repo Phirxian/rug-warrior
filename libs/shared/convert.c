@@ -33,6 +33,32 @@ float degToRad(float deg)
 }
 
 /**
+ * calculate the approximate time needed to run
+ * in @feet with given speed [-100 : 100]
+ */
+float feetToMotor(float feet, int speed)
+{
+    float tmp = (float)speed;
+    float inv = 100./tmp;
+    return (feet/0.67)*inv;
+}
+
+/**
+ * Calculate the distance to stop the robot => Set prealablemently the "_light_stop_distance_" to stop (in cm)
+ * Take care of the stop distance
+ * CAUTION : If the distance it superior to will be too high the distance will be set to -1
+ *           If the more environnement is light, the less accurancy is.
+ */
+int cmToPhotons(int distance)
+{
+    if(0 > distance || distance > MAX_STOP_DISTANCE)
+    {
+        return 0;
+    }
+    return (int)((float)distance * CM_TO_LIGHT_COEFFICIENT);
+}
+
+/**
  * calculate the difference between two value
  * of the photo sensor and aproximate is termal value
  */

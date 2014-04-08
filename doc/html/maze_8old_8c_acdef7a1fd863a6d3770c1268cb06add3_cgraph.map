@@ -1,0 +1,23 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$shared_2bumper_8c.html#a3e0043a27cabda922c8ce5cbd7264047" title="bumper_detection" alt="" coords="104,5,229,32"/>
+<area shape="rect" id="node5" href="$base_2lib__rwp_8c.html#a9032e2468648895fa936f08f6a831bf9" title="drive" alt="" coords="333,208,384,235"/>
+<area shape="rect" id="node7" href="$shared_2escape_8c.html#ab24efb0c5ba4846a0a497f8b726dee61" title="escape" alt="" coords="135,157,199,184"/>
+<area shape="rect" id="node10" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="684,284,737,311"/>
+<area shape="rect" id="node14" href="$maze_8c.html#a4e0bb97a2a351e13f4fb003a30e54231" title="maze_process" alt="" coords="113,411,220,437"/>
+<area shape="rect" id="node3" href="$base_2lib__rwp_8c.html#a6368ba2819f669bf17962d89b3fca203" title="bumper" alt="" coords="326,5,391,32"/>
+<area shape="rect" id="node4" href="$base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4" title="analog" alt="" coords="527,5,587,32"/>
+<area shape="rect" id="node6" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="530,208,585,235"/>
+<area shape="rect" id="node8" href="$shared_2motor_8c.html#a24845bf7b423f5ec436b3dc429584961" title="rotate" alt="" coords="331,259,386,285"/>
+<area shape="rect" id="node9" href="$shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3" title="reset_encoder_aux" alt="" coords="491,259,623,285"/>
+<area shape="rect" id="node12" href="$common_8c.html#aa885262c25eeae868438c7e48f0d26a4" title="round" alt="" coords="530,107,585,133"/>
+<area shape="rect" id="node11" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="795,385,859,412"/>
+<area shape="rect" id="node13" href="$common_8c.html#af16a33698050e484dc75fe85b77f97d6" title="floor" alt="" coords="687,107,734,133"/>
+<area shape="rect" id="node15" href="$shared_2sonar_8c.html#a4536c29acdd706cb369a5b5f32ce57a1" title="init_sonar" alt="" coords="319,411,398,437"/>
+<area shape="rect" id="node17" href="$base_2lib__rwp_8c.html#a0bcda6b2106a42058fe25734f7b6efc0" title="ir_detect" alt="" coords="675,537,747,564"/>
+<area shape="rect" id="node18" href="$shared_2motor_8c.html#ace7572c6e4f698960dddbd986cb672c3" title="running_forever" alt="" coords="303,309,414,336"/>
+<area shape="rect" id="node19" href="$shared_2sonar_8c.html#a429dc232d3a74189590dfc6e470b4b7e" title="sonar_init_servo" alt="" coords="300,512,417,539"/>
+<area shape="rect" id="node21" href="$base_2lib__ic_8c.html#a3ced1c4d929dec5fc84c7a905001a948" title="timer_create_mseconds" alt="" coords="278,461,439,488"/>
+<area shape="rect" id="node22" href="$base_2lib__ic_8c.html#a2a0f0ec3bd9ebf537a7a728b9b837f0e" title="timer_done" alt="" coords="315,563,402,589"/>
+<area shape="rect" id="node16" href="$base_2lib__ic_8c.html#a35b95a4506fe38aa8c942b178cdda428" title="beeper_off" alt="" coords="516,411,599,437"/>
+<area shape="rect" id="node20" href="$shared_2sonar_8c.html#a820ae5b5b352c676e51b8b36120055ea" title="sonar_enable_servo" alt="" coords="488,512,627,539"/>
+</map>

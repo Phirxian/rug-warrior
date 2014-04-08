@@ -1,4 +1,7 @@
 <map id="bumper_detection" name="bumper_detection">
-<area shape="rect" id="node3" href="$follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="192,5,307,32"/>
-<area shape="rect" id="node5" href="$behavior_2escape_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="222,56,277,83"/>
+<area shape="rect" id="node2" href="$light_8c.html#a9fadc58f1cdc44e627a5377611ef4b90" title="go_light_stop_touch" alt="" coords="179,5,317,32"/>
+<area shape="rect" id="node4" href="$light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="195,56,301,83"/>
+<area shape="rect" id="node6" href="$behavior_2escape_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="223,107,273,133"/>
+<area shape="rect" id="node3" href="$ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="365,5,416,32"/>
+<area shape="rect" id="node5" href="$follow__light_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="365,56,416,83"/>
 </map>

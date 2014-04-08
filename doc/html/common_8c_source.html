@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>Rug-warrior: /root/Desktop/rug-warrior/libs/shared/common.c Source File</title>
+<title>Rug-warrior: /mnt/midnight/rug-warrior/libs/shared/common.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -134,9 +134,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a>(0,trans - (rot + rot_bias));</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <a class="code" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200">motor</a>(1,trans + (rot + rot_bias));</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="common_8c.html#af16a33698050e484dc75fe85b77f97d6">   73</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="common_8c.html#af16a33698050e484dc75fe85b77f97d6">floor</a>(<span class="keywordtype">float</span> value)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;{</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span>(value &gt;= 0.0) <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(value - 0.5);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)<a class="code" href="common_8c.html#af16a33698050e484dc75fe85b77f97d6">floor</a>(value + 0.5);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="common_8c.html#aa885262c25eeae868438c7e48f0d26a4">   82</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="common_8c.html#aa885262c25eeae868438c7e48f0d26a4">round</a>(<span class="keywordtype">float</span> value)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">if</span>(value &gt;= 0.0) <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)(value + 0.5);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)<a class="code" href="common_8c.html#af16a33698050e484dc75fe85b77f97d6">floor</a>(value - 0.5);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;}</div>
 <div class="ttc" id="cof_8c_html_a4aec1a5be9d9a4a394a2e49e9744286e"><div class="ttname"><a href="cof_8c.html#a4aec1a5be9d9a4a394a2e49e9744286e">a</a></div><div class="ttdeci">float a</div><div class="ttdef"><b>Definition:</b> <a href="cof_8c_source.html#l00050">cof.c:50</a></div></div>
 <div class="ttc" id="common_8c_html_add203f675ed3f7aa8c1c55e51c5345ee"><div class="ttname"><a href="common_8c.html#add203f675ed3f7aa8c1c55e51c5345ee">clip</a></div><div class="ttdeci">int clip(int val, int min, int max)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00023">common.c:23</a></div></div>
 <div class="ttc" id="cof_8c_html_a83fc1af92e29717b4513d121b0c72c7d"><div class="ttname"><a href="cof_8c.html#a83fc1af92e29717b4513d121b0c72c7d">b</a></div><div class="ttdeci">float b</div><div class="ttdef"><b>Definition:</b> <a href="cof_8c_source.html#l00055">cof.c:55</a></div></div>
+<div class="ttc" id="common_8c_html_af16a33698050e484dc75fe85b77f97d6"><div class="ttname"><a href="common_8c.html#af16a33698050e484dc75fe85b77f97d6">floor</a></div><div class="ttdeci">int floor(float value)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00073">common.c:73</a></div></div>
 <div class="ttc" id="common_8c_html_a4a336f19d2bbcc174259e39ff641d9f8"><div class="ttname"><a href="common_8c.html#a4a336f19d2bbcc174259e39ff641d9f8">driveb</a></div><div class="ttdeci">void driveb(int trans, int rot)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00063">common.c:63</a></div></div>
 <div class="ttc" id="common_8c_html_ac05ce549a0135a62606f40209387eec7"><div class="ttname"><a href="common_8c.html#ac05ce549a0135a62606f40209387eec7">ap_eq</a></div><div class="ttdeci">int ap_eq(int val, int cmp, int tol)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00015">common.c:15</a></div></div>
 <div class="ttc" id="common_8c_html_a4cefbc24512b1d6663751a35a9df6292"><div class="ttname"><a href="common_8c.html#a4cefbc24512b1d6663751a35a9df6292">drive_bias</a></div><div class="ttdeci">int drive_bias</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00058">common.c:58</a></div></div>
@@ -144,10 +157,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="common_8c_html_a1fd3a8b6db743b7cb7dcfd277fbb905e"><div class="ttname"><a href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a></div><div class="ttdeci">int abs(int val)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00004">common.c:4</a></div></div>
 <div class="ttc" id="common_8c_html_a2f72f31bf325f0df4de4c83205568509"><div class="ttname"><a href="common_8c.html#a2f72f31bf325f0df4de4c83205568509">max</a></div><div class="ttdeci">int max(int x, int y)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00047">common.c:47</a></div></div>
 <div class="ttc" id="common_8c_html_abd8bbcfabb3ddef2ccaafb9928a37b95"><div class="ttname"><a href="common_8c.html#abd8bbcfabb3ddef2ccaafb9928a37b95">min</a></div><div class="ttdeci">int min(int a, int b)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00036">common.c:36</a></div></div>
+<div class="ttc" id="common_8c_html_aa885262c25eeae868438c7e48f0d26a4"><div class="ttname"><a href="common_8c.html#aa885262c25eeae868438c7e48f0d26a4">round</a></div><div class="ttdeci">int round(float value)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00082">common.c:82</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 12:16:32 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>Rug-warrior: /root/Desktop/rug-warrior/libs/shared/convert.c File Reference</title>
+<title>Rug-warrior: /mnt/midnight/rug-warrior/libs/shared/convert.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -102,6 +102,10 @@ Functions</h2></td></tr>
 <tr class="separator:a9adaec7e3e76bf5d807683cf34dca858"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae645817fbf89677ab8a3f779b4a10ae8"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="convert_8c.html#ae645817fbf89677ab8a3f779b4a10ae8">degToRad</a> (float deg)</td></tr>
 <tr class="separator:ae645817fbf89677ab8a3f779b4a10ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af075ff93ea9486ef03788b5c0b12707b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="convert_8c.html#af075ff93ea9486ef03788b5c0b12707b">feetToMotor</a> (float feet, int speed)</td></tr>
+<tr class="separator:af075ff93ea9486ef03788b5c0b12707b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e9035f19ecd73ced0e62b18df104afd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="convert_8c.html#a8e9035f19ecd73ced0e62b18df104afd">cmToPhotons</a> (int distance)</td></tr>
+<tr class="separator:a8e9035f19ecd73ced0e62b18df104afd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af80345410eaff31ee093c3e514bb9426"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="convert_8c.html#af80345410eaff31ee093c3e514bb9426">thermometer</a> (int val, int low, int high)</td></tr>
 <tr class="separator:af80345410eaff31ee093c3e514bb9426"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89059167767e145e6fd47ada117f0ebc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc">digits</a> (int signed_val)</td></tr>
@@ -133,6 +137,47 @@ Variables</h2></td></tr>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">return</span> cm/30.48;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a class="anchor" id="a8e9035f19ecd73ced0e62b18df104afd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int cmToPhotons </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>distance</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calculate the distance to stop the robot =&gt; Set prealablemently the "_light_stop_distance_" to stop (in cm) Take care of the stop distance CAUTION : If the distance it superior to will be too high the distance will be set to -1 If the more environnement is light, the less accurancy is. </p>
+
+<p>Definition at line <a class="el" href="convert_8c_source.html#l00052">52</a> of file <a class="el" href="convert_8c_source.html">convert.c</a>.</p>
+
+<p>References <a class="el" href="global_8c_source.html#l00087">CM_TO_LIGHT_COEFFICIENT</a>, and <a class="el" href="global_8c_source.html#l00086">MAX_STOP_DISTANCE</a>.</p>
+
+<p>Referenced by <a class="el" href="light_8c_source.html#l00096">go_light_stop()</a>.</p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span>(0 &gt; distance || distance &gt; <a class="code" href="global_8c.html#a1fb6a88786634bf561088263beca6299">MAX_STOP_DISTANCE</a>)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)((float)distance * <a class="code" href="global_8c.html#ab8ba1280c1c27b7c1ce7b0b334a805b8">CM_TO_LIGHT_COEFFICIENT</a>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="ttc" id="global_8c_html_a1fb6a88786634bf561088263beca6299"><div class="ttname"><a href="global_8c.html#a1fb6a88786634bf561088263beca6299">MAX_STOP_DISTANCE</a></div><div class="ttdeci">int MAX_STOP_DISTANCE</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00086">global.c:86</a></div></div>
+<div class="ttc" id="global_8c_html_ab8ba1280c1c27b7c1ce7b0b334a805b8"><div class="ttname"><a href="global_8c.html#ab8ba1280c1c27b7c1ce7b0b334a805b8">CM_TO_LIGHT_COEFFICIENT</a></div><div class="ttdeci">float CM_TO_LIGHT_COEFFICIENT</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00087">global.c:87</a></div></div>
+</div><!-- fragment -->
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="convert_8c_a8e9035f19ecd73ced0e62b18df104afd_icgraph.png" border="0" usemap="#convert_8c_a8e9035f19ecd73ced0e62b18df104afd_icgraph" alt=""/></div>
+<map name="convert_8c_a8e9035f19ecd73ced0e62b18df104afd_icgraph" id="convert_8c_a8e9035f19ecd73ced0e62b18df104afd_icgraph">
+<area shape="rect" id="node2" href="light_8c.html#afc29dd698687a94f8d311603ce720249" title="go_light_stop" alt="" coords="157,31,256,57"/><area shape="rect" id="node3" href="menu_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="348,5,399,32"/><area shape="rect" id="node4" href="light_8c.html#a9fadc58f1cdc44e627a5377611ef4b90" title="go_light_stop_touch" alt="" coords="304,56,443,83"/><area shape="rect" id="node5" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="491,56,541,83"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <a class="anchor" id="ae645817fbf89677ab8a3f779b4a10ae8"></a>
@@ -172,30 +217,30 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Count the number of digits in an integer (negative numbers add 1 for - sign) </p>
 
-<p>Definition at line <a class="el" href="convert_8c_source.html#l00063">63</a> of file <a class="el" href="convert_8c_source.html">convert.c</a>.</p>
+<p>Definition at line <a class="el" href="convert_8c_source.html#l00089">89</a> of file <a class="el" href="convert_8c_source.html">convert.c</a>.</p>
 
 <p>References <a class="el" href="common_8c_source.html#l00004">abs()</a>.</p>
 
 <p>Referenced by <a class="el" href="screen_8c_source.html#l00005">printn()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> digs, val;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    val = <a class="code" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a>(signed_val);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span>(val &lt; 100)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span>(val &lt; 10) digs = 1;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">else</span> digs = 2;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(val &lt; 10000)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">if</span>(val &lt; 1000) digs = 3;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">else</span> digs = 4;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">else</span> digs = 5;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span>(signed_val &gt;= 0) <span class="keywordflow">return</span> digs;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">return</span> (digs + 1);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">int</span> digs, val;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    val = <a class="code" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a>(signed_val);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">if</span>(val &lt; 100)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">if</span>(val &lt; 10) digs = 1;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">else</span> digs = 2;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(val &lt; 10000)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span>(val &lt; 1000) digs = 3;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">else</span> digs = 4;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">else</span> digs = 5;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">if</span>(signed_val &gt;= 0) <span class="keywordflow">return</span> digs;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">return</span> (digs + 1);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
 <div class="ttc" id="common_8c_html_a1fd3a8b6db743b7cb7dcfd277fbb905e"><div class="ttname"><a href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a></div><div class="ttdeci">int abs(int val)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00004">common.c:4</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -235,7 +280,7 @@ Here is the caller graph for this function:</div>
 
 <p>Definition at line <a class="el" href="convert_8c_source.html#l00014">14</a> of file <a class="el" href="convert_8c_source.html">convert.c</a>.</p>
 
-<p>Referenced by <a class="el" href="shared_2motor_8c_source.html#l00188">detect_distance_sonar()</a>, and <a class="el" href="ligth__stop_8c_source.html#l00009">main()</a>.</p>
+<p>Referenced by <a class="el" href="shared_2motor_8c_source.html#l00189">detect_distance_sonar()</a>, and <a class="el" href="menu_8c_source.html#l00043">main()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">return</span> cm*30.48;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div>
@@ -245,10 +290,44 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="convert_8c_a5a3e9377eb57d2b216ee3869c9eeabcd_icgraph.png" border="0" usemap="#convert_8c_a5a3e9377eb57d2b216ee3869c9eeabcd_icgraph" alt=""/></div>
 <map name="convert_8c_a5a3e9377eb57d2b216ee3869c9eeabcd_icgraph" id="convert_8c_a5a3e9377eb57d2b216ee3869c9eeabcd_icgraph">
-<area shape="rect" id="node3" href="shared_2motor_8c.html#a042beb97f3b48827212848a3a96ed41b" title="detect_distance_sonar" alt="" coords="137,5,303,32"/><area shape="rect" id="node5" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="353,31,407,57"/></map>
+<area shape="rect" id="node2" href="shared_2motor_8c.html#a042beb97f3b48827212848a3a96ed41b" title="detect_distance_sonar" alt="" coords="134,5,287,32"/><area shape="rect" id="node3" href="menu_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="336,31,387,57"/></map>
 </div>
 </p>
 
+</div>
+</div>
+<a class="anchor" id="af075ff93ea9486ef03788b5c0b12707b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float feetToMotor </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>feet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>speed</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>calculate the approximate time needed to run in  with given speed [-100 : 100] </p>
+
+<p>Definition at line <a class="el" href="convert_8c_source.html#l00039">39</a> of file <a class="el" href="convert_8c_source.html">convert.c</a>.</p>
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">float</span> tmp = (float)speed;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">float</span> inv = 100./tmp;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> (feet/0.67)*inv;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a9adaec7e3e76bf5d807683cf34dca858"></a>
@@ -304,29 +383,29 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 <p>calculate the difference between two value of the photo sensor and aproximate is termal value </p>
 
-<p>Definition at line <a class="el" href="convert_8c_source.html#l00039">39</a> of file <a class="el" href="convert_8c_source.html">convert.c</a>.</p>
+<p>Definition at line <a class="el" href="convert_8c_source.html#l00065">65</a> of file <a class="el" href="convert_8c_source.html">convert.c</a>.</p>
 
 <p>References <a class="el" href="shared_2sonar_8c_source.html#l00084">range()</a>.</p>
 
 <p>Referenced by <a class="el" href="analog5_8c_source.html#l00004">main()</a>.</p>
-<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016">range</a> = high - low;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> blks = (((val - low) * 16) + (range &gt;&gt; 1)) / <a class="code" href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016">range</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">int</span> j;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span>(blks &lt; 0)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        blks = 0;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(blks &gt; 16)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        blks = 16;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">for</span>(j = 1; j &lt;= blks; j++)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        printf(<span class="stringliteral">&quot;%c&quot;</span>,219);  <span class="comment">/* 219 =&gt; [] */</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">for</span>(j = blks; j &lt; 16; j++)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        printf(<span class="stringliteral">&quot;-&quot;</span>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> blks;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016">range</a> = high - low;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> blks = (((val - low) * 16) + (range &gt;&gt; 1)) / <a class="code" href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016">range</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">int</span> j;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span>(blks &lt; 0)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        blks = 0;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(blks &gt; 16)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        blks = 16;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">for</span>(j = 1; j &lt;= blks; j++)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        printf(<span class="stringliteral">&quot;%c&quot;</span>,219);  <span class="comment">/* 219 =&gt; [] */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">for</span>(j = blks; j &lt; 16; j++)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        printf(<span class="stringliteral">&quot;-&quot;</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> blks;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
 <div class="ttc" id="shared_2sonar_8c_html_aa79c7e06f14884f4008cc28e35896016"><div class="ttname"><a href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016">range</a></div><div class="ttdeci">float range()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00084">sonar.c:84</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
@@ -367,7 +446,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 12:16:33 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

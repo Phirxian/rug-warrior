@@ -1,5 +1,8 @@
 <map id="escape" name="escape">
-<area shape="rect" id="node3" href="$follow__light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="123,5,261,32"/>
-<area shape="rect" id="node5" href="$follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="135,56,249,83"/>
-<area shape="rect" id="node7" href="$behavior_2escape_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="165,107,219,133"/>
+<area shape="rect" id="node2" href="$light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="123,5,250,32"/>
+<area shape="rect" id="node3" href="$light_8c.html#a9fadc58f1cdc44e627a5377611ef4b90" title="go_light_stop_touch" alt="" coords="117,56,256,83"/>
+<area shape="rect" id="node5" href="$light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="133,107,240,133"/>
+<area shape="rect" id="node7" href="$behavior_2escape_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="161,157,212,184"/>
+<area shape="rect" id="node4" href="$ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="304,56,355,83"/>
+<area shape="rect" id="node6" href="$follow__light_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="304,107,355,133"/>
 </map>

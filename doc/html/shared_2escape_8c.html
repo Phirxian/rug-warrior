@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>Rug-warrior: /root/Desktop/rug-warrior/libs/shared/escape.c File Reference</title>
+<title>Rug-warrior: /mnt/midnight/rug-warrior/libs/shared/escape.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -115,12 +115,12 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="shared_2escape_8c_source.html#l00008">8</a> of file <a class="el" href="shared_2escape_8c_source.html">escape.c</a>.</p>
 
-<p>References <a class="el" href="global_8c_source.html#l00011">BMP_LEFT</a>, <a class="el" href="global_8c_source.html#l00010">BMP_RIGHT</a>, <a class="el" href="global_8c_source.html#l00003">C_MOTOR</a>, <a class="el" href="base_2lib__rwp_8c_source.html#l00125">drive()</a>, <a class="el" href="shared_2motor_8c_source.html#l00095">rotate()</a>, and <a class="el" href="base_2lib__ic_8c_source.html#l00027">sleep()</a>.</p>
+<p>References <a class="el" href="global_8c_source.html#l00028">BMP_LEFT</a>, <a class="el" href="global_8c_source.html#l00027">BMP_RIGHT</a>, <a class="el" href="global_8c_source.html#l00014">C_MOTOR</a>, <a class="el" href="base_2lib__rwp_8c_source.html#l00125">drive()</a>, <a class="el" href="shared_2motor_8c_source.html#l00090">rotate()</a>, and <a class="el" href="base_2lib__ic_8c_source.html#l00027">sleep()</a>.</p>
 
-<p>Referenced by <a class="el" href="follow__light_8c_source.html#l00045">go_light_detection()</a>, <a class="el" href="follow__light_8c_source.html#l00077">go_light_touch()</a>, and <a class="el" href="behavior_2escape_8c_source.html#l00008">main()</a>.</p>
+<p>Referenced by <a class="el" href="light_8c_source.html#l00034">go_light_detection()</a>, <a class="el" href="light_8c_source.html#l00134">go_light_stop_touch()</a>, <a class="el" href="light_8c_source.html#l00064">go_light_touch()</a>, and <a class="el" href="behavior_2escape_8c_source.html#l00008">main()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="comment">/* Drive back a bit */</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="base_2lib__rwp_8c.html#a9032e2468648895fa936f08f6a831bf9">drive</a>(-80,0);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="base_2lib__rwp_8c.html#a9032e2468648895fa936f08f6a831bf9">drive</a>(-50,0);</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(0.50);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="comment">/* Stop a motor */</span></div>
@@ -147,18 +147,18 @@ Functions</h2></td></tr>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a>(0.50);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
 <div class="ttc" id="base_2lib__rwp_8c_html_a9032e2468648895fa936f08f6a831bf9"><div class="ttname"><a href="base_2lib__rwp_8c.html#a9032e2468648895fa936f08f6a831bf9">drive</a></div><div class="ttdeci">void drive(int trans_vel, int rot_vel)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00125">lib_rwp.c:125</a></div></div>
-<div class="ttc" id="global_8c_html_a539ed7bbd8f21014b9ddeceb97cbfba7"><div class="ttname"><a href="global_8c.html#a539ed7bbd8f21014b9ddeceb97cbfba7">BMP_RIGHT</a></div><div class="ttdeci">#define BMP_RIGHT</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00010">global.c:10</a></div></div>
-<div class="ttc" id="global_8c_html_abd41aeebfc8a0f42e5585b8d383a8187"><div class="ttname"><a href="global_8c.html#abd41aeebfc8a0f42e5585b8d383a8187">C_MOTOR</a></div><div class="ttdeci">#define C_MOTOR</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00003">global.c:3</a></div></div>
+<div class="ttc" id="global_8c_html_a539ed7bbd8f21014b9ddeceb97cbfba7"><div class="ttname"><a href="global_8c.html#a539ed7bbd8f21014b9ddeceb97cbfba7">BMP_RIGHT</a></div><div class="ttdeci">#define BMP_RIGHT</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00027">global.c:27</a></div></div>
+<div class="ttc" id="global_8c_html_abd41aeebfc8a0f42e5585b8d383a8187"><div class="ttname"><a href="global_8c.html#abd41aeebfc8a0f42e5585b8d383a8187">C_MOTOR</a></div><div class="ttdeci">#define C_MOTOR</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00014">global.c:14</a></div></div>
 <div class="ttc" id="base_2lib__ic_8c_html_aa5113ec47ecf6d5c15614c9353cb9a08"><div class="ttname"><a href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08">sleep</a></div><div class="ttdeci">void sleep(float seconds)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00027">lib_ic.c:27</a></div></div>
-<div class="ttc" id="global_8c_html_a0053ee21018eb43b06137b44a4688a39"><div class="ttname"><a href="global_8c.html#a0053ee21018eb43b06137b44a4688a39">BMP_LEFT</a></div><div class="ttdeci">#define BMP_LEFT</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00011">global.c:11</a></div></div>
-<div class="ttc" id="shared_2motor_8c_html_a24845bf7b423f5ec436b3dc429584961"><div class="ttname"><a href="shared_2motor_8c.html#a24845bf7b423f5ec436b3dc429584961">rotate</a></div><div class="ttdeci">void rotate(int flags, int angle)</div><div class="ttdef"><b>Definition:</b> <a href="shared_2motor_8c_source.html#l00095">motor.c:95</a></div></div>
+<div class="ttc" id="global_8c_html_a0053ee21018eb43b06137b44a4688a39"><div class="ttname"><a href="global_8c.html#a0053ee21018eb43b06137b44a4688a39">BMP_LEFT</a></div><div class="ttdeci">#define BMP_LEFT</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00028">global.c:28</a></div></div>
+<div class="ttc" id="shared_2motor_8c_html_a24845bf7b423f5ec436b3dc429584961"><div class="ttname"><a href="shared_2motor_8c.html#a24845bf7b423f5ec436b3dc429584961">rotate</a></div><div class="ttdeci">void rotate(int flags, int angle)</div><div class="ttdef"><b>Definition:</b> <a href="shared_2motor_8c_source.html#l00090">motor.c:90</a></div></div>
 </div><!-- fragment -->
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="shared_2escape_8c_ab24efb0c5ba4846a0a497f8b726dee61_cgraph.png" border="0" usemap="#shared_2escape_8c_ab24efb0c5ba4846a0a497f8b726dee61_cgraph" alt=""/></div>
 <map name="shared_2escape_8c_ab24efb0c5ba4846a0a497f8b726dee61_cgraph" id="shared_2escape_8c_ab24efb0c5ba4846a0a497f8b726dee61_cgraph">
-<area shape="rect" id="node3" href="base_2lib__rwp_8c.html#a9032e2468648895fa936f08f6a831bf9" title="drive" alt="" coords="127,5,180,32"/><area shape="rect" id="node7" href="shared_2motor_8c.html#a24845bf7b423f5ec436b3dc429584961" title="rotate" alt="" coords="123,56,184,83"/><area shape="rect" id="node11" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="424,81,480,108"/><area shape="rect" id="node5" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="273,5,335,32"/><area shape="rect" id="node9" href="shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3" title="reset_encoder_aux" alt="" coords="232,56,376,83"/><area shape="rect" id="node13" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="528,81,597,108"/></map>
+<area shape="rect" id="node2" href="base_2lib__rwp_8c.html#a9032e2468648895fa936f08f6a831bf9" title="drive" alt="" coords="120,30,171,57"/><area shape="rect" id="node4" href="shared_2motor_8c.html#a24845bf7b423f5ec436b3dc429584961" title="rotate" alt="" coords="118,81,173,107"/><area shape="rect" id="node6" href="base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="403,30,456,57"/><area shape="rect" id="node3" href="base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="261,30,315,57"/><area shape="rect" id="node5" href="shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3" title="reset_encoder_aux" alt="" coords="222,81,354,107"/><area shape="rect" id="node8" href="common_8c.html#aa885262c25eeae868438c7e48f0d26a4" title="round" alt="" coords="261,131,315,158"/><area shape="rect" id="node7" href="base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="504,30,568,57"/><area shape="rect" id="node9" href="common_8c.html#af16a33698050e484dc75fe85b77f97d6" title="floor" alt="" coords="406,131,453,158"/></map>
 </div>
 </p>
 
@@ -167,7 +167,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="shared_2escape_8c_ab24efb0c5ba4846a0a497f8b726dee61_icgraph.png" border="0" usemap="#shared_2escape_8c_ab24efb0c5ba4846a0a497f8b726dee61_icgraph" alt=""/></div>
 <map name="shared_2escape_8c_ab24efb0c5ba4846a0a497f8b726dee61_icgraph" id="shared_2escape_8c_ab24efb0c5ba4846a0a497f8b726dee61_icgraph">
-<area shape="rect" id="node3" href="follow__light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="123,5,261,32"/><area shape="rect" id="node5" href="follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="135,56,249,83"/><area shape="rect" id="node7" href="behavior_2escape_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="165,107,219,133"/></map>
+<area shape="rect" id="node2" href="light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="123,5,250,32"/><area shape="rect" id="node3" href="light_8c.html#a9fadc58f1cdc44e627a5377611ef4b90" title="go_light_stop_touch" alt="" coords="117,56,256,83"/><area shape="rect" id="node5" href="light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="133,107,240,133"/><area shape="rect" id="node7" href="behavior_2escape_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="161,157,212,184"/><area shape="rect" id="node4" href="ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="304,56,355,83"/><area shape="rect" id="node6" href="follow__light_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="304,107,355,133"/></map>
 </div>
 </p>
 
@@ -176,7 +176,7 @@ Here is the caller graph for this function:</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 12:16:32 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

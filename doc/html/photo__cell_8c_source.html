@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>Rug-warrior: /root/Desktop/rug-warrior/libs/shared/photo_cell.c Source File</title>
+<title>Rug-warrior: /mnt/midnight/rug-warrior/libs/shared/photo_cell.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -92,16 +92,62 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">int</span> pc_left, pc_right;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    pc_left  = <a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(<a class="code" href="base_2lib__rwp_8c.html#a80003173b2b20936eebe10521f94b503">photo_left</a>); <span class="comment">/* 0 to 255 */</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    pc_right = <a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(<a class="code" href="base_2lib__rwp_8c.html#abf8c764cb5f5289ee3688871415dd737">photo_right</a>); <span class="comment">/* 0 to 255 */</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)((float)(pc_left - pc_right) /2.55);</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)((float)(pc_right - pc_left) /2.55);</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="photo__cell_8c.html#a56bb761e9fb23ceac4bfcc855fecd089">   17</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="photo__cell_8c.html#a56bb761e9fb23ceac4bfcc855fecd089">light_environnement</a>()</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> lightest = <a class="code" href="common_8c.html#abd8bbcfabb3ddef2ccaafb9928a37b95">min</a>(<a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(<a class="code" href="base_2lib__rwp_8c.html#a80003173b2b20936eebe10521f94b503">photo_left</a>), <a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(<a class="code" href="base_2lib__rwp_8c.html#abf8c764cb5f5289ee3688871415dd737">photo_right</a>)); <span class="comment">/* 0 to 255 */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">if</span>(lightest &lt; 32)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <a class="code" href="global_8c.html#a4a87ab1dc57fa369fb1f0602cd398cc5">_light_environnement_</a> = <a class="code" href="global_8c.html#a7e18073917a26176eed896041f966d4d">VLIGHT_ENVIRONNEMENT</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(lightest &lt; 64)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="global_8c.html#a4a87ab1dc57fa369fb1f0602cd398cc5">_light_environnement_</a> = <a class="code" href="global_8c.html#a1b1650876346ca8300502bc7712adbd3">LIGHT_ENVIRONNEMENT</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(lightest &lt; 128)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="global_8c.html#a4a87ab1dc57fa369fb1f0602cd398cc5">_light_environnement_</a> = <a class="code" href="global_8c.html#ad23d5a56d4dd8262bf6551b7b060cbcc">DARK_ENVIRONNEMENT</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <a class="code" href="global_8c.html#a4a87ab1dc57fa369fb1f0602cd398cc5">_light_environnement_</a> = <a class="code" href="global_8c.html#acc9b1a860020703e59ca1d93fd0058f7">VDARK_ENVIRONNEMENT</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="photo__cell_8c.html#acb7ee4e5a55a9cf8a9171673ad9ba2b5">   43</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="photo__cell_8c.html#acb7ee4e5a55a9cf8a9171673ad9ba2b5">display_info</a>()</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">int</span> pc_left, pc_right;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    pc_left  = <a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(<a class="code" href="base_2lib__rwp_8c.html#a80003173b2b20936eebe10521f94b503">photo_left</a>);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    pc_right = <a class="code" href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a>(<a class="code" href="base_2lib__rwp_8c.html#abf8c764cb5f5289ee3688871415dd737">photo_right</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">/* Diff thermometer points toward brighter light */</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="screen_8c.html#a933751989174a13eb0301583a36ef170">print_diff</a>(pc_left - pc_right);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    printf(<span class="stringliteral">&quot;Photo L&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <a class="code" href="screen_8c.html#a4ccb49abe8987fd40632afca2dbaa528">p_byte</a>(pc_left);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    printf(<span class="stringliteral">&quot; R&quot;</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="screen_8c.html#a4ccb49abe8987fd40632afca2dbaa528">p_byte</a>(pc_right);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    printf(<span class="stringliteral">&quot; \n&quot;</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
 <div class="ttc" id="base_2lib__ic_8c_html_afa28db0c35c02b77341a6bed7aac0cb4"><div class="ttname"><a href="base_2lib__ic_8c.html#afa28db0c35c02b77341a6bed7aac0cb4">analog</a></div><div class="ttdeci">int analog(int port)</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__ic_8c_source.html#l00129">lib_ic.c:129</a></div></div>
 <div class="ttc" id="photo__cell_8c_html_aed625017ad241b64d0cbf108dcca7b2a"><div class="ttname"><a href="photo__cell_8c.html#aed625017ad241b64d0cbf108dcca7b2a">light_diff</a></div><div class="ttdeci">int light_diff()</div><div class="ttdef"><b>Definition:</b> <a href="photo__cell_8c_source.html#l00006">photo_cell.c:6</a></div></div>
+<div class="ttc" id="global_8c_html_a4a87ab1dc57fa369fb1f0602cd398cc5"><div class="ttname"><a href="global_8c.html#a4a87ab1dc57fa369fb1f0602cd398cc5">_light_environnement_</a></div><div class="ttdeci">int _light_environnement_</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00081">global.c:81</a></div></div>
+<div class="ttc" id="screen_8c_html_a4ccb49abe8987fd40632afca2dbaa528"><div class="ttname"><a href="screen_8c.html#a4ccb49abe8987fd40632afca2dbaa528">p_byte</a></div><div class="ttdeci">void p_byte(int val)</div><div class="ttdef"><b>Definition:</b> <a href="screen_8c_source.html#l00035">screen.c:35</a></div></div>
+<div class="ttc" id="global_8c_html_ad23d5a56d4dd8262bf6551b7b060cbcc"><div class="ttname"><a href="global_8c.html#ad23d5a56d4dd8262bf6551b7b060cbcc">DARK_ENVIRONNEMENT</a></div><div class="ttdeci">#define DARK_ENVIRONNEMENT</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00042">global.c:42</a></div></div>
+<div class="ttc" id="photo__cell_8c_html_a56bb761e9fb23ceac4bfcc855fecd089"><div class="ttname"><a href="photo__cell_8c.html#a56bb761e9fb23ceac4bfcc855fecd089">light_environnement</a></div><div class="ttdeci">void light_environnement()</div><div class="ttdef"><b>Definition:</b> <a href="photo__cell_8c_source.html#l00017">photo_cell.c:17</a></div></div>
+<div class="ttc" id="global_8c_html_a7e18073917a26176eed896041f966d4d"><div class="ttname"><a href="global_8c.html#a7e18073917a26176eed896041f966d4d">VLIGHT_ENVIRONNEMENT</a></div><div class="ttdeci">#define VLIGHT_ENVIRONNEMENT</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00044">global.c:44</a></div></div>
 <div class="ttc" id="base_2lib__rwp_8c_html_a80003173b2b20936eebe10521f94b503"><div class="ttname"><a href="base_2lib__rwp_8c.html#a80003173b2b20936eebe10521f94b503">photo_left</a></div><div class="ttdeci">int photo_left</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00011">lib_rwp.c:11</a></div></div>
+<div class="ttc" id="global_8c_html_a1b1650876346ca8300502bc7712adbd3"><div class="ttname"><a href="global_8c.html#a1b1650876346ca8300502bc7712adbd3">LIGHT_ENVIRONNEMENT</a></div><div class="ttdeci">#define LIGHT_ENVIRONNEMENT</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00043">global.c:43</a></div></div>
+<div class="ttc" id="screen_8c_html_a933751989174a13eb0301583a36ef170"><div class="ttname"><a href="screen_8c.html#a933751989174a13eb0301583a36ef170">print_diff</a></div><div class="ttdeci">void print_diff(int diff)</div><div class="ttdef"><b>Definition:</b> <a href="screen_8c_source.html#l00050">screen.c:50</a></div></div>
+<div class="ttc" id="global_8c_html_acc9b1a860020703e59ca1d93fd0058f7"><div class="ttname"><a href="global_8c.html#acc9b1a860020703e59ca1d93fd0058f7">VDARK_ENVIRONNEMENT</a></div><div class="ttdeci">#define VDARK_ENVIRONNEMENT</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00041">global.c:41</a></div></div>
+<div class="ttc" id="photo__cell_8c_html_acb7ee4e5a55a9cf8a9171673ad9ba2b5"><div class="ttname"><a href="photo__cell_8c.html#acb7ee4e5a55a9cf8a9171673ad9ba2b5">display_info</a></div><div class="ttdeci">void display_info()</div><div class="ttdef"><b>Definition:</b> <a href="photo__cell_8c_source.html#l00043">photo_cell.c:43</a></div></div>
 <div class="ttc" id="base_2lib__rwp_8c_html_abf8c764cb5f5289ee3688871415dd737"><div class="ttname"><a href="base_2lib__rwp_8c.html#abf8c764cb5f5289ee3688871415dd737">photo_right</a></div><div class="ttdeci">int photo_right</div><div class="ttdef"><b>Definition:</b> <a href="base_2lib__rwp_8c_source.html#l00005">lib_rwp.c:5</a></div></div>
+<div class="ttc" id="common_8c_html_abd8bbcfabb3ddef2ccaafb9928a37b95"><div class="ttname"><a href="common_8c.html#abd8bbcfabb3ddef2ccaafb9928a37b95">min</a></div><div class="ttdeci">int min(int a, int b)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00036">common.c:36</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 12:16:32 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

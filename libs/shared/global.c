@@ -2,6 +2,9 @@
  * Global variables used all along of ours programs
  */
 
+#define true 1
+#define false 0
+
 /**
  * Motors used to run the robot
  * @see "motor.c"
@@ -40,7 +43,6 @@
 #define LIGHT_ENVIRONNEMENT 4
 #define VLIGHT_ENVIRONNEMENT 8
 
-
 int _right_enc_counts_ = 0;
 int _left_enc_counts_ = 0;
 
@@ -49,15 +51,15 @@ int _left_enc_counts_ = 0;
  * @see "motor.c"
  */
 int _motor_initial_speed_ = 0;  /* Pourcentage of the max speed */
-int _motor_right_speed_ = 0; /* FORBIDDEN TO MODIFY THE VALUE */
-int _motor_left_speed_ = 0; /* FORBIDDEN TO MODIFY THE VALUE */
-int _motor_distance_ = 0; /* The distance traveled by the robot in CM*/
+int _motor_right_speed_ = 0;    /* FORBIDDEN TO MODIFY THE VALUE */
+int _motor_left_speed_ = 0;     /* FORBIDDEN TO MODIFY THE VALUE */
+int _motor_distance_ = 0;       /* The distance traveled by the robot in CM*/
 
 /**
  * Indicator of the running of the process
  * 1: running, 0: Not running or tell of killing process properly, -1: process killed properly
  */
-int _running_process_running_ = 0; /* Associated with running() ,running_forever(), move_behind() process*/
+int _running_process_running_ = 0;     /* Associated with running() ,running_forever(), move_behind() process*/
 int _move_behind_process_running_ = 0; /* Associated with move_behind(), detect_distance_sonar() process*/
 
 /* The distance that it must be traveled to stop the process  */
@@ -71,12 +73,16 @@ float _check_enc_yield_time_ = 1.0;
  * Fonctions that used photons cells
  */
 int _go_light_detection_running_ = 0; /* Process of "go light detection" is running */
-int _go_light_touch_running_ = 0; /* Process of "go light touch" is running */
-int _go_light_running_ = 0; /* Process of "go light" is running */
-int _go_light_stop_running_ = 0; /* Process of "go_light_stop is running */
+int _go_light_touch_running_ = 0;     /* Process of "go light touch" is running */
+int _go_light_running_ = 0;           /* Process of "go light" is running */
+int _go_light_stop_running_ = 0;      /* Process of "go_light_stop is running */
 
 /* Various light of environnement use light_environnement() to calculate it  */
 int _light_environnement_ = LIGHT_ENVIRONNEMENT;
 
-/* 0 => Go light; else => Go Dark*/
+/* 0 => Go light; else => Go Dark */
 int _mode_light_ = 0;
+
+int MAX_STOP_DISTANCE = 30; /* The maximum distance of the detection */
+float CM_TO_LIGHT_COEFFICIENT = 17.0/20.0; /* Linear coefficient obtained after tests */
+

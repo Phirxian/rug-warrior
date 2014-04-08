@@ -1,10 +1,13 @@
 var searchData=
 [
+  ['_5fcheck_5fenc_5fyield_5ftime_5f',['_check_enc_yield_time_',['../global_8c.html#a9a33181dbbfa6f2d5e496bc3d6f1bda3',1,'global.c']]],
   ['_5fdetect_5fdistance_5fprocess_5frunning_5f',['_detect_distance_process_running_',['../global_8c.html#a3e07ea0a985a9f292d05bc6825a58446',1,'global.c']]],
   ['_5ffoobar',['_foobar',['../lib__rw10_8c.html#a7eada0aa6e78d377f4f8754adc970e82',1,'lib_rw10.c']]],
   ['_5fgo_5flight_5fdetection_5frunning_5f',['_go_light_detection_running_',['../global_8c.html#a5514e0748ee15b0488d7e32d7028c423',1,'global.c']]],
   ['_5fgo_5flight_5frunning_5f',['_go_light_running_',['../global_8c.html#acd099e2b8ea2240d8b8eb933cdcdc06c',1,'global.c']]],
+  ['_5fgo_5flight_5fstop_5frunning_5f',['_go_light_stop_running_',['../global_8c.html#a08bba20e397761ed50e0950bff05c020',1,'global.c']]],
   ['_5fgo_5flight_5ftouch_5frunning_5f',['_go_light_touch_running_',['../global_8c.html#a20a7866f98f2f7cf9348e02b83702859',1,'global.c']]],
+  ['_5fleft_5fenc_5fcounts_5f',['_left_enc_counts_',['../global_8c.html#ab8bb67bf1d7c853459429b601f25df67',1,'global.c']]],
   ['_5flight_5fenvironnement_5f',['_light_environnement_',['../global_8c.html#a4a87ab1dc57fa369fb1f0602cd398cc5',1,'global.c']]],
   ['_5fmode_5flight_5f',['_mode_light_',['../global_8c.html#a262ec472d53333d0db71587bc8c47e8b',1,'global.c']]],
   ['_5fmotor_5fdistance_5f',['_motor_distance_',['../global_8c.html#a8e08a42dc176053c008f4067d281af23',1,'global.c']]],
@@ -19,6 +22,7 @@ var searchData=
   ['_5fprocess_5fencoder_5f',['_process_encoder_',['../thread_8c.html#a3a8e68f50a16f04f1a8279755921338b',1,'thread.c']]],
   ['_5fprocess_5fyield_5ftime_5f',['_process_yield_time_',['../global_8c.html#afdf5f99d5c6e10e43b47d767515ca107',1,'global.c']]],
   ['_5fraw_5fanalog',['_raw_analog',['../lib__hb_8c.html#ab45352baf6161b1799e924c298b7384d',1,'lib_hb.c']]],
+  ['_5fright_5fenc_5fcounts_5f',['_right_enc_counts_',['../global_8c.html#a58035eb22e1e198536412237909f2a41',1,'global.c']]],
   ['_5frunning_5fprocess_5frunning_5f',['_running_process_running_',['../global_8c.html#af8130452f51bc1fdcb241cc631aafb15',1,'global.c']]],
   ['_5fset_5fmotor',['_set_motor',['../lib__hb_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb',1,'_set_motor(int motor, int dir, int speed):&#160;lib_hb.c'],['../lib__r22_8c.html#a5ad04cbb50e276d5c0c68928b6f72fbb',1,'_set_motor(int motor, int dir, int speed):&#160;lib_r22.c']]],
   ['_5fset_5fmotor_5fspeeds',['_set_motor_speeds',['../lib__hb_8c.html#a14a2f7ce8a5918b038b2f29adeb96771',1,'_set_motor_speeds():&#160;lib_hb.c'],['../lib__r22_8c.html#a14a2f7ce8a5918b038b2f29adeb96771',1,'_set_motor_speeds():&#160;lib_r22.c']]],

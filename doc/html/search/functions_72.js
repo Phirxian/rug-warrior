@@ -9,7 +9,8 @@ var searchData=
   ['right_5fbutton',['right_button',['../lib__r22_8c.html#a22b4859d4454499466dea2293d109d6d',1,'lib_r22.c']]],
   ['right_5fshaft',['right_shaft',['../base_2lib__rwp_8c.html#a759cd6a2d214a5b16d6e01d114385039',1,'right_shaft():&#160;lib_rwp.c'],['../firmware_2lib__rwp_8c.html#a759cd6a2d214a5b16d6e01d114385039',1,'right_shaft():&#160;lib_rwp.c']]],
   ['rotate',['rotate',['../shared_2motor_8c.html#a24845bf7b423f5ec436b3dc429584961',1,'motor.c']]],
-  ['rotate_5ftest_5fall_5ffor',['rotate_test_all_for',['../rotate_8c.html#a26d71955529c6b3d9bf09f67d9fe0671',1,'rotate.c']]],
+  ['rotate_5ftest_5fall_5ffor',['rotate_test_all_for',['../menu_8c.html#a26d71955529c6b3d9bf09f67d9fe0671',1,'rotate_test_all_for(int degree):&#160;menu.c'],['../rotate_8c.html#a26d71955529c6b3d9bf09f67d9fe0671',1,'rotate_test_all_for(int degree):&#160;rotate.c']]],
+  ['round',['round',['../common_8c.html#aa885262c25eeae868438c7e48f0d26a4',1,'common.c']]],
   ['rpt',['rpt',['../echo_8c.html#a126686bb849f61aca5d2fc14f452f827',1,'echo.c']]],
   ['running',['running',['../shared_2motor_8c.html#af2c4ffd5a44c4fed16acb57148f0c117',1,'motor.c']]],
   ['running_5fforever',['running_forever',['../shared_2motor_8c.html#ace7572c6e4f698960dddbd986cb672c3',1,'motor.c']]]

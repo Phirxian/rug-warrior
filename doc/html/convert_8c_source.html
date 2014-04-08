@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.5"/>
-<title>Rug-warrior: /root/Desktop/rug-warrior/libs/shared/convert.c Source File</title>
+<title>Rug-warrior: /mnt/midnight/rug-warrior/libs/shared/convert.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -108,59 +108,79 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordflow">return</span> deg/57.2957795;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="convert_8c.html#af80345410eaff31ee093c3e514bb9426">   39</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="convert_8c.html#af80345410eaff31ee093c3e514bb9426">thermometer</a>(<span class="keywordtype">int</span> val, <span class="keywordtype">int</span> low, <span class="keywordtype">int</span> high)</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="convert_8c.html#af075ff93ea9486ef03788b5c0b12707b">   39</a></span>&#160;<span class="keywordtype">float</span> <a class="code" href="convert_8c.html#af075ff93ea9486ef03788b5c0b12707b">feetToMotor</a>(<span class="keywordtype">float</span> feet, <span class="keywordtype">int</span> speed)</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016">range</a> = high - low;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">int</span> blks = (((val - low) * 16) + (range &gt;&gt; 1)) / <a class="code" href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016">range</a>;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">int</span> j;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span>(blks &lt; 0)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        blks = 0;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(blks &gt; 16)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        blks = 16;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">for</span>(j = 1; j &lt;= blks; j++)</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        printf(<span class="stringliteral">&quot;%c&quot;</span>,219);  <span class="comment">/* 219 =&gt; [] */</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">for</span>(j = blks; j &lt; 16; j++)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        printf(<span class="stringliteral">&quot;-&quot;</span>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> blks;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc">   63</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc">digits</a>(<span class="keywordtype">int</span> signed_val)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> digs, val;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    val = <a class="code" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a>(signed_val);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span>(val &lt; 100)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span>(val &lt; 10) digs = 1;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">else</span> digs = 2;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(val &lt; 10000)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">if</span>(val &lt; 1000) digs = 3;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">else</span> digs = 4;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">else</span> digs = 5;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span>(signed_val &gt;= 0) <span class="keywordflow">return</span> digs;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">return</span> (digs + 1);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;}</div>
-<div class="ttc" id="convert_8c_html_a89059167767e145e6fd47ada117f0ebc"><div class="ttname"><a href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc">digits</a></div><div class="ttdeci">int digits(int signed_val)</div><div class="ttdef"><b>Definition:</b> <a href="convert_8c_source.html#l00063">convert.c:63</a></div></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">float</span> tmp = (float)speed;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">float</span> inv = 100./tmp;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> (feet/0.67)*inv;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="convert_8c.html#a8e9035f19ecd73ced0e62b18df104afd">   52</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="convert_8c.html#a8e9035f19ecd73ced0e62b18df104afd">cmToPhotons</a>(<span class="keywordtype">int</span> distance)</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span>(0 &gt; distance || distance &gt; <a class="code" href="global_8c.html#a1fb6a88786634bf561088263beca6299">MAX_STOP_DISTANCE</a>)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">int</span>)((float)distance * <a class="code" href="global_8c.html#ab8ba1280c1c27b7c1ce7b0b334a805b8">CM_TO_LIGHT_COEFFICIENT</a>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;}</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="convert_8c.html#af80345410eaff31ee093c3e514bb9426">   65</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="convert_8c.html#af80345410eaff31ee093c3e514bb9426">thermometer</a>(<span class="keywordtype">int</span> val, <span class="keywordtype">int</span> low, <span class="keywordtype">int</span> high)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;{</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016">range</a> = high - low;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">int</span> blks = (((val - low) * 16) + (range &gt;&gt; 1)) / <a class="code" href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016">range</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">int</span> j;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordflow">if</span>(blks &lt; 0)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        blks = 0;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(blks &gt; 16)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        blks = 16;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordflow">for</span>(j = 1; j &lt;= blks; j++)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        printf(<span class="stringliteral">&quot;%c&quot;</span>,219);  <span class="comment">/* 219 =&gt; [] */</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">for</span>(j = blks; j &lt; 16; j++)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        printf(<span class="stringliteral">&quot;-&quot;</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> blks;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc">   89</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc">digits</a>(<span class="keywordtype">int</span> signed_val)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">int</span> digs, val;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    val = <a class="code" href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a>(signed_val);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordflow">if</span>(val &lt; 100)</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">if</span>(val &lt; 10) digs = 1;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">else</span> digs = 2;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span>(val &lt; 10000)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">if</span>(val &lt; 1000) digs = 3;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">else</span> digs = 4;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordflow">else</span> digs = 5;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordflow">if</span>(signed_val &gt;= 0) <span class="keywordflow">return</span> digs;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">return</span> (digs + 1);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
+<div class="ttc" id="convert_8c_html_a89059167767e145e6fd47ada117f0ebc"><div class="ttname"><a href="convert_8c.html#a89059167767e145e6fd47ada117f0ebc">digits</a></div><div class="ttdeci">int digits(int signed_val)</div><div class="ttdef"><b>Definition:</b> <a href="convert_8c_source.html#l00089">convert.c:89</a></div></div>
+<div class="ttc" id="convert_8c_html_af075ff93ea9486ef03788b5c0b12707b"><div class="ttname"><a href="convert_8c.html#af075ff93ea9486ef03788b5c0b12707b">feetToMotor</a></div><div class="ttdeci">float feetToMotor(float feet, int speed)</div><div class="ttdef"><b>Definition:</b> <a href="convert_8c_source.html#l00039">convert.c:39</a></div></div>
 <div class="ttc" id="convert_8c_html_a5a3e9377eb57d2b216ee3869c9eeabcd"><div class="ttname"><a href="convert_8c.html#a5a3e9377eb57d2b216ee3869c9eeabcd">feetToCm</a></div><div class="ttdeci">float feetToCm(float cm)</div><div class="ttdef"><b>Definition:</b> <a href="convert_8c_source.html#l00014">convert.c:14</a></div></div>
 <div class="ttc" id="convert_8c_html_a616c6cbada9a0cc9a076a510a274764a"><div class="ttname"><a href="convert_8c.html#a616c6cbada9a0cc9a076a510a274764a">cmToFeet</a></div><div class="ttdeci">float cmToFeet(float cm)</div><div class="ttdef"><b>Definition:</b> <a href="convert_8c_source.html#l00006">convert.c:6</a></div></div>
+<div class="ttc" id="global_8c_html_a1fb6a88786634bf561088263beca6299"><div class="ttname"><a href="global_8c.html#a1fb6a88786634bf561088263beca6299">MAX_STOP_DISTANCE</a></div><div class="ttdeci">int MAX_STOP_DISTANCE</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00086">global.c:86</a></div></div>
 <div class="ttc" id="convert_8c_html_ae645817fbf89677ab8a3f779b4a10ae8"><div class="ttname"><a href="convert_8c.html#ae645817fbf89677ab8a3f779b4a10ae8">degToRad</a></div><div class="ttdeci">float degToRad(float deg)</div><div class="ttdef"><b>Definition:</b> <a href="convert_8c_source.html#l00030">convert.c:30</a></div></div>
-<div class="ttc" id="convert_8c_html_af80345410eaff31ee093c3e514bb9426"><div class="ttname"><a href="convert_8c.html#af80345410eaff31ee093c3e514bb9426">thermometer</a></div><div class="ttdeci">int thermometer(int val, int low, int high)</div><div class="ttdef"><b>Definition:</b> <a href="convert_8c_source.html#l00039">convert.c:39</a></div></div>
+<div class="ttc" id="convert_8c_html_af80345410eaff31ee093c3e514bb9426"><div class="ttname"><a href="convert_8c.html#af80345410eaff31ee093c3e514bb9426">thermometer</a></div><div class="ttdeci">int thermometer(int val, int low, int high)</div><div class="ttdef"><b>Definition:</b> <a href="convert_8c_source.html#l00065">convert.c:65</a></div></div>
+<div class="ttc" id="global_8c_html_ab8ba1280c1c27b7c1ce7b0b334a805b8"><div class="ttname"><a href="global_8c.html#ab8ba1280c1c27b7c1ce7b0b334a805b8">CM_TO_LIGHT_COEFFICIENT</a></div><div class="ttdeci">float CM_TO_LIGHT_COEFFICIENT</div><div class="ttdef"><b>Definition:</b> <a href="global_8c_source.html#l00087">global.c:87</a></div></div>
 <div class="ttc" id="shared_2sonar_8c_html_aa79c7e06f14884f4008cc28e35896016"><div class="ttname"><a href="shared_2sonar_8c.html#aa79c7e06f14884f4008cc28e35896016">range</a></div><div class="ttdeci">float range()</div><div class="ttdef"><b>Definition:</b> <a href="shared_2sonar_8c_source.html#l00084">sonar.c:84</a></div></div>
 <div class="ttc" id="common_8c_html_a1fd3a8b6db743b7cb7dcfd277fbb905e"><div class="ttname"><a href="common_8c.html#a1fd3a8b6db743b7cb7dcfd277fbb905e">abs</a></div><div class="ttdeci">int abs(int val)</div><div class="ttdef"><b>Definition:</b> <a href="common_8c_source.html#l00004">common.c:4</a></div></div>
 <div class="ttc" id="convert_8c_html_a4c43e2b8db2027e48251350d972a39c2"><div class="ttname"><a href="convert_8c.html#a4c43e2b8db2027e48251350d972a39c2">PI</a></div><div class="ttdeci">float PI</div><div class="ttdef"><b>Definition:</b> <a href="convert_8c_source.html#l00001">convert.c:1</a></div></div>
 <div class="ttc" id="convert_8c_html_a9adaec7e3e76bf5d807683cf34dca858"><div class="ttname"><a href="convert_8c.html#a9adaec7e3e76bf5d807683cf34dca858">radToDeg</a></div><div class="ttdeci">float radToDeg(float rad)</div><div class="ttdef"><b>Definition:</b> <a href="convert_8c_source.html#l00022">convert.c:22</a></div></div>
+<div class="ttc" id="convert_8c_html_a8e9035f19ecd73ced0e62b18df104afd"><div class="ttname"><a href="convert_8c.html#a8e9035f19ecd73ced0e62b18df104afd">cmToPhotons</a></div><div class="ttdeci">int cmToPhotons(int distance)</div><div class="ttdef"><b>Definition:</b> <a href="convert_8c_source.html#l00052">convert.c:52</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 19 2014 19:40:13 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Apr 2 2014 12:16:32 for Rug-warrior by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

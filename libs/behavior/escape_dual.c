@@ -19,7 +19,7 @@ void main()
     /* Initialize all components needed to run the robot */
     init_motors();
 
-    _motor_initial_speed_ = 100;
+    _motor_initial_speed_ = 50;
     start_process(running_forever());
 
     while(1)
@@ -42,14 +42,14 @@ void main()
         if((bmp != 0 && bmp != BMP_BACK) || ir != OBSTACLE_NONE)
         {
             /* Stop the robot */
-            _running_process_running_ = 0;
-            while(_running_process_running_ != -1);
+            stop_process(_running_process_running_);
+            wait_process(_running_process_running_);
 
             if(ir) escape(ir);
             else   escape(bmp);
 
             /* The robot can go foward after the dodge */
-            _motor_initial_speed_ = 100;
+            _motor_initial_speed_ = 50;
             start_process(running_forever());
         }
     }

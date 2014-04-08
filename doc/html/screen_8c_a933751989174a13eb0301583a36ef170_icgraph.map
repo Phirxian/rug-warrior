@@ -1,5 +1,7 @@
 <map id="print_diff" name="print_diff">
-<area shape="rect" id="node3" href="$follow__light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="131,31,203,57"/>
-<area shape="rect" id="node5" href="$follow__light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="251,5,389,32"/>
-<area shape="rect" id="node7" href="$follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="263,56,377,83"/>
+<area shape="rect" id="node2" href="$photo__cell_8c.html#acb7ee4e5a55a9cf8a9171673ad9ba2b5" title="display_info" alt="" coords="125,5,216,32"/>
+<area shape="rect" id="node3" href="$light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="137,56,204,83"/>
+<area shape="rect" id="node4" href="$light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="265,31,391,57"/>
+<area shape="rect" id="node5" href="$light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="275,81,381,108"/>
+<area shape="rect" id="node6" href="$follow__light_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="440,81,491,108"/>
 </map>

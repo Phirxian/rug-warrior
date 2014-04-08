@@ -62,7 +62,16 @@
 		<Unit filename="libs/behavior/follow_wall.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="libs/behavior/follow_wall2.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="libs/behavior/ligth_stop.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/behavior/maze.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/behavior/maze.old.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="libs/behavior/menu.c">
@@ -150,9 +159,6 @@
 		<Unit filename="libs/shared/thread.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="libs/test/aie.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="libs/test/analog5.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -166,6 +172,9 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="libs/test/encoder.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="libs/test/frequency.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="libs/test/ir.c">

@@ -24,4 +24,16 @@ int _process_encoder_ = start_process(encoder_aux());
  * use exit variable like
  * _running_process_running_, _move_behind_process_running_, ... etc
  */
-#define wait_process(x) while(x != -1);
+#define wait_process(x) while((x) != -1);
+
+/**
+ * stop and wait process if is running
+ * use exit variable like
+ * _running_process_running_, _move_behind_process_running_, ... etc
+ */
+#define join_process(x) \
+if((x) == 1) \
+{\
+    stop_process(x);\
+    wait_process(x);\
+}

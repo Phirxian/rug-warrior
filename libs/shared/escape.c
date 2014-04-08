@@ -8,7 +8,7 @@
 void escape(int escape_bumper)
 {
     /* Drive back a bit */
-    drive(-80,0);
+    drive(-50,0);
     sleep(0.50);
 
     /* Stop a motor */

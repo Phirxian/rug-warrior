@@ -62,7 +62,25 @@ int drive_bias = 0;
  */
 void driveb(int trans, int rot)
 {
-	int rot_bias = (drive_bias * trans) / 100;
-	motor(0,trans - (rot + rot_bias));
-	motor(1,trans + (rot + rot_bias));
+    int rot_bias = (drive_bias * trans) / 100;
+    motor(0,trans - (rot + rot_bias));
+    motor(1,trans + (rot + rot_bias));
+}
+
+/**
+ * return the loweress value (lower troncate)
+ */
+int floor(float value)
+{
+    if(value >= 0.0) return (int)(value - 0.5);
+    return (int)floor(value + 0.5);
+}
+
+/**
+ * return the hihtess value (hiter troncate)
+ */
+int round(float value)
+{
+    if(value >= 0.0) return (int)(value + 0.5);
+    return (int)floor(value - 0.5);
 }

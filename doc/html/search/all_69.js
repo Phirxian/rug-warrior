@@ -7,5 +7,6 @@ var searchData=
   ['init_5fsonar',['init_sonar',['../shared_2sonar_8c.html#a4536c29acdd706cb369a5b5f32ce57a1',1,'sonar.c']]],
   ['init_5fvelocity',['init_velocity',['../shaft_8c.html#a655a0723b26fd4943c4f9883b69be9c6',1,'shaft.c']]],
   ['ir_2ec',['ir.c',['../ir_8c.html',1,'']]],
-  ['ir_5fdetect',['ir_detect',['../base_2lib__rwp_8c.html#a0bcda6b2106a42058fe25734f7b6efc0',1,'ir_detect():&#160;lib_rwp.c'],['../lib__rw11_8c.html#a0bcda6b2106a42058fe25734f7b6efc0',1,'ir_detect():&#160;lib_rw11.c'],['../firmware_2lib__rwp_8c.html#a0bcda6b2106a42058fe25734f7b6efc0',1,'ir_detect():&#160;lib_rwp.c']]]
+  ['ir_5fdetect',['ir_detect',['../base_2lib__rwp_8c.html#a0bcda6b2106a42058fe25734f7b6efc0',1,'ir_detect():&#160;lib_rwp.c'],['../lib__rw11_8c.html#a0bcda6b2106a42058fe25734f7b6efc0',1,'ir_detect():&#160;lib_rw11.c'],['../firmware_2lib__rwp_8c.html#a0bcda6b2106a42058fe25734f7b6efc0',1,'ir_detect():&#160;lib_rwp.c']]],
+  ['ir_5fprevious',['ir_previous',['../maze_8c.html#af29fc47b8d99eb9b3e850977514b6f81',1,'ir_previous():&#160;maze.c'],['../maze_8old_8c.html#af29fc47b8d99eb9b3e850977514b6f81',1,'ir_previous():&#160;maze.old.c']]]
 ];

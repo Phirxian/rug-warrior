@@ -1,0 +1,9 @@
+<map id="maze_process" name="maze_process">
+<area shape="rect" id="node2" href="$base_2lib__rwp_8c.html#a0bcda6b2106a42058fe25734f7b6efc0" title="ir_detect" alt="" coords="501,5,573,32"/>
+<area shape="rect" id="node4" href="$shared_2motor_8c.html#a24845bf7b423f5ec436b3dc429584961" title="rotate" alt="" coords="189,93,243,120"/>
+<area shape="rect" id="node6" href="$base_2lib__ic_8c.html#aa5113ec47ecf6d5c15614c9353cb9a08" title="sleep" alt="" coords="511,81,564,108"/>
+<area shape="rect" id="node8" href="$shared_2motor_8c.html#ace7572c6e4f698960dddbd986cb672c3" title="running_forever" alt="" coords="161,144,271,171"/>
+<area shape="rect" id="node3" href="$base_2lib__ic_8c.html#aa3650dfb953be0fa6fb4e6a625d3f777" title="msleep" alt="" coords="621,44,685,71"/>
+<area shape="rect" id="node5" href="$shared_2encoder_8c.html#ac1d12446ae642eedf3591bb662d42eb3" title="reset_encoder_aux" alt="" coords="321,93,453,120"/>
+<area shape="rect" id="node7" href="$base_2lib__rwp_8c.html#a04268e3e9a9cdbff1cd6d5c265f11200" title="motor" alt="" coords="359,144,414,171"/>
+</map>

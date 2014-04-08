@@ -1,5 +1,10 @@
 <map id="driveb" name="driveb">
-<area shape="rect" id="node3" href="$follow__light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="115,31,187,57"/>
-<area shape="rect" id="node5" href="$follow__light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="235,5,373,32"/>
-<area shape="rect" id="node7" href="$follow__light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="247,56,361,83"/>
+<area shape="rect" id="node2" href="$light_8c.html#aad5e637d53e41148f945298a7b15012a" title="go_light" alt="" coords="128,56,195,83"/>
+<area shape="rect" id="node6" href="$light_8c.html#afc29dd698687a94f8d311603ce720249" title="go_light_stop" alt="" coords="112,107,211,133"/>
+<area shape="rect" id="node3" href="$light_8c.html#a1ae4ca477bb9cd9d61bac37985383abd" title="go_light_detection" alt="" coords="265,5,391,32"/>
+<area shape="rect" id="node4" href="$light_8c.html#a20c66336f16de518b5417798f601c62c" title="go_light_touch" alt="" coords="275,56,381,83"/>
+<area shape="rect" id="node5" href="$follow__light_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="445,56,496,83"/>
+<area shape="rect" id="node7" href="$menu_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="303,107,353,133"/>
+<area shape="rect" id="node8" href="$light_8c.html#a9fadc58f1cdc44e627a5377611ef4b90" title="go_light_stop_touch" alt="" coords="259,157,397,184"/>
+<area shape="rect" id="node9" href="$ligth__stop_8c.html#acdef7a1fd863a6d3770c1268cb06add3" title="main" alt="" coords="445,157,496,184"/>
 </map>
